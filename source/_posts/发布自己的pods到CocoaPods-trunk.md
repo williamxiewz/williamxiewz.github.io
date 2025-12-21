@@ -1,8 +1,10 @@
 ---
 title: 发布自己的pods到CocoaPods trunk
 date: 2017-03-15 22:45:58
-categories: 
-tags:
+categories: iOS开发
+tags: [CocoaPods, pod, trunk, iOS, 包管理]
+description: 详细教程：如何将自己的iOS库发布到CocoaPods官方仓库trunk
+keywords: CocoaPods,trunk,pod,iOS库,发布教程
 ---
 
 使用CocoaPods trunk之前请确认CocoaPods版本是否是0.33或以上，打开Teaminal(终端)输入pod --version即可查看，如果版本过低，请执行sudo gem install cocoapods安装最新版本！

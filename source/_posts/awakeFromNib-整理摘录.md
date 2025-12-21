@@ -1,8 +1,10 @@
 ---
 title: awakeFromNib 整理摘录
 date: 2017-10-24 16:18:48
-categories: [iOS SDK]
-tags:
+categories: iOS开发
+tags: [iOS, awakeFromNib, initWithCoder, UIViewController]
+description: awakeFromNib和initWithCoder的区别，以及UIViewController生命周期方法的详细说明
+keywords: awakeFromNib,initWithCoder,iOS,UIViewController,生命周期
 ---
 
 （1）awakeFromNib和initWithCoder:差别
