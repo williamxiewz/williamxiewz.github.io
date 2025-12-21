@@ -9,8 +9,8 @@
 # ==========================================
 title: William's Blog
 subtitle: Walk steps step by step
-description: 'William Xie 的个人技术博客，专注 iOS 开发、音视频技术、云计算等技术分享'
-keywords: 'iOS开发,音视频技术,云计算,Swift,技术博客'
+description: 'William Xie 的个人技术博客，专注机器学习、人工智能、深度学习、大数据等前沿技术分享'
+keywords: '机器学习,人工智能,深度学习,AI,神经网络,Python,数据科学'
 author: William Xie
 language: zh-CN
 timezone: 'Asia/Shanghai'
@@ -94,6 +94,12 @@ default_category: uncategorized
 category_map:
   iOS SDK: iOS-SDK
   cloud computing: cloud-computing
+  machine learning: machine-learning
+  deep learning: deep-learning
+  artificial intelligence: AI
+  data science: data-science
+  computer vision: computer-vision
+  natural language processing: NLP
 tag_map:
 
 # ==========================================

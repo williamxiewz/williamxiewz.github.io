@@ -4,6 +4,7 @@
 
 # 导航栏配置
 nav:
+  Home: /
   Archives: /archives
   Categories: /categories
   Tags: /tags
