@@ -286,7 +286,7 @@
 <p>一，VideoToolbox基本数据结构。</p>
 <p>Video Toolbox视频编解码前后需要应用的数据结构进行说明。</p>
 <p>（1）CVPixelBuffer：编码前(编码流程)和解码后(解码流程)的图像数据结构,其实就是像素数据。</p>
-<p>（2）CMTime、CMClock和CMTimebase：时间戳相关。时间以64-bit/32-bit的形式出现。</p>
+<p>（2）CMTime、CMClock和CMTimebase：时间戳相关。时间以64-bit&#x2F;32-bit的形式出现。</p>
 <p>（3）CMBlockBuffer：编码后，结果图像的数据结构。</p>
 <p>（4）CMVideoFormatDescription：图像存储方式，编解码器等格式描述。</p>
 <p>（5）CMSampleBuffer：存放编解码前后的视频图像的容器数据结构。</p>
@@ -296,7 +296,7 @@
 <p>通过如图2.1所示的一个典型应用，来说明如何使用硬件解码接口。该应用场景是从网络处传来H264编码后的视频码流，最后显示在手机屏幕上。</p>
 <p>图2.1 H264典型应用场景</p>
 <p>1，将H264码流转换成解码前的CMSampleBuffer。</p>
-<p>由图1.1所示，解码前的CMSampleBuffer = CMTime + FormatDesc + CMBlockBuffer。需要从H264的码流里面提取出以上的三个信息。最后组合成CMSampleBuffer，提供给硬解码接口来进行解码工作。</p>
+<p>由图1.1所示，解码前的CMSampleBuffer &#x3D; CMTime + FormatDesc + CMBlockBuffer。需要从H264的码流里面提取出以上的三个信息。最后组合成CMSampleBuffer，提供给硬解码接口来进行解码工作。</p>
 <p>H264的码流由NALU单元组成，NALU单元包含视频图像数据和H264的参数信息。其中视频图像数据就是CMBlockBuffer，而H264的参数信息则可以组合成FormatDesc。具体来说参数信息包含SPS（Sequence Parameter Set）和PPS（Picture Parameter Set）。图2.2显示一个H264码流的结构。</p>
 <p>图2.2 H264码流结构</p>
 <p>（1）提取sps和pps生成format description。</p>

@@ -270,7 +270,7 @@
           <span class="text-gray-400">·</span>
           <span class="flex items-center gap-1">
             <iconify-icon width="18" icon="icon-park-outline:font-search" ></iconify-icon>
-            <span>898 words</span>
+            <span>903 words</span>
           </span>
           
             <span class="text-gray-400">·</span>
@@ -290,7 +290,7 @@
 <p>nib 加载结构时 发送一个awakeFromNib消息告诉每个对象重建一个nib 归档，但只有在所有的档案中的对象已加载和初始化。当一个对象接收awakefromnibmessage，这是保证其所有出口和行动连接已经建立。</p>
 <p>你必须调用awakefromnib super实施给父类的运行的机会去做额外的初始化工作。虽然这种方法的默认实现不执行任何操作，许多UIKit类提供非空的实现。你可以叫super 实现在任何一点你自己的awakefromnib方法里。</p>
 <p>实例化过程中，存档中的每个对象未归档然后初始化的方法适合于它的类型。符合nscoding协议对象（包括所有子类和处理）正在用他们的initwithcoder初始化：方法。不符合nscoding协议所有的对象都是使用init方法初始化。在所有对象被实例化和初始化，the nib 加载代码，将所有这些对象的出口和动作的连接。然后调用对象的awakefromnib方法。更详细的信息有关的步骤，然后nib在加载过程中，看到“NIB文件”在资源规划指南。</p>
-<p>// 先归档方法<br>-(id)initWithCoder:(NSCoder *)aDecoder<br>{<br>self = [super initWithCoder:aDecoder];<br>if (self) {<br>}<br>return self;<br>}<br>// 保证出口和行动连接已经建立 调用 awakeFromNib<br>-(void)awakeFromNib<br>{<br>[super awakeFromNib];<br>}</p>
+<p>&#x2F;&#x2F; 先归档方法<br>-(id)initWithCoder:(NSCoder *)aDecoder<br>{<br>self &#x3D; [super initWithCoder:aDecoder];<br>if (self) {<br>}<br>return self;<br>}<br>&#x2F;&#x2F; 保证出口和行动连接已经建立 调用 awakeFromNib<br>-(void)awakeFromNib<br>{<br>[super awakeFromNib];<br>}</p>
 <p>NIB文件是应用程序所有对象的存档。当程序启动后，对象从文件中释放，重新赋予生命，准备接收用户触发的事件信息。这种机制有些与众不同：大多数GUI的设计都是为界面布局产生源代码；相反，Interface Builder则允许开发者编辑好页面元素的状态后，把它们保存在文件里面。在对象从文件中释放、获得生命，而没有接收到用户事件以前，所有的对象自动发送awakeFromNib消息。开发者可以添加awakeFromNib方法，用来初始化文本框的值。</p>
 <p>parm mark 2</p>
 <p>-(void)awakeFromNib;从字面上理解，就是从nib文件中唤醒对象，完成对每一个对象的实例化或与nib文件的关联。<br>谁唤醒这个方法？</p>

@@ -270,7 +270,7 @@
           <span class="text-gray-400">·</span>
           <span class="flex items-center gap-1">
             <iconify-icon width="18" icon="icon-park-outline:font-search" ></iconify-icon>
-            <span>221 words</span>
+            <span>231 words</span>
           </span>
           
         </section>
@@ -281,13 +281,13 @@
   <article class="post-content prose m-auto slide-enter-content dark:prose-invert">
     <p>老规矩，从 Hello World 开始。</p>
 <p>新建一个 Swift 文件，就叫 Hello.swift 吧。使用文本编辑器打开输入以下内容，并保存：</p>
-<p>#!/usr/bin/env xcrun swift<br>println(“Hello World”)</p>
+<p>#!&#x2F;usr&#x2F;bin&#x2F;env xcrun swift<br>println(“Hello World”)</p>
 <p>打开终端，切换到保存 Hello.swift 文件的路径下，为该文件添加可执行权限，命令如下：<br>chmod +x Hello.swift</p>
-<p>然后运行一下这个文件：<br>./Hello.swift</p>
+<p>然后运行一下这个文件：<br>.&#x2F;Hello.swift</p>
 <p>终端上输出了熟悉的 Hello World。</p>
 <p>执行 shell 脚本</p>
 <p>在Swift 脚本里，你可以尽情使用 Swift 语法特性。但有些情况下还是需要调用一些 shell 脚本的。这里就需要用到 Foundation 库中的 NSTask 类了。</p>
-<p>首先，在脚本中引入 Foundation 库。<br>import Foundation<br>调用 shell 脚本的关键代码:<br>let shell = “pwd”<br>let task = NSTask()<br>task.launchPath = “/bin/bash”<br>task.arguments = [“-c”, shell]</p>
+<p>首先，在脚本中引入 Foundation 库。<br>import Foundation<br>调用 shell 脚本的关键代码:<br>let shell &#x3D; “pwd”<br>let task &#x3D; NSTask()<br>task.launchPath &#x3D; “&#x2F;bin&#x2F;bash”<br>task.arguments &#x3D; [“-c”, shell]</p>
 <p>task.launch()<br>字符串常量 shell 可以是任意能在 bash 中执行的 shell 脚本文本内容</p>
 
   </article>

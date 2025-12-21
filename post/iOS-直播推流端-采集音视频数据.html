@@ -270,7 +270,7 @@
           <span class="text-gray-400">·</span>
           <span class="flex items-center gap-1">
             <iconify-icon width="18" icon="icon-park-outline:font-search" ></iconify-icon>
-            <span>991 words</span>
+            <span>995 words</span>
           </span>
           
             <span class="text-gray-400">·</span>
@@ -285,8 +285,8 @@
   </header>
   <!-- content -->
   <article class="post-content prose m-auto slide-enter-content dark:prose-invert">
-    <p>OS上使用AVFoundation.framework框架来调用系统相机并获取视频数据。视频数据可以根据设定的参数，可采集到RGB或YUV数据，一般使用的是GBRA32，420v，420f，下面演示相机的调用和视频数据的获取。<br>a)引入框架的头文件#import &lt;AVFoundation/AVFoundation.h&gt;<br>b)调用的类遵守协议AVCaptureVideoDataOutputSampleBufferDelegate<br>c)声明变量<br>AVCaptureSession            *captureSession;<br>AVCaptureDevice             *captureDevice;<br>AVCaptureDeviceInput        *captureDeviceInput;<br>AVCaptureVideoDataOutput    *captureVdieoDataOutput;<br>d)实现<br>e)demo地址 <a target="_blank" rel="noopener" href="https://github.com/depthlove/STMCamera">https://github.com/depthlove/STMCamera</a></p>
-<p>AVFoundation 是 iOS系统上可以捕捉iPhone／iPad／iPod摄像头的一个库，这个库采集输出的是YUV/RGB。跟编码h264没有关系，AVFoundation只是作为一个视频输入源而已，要将它的数据采用编码器编码才能得到h264 数据。具体可参看我的博文《利用FFmpeg+x264将iOS摄像头实时视频流编码为h264文件》<a target="_blank" rel="noopener" href="http://depthlove.github.io/2015/09/18/use-ffmpeg-and-x264-encode-iOS-camera-video-to-h264/">http://depthlove.github.io/2015/09/18/use-ffmpeg-and-x264-encode-iOS-camera-video-to-h264/</a> ， 《利用x264将iOS摄像头实时视频流编码为h264文件》<a target="_blank" rel="noopener" href="http://depthlove.github.io/2015/09/17/use-x264-encode-iOS-camera-video-to-h264/">http://depthlove.github.io/2015/09/17/use-x264-encode-iOS-camera-video-to-h264/</a> ， 《在iOS上硬编码推流－硬编码h264（四）》<a target="_blank" rel="noopener" href="http://depthlove.github.io/2016/03/20/hw-encode-and-transfer-in-ios-platform-videotoolbox-encode-h264-part4/">http://depthlove.github.io/2016/03/20/hw-encode-and-transfer-in-ios-platform-videotoolbox-encode-h264-part4/</a></p>
+    <p>OS上使用AVFoundation.framework框架来调用系统相机并获取视频数据。视频数据可以根据设定的参数，可采集到RGB或YUV数据，一般使用的是GBRA32，420v，420f，下面演示相机的调用和视频数据的获取。<br>a)引入框架的头文件#import &lt;AVFoundation&#x2F;AVFoundation.h&gt;<br>b)调用的类遵守协议AVCaptureVideoDataOutputSampleBufferDelegate<br>c)声明变量<br>AVCaptureSession            *captureSession;<br>AVCaptureDevice             *captureDevice;<br>AVCaptureDeviceInput        *captureDeviceInput;<br>AVCaptureVideoDataOutput    *captureVdieoDataOutput;<br>d)实现<br>e)demo地址 <a target="_blank" rel="noopener" href="https://github.com/depthlove/STMCamera">https://github.com/depthlove/STMCamera</a></p>
+<p>AVFoundation 是 iOS系统上可以捕捉iPhone／iPad／iPod摄像头的一个库，这个库采集输出的是YUV&#x2F;RGB。跟编码h264没有关系，AVFoundation只是作为一个视频输入源而已，要将它的数据采用编码器编码才能得到h264 数据。具体可参看我的博文《利用FFmpeg+x264将iOS摄像头实时视频流编码为h264文件》<a target="_blank" rel="noopener" href="http://depthlove.github.io/2015/09/18/use-ffmpeg-and-x264-encode-iOS-camera-video-to-h264/">http://depthlove.github.io/2015/09/18/use-ffmpeg-and-x264-encode-iOS-camera-video-to-h264/</a> ， 《利用x264将iOS摄像头实时视频流编码为h264文件》<a target="_blank" rel="noopener" href="http://depthlove.github.io/2015/09/17/use-x264-encode-iOS-camera-video-to-h264/">http://depthlove.github.io/2015/09/17/use-x264-encode-iOS-camera-video-to-h264/</a> ， 《在iOS上硬编码推流－硬编码h264（四）》<a target="_blank" rel="noopener" href="http://depthlove.github.io/2016/03/20/hw-encode-and-transfer-in-ios-platform-videotoolbox-encode-h264-part4/">http://depthlove.github.io/2016/03/20/hw-encode-and-transfer-in-ios-platform-videotoolbox-encode-h264-part4/</a></p>
 <p>AVFoundation: 音视频数据采集需要用AVFoundation框架.</p>
 <p><code>AVCaptureDevice</code>：硬件设备，包括麦克风、摄像头，通过该对象可以设置物理设备的一些属性（例如相机聚焦、白平衡等）</p>
 <p><code>AVCaptureDeviceInput</code>：硬件输入对象，可以根据AVCaptureDevice创建对应的AVCaptureDeviceInput对象，用于管理硬件输入数据。</p>
@@ -299,7 +299,7 @@
 <p>捕获音视频步骤:官方文档</p>
 <p>1.创建AVCaptureSession对象</p>
 <p>2.获取AVCaptureDevicel录像设备（摄像头），录音设备（麦克风），注意不具备输入数据功能,只是用来调节硬件设备的配置。</p>
-<p>3.根据音频/视频硬件设备(AVCaptureDevice)创建音频/视频硬件输入数据对象(AVCaptureDeviceInput)，专门管理数据输入。</p>
+<p>3.根据音频&#x2F;视频硬件设备(AVCaptureDevice)创建音频&#x2F;视频硬件输入数据对象(AVCaptureDeviceInput)，专门管理数据输入。</p>
 <p>4.创建视频输出数据管理对象（AVCaptureVideoDataOutput），并且设置样品缓存代理(setSampleBufferDelegate)就可以通过它拿到采集到的视频数据</p>
 <p>5.创建音频输出数据管理对象（AVCaptureAudioDataOutput），并且设置样品缓存代理(setSampleBufferDelegate)就可以通过它拿到采集到的音频数据</p>
 <p>6.将数据输入对象AVCaptureDeviceInput、数据输出对象AVCaptureOutput添加到媒体会话管理对象AVCaptureSession中,就会自动让音频输入与输出和视频输入与输出产生连接.</p>

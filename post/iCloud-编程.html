@@ -311,7 +311,7 @@
 <li>doubieForKey:根据键取出double类型值。</li>
 <li>arrayForKey;根据键取出数组类型值。 </li>
 <li>dictionaryForKey:根据键取出字典类型值。</li>
-<li>dataForKey:根据键取出NSData类型值。 </li>
+<li>dataForKey:根据键取出NSData类型值。</li>
 </ul>
 <p>下面是NSUbiquitousKeyValueStore类的一些赋值方法： </p>
 <ul>
@@ -322,7 +322,7 @@
 <li>setDouble: forKey:根据键设置double类型值。</li>
 <li>setArray: forKey:根据键设置数组类型值。</li>
 <li>setDictionary: forKey;根据键设置字典类型值。</li>
-<li>setData; forKey;根据键设置NSData类型值。 </li>
+<li>setData; forKey;根据键设置NSData类型值。</li>
 </ul>
 <p>力了监听iCLoud键值数据存储据的变化，可以在程序中注册通知消息 <code>NSUbiquitousKeyValueStoreDidchangeExternallyNotification</code>，这个通知是当一个设备更新了iCloud中的键值数据时,iCloud服务器会发出这个通知,使得其他设备都接受到这个通知.</p>
 <p>##iCloud键值存储实例</p>
@@ -336,8 +336,8 @@
 <p>##iCloud存储运行过程 </p>
 <p>iCloud文档存储运行过程要比键值数据存储烦琐得多，将本地数据存储到iCloud服务器，大体分成3个步骤： </p>
 <p>步骤(1)<code>应用(App)</code>通过一个<code>Ubiquity容器标识</code>请求操作系统Ubiquity容器；<br>步骤(2)操作系统授权<code>应用(App)</code>可以访问Ubiquity容器；<br>步骤(3)通过Ubiquity容器实现与iCloud服务器传输数据。Ubiquity容器事实上也是设备上的目录，下面是运行在笔者设备某个应用的Ubiquity容器目录： </p>
-<p>/var/mobile/Library/Mobile % 20Documents/icloud〜cm〜51work6〜DoucmentDemo/</p>
-<p>而应用的沙箱目录：<br>/var/mobile/Containers/Data/Application/5A858EE6-F4FA-4462-835F-2AB8ED1994DA/Docuinents<br>可见沙箱目录与Ubiquity容器目录是不同的，使用的时候数据不能直接放在Ubiquity容器根目录下，而是要放在它的Documents子目录中，放入到这个目录中的数据可以自动同步到icioud服务器上，这个同步的过程开发者不用关系，由系统自动同步完成。</p>
+<p>&#x2F;var&#x2F;mobile&#x2F;Library&#x2F;Mobile % 20Documents&#x2F;icloud〜cm〜51work6〜DoucmentDemo&#x2F;</p>
+<p>而应用的沙箱目录：<br>&#x2F;var&#x2F;mobile&#x2F;Containers&#x2F;Data&#x2F;Application&#x2F;5A858EE6-F4FA-4462-835F-2AB8ED1994DA&#x2F;Docuinents<br>可见沙箱目录与Ubiquity容器目录是不同的，使用的时候数据不能直接放在Ubiquity容器根目录下，而是要放在它的Documents子目录中，放入到这个目录中的数据可以自动同步到icioud服务器上，这个同步的过程开发者不用关系，由系统自动同步完成。</p>
 <p>##iCloud文档储存实例</p>
 <p>开启Capabilities&gt;iCloud&gt;iCloud Documents<br>出现”&lt;工程名&gt;”. entilements 这个文件是授权文件,它保存了该工程的iCloud授权的详细配置信息<br>Containers选择 User default container 使用默认的容器名 : <code>&quot;iCloud.&lt;应用BundleID&gt;&quot;</code><br>自定义文档类</p>
 <figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">MyCloudDocument</span>: <span class="title class_ inherited__">UIDocument</span> &#123;</span><br><span class="line">    <span class="comment">//保存文档数据 ,这个文档是本文文件,所以是NSString类型</span></span><br><span class="line">    <span class="keyword">var</span> contents : <span class="type">NSString</span>!</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//加载数据</span></span><br><span class="line">    <span class="keyword">override</span> <span class="keyword">func</span> <span class="title function_">loadFromContents</span>(<span class="params">contents</span>: <span class="type">AnyObject</span>, <span class="params">ofType</span> <span class="params">typeName</span>: <span class="type">String</span>?) <span class="keyword">throws</span> &#123;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">let</span> qContents <span class="operator">=</span> contents <span class="keyword">as!</span> <span class="type">NSData</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> qContents.length <span class="operator">&gt;</span> <span class="number">0</span> &#123;</span><br><span class="line">            <span class="keyword">self</span>.contents <span class="operator">=</span> <span class="type">NSString</span>(data: qContents, encoding: <span class="type">NSUTF8StringEncoding</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//保存数据</span></span><br><span class="line">    <span class="keyword">override</span> <span class="keyword">func</span> <span class="title function_">contentsForType</span>(<span class="params">typeName</span>: <span class="type">String</span>) <span class="keyword">throws</span> -&gt; <span class="type">AnyObject</span> &#123;</span><br><span class="line">        <span class="keyword">let</span> outError: <span class="type">NSError</span>! <span class="operator">=</span> <span class="type">NSError</span>(domain: <span class="string">&quot;Migrator&quot;</span>, code: <span class="number">0</span>, userInfo: <span class="literal">nil</span>)</span><br><span class="line">        <span class="keyword">let</span> resContents <span class="operator">=</span> <span class="keyword">self</span>.contents.dataUsingEncoding(<span class="type">NSUTF8StringEncoding</span>)</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">let</span> value <span class="operator">=</span> resContents &#123;</span><br><span class="line">            <span class="keyword">return</span> value</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">throw</span> outError</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
@@ -372,18 +372,18 @@
 <li>数据库：iCloud容器中存储数据的区域，被分为两个数据库—公有数据库和私有数据库，公有数据库是所有用户都能访问的数据,而私有数据库只能允许用户自己访问。在CloudKit数据库类是CKDatabase类。</li>
 <li>记录类型（Record Type):相当于关系数据库中的表。 </li>
 <li>记录(Record) :相当于数据表中记录。在CloudKit数据库类是CKRecord类。 </li>
-<li>数据类型：记录（Record)中的字段是有数据类型的，他们分为database和asset两<br>种。database数据是一般的字符、数字、日期时间和地理经纬度坐标等类型；asset类型是用来存储图片、声音、视频等二进制数据。 </li>
+<li>数据类型：记录（Record)中的字段是有数据类型的，他们分为database和asset两<br>种。database数据是一般的字符、数字、日期时间和地理经纬度坐标等类型；asset类型是用来存储图片、声音、视频等二进制数据。</li>
 </ul>
 <p>iCloud Dashboard </p>
 <p>为了管理iCloud服务器，苹果提供了iCloud Dashboard的Web管理工具,可以通过网站<a target="_blank" rel="noopener" href="https://icloud.developer.apple.com/dashboard/">https://icloud.developer.apple.com/dashboard/</a>访问 或者在Xcodezhong 的CloudKit Dashboard按钮访问.</p>
-<p><img src=""></p>
+<p><img src="/"></p>
 <p>iCloud Dashboard左边导航菜单中有一些概念:</p>
 <ul>
 <li>Schema(模式):数据库对象的集合,iCloud中包含Record Type(记录类型),Security Role(安全角色）和Subscription Types(订阅类型).Record Type 可以管理记录类型,就是数据表; Security Roles定义角色，提供安全访问管理；Subscription Types可以订阅数据变化的通知。 </li>
 <li>Public Data: 公共数据库，其中包含User Records(用户记录),Default Zone(默认控件)和 Usage(用量)。User Records查看Users表中的数据，Users表的数据是由iCloud管理和维护的，开发人<br>员不能删除他们；Default Zone查看公共数据库表中数据。Usage提供了数据访问的统计报告。 </li>
 <li>Private Data:私有数据库，其中Default Zone查看私有数据库表中数据。需要注意的是，如果当前账户下没有任何数据，这个导航菜单是看不到的。 </li>
 <li>Admin:管理员功能，Team当需要多人协同开发一个项目时候，为他们提供一个统 一的访问权限。Deployment可以查看Schema修改日志；可以重新初始化开发环境;发布数据库。 </li>
-<li>Environment:切换Development(开发环境）和Production(产品环境）。 </li>
+<li>Environment:切换Development(开发环境）和Production(产品环境）。</li>
 </ul>
 <p>##CloudKit 实现实例</p>
 <p>Capabilities &gt; 开启iCloud &gt; CloudKit &gt; User default container </p>

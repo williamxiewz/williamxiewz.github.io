@@ -324,7 +324,7 @@
 <p>可以同步或异步使用CFFTP流。为了打开与FTP服务器的连接，调用CFReadStreamOpen函数，该服务器在FTP读取流创建的时候就已指定。为了读取流，使用CFReadStreamRead 函数并提供读取流引用CFReadStreamRef，当创建FTP读取流时该引用会返回。CFReadStreamRead 函数用FTP服务器输出填充缓存区。</p>
 <p>关于使用CFFTP的更多信息，参阅<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/Networking/Conceptual/CFNetwork/CFFTPTasks/CFFTPTasks.html#//apple_ref/doc/uid/TP30001132-CH9-SW1">Working with FTP Servers</a></p>
 <p>###CFHTTP API<br>发送和接收HTTP消息可使用CFHTTP API。正如CFFTP是FTP协议的抽象，CFHTTP是HTTP协议的抽象。</p>
-<p>超文本传输协议（HTTP）是一种客户端和服务器端的请求/响应协议。客户端创建一个请求消息。这个消息被序列化，序列化其实就是将消息转换成原始字节流。消息不能传递除非先被序列化。然后将请求消息发送到服务器。请求通常是请求一个文件，例如网页。服务器响应并后发送回一个字符串然后是消息。这个过程可以重复多次。</p>
+<p>超文本传输协议（HTTP）是一种客户端和服务器端的请求&#x2F;响应协议。客户端创建一个请求消息。这个消息被序列化，序列化其实就是将消息转换成原始字节流。消息不能传递除非先被序列化。然后将请求消息发送到服务器。请求通常是请求一个文件，例如网页。服务器响应并后发送回一个字符串然后是消息。这个过程可以重复多次。</p>
 <p>要创建一个HTTP请求消息，你指定以下内容：</p>
 <ul>
 <li><p>请求方法，可以是超文本传输协议定义的请求方法，例如 OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, 和CONNECT</p>

@@ -321,7 +321,7 @@
 <p>团队开发证书的管理<br>在团队开发的时候，最好是一个人去管理证书，当有其他人要用的时候，可直接导出.p12证书供其他开发者使用。证书出了问题，我感觉还是相当麻烦的，而App ID在添加之后，基本上是不会改变的，除非要为App添加新的服务，这时候才要重新编辑App ID，所以App ID最好也是管理证书的人去管理App ID。添加设备这一块就很随意了，所有的开发者都应该有权去管理添加设备这一块。描述文件的制作这个要区分一下是开发类型的描述文件，还是发布类型的描述文件。开发类型的描述文件应该是团队里的每一个开发者都有权去管理的，实际上当开发类型的描述文件出现问题的时候，开发者可以对此描述文件重新编辑一下进行使用，这样是不会影响其他开发者的，甚至你可以自己重新制作一个描述文件也没什么问题。但是发布类型的描述文件，这个最好还是管理证书的那个人去管理这个描述文件。打包发布的时候如果这个描述文件出现变化，还是很麻烦的，而且这个描述文件对于团队其他开发者来说也不是很常用，甚至是根本用不到这个描述文件。</p>
 <p>导出.p12<br>.p12又称为个人信息交换证书。此证书实际包含了.cer证书及对应的私钥信息。上述证书中提到.cer文件中包含公钥，私钥在本地钥匙串中。而.p12包含了公钥私钥，所以可以分发给团队其他成员使用。.cer文件没有包含私钥，所以别人的电脑上用此证书时找不到对应私钥，从而使用不了。在导出p12的时候是点击证书导出的，如（图5-1）所示：有下标箭头的就是有对应的私钥。</p>
 <p><img src="https://github.com/williamxiewz/williamxie-github-io/raw/master/appledeveloperdistributionguidep12.png" alt=".p12证书的导出"></p>
-<p>参考:<br>    <a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html">App Distribution Guide</a></p>
+<p>参考:<br>	<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html">App Distribution Guide</a></p>
 
   </article>
   <!-- tag -->

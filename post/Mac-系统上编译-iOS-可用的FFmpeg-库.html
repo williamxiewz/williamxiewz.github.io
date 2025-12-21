@@ -289,7 +289,7 @@
 <p>1）我们将其解压后，发现内部只有简单的 4 个文件，如下图：</p>
 <p><img src="https://github.com/williamxiewz/williamxie-github-io/raw/master/appledevelopffmpeg1.png"></p>
 <p>不难发现其中的 <code>gas-preprocessor.pl</code>，没错，这就是我们要找的刀了，恭喜，你获取了小木剑一把，继续往坑里走少年。</p>
-<p>2）继续将 <code>gas-preprocessor.pl</code> 文件复制到 /usr/sbin/ 目录下（ps：应该会有很多小伙伴发现这个目录是根本没法修改的，那么这种情况下，小伙伴们可以将文件复制到 /usr/local/bin/ 目录下），然后为文件开启可执行权限，打开终端并输入以下命令行：</p>
+<p>2）继续将 <code>gas-preprocessor.pl</code> 文件复制到 &#x2F;usr&#x2F;sbin&#x2F; 目录下（ps：应该会有很多小伙伴发现这个目录是根本没法修改的，那么这种情况下，小伙伴们可以将文件复制到 &#x2F;usr&#x2F;local&#x2F;bin&#x2F; 目录下），然后为文件开启可执行权限，打开终端并输入以下命令行：</p>
 <pre><code>chmod 777 /usr/sbin/gas-preprocessor.pl
 </code></pre>
 <p>或</p>
@@ -345,7 +345,7 @@
 <p>3）编译一下，你会发下有错误，哈哈，原因是你没有链接编译文件<br>好，我们进入 Build Setting ，修改 header search Path 链接到工程的 include 文件当中 操作如下：</p>
 <p><img src="https://github.com/williamxiewz/williamxie-github-io/raw/master/appledevelopffmpeg6.png"></p>
 <p>OK，我们可以在工程当中引入 #import “avformat.h” 文件了，编译 Success</p>
-<p>好了，至此，我们已经成功编译并集成了 ffmpeg 了，但是怎么使用呢？怎么压缩视频，视频压缩视频？<br>怎么实现 h264 编码？怎么将视频/音频推送到流媒体服务器呢？这些都是我们将要说的。</p>
+<p>好了，至此，我们已经成功编译并集成了 ffmpeg 了，但是怎么使用呢？怎么压缩视频，视频压缩视频？<br>怎么实现 h264 编码？怎么将视频&#x2F;音频推送到流媒体服务器呢？这些都是我们将要说的。</p>
 
   </article>
   <!-- tag -->

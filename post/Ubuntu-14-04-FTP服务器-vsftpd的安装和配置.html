@@ -270,7 +270,7 @@
           <span class="text-gray-400">·</span>
           <span class="flex items-center gap-1">
             <iconify-icon width="18" icon="icon-park-outline:font-search" ></iconify-icon>
-            <span>133 words</span>
+            <span>161 words</span>
           </span>
           
             <span class="text-gray-400">·</span>
@@ -288,11 +288,11 @@
     <p>更新源列表<br>sudo apt-get update</p>
 <p>安装vsftpd<br>sudo apt-get install vsftpd<br>判断vsftpd是否安装成功<br>sudo service vsftpd restart</p>
 <span id="more"></span>
-<p>新建”/home/vsftp”目录作为用户主目录<br>sudo mkdir /home/vsftp<br>sudo ls /home<br>新建用户user并设置密码<br>sudo useradd -d /home/user -s /bin/bash user</p>
-<p>sudo passwd uftp<br>修改配置文件/etc/vsftpd.conf<br>sudo vim /etc/vsftpd.conf</p>
-<p>添加<br>userlist_deny=NO<br>userlist_enable=YES userlist_file=/etc/allowed_users<br>修改<br>seccomp_sandbox=NO -&gt; seccomp_sandbox=YES</p>
-<p>新建/etc/allowed_users,输入user<br>sudo vim /etc/allowed_users</p>
-<p>查看/etc/ftpusers,这个文件中记录的是不能访问FTP服务器的用户清单。<br>sudo vim /etc/ftpusers</p>
+<p>新建”&#x2F;home&#x2F;vsftp”目录作为用户主目录<br>sudo mkdir &#x2F;home&#x2F;vsftp<br>sudo ls &#x2F;home<br>新建用户user并设置密码<br>sudo useradd -d &#x2F;home&#x2F;user -s &#x2F;bin&#x2F;bash user</p>
+<p>sudo passwd uftp<br>修改配置文件&#x2F;etc&#x2F;vsftpd.conf<br>sudo vim &#x2F;etc&#x2F;vsftpd.conf</p>
+<p>添加<br>userlist_deny&#x3D;NO<br>userlist_enable&#x3D;YES userlist_file&#x3D;&#x2F;etc&#x2F;allowed_users<br>修改<br>seccomp_sandbox&#x3D;NO -&gt; seccomp_sandbox&#x3D;YES</p>
+<p>新建&#x2F;etc&#x2F;allowed_users,输入user<br>sudo vim &#x2F;etc&#x2F;allowed_users</p>
+<p>查看&#x2F;etc&#x2F;ftpusers,这个文件中记录的是不能访问FTP服务器的用户清单。<br>sudo vim &#x2F;etc&#x2F;ftpusers</p>
 
   </article>
   <!-- tag -->

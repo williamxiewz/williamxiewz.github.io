@@ -360,7 +360,7 @@
 <p>当你创建一个读取流，你可能想要启用自动重定向。</p>
 <p>##取消一个待定请求<br>一旦请求已经发送，不能阻止远程服务器处理它。然而，你不再关心响应数据，你可以关闭流。</p>
 <blockquote>
-<p>重要：如果另一个线程正在等待某个线程的流的内容，则不要关闭该流。如果你需要终止请求时，你应该使用非阻塞 I/O，在使用流时防止阻塞（<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/Networking/Conceptual/CFNetwork/CFStreamTasks/CFStreamTasks.html#//apple_ref/doc/uid/TP30000230-61973">Preventing Blocking When Working with Streams</a>）中有描述。确保在关闭流之前从你的运行循环上移除流。</p>
+<p>重要：如果另一个线程正在等待某个线程的流的内容，则不要关闭该流。如果你需要终止请求时，你应该使用非阻塞 I&#x2F;O，在使用流时防止阻塞（<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/Networking/Conceptual/CFNetwork/CFStreamTasks/CFStreamTasks.html#//apple_ref/doc/uid/TP30000230-61973">Preventing Blocking When Working with Streams</a>）中有描述。确保在关闭流之前从你的运行循环上移除流。</p>
 </blockquote>
 <p>官方原文地址：<br><a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/Networking/Conceptual/CFNetwork/CFHTTPTasks/CFHTTPTasks.html#//apple_ref/doc/uid/TP30001132-CH5-SW2">CFNetwork Programming Guide</a></p>
 

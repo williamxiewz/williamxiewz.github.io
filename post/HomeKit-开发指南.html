@@ -300,7 +300,8 @@
 <p>#第二部分：启用HomeKit</p>
 <p>HomeKit应用服务只提供给通过App Store发布的app应用程序。在你的Xcode工程中， HomeKit应用程序需要额外的配置，你的app必须有开发证书和代码签名才能使用HomeKit。在Xcode的Capabilities面板使用HomeKit，可避免代码签名的问题。你无需直接在Xcode或者会员中心编辑授权文件（entitlements）。</p>
 <p>##设置</p>
-<p>为了完成本文档中所有步骤，你需要：</p>
+<p>为了完成本文档中所有步骤，你需要：
+	</p>
 <blockquote>
 <p>1.一个安装Xcode 6 或者Xcode 6 以上版本的Mac电脑。<br> 2.为了获得最佳体验，你的Mac电脑上最好安装最新的OS X 系统和最新的Xcode 版本。<br> 3.加iOS开发者计划。<br> 4.在Member Center 拥有创建代码签名和资源配置的权限。</p>
 </blockquote>
@@ -313,13 +314,13 @@
 <p>想要使用HomeKit，首先要启用它。Xcode将会添加HomeKit权限到你的工程授权文件中和会员中心的App ID授权文件中，也会将HomeKit框架添加到你的工程中。HomeKit 需要一个明确的App ID, 这个App ID是为了你完成这些步奏而创建的。</p>
 <p>启用HomeKit的步骤如下：</p>
 <blockquote>
-<p>1.在Xcode中，选择View &gt; Navigators &gt; Show Project Navigator。<br> 2.从Project/Targets弹出菜单中target（或者从Project/Targets的侧边栏）<br> 3.点击Capabilities查看你可以添加的应用服务列表。<br> 4.滑到HomeKit 所在的行并打开关。</p>
+<p>1.在Xcode中，选择View &gt; Navigators &gt; Show Project Navigator。<br> 2.从Project&#x2F;Targets弹出菜单中target（或者从Project&#x2F;Targets的侧边栏）<br> 3.点击Capabilities查看你可以添加的应用服务列表。<br> 4.滑到HomeKit 所在的行并打开关。</p>
 </blockquote>
 <p>##下载HomeKit Accessory Simulator</p>
 <p>无需为了开发Homekit 应用程序而购买硬件产品。你可以使HomeKit Accessory Simulator来测试HomeKit app和模拟配件设备之间的通信。HomeKit Accessory Simulator不是和Xcode一起发布的。 </p>
 <p>下载HomeKit Accessory Simulator步骤如下：</p>
 <blockquote>
-<p>1.在Capabilities面板的HomeKit分区，点击Download HomeKit Accessory Simulator按钮。（或者选择Xcode &gt; Open Developer Tool &gt; More Developer Tools）<br> 2.在浏览器中搜索并且下载”Hardware IO Tools for Xcode “.dmg文件。<br> 3.在 Finder中双击~/Downloads中的.dmg文件。<br> 4.把HomeKit Accessory Simulator拖拽到/Application文件中。</p>
+<p>1.在Capabilities面板的HomeKit分区，点击Download HomeKit Accessory Simulator按钮。（或者选择Xcode &gt; Open Developer Tool &gt; More Developer Tools）<br> 2.在浏览器中搜索并且下载”Hardware IO Tools for Xcode “.dmg文件。<br> 3.在 Finder中双击~&#x2F;Downloads中的.dmg文件。<br> 4.把HomeKit Accessory Simulator拖拽到&#x2F;Application文件中。</p>
 </blockquote>
 <p>之后，你将可以使用HomeKit Accessory Simulator测试你的HomeKit应用程序，正如<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/HomeKitDeveloperGuide/TestingYourHomeKitApp/TestingYourHomeKitApp.html#//apple_ref/doc/uid/TP40015050-CH7-SW1">Testing YourHomeKit App</a>中描述的那样。</p>
 <p>#第三部分：创建Home布局</p>
@@ -340,22 +341,22 @@ self.homeManager.delegate = self;
 </code></pre>
 <p>使用home manager的<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/HomeKit/Reference/HMHomeManager_Class/index.html#//apple_ref/occ/instp/HMHomeManager/homes">homes</a>属性可以得到用户的所有home的集合；例如自家主要居所、度假别墅以及办公室。每个home都对应一个独立的home对象。</p>
 <pre><code>HMHome *home;
- for(home in self.homeManager.homes ){
+	for(home in self.homeManager.homes ){
  ...
 }
 </code></pre>
 <p>##获取 Home中的所有room<br>在一个home中，rooms属性定义accessories的物理位置。用home的<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/HomeKit/Reference/HMHome_Class/index.html#//apple_ref/occ/instp/HMHome/rooms">rooms</a>属性可以枚举home中的所room。</p>
 <pre><code>HMHome *home = self.homeManager.primaryHome;
- HMRome *room;
- for(room in home.rooms){
-     ...
- }
+	HMRome *room;
+	for(room in home.rooms){
+		...
+	}
 </code></pre>
 <p>##获取Room 中的Accessories<br>Accessories 数组属于home，但是被指定给了home中的room。假如用户没有给一个accessory指定room，那么这个accessories被指定一个默认的room ,这个room是<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/HomeKit/Reference/HMHome_Class/index.html#//apple_ref/occ/instm/HMHome/roomForEntireHome">roomForEntireHome</a>方法的返回值。用room的<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/HomeKit/Reference/HMRoom_Class/index.html#//apple_ref/occ/instp/HMRoom/accessories">accessories</a>属性可以枚举room中所有的accessory。代码如下：</p>
 <pre><code>HMAccessory *accessory;
- for(accessory in room.accessories){
- …
- }
+	for(accessory in room.accessories){
+	…
+	}
 </code></pre>
 <p>如果你要展示一个个accessory的相关信息或者允许用户控制它，可设置accessory的代理方法并实现这个代理方法，详情请见“<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/HomeKitDeveloperGuide/RespondingtoHomeKitDatabaseChanges/RespondingtoHomeKitDatabaseChanges.html#//apple_ref/doc/uid/TP40015050-CH5-SW1">Observing Changes to Accessories</a>”.<br>一旦你获取到一个accessory对象，你就可以访问它的服务和对象，详情请参阅“<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/HomeKitDeveloperGuide/AccessingServicesandTheirCharacteristics/AccessingServicesandTheirCharacteristics.html#//apple_ref/doc/uid/TP40015050-CH6-SW1">Accessing Services and Characteristics</a>”。</p>
 <p>##获取Home中的Accessories属性<br>使用<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/HomeKit/Reference/HMHome_Class/index.html#//apple_ref/occ/cl/HMHome">HMHome</a>类中的<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/HomeKit/Reference/HMHome_Class/index.html#//apple_ref/occ/instp/HMHome/accessories">accessories</a>的方法，可以直接从Home对象中获取所有的accessory对象，而不用枚举home中的所有room对象（详情请见“<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/HomeKitDeveloperGuide/FindingandAddingAccessories/FindingandAddingAccessories.html#//apple_ref/doc/uid/TP40015050-CH3-SW5">Getting the Accessories in a Room</a>”)。</p>
@@ -371,11 +372,11 @@ self.homeManager.delegate = self;
 <p>##创建Homes</p>
 <p>在<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/HomeKit/Reference/HMHomeManager_Class/index.html#//apple_ref/occ/cl/HMHomeManager">HMHomeManager</a>类中使用<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/HomeKit/Reference/HMHomeManager_Class/index.html#//apple_ref/occ/instm/HMHomeManager/addHomeWithName:completionHandler:">addHomeWithName:completionHandler:</a>异步方法可以添加一个home。作为参数传到那个方法中的home的名字，必须是唯一独特的，并且是Siri可以识别的home名字。</p>
 <pre><code>[self.homeManager addHomeWithName:@&quot;My Home&quot; completionHandler:^(HMHome *home, NSError *error) {
-    if (error != nil) {
-        // Failed to add a home
-    } else {
-        // Successfully added a home
-    } 
+	if (error != nil) {
+		// Failed to add a home
+	} else {
+		// Successfully added a home
+	} 
 }];
 </code></pre>
 <p>在else语句中，写入代码以更新你应的程序的视图。为了获取home manager对象，请参阅<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/HomeKitDeveloperGuide/FindingandAddingAccessories/FindingandAddingAccessories.html#//apple_ref/doc/uid/TP40015050-CH3-SW2">Getting the Home Manager Object</a>.</p>
@@ -383,11 +384,11 @@ self.homeManager.delegate = self;
 <p>使用<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/HomeKit/Reference/HMHome_Class/index.html#//apple_ref/occ/instm/HMHome/addRoomWithName:completionHandler:">addRoomWithName:completionHandler:</a>异步方法可以在一个home中添加一个room对象。作为参数传到那个方法中的room的名字，必须是唯一独特的，并且是Siri可识别的room名字。</p>
 <pre><code>NSString *roomName = @&quot;Living Room&quot;;
 [home addRoomWithName:roomName completionHandler:^(HMRoom *room, NSError *error) {
-    if (error != nil) {
-        // Failed to add a room to a home
-    } else {
-        // Successfully added a room to a home
-    } 
+	if (error != nil) {
+		// Failed to add a room to a home
+	} else {
+		// Successfully added a room to a home
+	} 
 }];
 </code></pre>
 <p>在else语句中，写入代码更新应用程序的视图。</p>
@@ -408,8 +409,8 @@ self.accessoryBrowser.delegate = self;
 </code></pre>
 <p>4.将找到的配件添加到你的收藏里</p>
 <pre><code>- (void)accessoryBrowser:(HMAccessoryBrowser *)browser didFindNewAccessory:(HMAccessory *)accessory {
-    // Update the UI per the new accessory; for example,reload a picker view.
-    [self.accessoryPicker reloadAllComponents];
+	// Update the UI per the new accessory; for example,reload a picker view.
+	[self.accessoryPicker reloadAllComponents];
 }
 </code></pre>
 <p>用你自己的代码实现上面的<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/HomeKit/Reference/HMAccessoryBrowserDelegate_Protocol/index.html#//apple_ref/occ/intfm/HMAccessoryBrowserDelegate/accessoryBrowser:didFindNewAccessory:">accessoryBrowser:didFindNewAccessory:</a>方法。 当然也可以实现<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/HomeKit/Reference/HMAccessoryBrowserDelegate_Protocol/index.html#//apple_ref/occ/intfm/HMAccessoryBrowserDelegate/accessoryBrowser:didRemoveNewAccessory:">accessoryBrowser:didRemoveNewAccessory:</a> 这个方法来移除配件，这个配件对你的视图或者收藏来说不再是新的。</p>
@@ -417,7 +418,7 @@ self.accessoryBrowser.delegate = self;
 <p>如果一个视图控制器正在开始搜寻配件，那么可以通过重写<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIViewController_Class/index.html#//apple_ref/occ/instm/UIViewController/viewWillDisappear:">viewWillDisappear:</a>方法来停止搜寻配件。代码如下：</p>
 <pre><code>- (void)viewWillDisappear:(BOOL)animated {
 
-    [self.accessoryBrowser stopSearchingForNewAccessories];
+	[self.accessoryBrowser stopSearchingForNewAccessories];
 }
 </code></pre>
 <blockquote>
@@ -433,28 +434,28 @@ __block HMRoom *room = roomInHome;
 
 // 2. Add the accessory to the home
 [ home addAccessory:accessory completionHandler:^(NSError *error) {
-    if (error) {
-        // Failed to add accessory to home
-    } else {
-        if (accessory.room != room) {
-            // 3. If successfully, add the accessory to the room
+	if (error) {
+		// Failed to add accessory to home
+	} else {
+		if (accessory.room != room) {
+			// 3. If successfully, add the accessory to the room
 
-            [home assignAccessory:accessory toRoom:room completionHandler:^(NSError *error) {
-                if (error) {
-                        // Failed to add accessory to room
-                } }];
-        } }
+			[home assignAccessory:accessory toRoom:room completionHandler:^(NSError *error) {
+				if (error) {
+						// Failed to add accessory to room
+				} }];
+		} }
 }];
 </code></pre>
 <p>配件可提供一项或者多项服务，这些服务的特性是由制造商定义。想了解配件的服务和特性目的，请参阅 <a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/HomeKitDeveloperGuide/AccessingServicesandTheirCharacteristics/AccessingServicesandTheirCharacteristics.html#//apple_ref/doc/uid/TP40015050-CH6-SW1">Accessing Services and Characteristics</a>.</p>
 <p>##更改配件名称</p>
 <p>使用<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/HomeKit/Reference/HMAccessory_Class/index.html#//apple_ref/occ/instm/HMAccessory/updateName:completionHandler:">updateName:completionHandler:</a> 异步方法可以改变配件的名称，代码如下：</p>
 <pre><code>[accessory updateName:@&quot;Kid&#39;s Night Light&quot; completionHandler:^(NSError *error) {
-    if (error) {
-        // Failed to change the name
-    } else {
-        // Successfully changed the name
-    }
+	if (error) {
+		// Failed to change the name
+	} else {
+		// Successfully changed the name
+	}
 }];
 </code></pre>
 <p>##为Homes和Room添加Bridge（桥接口）</p>
@@ -466,21 +467,21 @@ __block HMRoom *room = roomInHome;
 <pre><code>__block HMHome *home = self.home;
 NSString *zoneName = @&quot;Upstairs&quot;;
 [home addZoneWithName:zoneName completionHandler:^(HMZone *zone, NSError *error){
-    if (error) {
-        // Failed to create zone
-    } else {
-        // Successfully created zone, now add the rooms
-    }
+	if (error) {
+		// Failed to create zone
+	} else {
+		// Successfully created zone, now add the rooms
+	}
 }];
 </code></pre>
 <p>可使用<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/HomeKit/Reference/HMZone_Class/index.html#//apple_ref/occ/instm/HMZone/addRoom:completionHandler:">addRoom:completionHandler:</a>异步方法给分区添加一个room，代码如下：</p>
 <pre><code>__block HMRoom *room = roomInHome;
 [zone addRoom:room completionHandler:^(NSError *error) {
-    if (error) {
-        // Failed to add room to zone
-    } else {
-        // Successfully added room to zone
-    } 
+	if (error) {
+		// Failed to add room to zone
+	} else {
+		// Successfully added room to zone
+	} 
 }];
 </code></pre>
 <p>#第五部分：观察HomeKit数据库的变化</p>
@@ -502,21 +503,21 @@ NSString *zoneName = @&quot;Upstairs&quot;;
 </code></pre>
 <p>2.创建home manager对象并设置其代理</p>
 <pre><code>- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions{
-    self.homeManager = [[HMHomeManager alloc] init];
-    self.homeManager.delegate = self;
-    return YES;
+	self.homeManager = [[HMHomeManager alloc] init];
+	self.homeManager.delegate = self;
+	return YES;
 }
 </code></pre>
 <p>3.实现homes发生改变时调用的代理方法。例如：如果多个视图控制器展示了homes相关信息，你可以发布一个更改通知去更新所有视图。</p>
 <pre><code>- (void)homeManagerDidUpdateHomes:(HMHomeManager *)manager {
-    // Send a notification to the other objects
-    [[NSNotificationCenter defaultCenter]
-    postNotificationName:@&quot;UpdateHomesNotification&quot; object:self];
+	// Send a notification to the other objects
+	[[NSNotificationCenter defaultCenter]
+	postNotificationName:@&quot;UpdateHomesNotification&quot; object:self];
 }
 - (void)homeManagerDidUpdatePrimaryHome:(HMHomeManager *)manager {
-    // Send a notification to the other objects
-    [[NSNotificationCenter defaultCenter]
-    postNotificationName:@&quot;UpdatePrimaryHomeNotification&quot; object:self];
+	// Send a notification to the other objects
+	[[NSNotificationCenter defaultCenter]
+	postNotificationName:@&quot;UpdatePrimaryHomeNotification&quot; object:self];
 }
 </code></pre>
 <p>视图控制器注册更改通知并且执行适当的操作。</p>
@@ -555,11 +556,11 @@ NSString *zoneName = @&quot;Upstairs&quot;;
 <p>3.实现 <a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/HomeKit/Reference/HMAccessoryDelegate_Protocol/index.html#//apple_ref/occ/intf/HMAccessoryDelegate">HMAccessoryDelegate</a> 协议</p>
 <p>比如，执行<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/HomeKit/Reference/HMAccessoryDelegate_Protocol/index.html#//apple_ref/occ/intfm/HMAccessoryDelegate/accessoryDidUpdateReachability:">accessoryDidUpdateReachability:</a>方法以启用或者禁用配件控制。</p>
 <pre><code>- (void)accessoryDidUpdateReachability:(HMAccessory *)accessory {
-    if (accessory.reachable == YES) {
-           // Can communicate with the accessory
-    } else {
-           // The accessory is out of range, turned off, etc
-    }
+	if (accessory.reachable == YES) {
+   		// Can communicate with the accessory
+	} else {
+   		// The accessory is out of range, turned off, etc
+	}
 }
 </code></pre>
 <p>如果你展示了配件的服务状态和特性，那么请执行以下代理方法来相应地更新其视图：</p>
@@ -567,7 +568,7 @@ NSString *zoneName = @&quot;Upstairs&quot;;
 <p><a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/HomeKit/Reference/HMAccessoryDelegate_Protocol/index.html#//apple_ref/occ/intfm/HMAccessoryDelegate/accessory:service:didUpdateValueForCharacteristic:">accessory:service:didUpdateValueForCharacteristic:</a></p>
 <p>想了解配件的服务，请参阅<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/HomeKitDeveloperGuide/AccessingServicesandTheirCharacteristics/AccessingServicesandTheirCharacteristics.html#//apple_ref/doc/uid/TP40015050-CH6-SW1">Accessing Services and Their Characteristics</a>.</p>
 <p>#第六部分：访问服务和特性</p>
-<p>服务(<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/HomeKit/Reference/HMService_Class/index.html#//apple_ref/occ/cl/HMService">HMService</a>)代表了一个配件(accessory)的某个功能和一些具有可读写的特性(<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/HomeKit/Reference/HMCharacteristic_Class/index.html#//apple_ref/occ/cl/HMCharacteristic">HMCharacteristic</a>)。一个配件可以拥有多项服务,一个服务也可以有很多特性。比如一个车库开门器可能拥有一个照明和开关的服务。照明服务可能拥有打开/关闭和调节亮度的特性。用户不能制造智能家电配件和它们的服务-配件制造商会制造配件和它们的服务-但是用户可以改变服务的特性。一些拥有可读写属性的特性代表着某种物理状态，比如，一个恒温器中的当前温度就是一个只可读的值，但是目标温度又是可读写的。苹果预先定义了一些服务和特性的名称，以便让Siri能够识别它们。</p>
+<p>服务(<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/HomeKit/Reference/HMService_Class/index.html#//apple_ref/occ/cl/HMService">HMService</a>)代表了一个配件(accessory)的某个功能和一些具有可读写的特性(<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/HomeKit/Reference/HMCharacteristic_Class/index.html#//apple_ref/occ/cl/HMCharacteristic">HMCharacteristic</a>)。一个配件可以拥有多项服务,一个服务也可以有很多特性。比如一个车库开门器可能拥有一个照明和开关的服务。照明服务可能拥有打开&#x2F;关闭和调节亮度的特性。用户不能制造智能家电配件和它们的服务-配件制造商会制造配件和它们的服务-但是用户可以改变服务的特性。一些拥有可读写属性的特性代表着某种物理状态，比如，一个恒温器中的当前温度就是一个只可读的值，但是目标温度又是可读写的。苹果预先定义了一些服务和特性的名称，以便让Siri能够识别它们。</p>
 <p>##获得配件的服务和属性</p>
 <p>在依照<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/HomeKitDeveloperGuide/FindingandAddingAccessories/FindingandAddingAccessories.html#//apple_ref/doc/uid/TP40015050-CH3-SW5">Getting the Accessroties in a Room</a>中描述，你创建了一个配件对象之后,你可以获得配件的服务和特性。当然你也可以直接从home中按照类型获得不同的服务。</p>
 <blockquote>
@@ -597,11 +598,11 @@ NSArray *thermostatServices = [home servicesWithTypes:[HMServicesTypeThermostat]
 <p>##改变服务名称</p>
 <p>使用<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/HomeKit/Reference/HMService_Class/index.html#//apple_ref/occ/instm/HMService/updateName:completionHandler:">updateName:completionHandler:</a>异步方法来改变服务名称。传入此方法的服务名称参数必须在一个home当中是唯一的，并且服务名可被Siri识别。</p>
 <pre><code>[service updateName:@&quot;Garage 1 Opener&quot; completionHandler:^(NSError *error) {
-    if (error) {
-        // Failed to change the name
-    } else {
-        // Successfully changed the name
-    }
+	if (error) {
+    	// Failed to change the name
+	} else {
+    	// Successfully changed the name
+	}
 }];
 </code></pre>
 <p>##访问特性的值</p>
@@ -614,23 +615,23 @@ NSArray *thermostatServices = [home servicesWithTypes:[HMServicesTypeThermostat]
 <p>在你获得了一个<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/HomeKit/Reference/HMService_Class/index.html#//apple_ref/occ/cl/HMService">HMService</a>对象之后,如 <a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/HomeKitDeveloperGuide/AccessingServicesandTheirCharacteristics/AccessingServicesandTheirCharacteristics.html#//apple_ref/doc/uid/TP40015050-CH6-SW2">Getting Services and Their Properties</a>所描述的,你可以获得每个服务的特性的值。因为这些值是从配件中获得的，这些读写的方法都是异步的，并可以传入一个完成回调的block。</p>
 <p>使用<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/HomeKit/Reference/HMCharacteristic_Class/index.html#//apple_ref/occ/instm/HMCharacteristic/readValueWithCompletionHandler:">readValueWithCompletionHandler:</a>异步方法来读取一个特性的值。</p>
 <pre><code>[characteristic readValueWithCompletionHandler:^(NSError *error) {
-    if (error == nil) {
-           // Successfully read the value
-           id value = characteristic.value;
-    }
-    else {
-           // Unable to read the value
-    }
+	if (error == nil) {
+   		// Successfully read the value
+   		id value = characteristic.value;
+	}
+	else {
+   		// Unable to read the value
+	}
 }];
 </code></pre>
 <p>在if语句块中，加入你的代码以更新app的视图。</p>
 <p>使用<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/HomeKit/Reference/HMCharacteristic_Class/index.html#//apple_ref/occ/instm/HMCharacteristic/writeValue:completionHandler:">writeValue:completionHandler:</a>异步方法来向一个特性写入值。</p>
 <pre><code>[self.characteristic writeValue:@42 withCompletionHandler:^(NSError *error) {
-    if (error == nil) {
-           // Successfully wrote the value
-    }else {
-           // Unable to write the value
-    }
+	if (error == nil) {
+   		// Successfully wrote the value
+	}else {
+   		// Unable to write the value
+	}
 }];
 </code></pre>
 <p>不要以为函数调用完成就意味着写入成功，实际上只有在当完成回调执行并没有错误产生时才表示写入成功。比如，直到一个开关的特性改变之前都不要改变这个开关的状态。在if语句块中，加入你的代码，以更新app的视图。</p>
@@ -641,23 +642,23 @@ NSArray *thermostatServices = [home servicesWithTypes:[HMServicesTypeThermostat]
 <p>在你创建了一个<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/HomeKit/Reference/HMHome_Class/index.html#//apple_ref/occ/cl/HMHome">HMHome</a>对象之后,如<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/HomeKitDeveloperGuide/FindingandAddingAccessories/FindingandAddingAccessories.html#//apple_ref/doc/uid/TP40015050-CH3-SW3">Getting the Primary Home and Collection of Homes</a>中描述,你也就在这个家中创建一个服务组。</p>
 <p>为了创建一个服务组,我们使用<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/HomeKit/Reference/HMHome_Class/index.html#//apple_ref/occ/cl/HMHome">HMHome</a>类对象的<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/HomeKit/Reference/HMHome_Class/index.html#//apple_ref/occ/instm/HMHome/addServiceGroupWithName:completionHandler:">addServiceGroupWithName:completionHandler:</a>方法。方法中参数服务组的名称必须在此家中唯一，并可以被Siri识别。</p>
 <pre><code>[self.home addServiceGroupWithName:@&quot;Away Lights&quot; completionHandler:^(HMServiceGroup *serviceGroup, NSError *error) {
-    if (error == nil) {
-           // Successfully created the service group
-    } else {
-           // Unable to create the service group
-       }
+	if (error == nil) {
+   		// Successfully created the service group
+	} else {
+   		// Unable to create the service group
+   	}
 }];
 </code></pre>
 <p>我们使用<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/HomeKit/Reference/HMServiceGroup_Class/index.html#//apple_ref/occ/cl/HMServiceGroup">HMServiceGroup</a>类对象的<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/HomeKit/Reference/HMServiceGroup_Class/index.html#//apple_ref/occ/instm/HMServiceGroup/addService:completionHandler:">addService:completionHandler:</a>方法来向服务组中添加一个服务。服务可以在一个或多个服务组中。</p>
 <pre><code>[serviceGroup addService:service completionHandler:^(NSError *error) {
-    if (error == nil) {
-           // Successfully added service to service group
-    }
-       // Unable to add the service to the service group
+	if (error == nil) {
+   		// Successfully added service to service group
+	}
+   	// Unable to add the service to the service group
 }];
 </code></pre>
 <p>通过<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/HomeKit/Reference/HMHome_Class/index.html#//apple_ref/occ/cl/HMHome">HMHome</a>类对象的<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/HomeKit/Reference/HMHome_Class/index.html#//apple_ref/occ/instp/HMHome/serviceGroups">serviceGroups</a>属性，来获得这个家的所有服务组。</p>
-<p>NSArray *serviceGroups = self.home.serviceGroups;<br>通过<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/HomeKit/Reference/HMServiceGroup_Class/index.html#//apple_ref/occ/cl/HMServiceGroup">HMServiceGroup</a>类对象的<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/HomeKit/Reference/HMService_Class/index.html#//apple_ref/occ/instp/HMService/accessory">accessory</a>属性，我们获得服务所对应的智能电器。</p>
+<p>NSArray *serviceGroups &#x3D; self.home.serviceGroups;<br>通过<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/HomeKit/Reference/HMServiceGroup_Class/index.html#//apple_ref/occ/cl/HMServiceGroup">HMServiceGroup</a>类对象的<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/HomeKit/Reference/HMService_Class/index.html#//apple_ref/occ/instp/HMService/accessory">accessory</a>属性，我们获得服务所对应的智能电器。</p>
 <pre><code>HMAccessory *accessory = service.accessory;
 </code></pre>
 <p>和配件类似，代理方法在别的app改变服务组时也会被调用。如果你的app使用了服务组，请阅读<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/HomeKit/Reference/HMHomeDelegate_Protocol/index.html#//apple_ref/doc/uid/TP40014474">HMHomeDelegate Protocol Reference</a>文档，获悉你应该实现哪些方法以观察这些变化。</p>
@@ -697,14 +698,14 @@ NSArray *thermostatServices = [home servicesWithTypes:[HMServicesTypeThermostat]
 <p>在你通过HomeKit Accessory Simulator创建了一个智能电器后，运行你的App然后添加一个新的智能电器到你的家庭。</p>
 <p>如何配对家庭中的智能电器：</p>
 <ol>
-<li><p> 在Xcode中，点击Run并调用<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/HomeKit/Reference/HMHome_Class/index.html#//apple_ref/occ/instm/HMHome/addAccessory:completionHandler:">addAccessory:completionHandler:</a>方法(如<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/HomeKitDeveloperGuide/WritingtotheHomeKitDatabase/WritingtotheHomeKitDatabase.html#//apple_ref/doc/uid/TP40015050-CH4-SW5">Adding Accessories to Homes and Rooms</a>中描述的那样).</p>
+<li><p>在Xcode中，点击Run并调用<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/HomeKit/Reference/HMHome_Class/index.html#//apple_ref/occ/instm/HMHome/addAccessory:completionHandler:">addAccessory:completionHandler:</a>方法(如<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/HomeKitDeveloperGuide/WritingtotheHomeKitDatabase/WritingtotheHomeKitDatabase.html#//apple_ref/doc/uid/TP40015050-CH4-SW5">Adding Accessories to Homes and Rooms</a>中描述的那样).</p>
 </li>
-<li><p> 如果弹出了一个Add HomeKit Accessory对话框声明这个智能电器未被信任(这在HomeKit Accessory Simulator中是被允许的)，不用管它，点击Add Anyway。</p>
+<li><p>如果弹出了一个Add HomeKit Accessory对话框声明这个智能电器未被信任(这在HomeKit Accessory Simulator中是被允许的)，不用管它，点击Add Anyway。</p>
 </li>
 </ol>
 <p><img src="https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/HomeKitDeveloperGuide/Art/add_accessory_dialog1_2x.png"></p>
 <ol start="3">
-<li> 在接下来显示的Add HomeKit Accessory对话框中，输入智能电器的setup code然后点击Add。</li>
+<li>在接下来显示的Add HomeKit Accessory对话框中，输入智能电器的setup code然后点击Add。</li>
 </ol>
 <p>在HomeKit Accessory Simulator，setup code显示在详情界面智能电器名称下。</p>
 <p><img src="https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/HomeKitDeveloperGuide/Art/add_accessory_dialog2_2x.png"></p>
@@ -759,20 +760,20 @@ NSArray *thermostatServices = [home servicesWithTypes:[HMServicesTypeThermostat]
 <p>一个动作集就是一个共同执行的动作的集合。比如一个夜间动作集合可能包含关闭电灯，调低恒温水平和锁上房门。</p>
 <p>为了创建一个动作集我们使用<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/HomeKit/Reference/HMHome_Class/index.html#//apple_ref/occ/instm/HMHome/addActionSetWithName:completionHandler:">addActionSetWithName:completionHandler:</a>异步方法。</p>
 <pre><code>[self.home addActionSetWithName:@&quot;NightTime&quot; completionHandler:^(HMActionSet *actionSet, NSError *error) {
-    if (error == nil) {
-        // 成功添加了一个动作集
-    } else {
-        // 添加一个动作集失败
-    }
+	if (error == nil) {
+    	// 成功添加了一个动作集
+	} else {
+	    // 添加一个动作集失败
+	}
 }];
 </code></pre>
 <p>为了添加一个动作到动作集，我们使用<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/HomeKit/Reference/HMActionSet_Class/index.html#//apple_ref/occ/instm/HMActionSet/addAction:completionHandler:">addAction:completionHandler:</a>异步方法。</p>
 <pre><code>[actionSet addAction:action completionHandler:^(NSError *error) {
-    if (error == nil) {
-        // 成功添加了一个动作到动作集
-    } else {
-        // 添加一个动作到动作集失败
-    }
+	if (error == nil) {
+    	// 成功添加了一个动作到动作集
+	} else {
+		// 添加一个动作到动作集失败
+	}
 }];
 </code></pre>
 <p>想要移除一个动作，可使用<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/HomeKit/Reference/HMActionSet_Class/index.html#//apple_ref/occ/instm/HMActionSet/removeAction:completionHandler:">removeAction:completionHandler:</a>方法。</p>
@@ -813,12 +814,12 @@ recurrenceCalendar:nil];
 <p>##添加和移除用户</p>
 <p>为了添加一个客人用户到home，请使用<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/HomeKit/Reference/HMHome_Class/index.html#//apple_ref/occ/instm/HMHome/addUserWithCompletionHandler:">addUserWithCompletionHandler:</a>异步方法。</p>
 <pre><code>[self.home addUserWithCompletionHandler:^(HMUser *user, NSError *error) {
-    if (error == nil) {
-        // Successfully added a user
-    }
-    else {
-           // Unable to add a user
-    }
+	if (error == nil) {
+    	// Successfully added a user
+	}
+	else {
+ 	  	// Unable to add a user
+	}
 }];
 </code></pre>
 <p>想要移除home中的用户，请使用<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/HomeKit/Reference/HMHome_Class/index.html#//apple_ref/occ/cl/HMHome">HMHome</a>类的<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/HomeKit/Reference/HMHome_Class/index.html#//apple_ref/occ/instm/HMHome/removeUser:completionHandler:">removeUser:completionHandler:</a>方法。</p>

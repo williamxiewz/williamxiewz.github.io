@@ -364,7 +364,7 @@
 <p>然后重启XCode（抱歉，XCode不喜欢自己修改scheme），重复Bot创建过成。这一次，应该没有关于scheme的消息了，正如下面截图所示。</p>
 <p><img src="https://github.com/williamxiewz/williamxie-github-io/raw/master/appledevelopxcodeserverpart110.jpg"></p>
 <p>点击下一步，此处你的XCode将会检查是否有权访问你的（实际上，此处是我的）代码库。很有可能（如果你像我一样使用一个自签证书）会首先看到XCode抱怨<code>“The server SSH fingerprint failed to verify.”</code>这是XCode 7的新的特性，来防止<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Man-in-the-middle_attack">MITM</a>袭击。你需要点击“View”然后点击“Trust”。这意味着你声明：“没有问题，XCode。我了解并且相信这个XCode Server，不需要担心。”</p>
-<p>然后，如果你还没有在XCode的Preferences -&gt; Accounts中登录到你的代码库，XCode会要求你“登录”，它说<code>“请提供证书，以便于XCode Server可以从这个代码库中检出文件。”</code>点击“登录”，告诉XCode，是要创建新的SSH键还使用既存的。因为在 ~/.ssh/里面已经存在SSH键，所以我告诉XCode “使用既存的SSH键”。</p>
+<p>然后，如果你还没有在XCode的Preferences -&gt; Accounts中登录到你的代码库，XCode会要求你“登录”，它说<code>“请提供证书，以便于XCode Server可以从这个代码库中检出文件。”</code>点击“登录”，告诉XCode，是要创建新的SSH键还使用既存的。因为在 ~&#x2F;.ssh&#x2F;里面已经存在SSH键，所以我告诉XCode “使用既存的SSH键”。</p>
 <p><img src="https://github.com/williamxiewz/williamxie-github-io/raw/master/appledevelopxcodeserverpart111.jpg"></p>
 <p>你的Bot会获取选定分支上的变更，生成代码的最新版本。这意味着如果你想在多分支上测试代码，比如说 master 和 release两个分支，你需要为它们创建两个独立的Bot（在后续的教程中，我们利用<a target="_blank" rel="noopener" href="https://github.com/czechboy0/Buildasaur">Buildasaur</a>使得这个过程连贯起来）。</p>
 <p><img src="https://github.com/williamxiewz/williamxie-github-io/raw/master/appledevelopxcodeserverpart112.jpg"></p>

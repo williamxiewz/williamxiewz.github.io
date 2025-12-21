@@ -286,23 +286,23 @@
   <!-- content -->
   <article class="post-content prose m-auto slide-enter-content dark:prose-invert">
     <p>#Apple Pay简介</p>
-<p>##什么是Apple Pay<br>Apple Pay，简单来说, 就是一种移动支付方式。通过Touch ID/ Passcode，用户可使用存储在iPhone 6, 6p等设备上的信用卡和借记卡支付证书来授权支付；</p>
+<p>##什么是Apple Pay<br>Apple Pay，简单来说, 就是一种移动支付方式。通过Touch ID&#x2F; Passcode，用户可使用存储在iPhone 6, 6p等设备上的信用卡和借记卡支付证书来授权支付；</p>
 <p>它是苹果公司在2014苹果秋季新品发布会上发布的一种基于NFC的手机支付功能，于2014年10月20日在美国正式上线，2016年2月18日凌晨5：00， Apple Pay 业务在中国上线。</p>
 <p>Apple Pay 是在 iOS 8 中第一次被介绍，它可以为你的应用中的实体商品和服务，提供简单、安全、私密的支付方式。它使得用户支付起来非常简便，只需按一下指纹就可以授权进行交易。</p>
 <span id="more"></span>
 <p>##使用前提<br>1.支持iOS设备</p>
-<p>Apple Pay 只能在特定的设备上使用，目前为止，这些设备包括 iPhone 6, iPhone 6+, iPad Air 2, iPad mini 3. 这是因为 Apple Pay 需要特定的硬件芯片来支持，这个硬件叫做 Secure Element （简称SE，安全元件）,他可以用来存储和加解密信息。<br>    <img src="https://github.com/williamxiewz/williamxie-github-io/raw/master/applepayprogrammingguidesupportDevice.png" alt="Apple Pay设备支持列表"></p>
+<p>Apple Pay 只能在特定的设备上使用，目前为止，这些设备包括 iPhone 6, iPhone 6+, iPad Air 2, iPad mini 3. 这是因为 Apple Pay 需要特定的硬件芯片来支持，这个硬件叫做 Secure Element （简称SE，安全元件）,他可以用来存储和加解密信息。<br>	<img src="https://github.com/williamxiewz/williamxie-github-io/raw/master/applepayprogrammingguidesupportDevice.png" alt="Apple Pay设备支持列表"></p>
 <p>2.系统支持</p>
 <pre><code>iOS8.0+版本
 </code></pre>
 <blockquote>
 <p>注意：iOS9.2才真正的支持“银联支付”， 意味着iOS9.2以后才可以在中国市场使用</p>
 </blockquote>
-<p>3.银行支持<br>     需要将被支持银行的银行卡， 添加到手机wallet应用当中<br><img src="https://github.com/williamxiewz/williamxie-github-io/raw/master/applepayprogrammingguidesupportBank1.png"><br><img src="https://github.com/williamxiewz/williamxie-github-io/raw/master/applepayprogrammingguidesupportBank2.png"></p>
+<p>3.银行支持<br> 	需要将被支持银行的银行卡， 添加到手机wallet应用当中<br><img src="https://github.com/williamxiewz/williamxie-github-io/raw/master/applepayprogrammingguidesupportBank1.png"><br><img src="https://github.com/williamxiewz/williamxie-github-io/raw/master/applepayprogrammingguidesupportBank2.png"></p>
 <p>##应用场景<br>1.线下支付</p>
 <p>如果发现以下标识，就代表该商家支持Apple Pay</p>
 <p><img src="https://github.com/williamxiewz/williamxie-github-io/raw/master/applepayprogrammingguideapplepayID.png"></p>
-<p>苹果公开的Apple Pay商家有    </p>
+<p>苹果公开的Apple Pay商家有	</p>
 <p><img src="https://github.com/williamxiewz/williamxie-github-io/raw/master/applepayprogrammingguideapplepaysupportMerchant.png"><br>2.线上支付</p>
 <p>2.1应用内支付</p>
 <p><img src="https://github.com/williamxiewz/williamxie-github-io/raw/master/applepayprogrammingguideapplepaysupport.png"></p>
@@ -390,9 +390,9 @@ var paymentShippingMethods : [PKShippingMethod]? = nil
 <p>1.判断当前是否支持Apple Pay</p>
 <pre><code>//1.判断当前设备是否支持苹果支付
 if !PKPaymentAuthorizationViewController.canMakePayments() {
-    //隐藏
-    payView.isHidden = true
-    print(&quot;设备不支持ApplePay，请升级至9.0以上版本，且iPhone6以上设备才支持&quot;)
+	//隐藏
+	payView.isHidden = true
+	print(&quot;设备不支持ApplePay，请升级至9.0以上版本，且iPhone6以上设备才支持&quot;)
 }
 </code></pre>
 <p>2.判断当前是否添加银行卡<br>检查用户是否可进行某种卡的支付，是否支持Amex、MasterCard、Visa与银联四种卡，根据自己项目的需要进行检测</p>
@@ -484,7 +484,7 @@ request.applicationData = &quot;BuyID=123456789&quot;.data(using: String.Encodin
     
 </code></pre>
 <p>4.弹出授权视图控制,让用户去支付</p>
-<pre><code> //显示购物信息并进行支付
+<pre><code>	//显示购物信息并进行支付
 let avc  = PKPaymentAuthorizationViewController(paymentRequest: request)
 avc.delegate = self
 self.present(avc, animated: true, completion: nil)
@@ -496,36 +496,8 @@ self.present(avc, animated: true, completion: nil)
 <p><img src="https://github.com/williamxiewz/williamxie-github-io/raw/master/applepayprogrammingguideapplepaywillauthrizetion.png" alt="等待用户TouchID或者输入密码"></p>
 <p><img src="https://github.com/williamxiewz/williamxie-github-io/raw/master/applepayprogrammingguideapplePayDone.png" alt="Apple Pay支付完成"></p>
 <p>5.PKPaymentAuthorizationViewControllerDelegate 代理方法</p>
-<p>5.1 选择支付方式代理方法</p>
-<pre><code> /**
- 选择支付方式
- - parameter controller:    授权视图控制器
- - parameter paymentMethod: 支付方式信息
- - parameter completion:    回调
- */
-func paymentAuthorizationViewController(_ controller: PKPaymentAuthorizationViewController, didSelect paymentMethod: PKPaymentMethod, completion: ([PKPaymentSummaryItem]) -&gt; Void) {
-    //作用:
-    //选择支付方式选择回调,用于更新不同的货币,支付金额等,主要更新paymentSummaryItems对象数组
-    print(&quot;已经选了一个付款方式&quot;)
-    //付款方式
-    var  paymentType : String = &quot;&quot;
-    switch paymentMethod.type {
-    case .unknown:
-        paymentType = &quot;未知&quot;
-    case .debit:
-        paymentType = &quot;借记卡&quot;
-    case .credit:
-        paymentType = &quot;信用卡&quot;
-    case .prepaid:
-        paymentType = &quot;预付卡&quot;
-    case .store:
-        paymentType = &quot;store方式&quot;
-    }
-    //网络内购部分数据会为nil
-    print(&quot;当前网络:\(paymentMethod.network),支付方式:\(paymentType),支付卡号:\(paymentMethod.displayName)&quot;)
-    print(paymentMethod.paymentPass)
-    
-    completion(self.paymentSummaryItems!)
+<p>5.1 选择支付方式代理方法<br> 	<br> 	&#x2F;**<br>     选择支付方式<br>     - parameter controller:    授权视图控制器<br>     - parameter paymentMethod: 支付方式信息<br>     - parameter completion:    回调<br>     *&#x2F;<br>    func paymentAuthorizationViewController(_ controller: PKPaymentAuthorizationViewController, didSelect paymentMethod: PKPaymentMethod, completion: ([PKPaymentSummaryItem]) -&gt; Void) {<br>    	&#x2F;&#x2F;作用:<br>        &#x2F;&#x2F;选择支付方式选择回调,用于更新不同的货币,支付金额等,主要更新paymentSummaryItems对象数组<br>        print(“已经选了一个付款方式”)<br>        &#x2F;&#x2F;付款方式<br>        var  paymentType : String &#x3D; “”<br>        switch paymentMethod.type {<br>        case .unknown:<br>            paymentType &#x3D; “未知”<br>        case .debit:<br>            paymentType &#x3D; “借记卡”<br>        case .credit:<br>            paymentType &#x3D; “信用卡”<br>        case .prepaid:<br>            paymentType &#x3D; “预付卡”<br>        case .store:<br>            paymentType &#x3D; “store方式”<br>        }<br>		&#x2F;&#x2F;网络内购部分数据会为nil<br>        print(“当前网络:(paymentMethod.network),支付方式:(paymentType),支付卡号:(paymentMethod.displayName)”)<br>        print(paymentMethod.paymentPass)</p>
+<pre><code>    completion(self.paymentSummaryItems!)
     
 }
 </code></pre>
@@ -545,24 +517,11 @@ func paymentAuthorizationViewController(_ controller: PKPaymentAuthorizationView
     completion(PKPaymentAuthorizationStatus.success, self.paymentShippingMethods!, self.paymentSummaryItems!)
 }
 </code></pre>
-<p>5.3选择邮寄方式代理方法</p>
-<pre><code>/**
- 选择邮寄方式
- - parameter controller:     授权视图控制器
- - parameter shippingMethod: 邮寄方式
- - parameter completion:     回调
- */
-func paymentAuthorizationViewController(_ controller: PKPaymentAuthorizationViewController, didSelect shippingMethod: PKShippingMethod, completion: (PKPaymentAuthorizationStatus, [PKPaymentSummaryItem]) -&gt; Void) {
-    print(&quot;选择邮寄方式为:\(shippingMethod.label)&quot;)
-    //配送方式回调，如果需要根据不同的送货方式进行支付金额的调整，比如包邮和付费加速配送，可以实现该代理
-    //更新paymentSummaryItems数组
-    completion(PKPaymentAuthorizationStatus.success, self.paymentSummaryItems!)
-}
-</code></pre>
+<p>5.3选择邮寄方式代理方法<br>	<br>	&#x2F;**<br>     选择邮寄方式<br>     - parameter controller:     授权视图控制器<br>     - parameter shippingMethod: 邮寄方式<br>     - parameter completion:     回调<br>     *&#x2F;<br>    func paymentAuthorizationViewController(_ controller: PKPaymentAuthorizationViewController, didSelect shippingMethod: PKShippingMethod, completion: (PKPaymentAuthorizationStatus, [PKPaymentSummaryItem]) -&gt; Void) {<br>        print(“选择邮寄方式为:(shippingMethod.label)”)<br>        &#x2F;&#x2F;配送方式回调，如果需要根据不同的送货方式进行支付金额的调整，比如包邮和付费加速配送，可以实现该代理<br>        &#x2F;&#x2F;更新paymentSummaryItems数组<br>        completion(PKPaymentAuthorizationStatus.success, self.paymentSummaryItems!)<br>    }</p>
 <p>5.4已经授权支付代理方法</p>
 <pre><code>func paymentAuthorizationViewController(_ controller: PKPaymentAuthorizationViewController, didAuthorizePayment payment: PKPayment, completion: (PKPaymentAuthorizationStatus) -&gt; Void) {
     print(&quot;完成授权,获取Token,连接商家服务器&quot;)
-    //支付凭据，发给服务端进行验证支付是否真实有效
+	//支付凭据，发给服务端进行验证支付是否真实有效
     print(payment.token)
     print(payment.shippingMethod)  //送货方式
     print(payment.billingContact)  //账单信息
@@ -570,7 +529,7 @@ func paymentAuthorizationViewController(_ controller: PKPaymentAuthorizationView
 
     // 一般在此处,拿到支付信息, 发送给服务器处理, 处理完毕之后, 服务器会返回一个状态, 告诉客户端,是否支付成功, 然后由客户端进行处理
     let isSuccess = true
-    //它需要你连接服务器并上传支付令牌和其他信息，以完成整个支付流程。
+	//它需要你连接服务器并上传支付令牌和其他信息，以完成整个支付流程。
     if isSuccess {
         completion(.success)
     }else{
@@ -580,7 +539,7 @@ func paymentAuthorizationViewController(_ controller: PKPaymentAuthorizationView
 }
 </code></pre>
 <p>5.5授权控制器完成支付或者取消</p>
-<pre><code> func paymentAuthorizationViewControllerDidFinish(_ controller: PKPaymentAuthorizationViewController) {
+<pre><code>	func paymentAuthorizationViewControllerDidFinish(_ controller: PKPaymentAuthorizationViewController) {
     self.dismiss(animated: true, completion: nil)
     print(&quot;取消或者完成交易&quot;)   
 }

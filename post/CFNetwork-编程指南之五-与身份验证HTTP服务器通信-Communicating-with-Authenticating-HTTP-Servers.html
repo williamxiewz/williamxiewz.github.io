@@ -398,7 +398,7 @@
 
 
 
-<p>如果你可以先存储证书到钥匙链中，从钥匙链中检索证书才有用。首先，查看证书是否已经存储在钥匙链中。调用SecKeychainFindInternetPassword，传递用户名到accountName ，传递accountName 的长度到accountNameLength``。</p>
+<p>如果你可以先存储证书到钥匙链中，从钥匙链中检索证书才有用。首先，查看证书是否已经存储在钥匙链中。调用SecKeychainFindInternetPassword，传递用户名到accountName ，传递accountName 的长度到accountNameLength&#96;&#96;。</p>
 <p>如果记录存在，修改它来改变密码。设置钥匙链属性的数据字段包含用户名，主要你可以修改正确的属性。然后调用SecKeychainItemModifyContent 函数并传递钥匙链记录引用对象(itemRef)，钥匙链属性列表和新密码。通过修改钥匙链记录而非重写，钥匙链记录会正确的更新其他相关数据也将保留。记录如列表4-9所示。</p>
 <p>列表4-9 修改钥匙链记录</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Set the attribute to the account name   </span></span><br><span class="line">attr.tag = kSecAccountItemAttr; </span><br><span class="line">attr.length = <span class="built_in">strlen</span>(username); </span><br><span class="line">attr.data = (<span class="type">void</span>*)username;</span><br><span class="line"><span class="comment">// Modify the keychain entry   </span></span><br><span class="line">SecKeychainItemModifyContent(itemRef, &amp;attrList, <span class="built_in">strlen</span>(password),   </span><br><span class="line">(<span class="type">void</span> *)password);</span><br></pre></td></tr></table></figure>
