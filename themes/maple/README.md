@@ -106,4 +106,3 @@ giscus:
   category_id:
   mapping:
 ```
-
