@@ -111,4 +111,4 @@ stylus:
 deploy:
 - type: git
   repo:
-      github: git@github.com:williamxiewz/williamxiewz.github.io.git,master
+      github: git@github.com:williamxiewz/williamxiewz.github.io.git,gh-pages
