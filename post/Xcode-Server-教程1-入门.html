@@ -182,7 +182,7 @@
 
 
 
-<meta name="generator" content="Hexo 5.4.2"></head>
+<meta name="generator" content="Hexo 8.1.1"></head>
 <body class="font-sans bg-white dark:bg-zinc-900 text-gray-700 dark:text-gray-200 relative">
   <header class="fixed w-full px-5 py-1 z-10 backdrop-blur-xl backdrop-saturate-150 border-b border-black/5">
   <div class="max-auto">
@@ -334,9 +334,7 @@
 <p>#3.检出我们的测试工程</p>
 <p>现在，我们创建一个Bot来测试GitHub上的一个应用程序（这是我为你特别准备的，是不是很善解人意？）正如你期望的，它叫做，“<a target="_blank" rel="noopener" href="https://github.com/czechboy0/XCSTutorialProject1">XCSTutorial Project1</a>”。它是一个带有iOS 应用程序目标的XCode工程。</p>
 <p>创建Bot的一种方式是直接由XCode创建。为了后续工作顺利进行，首先需要将你的工程检出到本地。现在我们进行检出。打开终端，切换到工作路径下，比如在你的文档目录下，运行下面的三个命令：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> clone --branch step1 git@github.com:czechboy0/XCSTutorialProject1.git
-<span class="token builtin class-name">cd</span> XCSTutorialProject1
-<span class="token function">open</span> XCSTutorialProject1.xcodeproj<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> --branch step1 git@github.com:czechboy0/XCSTutorialProject1.git</span><br><span class="line"><span class="built_in">cd</span> XCSTutorialProject1</span><br><span class="line">open XCSTutorialProject1.xcodeproj</span><br></pre></td></tr></table></figure>
 <p>这会把工程克隆到本地（向导的第一步）并在XCode中打开。请确保你正在使用的XCode与之前在XCode Server中选择的XCode是同一个（最好是XCode 7）。</p>
 <p>#4.在XCode中追加Server</p>
 <p>在我们创建Bot之前，我们需要在XCode注册我们新创建的XCode Server。选择 XCode 的<code>Preferences</code> (CMD+,)，然后选择“Accounts”，在底端点击加号按钮，选择“Add Server”。</p>
@@ -356,19 +354,12 @@
 <p>现在可以看到弹出了一个与下面类似的表单，注意，复选框要求你共享scheme。</p>
 <p><img src="https://github.com/williamxiewz/williamxie-github-io/raw/master/appledevelopxcodeserverpart19.jpg"></p>
 <p>这是什么意思呢？</p>
-<blockquote><span class="custom-blockquote-svg"><svg width="24" height="24" viewBox="0 0 24 24" fill="" xmlns="http://www.w3.org/2000/svg" data-reactroot="">
-<path fill="" d="M22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22C13.8 22 15.5 21.5 17 20.6L22 22L20.7 17C21.5 15.5 22 13.8 22 12Z" undefined="1"></path>
-<path fill="" d="M15.97 11.5H16.04C17.12 11.5 18 12.38 18 13.47V13.53C18 14.62 17.12 15.5 16.03 15.5H15.96C14.88 15.5 14 14.62 14 13.53V13.46C14 12.38 14.88 11.5 15.97 11.5Z" undefined="1"></path>
-<path fill="" d="M7.97 11.5H8.04C9.12 11.5 10 12.38 10 13.47V13.53C10 14.62 9.12 15.5 8.03 15.5H7.97C6.88 15.5 6 14.62 6 13.53V13.46C6 12.38 6.88 11.5 7.97 11.5Z" undefined="1"></path>
-<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke="" d="M17 8.5C15.23 8.97 14.07 10.84 14.01 13.27C14 13.33 14 13.4 14 13.47V13.5"></path>
-<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke="" d="M9 8.5C7.23 8.97 6.07 10.84 6.01 13.27C6 13.33 6 13.4 6 13.47V13.5"></path>
-<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke="" d="M15.97 11.5H16.04C17.12 11.5 18 12.38 18 13.47V13.53C18 14.62 17.12 15.5 16.03 15.5H15.96C14.88 15.5 14 14.62 14 13.53V13.46C14 12.38 14.88 11.5 15.97 11.5Z"></path>
-<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke="" d="M7.97 11.5H8.04C9.12 11.5 10 12.38 10 13.47V13.53C10 14.62 9.12 15.5 8.03 15.5H7.97C6.88 15.5 6 14.62 6 13.53V13.46C6 12.38 6.88 11.5 7.97 11.5Z"></path>
-</svg>
-</span><p>Scheme 是你 xcodeproj j和 xcworkspace文件夹下的文件，描述了使用哪一个目标（例如 XCSTutorialProject1 - iOS app）和如何生成（例如Debug 或者 Release）。只有共享的schema才可以检入到你的代码库，并且只有这些共享的schema可以被持续集成服务例如XCode Server使用。</p></blockquote>
+<blockquote>
+<p>Scheme 是你 xcodeproj j和 xcworkspace文件夹下的文件，描述了使用哪一个目标（例如 XCSTutorialProject1 - iOS app）和如何生成（例如Debug 或者 Release）。只有共享的schema才可以检入到你的代码库，并且只有这些共享的schema可以被持续集成服务例如XCode Server使用。</p>
+</blockquote>
 <p>总体而言，schema是一个生成方案。所以要确保XCode Server可以看到它，这里我们通过共享实现（当在XCode里面编辑scheme的时候，点击Shared 复选框，这会将scheme加入到我们的代码库中）。</p>
 <p>第一次在你的项目中创建Bot，你会看到这个。通常，你会继续并让XCode提交scheme到你的代码库。但是我已经为你做完了这些。所以，点击Cancel，转到终端，在你的工程文件夹下运行下面的命令</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> checkout step2<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout step2</span><br></pre></td></tr></table></figure>
 
 <p>然后重启XCode（抱歉，XCode不喜欢自己修改scheme），重复Bot创建过成。这一次，应该没有关于scheme的消息了，正如下面截图所示。</p>
 <p><img src="https://github.com/williamxiewz/williamxie-github-io/raw/master/appledevelopxcodeserverpart110.jpg"></p>

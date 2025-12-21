@@ -182,7 +182,7 @@
 
 
 
-<meta name="generator" content="Hexo 5.4.2"></head>
+<meta name="generator" content="Hexo 8.1.1"></head>
 <body class="font-sans bg-white dark:bg-zinc-900 text-gray-700 dark:text-gray-200 relative">
   <header class="fixed w-full px-5 py-1 z-10 backdrop-blur-xl backdrop-saturate-150 border-b border-black/5">
   <div class="max-auto">
@@ -294,16 +294,9 @@
 <p>从功能上讲，这两种方式都可以为测试人员在测试阶段对你的App进行测试。但是既然分了内部测试和外部测试，他们肯定还是有区别的，所谓的内部主要是指iTunes Connect上在你的开发团队里参与技术开发或者管理的成员。最多可以邀请25个内部成员，而与之相对的外部测试，指的是那些不属于你的团队或者公司的测试者，外部测试人员的上限是2000人。这里有一点需要注意的是，在你邀请外部成员参与测试之前，需要先通过苹果的审核，一般审核会在一天左右。而这一限制在内部成员上就没有，也就是说只要你把你的App上传到iTunes Connect上之后内部成员就可以开始进行内部测试了，无需审核。在邀请发出后，有效测试时间为60天。</p>
 <span id="more"></span>
 
-<blockquote><span class="custom-blockquote-svg"><svg width="24" height="24" viewBox="0 0 24 24" fill="" xmlns="http://www.w3.org/2000/svg" data-reactroot="">
-<path fill="" d="M22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22C13.8 22 15.5 21.5 17 20.6L22 22L20.7 17C21.5 15.5 22 13.8 22 12Z" undefined="1"></path>
-<path fill="" d="M15.97 11.5H16.04C17.12 11.5 18 12.38 18 13.47V13.53C18 14.62 17.12 15.5 16.03 15.5H15.96C14.88 15.5 14 14.62 14 13.53V13.46C14 12.38 14.88 11.5 15.97 11.5Z" undefined="1"></path>
-<path fill="" d="M7.97 11.5H8.04C9.12 11.5 10 12.38 10 13.47V13.53C10 14.62 9.12 15.5 8.03 15.5H7.97C6.88 15.5 6 14.62 6 13.53V13.46C6 12.38 6.88 11.5 7.97 11.5Z" undefined="1"></path>
-<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke="" d="M17 8.5C15.23 8.97 14.07 10.84 14.01 13.27C14 13.33 14 13.4 14 13.47V13.5"></path>
-<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke="" d="M9 8.5C7.23 8.97 6.07 10.84 6.01 13.27C6 13.33 6 13.4 6 13.47V13.5"></path>
-<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke="" d="M15.97 11.5H16.04C17.12 11.5 18 12.38 18 13.47V13.53C18 14.62 17.12 15.5 16.03 15.5H15.96C14.88 15.5 14 14.62 14 13.53V13.46C14 12.38 14.88 11.5 15.97 11.5Z"></path>
-<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke="" d="M7.97 11.5H8.04C9.12 11.5 10 12.38 10 13.47V13.53C10 14.62 9.12 15.5 8.03 15.5H7.97C6.88 15.5 6 14.62 6 13.53V13.46C6 12.38 6.88 11.5 7.97 11.5Z"></path>
-</svg>
-</span><p>1、现在公司也有使用比较老的测试方法，就是需要提供参与app测试人员的设备UDID，并且开发者需要将这些设备的UDID添加到开发者中心，每次有新的测试人员加入，需要重新生成profiles，重新打包，最可恶的是，只能添加100台设备的限制，总体来说，比较笨拙。<br>2、使用TestFlight测试的好处，只需要参与app测试人员提供一个邮箱，开发者登录iTunes Connect，给测试者发送邀请，测试者接受邀请，然后通过TestFlight，下载安装程序。不需要用户提供设备的UDID，最重要的一点是没有了100台设备的限制，一般内部测试人员最多25个人，外部测试人员最多2000个人，重点是不需要重新配置证书了，也不需要手动发送ipa包, 直接上传到iTunes即可。<br> 3、然而，也有其他公司在使用蒲公英等其他参与测试。</p></blockquote>
+<blockquote>
+<p>1、现在公司也有使用比较老的测试方法，就是需要提供参与app测试人员的设备UDID，并且开发者需要将这些设备的UDID添加到开发者中心，每次有新的测试人员加入，需要重新生成profiles，重新打包，最可恶的是，只能添加100台设备的限制，总体来说，比较笨拙。<br>2、使用TestFlight测试的好处，只需要参与app测试人员提供一个邮箱，开发者登录iTunes Connect，给测试者发送邀请，测试者接受邀请，然后通过TestFlight，下载安装程序。不需要用户提供设备的UDID，最重要的一点是没有了100台设备的限制，一般内部测试人员最多25个人，外部测试人员最多2000个人，重点是不需要重新配置证书了，也不需要手动发送ipa包, 直接上传到iTunes即可。<br> 3、然而，也有其他公司在使用蒲公英等其他参与测试。</p>
+</blockquote>
 <p>接下来介绍一下TestFlight如何使用：<br>一、开发者需要做的事情<br>1、进入网址：<a target="_blank" rel="noopener" href="https://itunesconnect.apple.com/">https://itunesconnect.apple.com</a> 输入账号密码登录iTunes Connect。</p>
 <p><img src="https://github.com/williamxiewz/williamxie-github-io/raw/master/appledevelopertestflight1.png"></p>
 <p>2、成功登录iTunes Connect，点击我的App，进入App列表页<br><img src="https://github.com/williamxiewz/williamxie-github-io/raw/master/appledevelopertestflight2.png"></p>

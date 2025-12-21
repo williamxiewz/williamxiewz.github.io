@@ -182,7 +182,7 @@
 
 
 
-<meta name="generator" content="Hexo 5.4.2"></head>
+<meta name="generator" content="Hexo 8.1.1"></head>
 <body class="font-sans bg-white dark:bg-zinc-900 text-gray-700 dark:text-gray-200 relative">
   <header class="fixed w-full px-5 py-1 z-10 backdrop-blur-xl backdrop-saturate-150 border-b border-black/5">
   <div class="max-auto">
@@ -265,12 +265,12 @@
           <span class="text-gray-400">·</span>
           <span class="flex items-center gap-1">
             <iconify-icon width="18" icon="ic:round-access-alarm" ></iconify-icon>
-            <span>2 min</span>
+            <span>3 min</span>
           </span>
           <span class="text-gray-400">·</span>
           <span class="flex items-center gap-1">
             <iconify-icon width="18" icon="icon-park-outline:font-search" ></iconify-icon>
-            <span>658 words</span>
+            <span>738 words</span>
           </span>
           
             <span class="text-gray-400">·</span>
@@ -300,38 +300,7 @@
 <p>10.等待10分钟，此过程阿里云系统会去检测，检测到了就成功，此时你的域名证书记录状态为“已签发”</p>
 <p>11.下载此证书，选择对应的应用服务器，我们用的是nignx，下载后一个压缩文件，里面包含2个文件,xx.pem xx.key。<br><img src="https://github.com/williamxiewz/williamxie-github-io/raw/master/swiftperfectssl11.png"></p>
 <p>12.安装证书,80 端口重定向到https</p>
-<pre class="line-numbers language-swift" data-language="swift"><code class="language-swift"><span class="token keyword">let</span> confData <span class="token operator">=</span> <span class="token punctuation">[</span>
-    <span class="token string">"servers"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
-        <span class="token comment">// Serves Port 80</span>
-        <span class="token comment">// Configuration data for another server which:</span>
-        <span class="token comment">//	* Redirects all traffic back to the first server.</span>
-        <span class="token punctuation">[</span>
-            <span class="token string">"name"</span><span class="token punctuation">:</span><span class="token string">"localhost"</span><span class="token punctuation">,</span>
-            <span class="token string">"port"</span><span class="token punctuation">:</span><span class="token number">80</span><span class="token punctuation">,</span>
-            <span class="token string">"routes"</span><span class="token punctuation">:</span><span class="token punctuation">[</span>
-                <span class="token punctuation">[</span><span class="token string">"method"</span><span class="token punctuation">:</span><span class="token string">"get"</span><span class="token punctuation">,</span> <span class="token string">"uri"</span><span class="token punctuation">:</span><span class="token string">"/**"</span><span class="token punctuation">,</span> <span class="token string">"handler"</span><span class="token punctuation">:</span><span class="token builtin">PerfectHTTPServer</span><span class="token punctuation">.</span><span class="token builtin">HTTPHandler</span><span class="token punctuation">.</span>redirect<span class="token punctuation">,</span><span class="token string">"base"</span><span class="token punctuation">:</span><span class="token string">"https://localhost"</span><span class="token punctuation">]</span>
-            <span class="token punctuation">]</span><span class="token punctuation">,</span>    
-        <span class="token punctuation">]</span><span class="token punctuation">,</span>
-        <span class="token comment">// Serves Port 443.</span>
-        <span class="token punctuation">[</span>
-            <span class="token string">"name"</span><span class="token punctuation">:</span><span class="token string">"localhost"</span><span class="token punctuation">,</span>
-            <span class="token string">"port"</span><span class="token punctuation">:</span><span class="token number">443</span><span class="token punctuation">,</span>
-            <span class="token string">"routes"</span><span class="token punctuation">:</span><span class="token punctuation">[</span>
-                <span class="token punctuation">[</span><span class="token string">"method"</span><span class="token punctuation">:</span><span class="token string">"get"</span><span class="token punctuation">,</span> <span class="token string">"uri"</span><span class="token punctuation">:</span><span class="token string">"/"</span><span class="token punctuation">,</span> <span class="token string">"handler"</span><span class="token punctuation">:</span><span class="token builtin">PerfectHTTPServer</span><span class="token punctuation">.</span><span class="token builtin">HTTPHandler</span><span class="token punctuation">.</span>staticFiles<span class="token punctuation">]</span><span class="token punctuation">,</span>
-                <span class="token punctuation">[</span><span class="token string">"method"</span><span class="token punctuation">:</span><span class="token string">"get"</span><span class="token punctuation">,</span> <span class="token string">"uri"</span><span class="token punctuation">:</span><span class="token string">"/**"</span><span class="token punctuation">,</span> <span class="token string">"handler"</span><span class="token punctuation">:</span><span class="token builtin">PerfectHTTPServer</span><span class="token punctuation">.</span><span class="token builtin">HTTPHandler</span><span class="token punctuation">.</span>staticFiles<span class="token punctuation">,</span>
-                 <span class="token string">"documentRoot"</span><span class="token punctuation">:</span><span class="token string">"./webroot"</span><span class="token punctuation">,</span>
-                 <span class="token string">"allowResponseFilters"</span><span class="token punctuation">:</span><span class="token boolean">true</span><span class="token punctuation">]</span>
-            <span class="token punctuation">]</span><span class="token punctuation">,</span>
-            <span class="token string">"tlsConfig"</span><span class="token punctuation">:</span><span class="token punctuation">[</span>
-                <span class="token string">"certPath"</span><span class="token punctuation">:</span> <span class="token string">"./webroot/cert/21411439650856.pem"</span><span class="token punctuation">,</span>
-                <span class="token string">"verifyMode"</span><span class="token punctuation">:</span> <span class="token string">"peer"</span><span class="token punctuation">,</span>
-                <span class="token string">"keyPath"</span><span class="token punctuation">:</span> <span class="token string">"./webroot/cert/21411494650856.key"</span><span class="token punctuation">,</span>
-                <span class="token string">"cipherList"</span><span class="token punctuation">:</span><span class="token string">"ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4"</span>
-            <span class="token punctuation">]</span><span class="token punctuation">,</span>
-            <span class="token string">"runAs"</span><span class="token punctuation">:</span><span class="token string">"root"</span><span class="token punctuation">,</span>
-        <span class="token punctuation">]</span>
-    <span class="token punctuation">]</span>
-<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> confData <span class="operator">=</span> [</span><br><span class="line">    <span class="string">&quot;servers&quot;</span>: [</span><br><span class="line">        <span class="comment">// Serves Port 80</span></span><br><span class="line">        <span class="comment">// Configuration data for another server which:</span></span><br><span class="line">        <span class="comment">//	* Redirects all traffic back to the first server.</span></span><br><span class="line">        [</span><br><span class="line">            <span class="string">&quot;name&quot;</span>:<span class="string">&quot;localhost&quot;</span>,</span><br><span class="line">            <span class="string">&quot;port&quot;</span>:<span class="number">80</span>,</span><br><span class="line">            <span class="string">&quot;routes&quot;</span>:[</span><br><span class="line">                [<span class="string">&quot;method&quot;</span>:<span class="string">&quot;get&quot;</span>, <span class="string">&quot;uri&quot;</span>:<span class="string">&quot;/**&quot;</span>, <span class="string">&quot;handler&quot;</span>:<span class="type">PerfectHTTPServer</span>.<span class="type">HTTPHandler</span>.redirect,<span class="string">&quot;base&quot;</span>:<span class="string">&quot;https://localhost&quot;</span>]</span><br><span class="line">            ],    </span><br><span class="line">        ],</span><br><span class="line">        <span class="comment">// Serves Port 443.</span></span><br><span class="line">        [</span><br><span class="line">            <span class="string">&quot;name&quot;</span>:<span class="string">&quot;localhost&quot;</span>,</span><br><span class="line">            <span class="string">&quot;port&quot;</span>:<span class="number">443</span>,</span><br><span class="line">            <span class="string">&quot;routes&quot;</span>:[</span><br><span class="line">                [<span class="string">&quot;method&quot;</span>:<span class="string">&quot;get&quot;</span>, <span class="string">&quot;uri&quot;</span>:<span class="string">&quot;/&quot;</span>, <span class="string">&quot;handler&quot;</span>:<span class="type">PerfectHTTPServer</span>.<span class="type">HTTPHandler</span>.staticFiles],</span><br><span class="line">                [<span class="string">&quot;method&quot;</span>:<span class="string">&quot;get&quot;</span>, <span class="string">&quot;uri&quot;</span>:<span class="string">&quot;/**&quot;</span>, <span class="string">&quot;handler&quot;</span>:<span class="type">PerfectHTTPServer</span>.<span class="type">HTTPHandler</span>.staticFiles,</span><br><span class="line">                 <span class="string">&quot;documentRoot&quot;</span>:<span class="string">&quot;./webroot&quot;</span>,</span><br><span class="line">                 <span class="string">&quot;allowResponseFilters&quot;</span>:<span class="literal">true</span>]</span><br><span class="line">            ],</span><br><span class="line">            <span class="string">&quot;tlsConfig&quot;</span>:[</span><br><span class="line">                <span class="string">&quot;certPath&quot;</span>: <span class="string">&quot;./webroot/cert/21411439650856.pem&quot;</span>,</span><br><span class="line">                <span class="string">&quot;verifyMode&quot;</span>: <span class="string">&quot;peer&quot;</span>,</span><br><span class="line">                <span class="string">&quot;keyPath&quot;</span>: <span class="string">&quot;./webroot/cert/21411494650856.key&quot;</span>,</span><br><span class="line">                <span class="string">&quot;cipherList&quot;</span>:<span class="string">&quot;ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4&quot;</span></span><br><span class="line">            ],</span><br><span class="line">            <span class="string">&quot;runAs&quot;</span>:<span class="string">&quot;root&quot;</span>,</span><br><span class="line">        ]</span><br><span class="line">    ]</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
 
 <ol start="13">
 <li>local build  test </li>
@@ -339,7 +308,7 @@
 <p>14.delopy swift perfect</p>
 <p>15.通过https访问，大功告成。</p>
 <p>16.apple ATS 测试</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">nscurl --ats-diagnostics --verbose https://www.konekti-ai.com<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nscurl --ats-diagnostics --verbose https://www.konekti-ai.com</span><br></pre></td></tr></table></figure>
 
   </article>
   <!-- tag -->

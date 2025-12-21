@@ -182,7 +182,7 @@
 
 
 
-<meta name="generator" content="Hexo 5.4.2"></head>
+<meta name="generator" content="Hexo 8.1.1"></head>
 <body class="font-sans bg-white dark:bg-zinc-900 text-gray-700 dark:text-gray-200 relative">
   <header class="fixed w-full px-5 py-1 z-10 backdrop-blur-xl backdrop-saturate-150 border-b border-black/5">
   <div class="max-auto">
@@ -290,16 +290,9 @@
 <p>OS X server中集成了git版本管理功能，Xcode server持续集成服务，还有wiki知识库管理等，你甚至还可以拿它搭建一个网站服务器。</p>
 <p>在持续集成过程中你可以直接使用os x server 的git版本管理功能，将代码提交至自己搭建的OS X server服务器。也可以将代码提交至其他git版本管理仓库中(比如GitHub)。</p>
 <p>设备</p>
-<blockquote><span class="custom-blockquote-svg"><svg width="24" height="24" viewBox="0 0 24 24" fill="" xmlns="http://www.w3.org/2000/svg" data-reactroot="">
-<path fill="" d="M22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22C13.8 22 15.5 21.5 17 20.6L22 22L20.7 17C21.5 15.5 22 13.8 22 12Z" undefined="1"></path>
-<path fill="" d="M15.97 11.5H16.04C17.12 11.5 18 12.38 18 13.47V13.53C18 14.62 17.12 15.5 16.03 15.5H15.96C14.88 15.5 14 14.62 14 13.53V13.46C14 12.38 14.88 11.5 15.97 11.5Z" undefined="1"></path>
-<path fill="" d="M7.97 11.5H8.04C9.12 11.5 10 12.38 10 13.47V13.53C10 14.62 9.12 15.5 8.03 15.5H7.97C6.88 15.5 6 14.62 6 13.53V13.46C6 12.38 6.88 11.5 7.97 11.5Z" undefined="1"></path>
-<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke="" d="M17 8.5C15.23 8.97 14.07 10.84 14.01 13.27C14 13.33 14 13.4 14 13.47V13.5"></path>
-<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke="" d="M9 8.5C7.23 8.97 6.07 10.84 6.01 13.27C6 13.33 6 13.4 6 13.47V13.5"></path>
-<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke="" d="M15.97 11.5H16.04C17.12 11.5 18 12.38 18 13.47V13.53C18 14.62 17.12 15.5 16.03 15.5H15.96C14.88 15.5 14 14.62 14 13.53V13.46C14 12.38 14.88 11.5 15.97 11.5Z"></path>
-<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke="" d="M7.97 11.5H8.04C9.12 11.5 10 12.38 10 13.47V13.53C10 14.62 9.12 15.5 8.03 15.5H7.97C6.88 15.5 6 14.62 6 13.53V13.46C6 12.38 6.88 11.5 7.97 11.5Z"></path>
-</svg>
-</span><p>1.一台Git服务器，可以用GitHub、oschina等。<br> 2.一台装OS X Server的服务器，必须为MAC，下文简称 Xcode Server服务器。<br> 3.若干MAC做客户端，下文简称客户端。<br> 4.若干台iOS测试机。</p></blockquote>
+<blockquote>
+<p>1.一台Git服务器，可以用GitHub、oschina等。<br> 2.一台装OS X Server的服务器，必须为MAC，下文简称 Xcode Server服务器。<br> 3.若干MAC做客户端，下文简称客户端。<br> 4.若干台iOS测试机。</p>
+</blockquote>
 <p><img src="http://cc.cocimg.com/api/uploads/20160418/1460947852507721.jpg"></p>
 <span id="more"></span>
 <p>#配置Xcode Server服务器</p>
@@ -379,12 +372,10 @@
 <p>添加 After Integrate脚本。</p>
 <p>持续集成后将ipa包上传至蒲公英。</p>
 <p>蒲公英是免费的应用分发平台，如果没有注册请注册。注册后在账户设置中有API Key、User Key。。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token assign-left variable">IPA_NAME</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span><span class="token function">basename</span> <span class="token string">"<span class="token variable">$&#123;XCS_ARCHIVE<span class="token operator">%</span>.*&#125;</span>"</span>.ipa<span class="token variable">)</span></span>
-<span class="token assign-left variable">IPA_PATH</span><span class="token operator">=</span><span class="token string">"<span class="token variable">$&#123;XCS_OUTPUT_DIR&#125;</span>/ExportedProduct/Apps/<span class="token variable">$&#123;IPA_NAME&#125;</span>"</span>
-<span class="token builtin class-name">echo</span> <span class="token variable">$&#123;IPA_PATH&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">IPA_NAME=$(<span class="built_in">basename</span> <span class="string">&quot;<span class="variable">$&#123;XCS_ARCHIVE%.*&#125;</span>&quot;</span>.ipa)</span><br><span class="line">IPA_PATH=<span class="string">&quot;<span class="variable">$&#123;XCS_OUTPUT_DIR&#125;</span>/ExportedProduct/Apps/<span class="variable">$&#123;IPA_NAME&#125;</span>&quot;</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$&#123;IPA_PATH&#125;</span></span><br></pre></td></tr></table></figure>
 
 <p>请根据蒲公英自己的账号，将其中的 uKey 和 _api_key 的值替换为相应的值。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">curl</span> -F <span class="token string">"file=@<span class="token variable">$&#123;IPA_PATH&#125;</span>"</span> -F <span class="token string">"uKey=User Key"</span> -F <span class="token string">"_api_key=API Key"</span> http://www.pgyer.com/apiv1/app/upload<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -F <span class="string">&quot;file=@<span class="variable">$&#123;IPA_PATH&#125;</span>&quot;</span> -F <span class="string">&quot;uKey=User Key&quot;</span> -F <span class="string">&quot;_api_key=API Key&quot;</span> http://www.pgyer.com/apiv1/app/upload</span><br></pre></td></tr></table></figure>
 
 <p><img src="http://cc.cocimg.com/api/uploads/20160420/1461119665822939.jpg"></p>
 <p>点击Integrate开始持续集成。</p>

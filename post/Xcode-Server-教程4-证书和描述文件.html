@@ -182,7 +182,7 @@
 
 
 
-<meta name="generator" content="Hexo 5.4.2"></head>
+<meta name="generator" content="Hexo 8.1.1"></head>
 <body class="font-sans bg-white dark:bg-zinc-900 text-gray-700 dark:text-gray-200 relative">
   <header class="fixed w-full px-5 py-1 z-10 backdrop-blur-xl backdrop-saturate-150 border-b border-black/5">
   <div class="max-auto">
@@ -316,8 +316,8 @@
 <h1 id="create-a-folder-for-our-provisioning-profiles-if-not-exists"><a href="#create-a-folder-for-our-provisioning-profiles-if-not-exists" class="headerlink" title="create a folder for our provisioning profiles if not exists"></a>create a folder for our provisioning profiles if not exists</h1><pre><code>  sh &quot;cd .. &amp;&amp; mkdir -p ProvisioningProfiles&quot;
 </code></pre>
 <h1 id="generate-development-profile"><a href="#generate-development-profile" class="headerlink" title="generate development profile"></a>generate development profile</h1><pre><code>  profile_name = &#39;tutorial_app_dev&#39;
-  profile_file = &quot;#&#123;profile_name&#125;.mobileprovision&quot;
-  profile_path = &quot;./ProvisioningProfiles/#&#123;profile_file&#125;&quot;
+  profile_file = &quot;#{profile_name}.mobileprovision&quot;
+  profile_path = &quot;./ProvisioningProfiles/#{profile_file}&quot;
   udid_dev = sigh(
 </code></pre>
 <p>provisioning_name: profile_name,<br>filename: profile_file,<br>development: true<br>          )</p>
@@ -325,8 +325,8 @@
 </code></pre>
 <p>profile: profile_path,<br>build_configuration: ‘Debug’<br>          )</p>
 <h1 id="generate-appstore-profile"><a href="#generate-appstore-profile" class="headerlink" title="generate appstore profile"></a>generate appstore profile</h1><pre><code>  profile_name = &#39;tutorial_app_appstore&#39;
-  profile_file = &quot;#&#123;profile_name&#125;.mobileprovision&quot;
-  profile_path = &quot;./ProvisioningProfiles/#&#123;profile_file&#125;&quot;
+  profile_file = &quot;#{profile_name}.mobileprovision&quot;
+  profile_path = &quot;./ProvisioningProfiles/#{profile_file}&quot;
   udid_appstore = sigh(
 </code></pre>
 <p>provisioning_name: profile_name,<br>filename: profile_file<br>          )</p>

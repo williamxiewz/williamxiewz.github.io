@@ -182,7 +182,7 @@
 
 
 
-<meta name="generator" content="Hexo 5.4.2"></head>
+<meta name="generator" content="Hexo 8.1.1"></head>
 <body class="font-sans bg-white dark:bg-zinc-900 text-gray-700 dark:text-gray-200 relative">
   <header class="fixed w-full px-5 py-1 z-10 backdrop-blur-xl backdrop-saturate-150 border-b border-black/5">
   <div class="max-auto">
@@ -329,7 +329,7 @@
 <p>对于Packages.gz和Packages.bz2，格式相同，也记得要另起一行。 </p>
 <p>因此，Packages文件的保存位置就是 软件源地址/dists/main/Codename（与Release文件中一致）/main/binary-iphoneos-arm下。 </p>
 <p>Release文件的示例可以参看以下几个地址：<br><a target="_blank" rel="noopener" href="http://app.weiphone.com/cydia/Release">http://app.weiphone.com/cydia/Release</a><br><a target="_blank" rel="noopener" href="http://apt.saurik.com/dists/tangelo-3.7/Release">http://apt.saurik.com/dists/tangelo-3.7/Release</a><br><a target="_blank" rel="noopener" href="http://apt.bigboss.us.com/repofiles/cydia/dists/stable/Release">http://apt.bigboss.us.com/repofiles/cydia/dists/stable/Release</a></p>
-<p>以下是生成Packages文件的方法：<br>Packages文件格式<br>Package: 3proxy<br>Version: 0.5.3k-2<br>Architecture: iphoneos-arm<br>Maintainer: Jay Freeman (saurik) &lt;<a href="mailto:&#115;&#97;&#x75;&#x72;&#105;&#x6b;&#x40;&#x73;&#x61;&#117;&#x72;&#105;&#x6b;&#46;&#99;&#111;&#x6d;">&#115;&#97;&#x75;&#x72;&#105;&#x6b;&#x40;&#x73;&#x61;&#117;&#x72;&#105;&#x6b;&#46;&#99;&#111;&#x6d;</a>&gt;<br>Installed-Size: 1208<br>Filename: debs/3proxy_0.5.3k-2_iphoneos-arm.deb<br>Size: 416318<br>MD5sum: f84cb6764a9df30ab326c17f51de15fd<br>Section: Networking<br>Priority: optional<br>Homepage: <a target="_blank" rel="noopener" href="http://3proxy.ru/download/">http://3proxy.ru/download/</a><br>Description: tiny free proxy server<br>Name: 3proxy<br>Depiction: <a target="_blank" rel="noopener" href="http://cydia.saurik.com/info/3proxy/">http://cydia.saurik.com/info/3proxy/</a><br>Tag: purpose::daemon, role::hacker<br>复制代码</p>
+<p>以下是生成Packages文件的方法：<br>Packages文件格式<br>Package: 3proxy<br>Version: 0.5.3k-2<br>Architecture: iphoneos-arm<br>Maintainer: Jay Freeman (saurik) &lt;<a href="mailto:&#x73;&#x61;&#117;&#114;&#105;&#x6b;&#x40;&#115;&#97;&#117;&#114;&#105;&#x6b;&#46;&#x63;&#x6f;&#x6d;">&#x73;&#x61;&#117;&#114;&#105;&#x6b;&#x40;&#115;&#97;&#117;&#114;&#105;&#x6b;&#46;&#x63;&#x6f;&#x6d;</a>&gt;<br>Installed-Size: 1208<br>Filename: debs/3proxy_0.5.3k-2_iphoneos-arm.deb<br>Size: 416318<br>MD5sum: f84cb6764a9df30ab326c17f51de15fd<br>Section: Networking<br>Priority: optional<br>Homepage: <a target="_blank" rel="noopener" href="http://3proxy.ru/download/">http://3proxy.ru/download/</a><br>Description: tiny free proxy server<br>Name: 3proxy<br>Depiction: <a target="_blank" rel="noopener" href="http://cydia.saurik.com/info/3proxy/">http://cydia.saurik.com/info/3proxy/</a><br>Tag: purpose::daemon, role::hacker<br>复制代码</p>
 <p>Packages实质上是deb文件的control信息集合，另外多了deb文件本身的信息。（control文件是记录软件包本身的信息，但没有deb文件本身） </p>
 <p>多出的deb文件信息为：<br>[li]Filename（deb文件位置与文件名）[/li][li]Size（deb文件大小，字节为单位）[/li][li]MD5sum（deb文件MD5值）[/li]</p>
 <p>要保证Cydia能正确获取deb的相关数据，除了以上3个deb文件信息以为，还必须保证至少有以下两项：<br>[li]Package（软件标识符，相当于***号码，用于识别唯一的软件）[/li][li]Version（软件版本号）[/li]</p>

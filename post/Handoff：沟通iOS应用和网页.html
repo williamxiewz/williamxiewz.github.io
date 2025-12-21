@@ -182,7 +182,7 @@
 
 
 
-<meta name="generator" content="Hexo 5.4.2"></head>
+<meta name="generator" content="Hexo 8.1.1"></head>
 <body class="font-sans bg-white dark:bg-zinc-900 text-gray-700 dark:text-gray-200 relative">
   <header class="fixed w-full px-5 py-1 z-10 backdrop-blur-xl backdrop-saturate-150 border-b border-black/5">
   <div class="max-auto">
@@ -290,16 +290,9 @@
 <p>iOS 8以及Mac OS X Yosemite之后引入了一个新的功能特性：Handoff。Handoff也就是Continuity特性，连续互通，比如你用iPhone写邮件写到一半想在Mac上继续写，或者Mac上看到一个网页想在手机上浏览，这些便是Handoff的使用场景了。</p>
 <span id="more"></span>
 <p>Handoff的支持有一些硬性的要求：</p>
-<blockquote><span class="custom-blockquote-svg"><svg width="24" height="24" viewBox="0 0 24 24" fill="" xmlns="http://www.w3.org/2000/svg" data-reactroot="">
-<path fill="" d="M22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22C13.8 22 15.5 21.5 17 20.6L22 22L20.7 17C21.5 15.5 22 13.8 22 12Z" undefined="1"></path>
-<path fill="" d="M15.97 11.5H16.04C17.12 11.5 18 12.38 18 13.47V13.53C18 14.62 17.12 15.5 16.03 15.5H15.96C14.88 15.5 14 14.62 14 13.53V13.46C14 12.38 14.88 11.5 15.97 11.5Z" undefined="1"></path>
-<path fill="" d="M7.97 11.5H8.04C9.12 11.5 10 12.38 10 13.47V13.53C10 14.62 9.12 15.5 8.03 15.5H7.97C6.88 15.5 6 14.62 6 13.53V13.46C6 12.38 6.88 11.5 7.97 11.5Z" undefined="1"></path>
-<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke="" d="M17 8.5C15.23 8.97 14.07 10.84 14.01 13.27C14 13.33 14 13.4 14 13.47V13.5"></path>
-<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke="" d="M9 8.5C7.23 8.97 6.07 10.84 6.01 13.27C6 13.33 6 13.4 6 13.47V13.5"></path>
-<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke="" d="M15.97 11.5H16.04C17.12 11.5 18 12.38 18 13.47V13.53C18 14.62 17.12 15.5 16.03 15.5H15.96C14.88 15.5 14 14.62 14 13.53V13.46C14 12.38 14.88 11.5 15.97 11.5Z"></path>
-<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke="" d="M7.97 11.5H8.04C9.12 11.5 10 12.38 10 13.47V13.53C10 14.62 9.12 15.5 8.03 15.5H7.97C6.88 15.5 6 14.62 6 13.53V13.46C6 12.38 6.88 11.5 7.97 11.5Z"></path>
-</svg>
-</span><p>1.互通的所有设备必须支持 Buletooth LE 4.0，Handoff使用BLE信号来传递用户活动数据。<br>2.设备处于联网状态，有时候有些数据还是会通过互联网来传递的，比如Mail App的邮件内容的同步。<br>3.所有设备必须连到同一个iCloud账户。<br>4.当然你还得保证当前设备的Handoff功能打开了(iOS:设置-&gt;通用-&gt;Handoff 与建议的应用程序。<br>5.Mac:系统偏好设置-&gt;通用,倒数第二栏有个选项,”允许这台Mac和iCloud设备之间使用Handoff”)</p></blockquote>
+<blockquote>
+<p>1.互通的所有设备必须支持 Buletooth LE 4.0，Handoff使用BLE信号来传递用户活动数据。<br>2.设备处于联网状态，有时候有些数据还是会通过互联网来传递的，比如Mail App的邮件内容的同步。<br>3.所有设备必须连到同一个iCloud账户。<br>4.当然你还得保证当前设备的Handoff功能打开了(iOS:设置-&gt;通用-&gt;Handoff 与建议的应用程序。<br>5.Mac:系统偏好设置-&gt;通用,倒数第二栏有个选项,”允许这台Mac和iCloud设备之间使用Handoff”)</p>
+</blockquote>
 <p>BLE并不像传统的蓝牙，并不需要人工手动进行配对，只要打开就行了，所有的配对数据传输都是自动完成的；设备并不一定需要连在同一个WIFI网络中，Handoff的活动数据通过BLE进行传递，保证及时性以及数据的安全性，你可以在使用过程中尝试将WIFI或者网络关闭，设备还是可以接受到Handoff的通知的。</p>
 <p>苹果已经对很多内置的App做了Handoff支持，如Safari浏览器，邮件，电话，消息，提醒事项等都是支持的，在你开始Handoff编程之前可以先使用这些App进行Handoff功能的体验。</p>
 <p>#iOS App 到 Web Browser</p>
@@ -307,23 +300,14 @@
 <p>App必须是通过发布证书或者开发者证书进行打包的和发布Activity的App拥有相同的TeamID</p>
 <p>info.plist中声明了接受的Activity的activityType(key 为 NSUserActivityTypes)</p>
 <p>不过很多应用其实也只是在移动设备上有App，在Mac上绝大多数还是走的浏览器，所以iOS App和浏览器的Handoff的需求就变的很常见了。这个时候Activity的另一个叫做<code>webpageURL</code>的属性便有用武之地了，当没有合适的App能够处理当前的Activity的话，系统会转给默认的浏览器进行处理（当然你的这个默认的浏览器的info.plist的<code>NSUserActivityTypes数组</code>中必须声明了 <code>NSUserActivityTypeBrowsingWeb</code>这个type，目前Mac版本的Chrome已经支持了)</p>
-<pre class="line-numbers language-c" data-language="c"><code class="language-c">self<span class="token punctuation">.</span>myActivity <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span>NSUserActivity alloc<span class="token punctuation">]</span> initWithActivityType<span class="token operator">:</span> @<span class="token string">"com.taobao.handoff.act.home"</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-self<span class="token punctuation">.</span>myActivity<span class="token punctuation">.</span>webpageURL <span class="token operator">=</span> <span class="token punctuation">[</span>NSURL URLWithString<span class="token operator">:</span>@<span class="token string">"http://www.taobao.com"</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token punctuation">[</span>self<span class="token punctuation">.</span>myActivity becomeCurrent<span class="token punctuation">]</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">self.myActivity = [[NSUserActivity alloc] initWithActivityType: @<span class="string">&quot;com.taobao.handoff.act.home&quot;</span>];</span><br><span class="line">self.myActivity.webpageURL = [NSURL URLWithString:@<span class="string">&quot;http://www.taobao.com&quot;</span>];</span><br><span class="line">[self.myActivity becomeCurrent];</span><br></pre></td></tr></table></figure>
 <p>当上面的代码执行之后，Activity便会进行分发，接受者接受后，若没有App能够处理当前类型的Activity的话便转交给默认的浏览器去处理了，这里需要特别注意的就是activity的生命周期，当activity被<code>invalidate</code>或者被释放了，那么这个Handoff消息也就消失了，相关设备的Handoff消息就会消失。</p>
 <p>关于Handoff的调试，由于到目前为止模拟器还是没有支持Handoff的，所以你必须使用开发者证书进行真机调试。</p>
 <p>#Web Browser 到 iOS App</p>
 <p>相比于App到Web Browser，Web Browser到iOS App的Handoff实现起来就复杂一些了。 首先先描述下大体的流程：</p>
-<blockquote><span class="custom-blockquote-svg"><svg width="24" height="24" viewBox="0 0 24 24" fill="" xmlns="http://www.w3.org/2000/svg" data-reactroot="">
-<path fill="" d="M22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22C13.8 22 15.5 21.5 17 20.6L22 22L20.7 17C21.5 15.5 22 13.8 22 12Z" undefined="1"></path>
-<path fill="" d="M15.97 11.5H16.04C17.12 11.5 18 12.38 18 13.47V13.53C18 14.62 17.12 15.5 16.03 15.5H15.96C14.88 15.5 14 14.62 14 13.53V13.46C14 12.38 14.88 11.5 15.97 11.5Z" undefined="1"></path>
-<path fill="" d="M7.97 11.5H8.04C9.12 11.5 10 12.38 10 13.47V13.53C10 14.62 9.12 15.5 8.03 15.5H7.97C6.88 15.5 6 14.62 6 13.53V13.46C6 12.38 6.88 11.5 7.97 11.5Z" undefined="1"></path>
-<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke="" d="M17 8.5C15.23 8.97 14.07 10.84 14.01 13.27C14 13.33 14 13.4 14 13.47V13.5"></path>
-<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke="" d="M9 8.5C7.23 8.97 6.07 10.84 6.01 13.27C6 13.33 6 13.4 6 13.47V13.5"></path>
-<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke="" d="M15.97 11.5H16.04C17.12 11.5 18 12.38 18 13.47V13.53C18 14.62 17.12 15.5 16.03 15.5H15.96C14.88 15.5 14 14.62 14 13.53V13.46C14 12.38 14.88 11.5 15.97 11.5Z"></path>
-<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke="" d="M7.97 11.5H8.04C9.12 11.5 10 12.38 10 13.47V13.53C10 14.62 9.12 15.5 8.03 15.5H7.97C6.88 15.5 6 14.62 6 13.53V13.46C6 12.38 6.88 11.5 7.97 11.5Z"></path>
-</svg>
-</span><p>1.首先在Mac上使用Safari浏览器浏览目标网站，Handoff消息会通过BLE进行分发<br> 2.iOS设备接收到Handoff消息后，检查对应的<code>webpageURL</code>，看是否有某个App的<code>associated-domains</code> （entitlement中的一项）中包含了这个<code>webpageURL</code>, <code>associated-domains</code>对应的Handoff的配置URL样式为 <code>activitycontinuation:example.com</code><br> 3.如果某个App的<code>associated-domains</code>存在相应的<code>webpageURL</code>,那么iOS会去这个网站的固定的一个URL（地址为<a href="">https://example.com/apple-app-site-association</a>）获取一个签名过的文件（源文件为一个JSON文件）,如果解密后文件中的App IDs中包含了 之前匹配的App的App ID，那么这个Activity便交给这个匹配的App进行处理。</p></blockquote>
+<blockquote>
+<p>1.首先在Mac上使用Safari浏览器浏览目标网站，Handoff消息会通过BLE进行分发<br> 2.iOS设备接收到Handoff消息后，检查对应的<code>webpageURL</code>，看是否有某个App的<code>associated-domains</code> （entitlement中的一项）中包含了这个<code>webpageURL</code>, <code>associated-domains</code>对应的Handoff的配置URL样式为 <code>activitycontinuation:example.com</code><br> 3.如果某个App的<code>associated-domains</code>存在相应的<code>webpageURL</code>,那么iOS会去这个网站的固定的一个URL（地址为<a href="">https://example.com/apple-app-site-association</a>）获取一个签名过的文件（源文件为一个JSON文件）,如果解密后文件中的App IDs中包含了 之前匹配的App的App ID，那么这个Activity便交给这个匹配的App进行处理。</p>
+</blockquote>
 <p>下面讲解详细的操作步骤</p>
 <p>1.客户端</p>
 <p>首先当然还是折腾客户端工程，当你创建好工程，创建好App ID，XCode中设置好自己的Developer账户之后，你便可以设置编译的Code Sign的相关东西了，配置都得选自动的，这样就可以通过XCode来管理配置 App ID 以及相应的 Provisioning Profiles了，当你通过developer后台网站就可以看到Provisioning Profiles中有一堆所谓的Managed by Xcode的条目了。</p>
@@ -335,14 +319,10 @@ self<span class="token punctuation">.</span>myActivity<span class="token punctua
 <p>activitycontinuation是服务名，taobao.com是支持的域名 当Mac上的浏览器访问一个网站的时候，此网站的域名如果被某个App的<code>Associated Domains</code>包含了，那么Handoff底层会去这个域名一个指定的路径下访问一个文件，这个指定的路径便是 : <a target="_blank" rel="noopener" href="https://taobao.com/apple-app-site-association">https://taobao.com/apple-app-site-association</a> ,这个路径需要返回一个签名过的文件数据，里面指定了当前网站所支持Handoff的App ID们，这个下面会提及到</p>
 <p>2.服务器端</p>
 <p>需要进行Handoff的网站，需要在https的特定的路径下放一个签名过的文件，这个文件里面指明了Handoff支持哪些App（Domain-approved apps IDs），这个文件的明文为JSON格式,在对JSON文件签名前最好去掉所有无用的空格以及检测下JSON格式的正确性，避免后面带来问题</p>
-<pre><code>&#123;&quot;activitycontinuation&quot;:&#123;&quot;apps&quot;:[&quot;XN6U3EV979.com.taobao.handoff&quot;]&#125;&#125;
+<pre><code>{&quot;activitycontinuation&quot;:{&quot;apps&quot;:[&quot;XN6U3EV979.com.taobao.handoff&quot;]}}
 </code></pre>
 <p>签名则是使用网站的ssl的私钥以及证书进行签名（如果不存在中级证书，那么中级证书可以去掉）</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">cat</span> json.txt <span class="token operator">|</span> openssl smime -sign -inkey taobao.com.key
-                             -signer taobao.com.pem
-                             -certfile intermediate.pem
-                             -noattr -nodetach
-                             -outform DER <span class="token operator">></span> apple-app-site-association<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cat</span> json.txt | openssl smime -sign -inkey taobao.com.key</span><br><span class="line">                             -signer taobao.com.pem</span><br><span class="line">                             -certfile intermediate.pem</span><br><span class="line">                             -noattr -nodetach</span><br><span class="line">                             -outform DER &gt; apple-app-site-association</span><br></pre></td></tr></table></figure>
 <p>生成的文件放到网站根目录下以及确保可以通过指定的路径进行访问。</p>
 <p>3.如何进行本机调试<br>要想在开发机器上进行网站的Handoff的调试则首先的问题就是SSL证书，你需要自己搞一个CA证书，在Mac上可以通过Keychain Access(钥匙串访问)这个App中的证书助理来生成 。</p>
 <p>首先是CA证书,这里生成的是自签名的根证书，CA证书的作用就是给网站的SSL的证书进行签名用的，然后创建网站的SSL证书,一步一步走下去，然后通过刚才的CA证书进行签发，这样生成的证书就可以直接用于网站的SSL证书了。</p>
@@ -360,8 +340,7 @@ self<span class="token punctuation">.</span>myActivity<span class="token punctua
 <p>然后我便可以通过<code>https://lukesmac.local:8443/</code> 进行访问了</p>
 <p>下面需要将json.txt进行签名，</p>
 <p>首先你需要从上面导出的p12文件中搞出私钥文件，再从Keychain Access中导出一份证书的cer文件</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">openssl pkcs12 -in lukesmac.p12 -nocerts -out privateKey.pem
-<span class="token function">cat</span> json.txt <span class="token operator">|</span> openssl smime -sign -inkey privateKey.pem -signer lukesmac.cer -noattr -nodetach -outform DER <span class="token operator">></span> apple-app-site-association<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">openssl pkcs12 -<span class="keyword">in</span> lukesmac.p12 -nocerts -out privateKey.pem</span><br><span class="line"><span class="built_in">cat</span> json.txt | openssl smime -sign -inkey privateKey.pem -signer lukesmac.cer -noattr -nodetach -outform DER &gt; apple-app-site-association</span><br></pre></td></tr></table></figure>
 <p>将生成的apple-app-site-association文件放到 demo工程的ROOT目录下，然后重启以及在浏览器中对这个文件进行访问测试。</p>
 <p>这个时候你以为一切就绪了，发现手机上handoff的图标依然是safari，打开后发现，网页根本无法打开，其原因就是自己生成的自签名的CA证书不被信任，这个时候你可以讲CA证书按照cer的格式导出，然后通过邮件发送，在iPhone上的邮箱App中点击这个cer的附件，系统会跳转到设置的描述文件的界面去，你需要进行安装证书，之后这个CA证书签发的SSL证书对于这台设备都是可信任的了。</p>
 <p>最后就是客户端添加处理逻辑了，可以在Appdelegate中添加如下方法，就可以对传递过来的userActivity进行处理</p>

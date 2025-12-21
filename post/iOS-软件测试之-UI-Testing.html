@@ -182,7 +182,7 @@
 
 
 
-<meta name="generator" content="Hexo 5.4.2"></head>
+<meta name="generator" content="Hexo 8.1.1"></head>
 <body class="font-sans bg-white dark:bg-zinc-900 text-gray-700 dark:text-gray-200 relative">
   <header class="fixed w-full px-5 py-1 z-10 backdrop-blur-xl backdrop-saturate-150 border-b border-black/5">
   <div class="max-auto">
@@ -285,16 +285,9 @@
   </header>
   <!-- content -->
   <article class="post-content prose m-auto slide-enter-content dark:prose-invert">
-    <blockquote><span class="custom-blockquote-svg"><svg width="24" height="24" viewBox="0 0 24 24" fill="" xmlns="http://www.w3.org/2000/svg" data-reactroot="">
-<path fill="" d="M22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22C13.8 22 15.5 21.5 17 20.6L22 22L20.7 17C21.5 15.5 22 13.8 22 12Z" undefined="1"></path>
-<path fill="" d="M15.97 11.5H16.04C17.12 11.5 18 12.38 18 13.47V13.53C18 14.62 17.12 15.5 16.03 15.5H15.96C14.88 15.5 14 14.62 14 13.53V13.46C14 12.38 14.88 11.5 15.97 11.5Z" undefined="1"></path>
-<path fill="" d="M7.97 11.5H8.04C9.12 11.5 10 12.38 10 13.47V13.53C10 14.62 9.12 15.5 8.03 15.5H7.97C6.88 15.5 6 14.62 6 13.53V13.46C6 12.38 6.88 11.5 7.97 11.5Z" undefined="1"></path>
-<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke="" d="M17 8.5C15.23 8.97 14.07 10.84 14.01 13.27C14 13.33 14 13.4 14 13.47V13.5"></path>
-<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke="" d="M9 8.5C7.23 8.97 6.07 10.84 6.01 13.27C6 13.33 6 13.4 6 13.47V13.5"></path>
-<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke="" d="M15.97 11.5H16.04C17.12 11.5 18 12.38 18 13.47V13.53C18 14.62 17.12 15.5 16.03 15.5H15.96C14.88 15.5 14 14.62 14 13.53V13.46C14 12.38 14.88 11.5 15.97 11.5Z"></path>
-<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke="" d="M7.97 11.5H8.04C9.12 11.5 10 12.38 10 13.47V13.53C10 14.62 9.12 15.5 8.03 15.5H7.97C6.88 15.5 6 14.62 6 13.53V13.46C6 12.38 6.88 11.5 7.97 11.5Z"></path>
-</svg>
-</span><p>本文译自:<a target="_blank" rel="noopener" href="https://www.shinobicontrols.com/blog/ios9-day-by-day-day2-ui-testing">iOS9 Day-by-Day :: Day 2 :: UI Testing</a></p></blockquote>
+    <blockquote>
+<p>本文译自:<a target="_blank" rel="noopener" href="https://www.shinobicontrols.com/blog/ios9-day-by-day-day2-ui-testing">iOS9 Day-by-Day :: Day 2 :: UI Testing</a></p>
+</blockquote>
 <p> 在任何软件的开发中，自动化UI测试都是很重要的。它能快速发现你应用中的问题，在发布之前进行一次成功的配套测试能减少许多问题。在iOS平台目前是通过UIAutomation来完成自动化测试，它的用例是用JavaScript写的。这需要打开Instruments，在其中编写和运行脚本。这个流程实在是慢得出奇而且要花很长时间来适应。</p>
 <p>#UI Testing</p>
 <p>在Xcode 7 中，Apple引入了一种新的方式来在你的应用中进行UI测试。UI testing允许你找到UI元素并与之交互，还能检查属性和状态。UI testing已经完全集成进Xcode 7 的测试报告了，可以和单元测试一起执行。在Xcode 5 中XCTest就已经集成到Xcode 的测试框架了，而在Xcode 7 中，XCTest已经拥有进行UI测试的能力了。这样你就能在检查UI状态的时候执行断言了。</p>
@@ -323,70 +316,38 @@
 <p>现在我们已经了解了API，可以开始编写一些测试了。</p>
 <p>Test 1 – 确保当switch关闭时不会发生跳转</p>
 <p>首先我们必须要定义一个方法来写测试。</p>
-<pre class="line-numbers language-swift" data-language="swift"><code class="language-swift"><span class="token keyword">func</span> <span class="token function">testTapViewDetailWhenSwitchIsOffDoesNothing</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
- 
-<span class="token punctuation">&#125;</span>​﻿​<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">func</span> <span class="title function_">testTapViewDetailWhenSwitchIsOffDoesNothing</span>() &#123;</span><br><span class="line"> </span><br><span class="line">&#125;​﻿​</span><br></pre></td></tr></table></figure>
 
 <p>当定义好方法之后，我们把光标移到方法的括号里，然后点击Xcode 窗口下方的录制按钮。</p>
 <p><img src="https://www.shinobicontrols.com/wp-content/uploads/2015/07/prerecording.png"></p>
 <p>应用会马上启动。点击关闭switch，然后点击“View Detail” 按钮。在testTapViewDetailWhenSwitchIsOffDoesNothing﻿​方法里应该会出现下面的内容。</p>
-<pre class="line-numbers language-swift" data-language="swift"><code class="language-swift"><span class="token keyword">let</span> app <span class="token operator">=</span> <span class="token function">XCUIApplication</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-app<span class="token punctuation">.</span>switches<span class="token punctuation">[</span><span class="token string">"View Detail Enabled Switch"</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">tap</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-app<span class="token punctuation">.</span>buttons<span class="token punctuation">[</span><span class="token string">"View Detail"</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">tap</span><span class="token punctuation">(</span><span class="token punctuation">)</span>​﻿​<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> app <span class="operator">=</span> <span class="type">XCUIApplication</span>()</span><br><span class="line">app.switches[<span class="string">&quot;View Detail Enabled Switch&quot;</span>].tap()</span><br><span class="line">app.buttons[<span class="string">&quot;View Detail&quot;</span>].tap()​﻿​</span><br></pre></td></tr></table></figure>
 
 <p>现在再点击录制按钮，录制应该就会停止了。我们可以看到应用没有显示detail view controller，但是目前测试没有办法知道。我们必须加一个断言来判断没有发生跳转。我们可以检测导航栏的title。这可能不适合所有情况，但对我们这个例子来说足够了。</p>
-<pre class="line-numbers language-swift" data-language="swift"><code class="language-swift"><span class="token function">XCTAssertEqual</span><span class="token punctuation">(</span>app<span class="token punctuation">.</span>navigationBars<span class="token punctuation">.</span>element<span class="token punctuation">.</span>identifier<span class="token punctuation">,</span> <span class="token string">"Menu"</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">XCTAssertEqual</span>(app.navigationBars.element.identifier, <span class="string">&quot;Menu&quot;</span>)</span><br></pre></td></tr></table></figure>
 
 <p>在添加完这行代码之后再次执行测试，应该是能通过的。试着将“Menu”字符串改成“Detail”，应该就失败了。下面就是这个测试的完整代码了，其中添加了一些注释来解释每一步的操作。</p>
-<pre class="line-numbers language-swift" data-language="swift"><code class="language-swift"><span class="token keyword">func</span> <span class="token function">testTapViewDetailWhenSwitchIsOffDoesNothing</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-    <span class="token keyword">let</span> app <span class="token operator">=</span> <span class="token function">XCUIApplication</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
- 
-    <span class="token comment">// Change the switch to off.</span>
-    app<span class="token punctuation">.</span>switches<span class="token punctuation">[</span><span class="token string">"View Detail Enabled Switch"</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">tap</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
- 
-    <span class="token comment">// Tap the view detail button.</span>
-    app<span class="token punctuation">.</span>buttons<span class="token punctuation">[</span><span class="token string">"View Detail"</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">tap</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
- 
-    <span class="token comment">// Verify that nothing has happened and we are still at the menu screen.</span>
-    <span class="token function">XCTAssertEqual</span><span class="token punctuation">(</span>app<span class="token punctuation">.</span>navigationBars<span class="token punctuation">.</span>element<span class="token punctuation">.</span>identifier<span class="token punctuation">,</span> <span class="token string">"Menu"</span><span class="token punctuation">)</span>
-<span class="token punctuation">&#125;</span>﻿​<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">func</span> <span class="title function_">testTapViewDetailWhenSwitchIsOffDoesNothing</span>() &#123;</span><br><span class="line">    <span class="keyword">let</span> app <span class="operator">=</span> <span class="type">XCUIApplication</span>()</span><br><span class="line"> </span><br><span class="line">    <span class="comment">// Change the switch to off.</span></span><br><span class="line">    app.switches[<span class="string">&quot;View Detail Enabled Switch&quot;</span>].tap()</span><br><span class="line"> </span><br><span class="line">    <span class="comment">// Tap the view detail button.</span></span><br><span class="line">    app.buttons[<span class="string">&quot;View Detail&quot;</span>].tap()</span><br><span class="line"> </span><br><span class="line">    <span class="comment">// Verify that nothing has happened and we are still at the menu screen.</span></span><br><span class="line">    <span class="type">XCTAssertEqual</span>(app.navigationBars.element.identifier, <span class="string">&quot;Menu&quot;</span>)</span><br><span class="line">&#125;﻿​</span><br></pre></td></tr></table></figure>
 
 <p>Test 2 – 确保当switch打开时发生跳转</p>
 <p>第二个测试和第一个类似，所以就不详细讲了。唯一的区别是，当switch打开时，应用应该加载detail页面，XCTAssertEqual会检查这个。</p>
-<pre class="line-numbers language-swift" data-language="swift"><code class="language-swift"><span class="token keyword">func</span> <span class="token function">testTapViewDetailWhenSwitchIsOnNavigatesToDetailViewController</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-    <span class="token keyword">let</span> app <span class="token operator">=</span> <span class="token function">XCUIApplication</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
- 
-    <span class="token comment">// Tap the view detail button.</span>
-    app<span class="token punctuation">.</span>buttons<span class="token punctuation">[</span><span class="token string">"View Detail"</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">tap</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
- 
-    <span class="token comment">// Verify that navigation occurred and we are at the detail screen.</span>
-    <span class="token function">XCTAssertEqual</span><span class="token punctuation">(</span>app<span class="token punctuation">.</span>navigationBars<span class="token punctuation">.</span>element<span class="token punctuation">.</span>identifier<span class="token punctuation">,</span> <span class="token string">"Detail"</span><span class="token punctuation">)</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">func</span> <span class="title function_">testTapViewDetailWhenSwitchIsOnNavigatesToDetailViewController</span>() &#123;</span><br><span class="line">    <span class="keyword">let</span> app <span class="operator">=</span> <span class="type">XCUIApplication</span>()</span><br><span class="line"> </span><br><span class="line">    <span class="comment">// Tap the view detail button.</span></span><br><span class="line">    app.buttons[<span class="string">&quot;View Detail&quot;</span>].tap()</span><br><span class="line"> </span><br><span class="line">    <span class="comment">// Verify that navigation occurred and we are at the detail screen.</span></span><br><span class="line">    <span class="type">XCTAssertEqual</span>(app.navigationBars.element.identifier, <span class="string">&quot;Detail&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>Test 3 – 确保“Increment Value”按钮会增加label中的值</p>
 <p>在这个测试中，我们要检查当用户点击“Increment Value”按钮，label中的值会增加1。测试中的前两行代码和之前的类似，所以我们可以直接从之前的测试中复制粘贴。</p>
-<pre class="line-numbers language-swift" data-language="swift"><code class="language-swift"><span class="token keyword">let</span> app <span class="token operator">=</span> <span class="token function">XCUIApplication</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
- 
-  <span class="token comment">// Tap the view detail button to open the detail page.</span>
-  app<span class="token punctuation">.</span>buttons<span class="token punctuation">[</span><span class="token string">"View Detail"</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">tap</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> app <span class="operator">=</span> <span class="type">XCUIApplication</span>()</span><br><span class="line"> </span><br><span class="line">  <span class="comment">// Tap the view detail button to open the detail page.</span></span><br><span class="line">  app.buttons[<span class="string">&quot;View Detail&quot;</span>].tap()</span><br></pre></td></tr></table></figure>
 
 <p>下一步我们需要能访问这个button。我们之后要点击几次button，所以我们把它作为一个变量保存下来。与其我们手动输入代码找到这个button，而且还需要调试，不如直接使用录制功能，点击“Increment Value”按钮即可。这样就得到了下面的代码。</p>
-<pre class="line-numbers language-swift" data-language="swift"><code class="language-swift">app<span class="token punctuation">.</span>buttons<span class="token punctuation">[</span><span class="token string">"Increment Value"</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">tap</span><span class="token punctuation">(</span><span class="token punctuation">)</span>﻿​<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">app.buttons[<span class="string">&quot;Increment Value&quot;</span>].tap()﻿​</span><br></pre></td></tr></table></figure>
 
 <p>现在我们可以停止录制，把代码改成下面这样的：</p>
-<pre class="line-numbers language-swift" data-language="swift"><code class="language-swift"><span class="token keyword">let</span> incrementButton <span class="token operator">=</span> app<span class="token punctuation">.</span>buttons<span class="token punctuation">[</span><span class="token string">"Increment Value"</span><span class="token punctuation">]</span>﻿​<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> incrementButton <span class="operator">=</span> app.buttons[<span class="string">&quot;Increment Value&quot;</span>]﻿​</span><br></pre></td></tr></table></figure>
 
 <p>这样我们就不用手动输入代码来找这个button了。我们使用同样的方法来找到显示值的label。</p>
-<pre class="line-numbers language-swift" data-language="swift"><code class="language-swift"><span class="token keyword">let</span> valueLabel <span class="token operator">=</span> app<span class="token punctuation">.</span>staticTexts<span class="token punctuation">[</span><span class="token string">"Number Value Label"</span><span class="token punctuation">]</span>﻿​<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> valueLabel <span class="operator">=</span> app.staticTexts[<span class="string">&quot;Number Value Label&quot;</span>]﻿​</span><br></pre></td></tr></table></figure>
 
 <p>现在我们已经有UI元素，就可以和它们交互了。在这个测试中我们会检查点击button十次之后，label的值是否也相应地更新了。我们可以录制十次点击，但是我们之前已经保存这些元素了，所以可以在循环中完成。</p>
-<pre class="line-numbers language-swift" data-language="swift"><code class="language-swift"><span class="token keyword">for</span> index <span class="token keyword">in</span> <span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token number">10</span> <span class="token punctuation">&#123;</span>
-    <span class="token comment">// Tap the increment value button.</span>
-    incrementButton<span class="token punctuation">.</span><span class="token function">tap</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
- 
-    <span class="token comment">// Ensure that the value has increased by 1.</span>
-    <span class="token function">XCTAssertEqual</span><span class="token punctuation">(</span>valueLabel<span class="token punctuation">.</span>value <span class="token keyword">as</span><span class="token operator">!</span> <span class="token builtin">String</span><span class="token punctuation">,</span> <span class="token string">"<span class="token interpolation"><span class="token delimiter variable">\(</span>index<span class="token operator">+</span><span class="token number">1</span><span class="token delimiter variable">)</span></span>"</span><span class="token punctuation">)</span>
-<span class="token punctuation">&#125;</span> <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> index <span class="keyword">in</span> <span class="number">0</span><span class="operator">...</span><span class="number">10</span> &#123;</span><br><span class="line">    <span class="comment">// Tap the increment value button.</span></span><br><span class="line">    incrementButton.tap()</span><br><span class="line"> </span><br><span class="line">    <span class="comment">// Ensure that the value has increased by 1.</span></span><br><span class="line">    <span class="type">XCTAssertEqual</span>(valueLabel.value <span class="keyword">as!</span> <span class="type">String</span>, <span class="string">&quot;<span class="subst">\(index<span class="operator">+</span><span class="number">1</span>)</span>&quot;</span>)</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
 
 <p>这三个测试根本算不上全面，但它们应该给你开了一个好头，你可以在这之上很轻松地扩展。你可以自己写一个测试来检查当button可点击时，你能跳转，如果关闭switch，又是否能跳转。</p>
 <p>##录制出错怎么办？</p>

@@ -182,7 +182,7 @@
 
 
 
-<meta name="generator" content="Hexo 5.4.2"></head>
+<meta name="generator" content="Hexo 8.1.1"></head>
 <body class="font-sans bg-white dark:bg-zinc-900 text-gray-700 dark:text-gray-200 relative">
   <header class="fixed w-full px-5 py-1 z-10 backdrop-blur-xl backdrop-saturate-150 border-b border-black/5">
   <div class="max-auto">
@@ -270,7 +270,7 @@
           <span class="text-gray-400">·</span>
           <span class="flex items-center gap-1">
             <iconify-icon width="18" icon="icon-park-outline:font-search" ></iconify-icon>
-            <span>554 words</span>
+            <span>548 words</span>
           </span>
           
         </section>
@@ -286,11 +286,11 @@
 <p>这里我们可以选择新建一个shell script 或者 将一个编写好的脚步拖进器</p>
 <p>shell脚本代码如下:</p>
 <pre><code> echo &quot;Dump of variables&quot;
- echo &quot;PRODUCT_NAME=$&#123;PRODUCT_NAME&#125;&quot;
+ echo &quot;PRODUCT_NAME=${PRODUCT_NAME}&quot;
  echo &quot;The action being performed on the current target,such as build or clean.&quot;
- echo &quot;ACTION=$&#123;ACTION&#125;&quot;
+ echo &quot;ACTION=${ACTION}&quot;
  echo &quot;The variations-debug,profile or normal-that Xcode is creating for the product being built.&quot;
- echo &quot;BUILD_VARIANTS=$&#123;BUILD_VARIANTS&#125;&quot;
+ echo &quot;BUILD_VARIANTS=${BUILD_VARIANTS}&quot;
  echo &quot;The name of the project containing the tartget that is being build.&quot;
  echo &quot;PROJECT_NAME=$PROJECT_NAME&quot;
  echo &quot;The name of the project being built, without any extension or suffix.&quot;

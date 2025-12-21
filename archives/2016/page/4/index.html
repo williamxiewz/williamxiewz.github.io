@@ -182,7 +182,7 @@
 
 
 
-<meta name="generator" content="Hexo 5.4.2"></head>
+<meta name="generator" content="Hexo 8.1.1"></head>
 <body class="font-sans bg-white dark:bg-zinc-900 text-gray-700 dark:text-gray-200 relative">
   <header class="fixed w-full px-5 py-1 z-10 backdrop-blur-xl backdrop-saturate-150 border-b border-black/5">
   <div class="max-auto">
@@ -336,7 +336,7 @@
         <p class="line-clamp-4">
           8月 10
           ·
-          32 min
+          33 min
         </p>
       </section>
     </a>
@@ -363,7 +363,7 @@
         <p class="line-clamp-4">
           8月 10
           ·
-          40 min
+          39 min
         </p>
       </section>
     </a>
@@ -386,17 +386,7 @@
 <p>如果不存在流，你还可以直接从URL创建一个网络诊断引用。要做到这一点，调用<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/CoreFoundation/Reference/CFNetDiagnosticsRef/index.html#//apple_ref/doc/c_ref/CFNetDiagnosticCreateWithURL">CFNetDiagnosticCreateWithURL</a> 函数，并传递一个分配器，URL到CFURLRef。它将返回一个网络诊断引用供你使用。</p>
 <p>为了通过网络诊断助手诊断问题，调用<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/CoreFoundation/Reference/CFNetDiagnosticsRef/index.html#//apple_ref/doc/c_ref/CFNetDiagnosticDiagnoseProblemInteractively">CFNetDiagnosticDiagnoseProblemInteractively</a> 函数并传递网络诊断引用。列表6-1展示了如何使用CFNetDiagnostics 诊断在运行循环上实现的流。</p>
 <p>列表6-1 当发生流错误时使用CFNetDiagnostics API</p>
-<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">case</span> kCFStreamEventErrorOccurred<span class="token operator">:</span> 
-
-    CFNetDiagnosticRef diagRef <span class="token operator">=</span>
-        <span class="token function">CFNetDiagnosticCreateWithStreams</span><span class="token punctuation">(</span><span class="token constant">NULL</span><span class="token punctuation">,</span> stream<span class="token punctuation">,</span> <span class="token constant">NULL</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
-
-    <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token function">CFNetDiagnosticDiagnoseProblemInteractively</span><span class="token punctuation">(</span>diagRef<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    CFStreamError error <span class="token operator">=</span> <span class="token function">CFReadStreamGetError</span><span class="token punctuation">(</span>stream<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token function">reportError</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token function">CFReadStreamClose</span><span class="token punctuation">(</span>stream<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token function">CFRelease</span><span class="token punctuation">(</span>stream<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">break</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">case</span> kCFStreamEventErrorOccurred: </span><br><span class="line"></span><br><span class="line">    CFNetDiagnosticRef diagRef =</span><br><span class="line">        CFNetDiagnosticCreateWithStreams(<span class="literal">NULL</span>, stream, <span class="literal">NULL</span>); </span><br><span class="line"></span><br><span class="line">    (<span class="type">void</span>)CFNetDiagnosticDiagnoseProblemInteractively(diagRef);</span><br><span class="line">    CFStreamError error = CFReadStreamGetError(stream);</span><br><span class="line">    reportError(error);</span><br><span class="line">    CFReadStreamClose(stream);</span><br><span class="line">    CFRelease(stream);</span><br><span class="line">    <span class="keyword">break</span>;</span><br></pre></td></tr></table></figure>
             </div>
           
         </p>
@@ -510,7 +500,7 @@
 <p>##使用读取流<br>核心基础流可用于读取或写入文件或使用网络套接字。除了创建这些流过程中的异常，其他行为类似。</p>
 <p>###创建一个读取流<br>首先创建一个读取流。列表2-1为一个文件创建读取流。</p>
 <p>列表2-1 为一个文件创建读取流</p>
-<pre class="line-numbers language-c" data-language="c"><code class="language-c">CFReadStreamRef myReadStream <span class="token operator">=</span> <span class="token function">CFReadStreamCreateWithFile</span><span class="token punctuation">(</span>kCFAllocatorDefault<span class="token punctuation">,</span> fileURL<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CFReadStreamRef myReadStream = CFReadStreamCreateWithFile(kCFAllocatorDefault, fileURL);</span><br></pre></td></tr></table></figure>
             </div>
           
         </p>
