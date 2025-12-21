@@ -1,0 +1,13 @@
+<% if (theme.adsense && theme.adsense.enable && theme.adsense.article_ads && theme.adsense.client && is_post()){ %>
+<div class="adsense-container my-6 text-center">
+  <ins class="adsbygoogle"
+       style="display:block; text-align:center;"
+       data-ad-layout="in-article"
+       data-ad-format="fluid"
+       data-ad-client="<%= theme.adsense.client %>"
+       data-ad-slot="<%= theme.adsense.slot || '' %>"></ins>
+  <script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+<% } %>

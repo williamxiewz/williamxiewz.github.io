@@ -23,6 +23,13 @@ links:
 google_analytics:
 baidu_analytics:
 
+# Google Adsense
+adsense:
+  enable: true       # 是否启用Adsense广告
+  client: ca-pub-1663357848309469  # 发布商ID
+  slot:             # 广告位ID (可选，用于自动广告)
+  article_ads: true # 是否在文章中显示广告
+
 # 功能开关
 fancybox: true        # 图片查看器
 mathjax: true         # 数学公式支持
