@@ -1,1 +1,606 @@
-<!DOCTYPE html><html lang="en"><head><!-- hexo injector head_begin start --><meta name="description" content="ssss"></meta><meta name="keywords" content="Frontend, Web development, Blog, Aurora Theme, TriDiamond"></meta><meta name="author" content="Williamxie"></meta><!-- hexo injector head_begin end --><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="/favicon.ico"><link href="/static/css/chunk-libs.eebac533.css" rel="stylesheet"><link href="/static/css/app.a5fe2998.css" rel="stylesheet"><!-- hexo injector head_end start --><script rel="prefetch" async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script rel="preload" src="https://cdn.bootcdn.net/ajax/libs/prism/1.23.0/components/prism-core.js" data-manual></script><script rel="preload" src="https://cdn.bootcdn.net/ajax/libs/prism/1.23.0/plugins/autoloader/prism-autoloader.js"></script><script rel="preload" src="https://cdn.bootcdn.net/ajax/libs/prism/1.23.0/plugins/toolbar/prism-toolbar.min.js"></script><script rel="preload" src="https://cdn.bootcdn.net/ajax/libs/prism/1.23.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script><script rel="preload" src="https://cdn.bootcdn.net/ajax/libs/blueimp-md5/2.18.0/js/md5.min.js"></script><script rel="preload" src="https://cdn.bootcdn.net/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script><link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/prism/1.23.0/themes/prism.min.css"/><link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/prism/1.23.0/plugins/toolbar/prism-toolbar.min.css"/><link rel="stylesheet" href="https://fonts.loli.net/css?family=Rubik" /><script rel="preload" src="https://cdn.bootcdn.net/ajax/libs/gitalk/1.7.2/gitalk.min.js"></script><link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/gitalk/1.7.2/gitalk.min.css"/><link rel="stylesheet" href="//at.alicdn.com/t/font_2476818_87vaqng7dno.css" /><!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.0"></head><body id="body-container"><noscript><strong>We're sorry but Aurora Blog doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id="app"></div><script>(function(e){function t(t){for(var n,o,u=t[0],i=t[1],c=t[2],l=0,p=[];l<u.length;l++)o=u[l],Object.prototype.hasOwnProperty.call(a,o)&&a[o]&&p.push(a[o][0]),a[o]=0;for(n in i)Object.prototype.hasOwnProperty.call(i,n)&&(e[n]=i[n]);f&&f(t);while(p.length)p.shift()();return s.push.apply(s,c||[]),r()}function r(){for(var e,t=0;t<s.length;t++){for(var r=s[t],n=!0,o=1;o<r.length;o++){var u=r[o];0!==a[u]&&(n=!1)}n&&(s.splice(t--,1),e=i(i.s=r[0]))}return e}var n={},o={runtime:0},a={runtime:0},s=[];function u(e){return i.p+"static/js/"+({404:"404",about:"about",archives:"archives",categories:"categories",page:"page",post:"post",result:"result",tags:"tags"}[e]||e)+"."+{404:"7d1e319c",about:"b870224f",archives:"62201fb5",categories:"cd195d1b",page:"f035d07e",post:"bbd5d2f0",result:"7281cdb6",tags:"df396091"}[e]+".js"}function i(t){if(n[t])return n[t].exports;var r=n[t]={i:t,l:!1,exports:{}};return e[t].call(r.exports,r,r.exports,i),r.l=!0,r.exports}i.e=function(e){var t=[],r={404:1,about:1,archives:1,categories:1,page:1,post:1,result:1,tags:1};o[e]?t.push(o[e]):0!==o[e]&&r[e]&&t.push(o[e]=new Promise((function(t,r){for(var n="static/css/"+({404:"404",about:"about",archives:"archives",categories:"categories",page:"page",post:"post",result:"result",tags:"tags"}[e]||e)+"."+{404:"1a6cd5bd",about:"713e2e0c",archives:"0536c7a0",categories:"10e2be12",page:"01d3099e",post:"9f951a60",result:"10e2be12",tags:"10e2be12"}[e]+".css",a=i.p+n,s=document.getElementsByTagName("link"),u=0;u<s.length;u++){var c=s[u],l=c.getAttribute("data-href")||c.getAttribute("href");if("stylesheet"===c.rel&&(l===n||l===a))return t()}var p=document.getElementsByTagName("style");for(u=0;u<p.length;u++){c=p[u],l=c.getAttribute("data-href");if(l===n||l===a)return t()}var f=document.createElement("link");f.rel="stylesheet",f.type="text/css",f.onload=t,f.onerror=function(t){var n=t&&t.target&&t.target.src||a,s=new Error("Loading CSS chunk "+e+" failed.\n("+n+")");s.code="CSS_CHUNK_LOAD_FAILED",s.request=n,delete o[e],f.parentNode.removeChild(f),r(s)},f.href=a;var d=document.getElementsByTagName("head")[0];d.appendChild(f)})).then((function(){o[e]=0})));var n=a[e];if(0!==n)if(n)t.push(n[2]);else{var s=new Promise((function(t,r){n=a[e]=[t,r]}));t.push(n[2]=s);var c,l=document.createElement("script");l.charset="utf-8",l.timeout=120,i.nc&&l.setAttribute("nonce",i.nc),l.src=u(e);var p=new Error;c=function(t){l.onerror=l.onload=null,clearTimeout(f);var r=a[e];if(0!==r){if(r){var n=t&&("load"===t.type?"missing":t.type),o=t&&t.target&&t.target.src;p.message="Loading chunk "+e+" failed.\n("+n+": "+o+")",p.name="ChunkLoadError",p.type=n,p.request=o,r[1](p)}a[e]=void 0}};var f=setTimeout((function(){c({type:"timeout",target:l})}),12e4);l.onerror=l.onload=c,document.head.appendChild(l)}return Promise.all(t)},i.m=e,i.c=n,i.d=function(e,t,r){i.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:r})},i.r=function(e){"undefined"!==typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.t=function(e,t){if(1&t&&(e=i(e)),8&t)return e;if(4&t&&"object"===typeof e&&e&&e.__esModule)return e;var r=Object.create(null);if(i.r(r),Object.defineProperty(r,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var n in e)i.d(r,n,function(t){return e[t]}.bind(null,n));return r},i.n=function(e){var t=e&&e.__esModule?function(){return e["default"]}:function(){return e};return i.d(t,"a",t),t},i.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},i.p="/",i.oe=function(e){throw console.error(e),e};var c=window["webpackJsonp"]=window["webpackJsonp"]||[],l=c.push.bind(c);c.push=t,c=c.slice();for(var p=0;p<c.length;p++)t(c[p]);var f=l;r()})([]);</script><script src="/static/js/chunk-libs.9b3ced64.js"></script><script src="/static/js/app.d749b93c.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <meta name="author" content="William Xie">
+
+
+  <meta name="subtitle" content="Walk steps step by step">
+
+
+
+
+<title>Xcode Server 教程4: 证书和描述文件 | William&#39;s Blog</title>
+
+
+
+<link rel="icon" href="/favicon.png">
+
+
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/nprogress/nprogress.css">
+
+
+
+<script src="/lib/jquery.min.js"></script>
+
+
+<script src="/lib/iconify-icon.min.js"></script>
+
+
+<script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+<script>
+  tailwind.config = {
+    darkMode: "class",
+  };
+</script>
+
+
+<script src="/lib/nprogress/nprogress.js"></script>
+
+<script>
+  $(document).ready(() => {
+    NProgress.configure({
+      showSpinner: false,
+    });
+    NProgress.start();
+    $("#nprogress .bar").css({
+      background: "#de7441",
+    });
+    $("#nprogress .peg").css({
+      "box-shadow": "0 0 2px #de7441, 0 0 4px #de7441",
+    });
+    $("#nprogress .spinner-icon").css({
+      "border-top-color": "#de7441",
+      "border-left-color": "#de7441",
+    });
+    setTimeout(function () {
+      NProgress.done();
+      $(".fade").removeClass("out");
+    }, 800);
+  });
+</script>
+
+<script>
+  (function () {
+    const prefersDark =
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const setting = localStorage.getItem("hexo-color-scheme") || "auto";
+    if (setting === "dark" || (prefersDark && setting !== "light"))
+      document.documentElement.classList.toggle("dark", true);
+    let isDark = document.documentElement.classList.contains("dark");
+  })();
+
+  $(document).ready(function () {
+    // init icon
+    const prefersDark =
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const isDark = document.documentElement.classList.contains("dark");
+    $("#theme-icon").attr("icon", isDark ? "ri:moon-line" : "ri:sun-line");
+
+    function toggleGiscusTheme() {
+      const isDark = document.documentElement.classList.contains("dark");
+      const giscusFrame = document.querySelector("iframe.giscus-frame");
+      if (giscusFrame) {
+        giscusFrame.contentWindow.postMessage(
+          {
+            giscus: {
+              setConfig: {
+                theme: isDark ? "dark" : "light",
+              },
+            },
+          },
+          "https://giscus.app"
+        );
+      }
+    }
+
+    // toggle dark mode
+    function toggleDark() {
+      let isDark = document.documentElement.classList.contains("dark");
+      const setting = localStorage.getItem("hexo-color-scheme") || "auto";
+      isDark = !isDark;
+      document.documentElement.classList.toggle("dark", isDark);
+      $("#theme-icon").attr("icon", isDark ? "ri:moon-line" : "ri:sun-line");
+      if (prefersDark === isDark) {
+        localStorage.setItem("hexo-color-scheme", "auto");
+      } else {
+        localStorage.setItem("hexo-color-scheme", isDark ? "dark" : "light");
+      }
+      toggleGiscusTheme();
+    }
+
+    // listen dark mode change
+    window
+      .matchMedia("(prefers-color-scheme: dark)")
+      .addEventListener("change", (e) => {
+        const setting = localStorage.getItem("hexo-color-scheme") || "auto";
+        if (setting === "auto") {
+          document.documentElement.classList.toggle("dark", e.matches);
+          $("#theme-icon").attr(
+            "icon",
+            e.matches ? "ri:moon-line" : "ri:sun-line"
+          );
+          toggleGiscusTheme();
+        }
+      });
+
+    $("#toggle-dark").click((event) => {
+      const isAppearanceTransition = document.startViewTransition && !window.matchMedia('(prefers-reduced-motion: reduce)').matches
+      if (!isAppearanceTransition) {
+        toggleDark()
+        return
+      }
+      const x = event.clientX
+      const y = event.clientY
+      const endRadius = Math.hypot(
+        Math.max(x, innerWidth - x),
+        Math.max(y, innerHeight - y),
+      )
+      const transition = document.startViewTransition(async () => {
+        toggleDark()
+      })
+
+      transition.ready
+        .then(() => {
+          const isDark = document.documentElement.classList.contains("dark")
+          const clipPath = [
+            `circle(0px at ${x}px ${y}px)`,
+            `circle(${endRadius}px at ${x}px ${y}px)`,
+          ]
+          document.documentElement.animate(
+            {
+              clipPath: isDark
+                ? [...clipPath].reverse()
+                : clipPath,
+            },
+            {
+              duration: 400,
+              easing: 'ease-out',
+              pseudoElement: isDark
+                ? '::view-transition-old(root)'
+                : '::view-transition-new(root)',
+            },
+          )
+        })
+    });
+  });
+</script>
+
+
+
+
+<meta name="generator" content="Hexo 8.1.1"></head>
+<body class="font-sans bg-white dark:bg-zinc-900 text-gray-700 dark:text-gray-200 relative">
+  <header class="fixed w-full px-5 py-1 z-10 backdrop-blur-xl backdrop-saturate-150 border-b border-black/5">
+  <div class="max-auto">
+    <nav class="flex items-center text-base">
+      <a href="/" class="group">
+        <h2 class="font-medium tracking-tighterp text-l p-2">
+          <img class="w-5 mr-2 inline-block transition-transform group-hover:rotate-[30deg]" id="logo" src="/images/logo.svg" alt="William's Blog" />
+          William&#39;s Blog
+        </h2>
+      </a>
+      <div id="header-title" class="opacity-0 md:ml-2 md:mt-[0.1rem] text-xs font-medium whitespace-nowrap overflow-hidden overflow-ellipsis">
+        Xcode Server 教程4: 证书和描述文件
+      </div>
+      <div class="flex-1"></div>
+      <div class="flex items-center gap-3">
+        
+          <a class="hidden sm:flex" href="/archives">Posts</a>
+        
+        
+          
+            <a class="w-5 h-5 hidden sm:flex" title="Github" target="_blank" rel="noopener" href="https://github.com/xbmlz">
+              <iconify-icon width="20" icon="ri:github-line"></iconify-icon>
+            </a>
+          
+        
+        <a class="w-5 h-5 hidden sm:flex" title="Github" href="rss2.xml">
+          <iconify-icon width="20" icon="ri:rss-line"></iconify-icon>
+        </a>
+        <a class="w-5 h-5" title="toggle theme" id="toggle-dark">
+          <iconify-icon width="20" icon="" id="theme-icon"></iconify-icon>
+        </a>
+      </div>
+      <div class="flex items-center justify-center gap-3 ml-3 sm:hidden">
+        <span class="w-5 h-5" aria-hidden="true" role="img" id="open-menu">
+          <iconify-icon width="20" icon="carbon:menu" ></iconify-icon>
+        </span>
+        <span class="w-5 h-5 hidden" aria-hidden="true" role="img" id="close-menu">
+          <iconify-icon  width="20" icon="carbon:close" ></iconify-icon>
+        </span>
+      </div>
+    </nav>
+  </div>
+</header>
+<div id="menu-panel" class="h-0 overflow-hidden sm:hidden fixed left-0 right-0 top-12 bottom-0 z-10">
+  <div id="menu-content" class="relative z-20 bg-white/80 px-6 sm:px-8 py-2 backdrop-blur-xl -translate-y-full transition-transform duration-300">
+    <ul class="nav flex flex-col sm:flex-row text-sm font-medium">
+      
+        <li class="nav-portfolio sm:mx-2 border-b sm:border-0 border-black/5 last:border-0 hover:text-main">
+          <a href="/archives" class="flex h-12 sm:h-auto items-center">Posts</a>
+        </li>
+      
+    </ul>
+  </div>
+  <div class="mask bg-black/20 absolute inset-0"></div>
+</div>
+
+  <main class="pt-14">
+    <!-- css -->
+
+<link rel="stylesheet" href="/lib/fancybox/fancybox.min.css">
+
+
+<link rel="stylesheet" href="/lib/tocbot/tocbot.min.css">
+
+<!-- toc -->
+
+  <!-- tocbot -->
+<nav class="post-toc toc text-sm w-48 relative top-32 right-0 opacity-70 hidden lg:block" style="position: fixed !important;"></nav>
+
+
+<section class="px-6 max-w-prose mx-auto md:px-0">
+  <!-- header -->
+  <header class="overflow-hidden pt-6 pb-6 md:pt-12">
+    <div class="pt-4 md:pt-6">
+      <h1 id="article-title" class="text-[2rem] font-bold leading-snug mb-4 md:mb-6 md:text-[2.6rem]">
+        Xcode Server 教程4: 证书和描述文件
+      </h1>
+      <div>
+        <section class="flex items-center gap-3 text-sm">
+          <span class="flex items-center gap-1">
+            <iconify-icon width="18" icon="carbon-calendar" ></iconify-icon>
+            <time>2016-08-23</time>
+          </span>
+          <span class="text-gray-400">·</span>
+          <span class="flex items-center gap-1">
+            <iconify-icon width="18" icon="ic:round-access-alarm" ></iconify-icon>
+            <span>20 min</span>
+          </span>
+          <span class="text-gray-400">·</span>
+          <span class="flex items-center gap-1">
+            <iconify-icon width="18" icon="icon-park-outline:font-search" ></iconify-icon>
+            <span>3.3k words</span>
+          </span>
+          
+            <span class="text-gray-400">·</span>
+            <span class="flex items-center gap-1">
+              <iconify-icon width="16" icon="icon-park-outline:box" class="mr-2"></iconify-icon>
+              <a class="article-category-link" href="/categories/Mac-OS-Server/">Mac OS Server</a>
+            </span>
+          
+        </section>
+      </div>
+    </div>
+  </header>
+  <!-- content -->
+  <article class="post-content prose m-auto slide-enter-content dark:prose-invert">
+    <p><a href="(https://honzadvorsky.com/articles/2015-10-21-17-40-xcode_server_tutorials_4_certificates__provisioning_profiles/">原文翻译地址</a></p>
+<p>honza dvorsky<br>Xcode Server Tutorials: 4. Certificates &amp; Provisioning Profiles<br>21. october 2015</p>
+<p>This article is Part 4 of a whole series called Xcode Server Tutorials. Check out Part 3 first if you haven’t already. New posts are always tweeted by me (@czechboy0) on Twitter.</p>
+<p>Welcome back! Today we’ll cover the last piece of making Xcode Server a viable CI tool for shipping apps: code signing. Code signing is an important part of the outstanding security of iOS, Mac, Watch and now TV apps on Apple’s platforms. However, managing code signing is still an involved process for beginners, even though Apple has been working hard to abstract away many of the details with recent releases of Xcode. Unfortunately, those improvements haven’t really trickled down to Xcode Server yet, so we’ll need to get our hands dirty to make it archive apps for us and let us test on real iOS devices. Shall we?</p>
+<span id="more"></span>
+<p>Objective of this article</p>
+<p>We will add a connected iOS device as a test device, which will require us to tackle code signing of our app with a development provisioning profile. This won’t be enough for us, because after an app is tested and ready, we want to ship it! This will bring us to archiving our app for testing on TestFlight or deployment to the App Store. Not there yet? We’ll also see how to install our apps on our device over Wi-Fi directly from Xcode Server. During this whole process we’ll make a good use of sigh, a great tool from the fastlane family, so make sure to install that first.</p>
+<p>Environment</p>
+<p>Xcode 7 has been released, but since my iPhone is on iOS 9.1 Beta, I’ll use Xcode 7.1 Beta 3 and OS X Server 5 in this tutorial. But feel free to use the latest stable Xcode 7. Everything is running on OS X 10.11 El Capitan now.</p>
+<p>Project setup</p>
+<p>I’ll be working on our XCSTutorialProject1 that you got familiar with in my previous posts, but today you’ll have to make changes to your own Xcode project, because the sample project’s app ID cannot be registered under all of us. Whenever you’re not sure about something, however, feel free to take a look in the sample repo (and choose the right branch - today we’ll use step5).</p>
+<p>How to use code signing in Xcode is out of scope of this article, but I recommend this quick guide on code signing with fastlane, because that’s what we’ll set up today. Unfortunately, we won’t be able to use the “Best Solution” mentioned in that article (using environment variables), because as far as I can tell, there is no way to pass environment variables to Xcode Server’s build command. Thus we’ll use the last solution where we’ll let fastlane download our provisioning profiles, change them in our project and we’ll save them in git, to be later copied on Xcode Server.</p>
+<p>This means that we will not be using the automatically managed provisioning profiles in Xcode. If you want to have a good setup with Xcode Server that includes archiving apps for distribution, I recommend you switch to manually managed profiles, like I have in the sample project.</p>
+<p>⚠️ Again, you might be tempted to use the button titled “Add Team…” in Xcode Server’s configuration screen in OS X Server. DO NOT do that. That would create a new certificate for the server, which you can only add to the automatic provisioning profiles (which you can’t use for archiving apps for distribution) and is very difficult to clean up later.<br>TL;DR? Too much magic that doesn’t lead to the right results.</p>
+<ol>
+<li>Provisioning Profiles</li>
+</ol>
+<p>Ok, let’s get back to how we will set things up today. In order to allow Xcode Server to build, test and archive for both testing and distribution, we need to somehow ensure that the respective provisioning profiles are available there. The folder which Xcode Server scans for provisioning profiles is, as you’d expect,</p>
+<p>&#x2F;Library&#x2F;Developer&#x2F;XcodeServer&#x2F;ProvisioningProfiles<br>and that’s where we need to ensure our profiles are before each build.</p>
+<p>As I said, I’ll walk you through a workflow which has worked for me very well, but in no way it’s the only possible one. With that disclaimer out of the way, I tried many ways to do this and this is the least painful one.</p>
+<p>1.1 Storing Provisioning Profiles in your repo</p>
+<p>The best way to get your profiles over is by actually storing them in your source repository. You don’t have to worry about security here, because provisioning profiles are useless to anyone without your certificate (and a private key). So let’s do that.</p>
+<p>As I mentioned in the beginning of this article, we’ll use sigh, a tool from the fastlane family to achieve this by adding a new lane to our Fastfile, which we’ll call provision. For my project it looks like this:</p>
+<p>  lane :provision do<br>ENV[‘SIGH_APP_IDENTIFIER’] &#x3D; ‘com.honzadvorsky.XCSTutorialProject1’<br>ENV[‘SIGH_OUTPUT_PATH’] &#x3D; ‘.&#x2F;ProvisioningProfiles’<br>ENV[‘SIGH_USERNAME’] &#x3D; “#{ENV[‘USER’]}@icloud.com”<br>ENV[‘SIGH_SKIP_CERTIFICATE_VERIFICATION’] &#x3D; ‘true’ # <a target="_blank" rel="noopener" href="https://github.com/KrauseFx/sigh/issues/141">https://github.com/KrauseFx/sigh/issues/141</a><br>ENV[‘FL_PROJECT_PROVISIONING_PROJECT_PATH’] &#x3D; ‘XCSTutorialProject1.xcodeproj’<br>ENV[‘FL_PROJECT_PROVISIONING_PROFILE_TARGET_FILTER’] &#x3D; ‘^XCSTutorialProject1$’ # exact match in regex, we don’t want e.g. XCSTutorialProject1Tests</p>
+<h1 id="create-a-folder-for-our-provisioning-profiles-if-not-exists"><a href="#create-a-folder-for-our-provisioning-profiles-if-not-exists" class="headerlink" title="create a folder for our provisioning profiles if not exists"></a>create a folder for our provisioning profiles if not exists</h1><pre><code>	sh &quot;cd .. &amp;&amp; mkdir -p ProvisioningProfiles&quot;
+</code></pre>
+<h1 id="generate-development-profile"><a href="#generate-development-profile" class="headerlink" title="generate development profile"></a>generate development profile</h1><pre><code>	profile_name = &#39;tutorial_app_dev&#39;
+	profile_file = &quot;#{profile_name}.mobileprovision&quot;
+	profile_path = &quot;./ProvisioningProfiles/#{profile_file}&quot;
+	udid_dev = sigh(
+</code></pre>
+<p>provisioning_name: profile_name,<br>filename: profile_file,<br>development: true<br>  		)</p>
+<h1 id="set-the-development-profile-in-the-project"><a href="#set-the-development-profile-in-the-project" class="headerlink" title="set the development profile in the project"></a>set the development profile in the project</h1><pre><code>	update_project_provisioning(
+</code></pre>
+<p>profile: profile_path,<br>build_configuration: ‘Debug’<br>  		)</p>
+<h1 id="generate-appstore-profile"><a href="#generate-appstore-profile" class="headerlink" title="generate appstore profile"></a>generate appstore profile</h1><pre><code>	profile_name = &#39;tutorial_app_appstore&#39;
+	profile_file = &quot;#{profile_name}.mobileprovision&quot;
+	profile_path = &quot;./ProvisioningProfiles/#{profile_file}&quot;
+	udid_appstore = sigh(
+</code></pre>
+<p>provisioning_name: profile_name,<br>filename: profile_file<br>  		)</p>
+<h1 id="set-the-appstore-profile-in-the-project"><a href="#set-the-appstore-profile-in-the-project" class="headerlink" title="set the appstore profile in the project"></a>set the appstore profile in the project</h1><pre><code>	update_project_provisioning(
+</code></pre>
+<p>profile: profile_path,<br>build_configuration: ‘Release’<br>  		)<br>end<br>view rawfastlane_provision_lane.rb hosted with ❤ by GitHub<br>Don’t let the 45 lines of code fool you, it’s not complicated. I just tried to write in in a readable way. Basically, at the top (lines 3-9), we’re just telling sigh who we are and where we want to store the downloaded provisioning profiles. Then, on line 12, we make sure we have a folder called ProvisioningProfiles in our repository. And then, on lines 15-28 we first call sigh, which downloads (and creates if necessary) the appropriate provisioning profile for development (note the development: true on line 21). And we repeat the same thing for the appstore provisioning profile, this time with no development flag.</p>
+<p>You add this to your Fastfile and then just run fastlane provision whenever your provisioning profiles might have changed (new team member, new device added to the profile etc.) This will download the provisioning profiles into your repository, in the ProvisioningProfiles folder and modifies your Xcode project to use them in the app target. Needless to say, you need to adapt this lane to work for your project&#x2F;target&#x2F;configuration names, but I hope the example is self-explanatory.</p>
+<p>After you run fastlane provision, make sure to commit your changes. This is a requirement so that we can go to the next step, using these profiles on Xcode Server.</p>
+<p>1.2 Copying Provisioning Profiles on Xcode Server</p>
+<p>We just made sure that all our provisioning profiles are stored in our repository, but how do we make sure they appear in</p>
+<p>&#x2F;Library&#x2F;Developer&#x2F;XcodeServer&#x2F;ProvisioningProfiles<br>on our Xcode Server? Well, we’ll use our prebuild scripts again, just like we did in the previous tutorial.</p>
+<p>Luckily, we already have a prebuild lane in our Fastfile, which our Bot calls before every build. Currently, we just install our CocoaPods there, but there’s nothing preventing us from adding more actions to it. So that’s exactly what we’ll do now. As I mentioned multiple times, all we need to do is copy the provisioning profiles from our repository to the right folder on Xcode Server.</p>
+<p>sh “cd .. &amp;&amp; cp .&#x2F;ProvisioningProfiles&#x2F;* &#x2F;Library&#x2F;Developer&#x2F;XcodeServer&#x2F;ProvisioningProfiles&#x2F;“<br>That’s it! Just add this to the lane called prebuild and you should end up with a lane like this.</p>
+<p>Let’s give our new setup a whirl! (Spoiler alert: we’re not done!)</p>
+<ol start="2">
+<li>Testing on your iPhone</li>
+</ol>
+<p>You might remember that in Part 1 we created our first Bot. In that process, one screen allowed us to select devices and simulators to test our app on. I asked you to select only simulators back then, but now it’s time to unleash the full power of tests. If you’re wondering why you’d want to test on real devices instead of just simulators, take a look at this post. Also, in my experience at SwiftKey (where we only tested on real devices), there are enough performance, memory and behavioral differences that justify running tests on real devices.</p>
+<p>Let’s use our usual approach - try to add our device and see what happens. You already know how to edit your Bot from the previous article, so in the Schedule tab only select the Test action and then switch to the Devices tab. Have a development iOS device handy and connect it to your Xcode Server now. You should see it pop up in the list in a matter of seconds (if it doesn’t, running sudo xcrun xcscontrol –restart to restart Xcode Server has fixed it for me).</p>
+<p>Save your Bot and re-Integrate. You might be rightfully suspicious - this will not work yet, but let’s look at the error we got.</p>
+<p>Fair enough - “No code signing identities found” is a pretty sensible error. We are trying to run our app on a real iPhone without providing all the required resources to code sign our app. So why did it work on the Simulator? Well, because code signing is optional for testing on the Simulator, so in our case, Xcode just fell back to not code signing the app before testing, which works just fine. However, that’s not enough for testing on real iOS devices.</p>
+<p>That missing resource is called a certificate - and that’s what we’ll fix now.</p>
+<ol start="3">
+<li>Certificates</li>
+</ol>
+<p>Just provisioning profiles are useless without a proper signing certificate. In order to allow our Xcode Server to sign apps for testing on devices and archiving, we first need to have a certificate ready there (which is a piece of crypthographic data proving that it was you who created this app and nobody else). From my experience, I would recommend you transfer both your distribution and development certificates to the server, instead of creating new ones. Let’s look at how we do that!</p>
+<p>Your certificates need their private keys to be useful for code signing. Both are stored in your OS X Keychain. Open Keychain Access</p>
+<p>open “&#x2F;Applications&#x2F;Utilities&#x2F;Keychain Access.app”<br>and switch to your login keychain at the top left. Then, under Category choose My Certificates. Choose both your development and distribution certificates, right click and select “Export 2 Items…”. Export the certificates (with their private keys inside) as a secure .p12 container and set up a password for the file.</p>
+<p>Now send this file over to your Xcode Server machine (or add it to your repo, in which case make sure to keep your password safe), where you’ll open Keychain Access as well. Now, this time, however, switch to the System keychain (that’s the one that _xcsbuildd can actually look into for certificates) and go to File -&gt; Import Items…. Select the .p12 file you just transfered from your development Mac and make sure you’re importing the certificates into the System keychain. Go through the process, type your passwords when asked and at the end you should see your two new certificates appear in the System keychain.</p>
+<p>One more thing you have to do to be done with certificates, however. By default, the private keys we just added to our build machine’s System keychain are not readable by &#x2F;usr&#x2F;bin&#x2F;codesign. We easily fix that by expanding the certificate to show the private key inside, right-clicking on the key and selecting Get info. There, switch to Access Control and click on the little plus sign at the bottom left.</p>
+<p>This will present you with a file selection dialog, where you’ll need to select &#x2F;usr&#x2F;bin&#x2F;codesign. How do you show hidden files in this dialog, however? CMD+SHIFT+.. Then go to the root of your hard drive and find usr, inside it bin and finally codesign. After hitting Add, make sure to click on Save changes on the bottom right.</p>
+<p>What if we didn’t do this? Well, from my experience, you’d probably get your build hanging on trying to sign your code. And then it would time out after a couple of minutes. So if you’re seeing that, make sure your private keys are accessible by codesign.</p>
+<p>Now, your certificates are ready to be used. 👍</p>
+<ol start="4">
+<li>Putting it all together</li>
+</ol>
+<p>Let’s recap - we set up our provisioning profiles to be copied from our repository before every build and we just made sure our Xcode Server has access to our certificates that we just transfered there. What’s left? Nothing!</p>
+<p>Give it a try, kick off an integration on your Bot and observe how your connected iOS device comes alive, runs tests and the integration succeeds! 🎉 (Make sure your device is unlocked&#x2F;has no passcode.)</p>
+<p>Disclaimer: When upgrading my Xcode Server on an old machine, I had to wipe Xcode Server there before I got this working. This hopefully won’t be necessary for you, but if it’s not working (most likely hanging on tests) and you’ve made sure you followed all the steps above, please resort to resetting your Xcode Server as I described in a hack article focused on xcscontrol.</p>
+<ol start="5">
+<li>Archiving</li>
+</ol>
+<p>Since we did all the hard work already, our distribution certificate and provisioning profile are where they need to be, adding the archiving step in your Bot is all you need to do! So again, edit your Bot, go to Schedule and select Perform Archive action, together with Create user-installable product. Re-run your Bot.</p>
+<p>You can now see a new section in the Integration result, which contains the created Archive and an exported .ipa. This archive is ready to be downloaded or submitted directly to the App Store 🚀 (very neat!) Or, if you want to go further with fastlane and download this archive from Xcode Server and submit with fastlane, take a look at this fastlane action (created by yours truly.)</p>
+<p>Also, check out all other deployment options (Crashlytics Beta, Hockey App, …) with fastlane. These can be plugged in in a postbuild script (previous tutorial, remember?) - you can use the environment variable XCS_ARCHIVE, which gives the path to the archive.</p>
+<p>Conclusion</p>
+<p>As you can see, once you tackle code signing on Xcode Server, a whole new world of opportunities opens up, where you can go from a mere commit to having your app submitted to a beta testing service, all completely automagically. fastlane brings an extremely simple way to plug all these actions together, making deployment of your app a matter of one line of code. By connecting it with the best Xcode-integrated CI solution, Xcode Server, you can really achieve an automation Zen, where you focus on your code and let computers perform the boilerplate tasks for you. Take advantage of all that. And dedicate the saved time to creating more things.</p>
+<p>Extra Credit</p>
+<p>Oh, I almost got away with it. You’d like to know how to install your app over Wi-Fi, huh? Here you go:</p>
+<p>App Installation over Wi-Fi</p>
+<p>Xcode Server takes care of all the difficult parts of this process, all you need to know is that to prepare your app, you need to have an Xcode scheme, which in its archiving action uses a configuration which allows installation on devices. Such as Debug (most likely) signed with a development profile. Or other configuration signed with an Ad Hoc profile. Or an Enterprise profile. You need to select that scheme when creating your Bot and Xcode Server will automatically create the .ipa for you (assuming you select Create user-installable product when setting up the Bot).</p>
+<p>Let’s go through this step-by-step. In my sample app, I’ll just create a new Xcode scheme, which will use the Debug configuration for Archiving. In Xcode, go to Product - Scheme - Manage Schemes. There duplicate your existing scheme, and rename it (make sure it’s also shared). I named mine XCSTutorialProject1-ArchiveDebug. When you have it selected, click Edit and on the left, in Archiving, select the Debug configuration.</p>
+<p>Commit all these changes, edit your Bot and in Info (first tab), change the scheme to your new scheme, in my case XCSTutorialProject1-ArchiveDebug. Save and rerun your Bot.</p>
+<p>You should see a screen identical to the one we saw in Archiving earlier. On the surface, not much has changed. However, grab your iPhone now and make sure you’re on the same Wi-Fi as your Xcode Server. Open Safari on your phone and go to the canonical hostname of your server.</p>
+<p>How to get the canonical hostname of your Xcode Server: In Terminal, run</p>
+<p>curl -k <a target="_blank" rel="noopener" href="https://your_xcode_server_ip:20343/api/hostname">https://YOUR_XCODE_SERVER_IP:20343/api/hostname</a><br>and you’ll get a JSON response with the hostname. That’s what you have to type into your phone, otherwise the installation will fail. For security reasons, you can’t access the server from your phone just by its IP address.</p>
+<p>You’ll see a dashboard of your Xcode Server, listing all your Bots.</p>
+<p>Tap on the Bot that just created the archive for you and click Install. If this is the first time, you’ll be asked to install a profile to allow installation from this Xcode Server. Go through the process carefully and make sure you install it, at the end you’ll get automatically redirected back to Safari. The Install button should now turn green and after tapping it, you’ll be asked to confirm the installation. Once you do and close Safari, you’ll see your app installing on your home screen. Sweet, nah? ⛵️</p>
+<p>This is very useful when your team makes nightly releases, because it allows your non-technical colleagues to install the build every morning without ever touching Xcode.</p>
+<p>Note that you can change permissions of who can connect to your Xcode Server over Wi-Fi, but here I was assuming you had open access for everyone. See the OS X Server app for restricting access to this dashboard.</p>
+<p>Troubleshooting: If, after tapping Install, you’re getting a popup saying that installation failed, it’s likely that you had the profile installed and later deleted it (and a bug with a browser cookie is confusing Xcode Server). To force a reinstallation of the profile, on your phone visit</p>
+<p><a target="_blank" rel="noopener" href="https://your_server_canonical_hostname:20343/api/profiles/ota.mobileconfig">https://YOUR_SERVER_CANONICAL_HOSTNAME:20343/api/profiles/ota.mobileconfig</a><br>Real Conclusion</p>
+<p>Now, this is really it for today. I hope you learned something or that this will be useful to you at some point in the future. Please keep the feedback coming, I’ve received many nice emails and tweets - I’m really glad these articles help some of you to get XCS set up faster.</p>
+<p>This part concludes the Xcode Server basics that you really needed to know to deploy Xcode Server in the wild. Ping me with ideas of what you’d like to learn about next!</p>
+<p>I hope you found this useful or interesting. For criticism, praise and future articles, I’m @czechboy0 on Twitter.</p>
+<p>« Part 3: Prebuild &amp; Postbuild Scripts<br>All Xcode Server Tutorials &amp; Hacks<br>« Full blog<br>© 2016 honza dvorsky — powered by Wintersmith</p>
+
+  </article>
+  <!-- tag -->
+  <div class="mt-12 pt-6 border-t border-gray-200">
+    
+      
+        <span class="bg-gray-100 dark:bg-gray-700 px-2 py-1 m-1 text-sm rounded-md transition-colors hover:bg-gray-200">
+          <a href="/tags/Xcode-Server/">Xcode Server</a>
+        </span>
+      
+    
+  </div>
+  <!-- prev and next -->
+  <div class="flex justify-between mt-12 pt-6 border-t border-gray-200">
+    <div>
+      
+        <a href="/post/Handoff%EF%BC%9A%E6%B2%9F%E9%80%9AiOS%E5%BA%94%E7%94%A8%E5%92%8C%E7%BD%91%E9%A1%B5.html" class="text-sm text-gray-400 hover:text-gray-500 flex justify-center">
+          <iconify-icon width="20" icon="ri:arrow-left-s-line" data-inline="false"></iconify-icon>
+          Handoff：沟通iOS应用和网页
+        </a>
+      
+    </div>
+    <div>
+      
+        <a href="/post/Xcode-Server-%E6%95%99%E7%A8%8B3-%E9%A2%84%E7%BC%96%E8%AF%91%E4%BB%A5%E5%8F%8A%E7%BC%96%E8%AF%91%E5%90%8E%E8%84%9A%E6%9C%AC.html" class="text-sm text-gray-400 hover:text-gray-500 flex justify-center">
+          Xcode Server 教程3: 预编译以及编译后脚本
+          <iconify-icon width="20" icon="ri:arrow-right-s-line" data-inline="false"></iconify-icon>
+        </a>
+      
+    </div>
+  </div>
+  <!-- comment -->
+  <div class="article-comments mt-12">
+    
+
+  </div>
+</section>
+<!-- js inspect -->
+
+<script src="/lib/clipboard.min.js"></script>
+
+
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    "HTML-CSS": {
+        preferredFont: "TeX",
+        availableFonts: ["STIX","TeX"],
+        linebreaks: { automatic:true },
+        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+        inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
+        processEscapes: true,
+        ignoreClass: "tex2jax_ignore|dno",
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+        equationNumbers: { autoNumber: "AMS" },
+        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+        Macros: { href: "{}" }
+    },
+    messageStyle: "none"
+  });
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<script>
+  $(document).ready(() => {
+    const maraidConfig = {
+      theme: "default",
+      logLevel: 3,
+      flowchart: { curve: "linear" },
+      gantt: { axisFormat: "%m/%d/%Y" },
+      sequence: { actorMargin: 50 },
+    };
+    mermaid.initialize(maraidConfig);
+  });
+</script>
+
+
+
+<script src="/lib/fancybox/fancybox.umd.min.js"></script>
+
+<script>
+  $(document).ready(() => {
+    $('.post-content').each(function(i){
+      $(this).find('img').each(function(){
+        if ($(this).parent().hasClass('fancybox') || $(this).parent().is('a')) return;
+        var alt = this.alt;
+        if (alt) $(this).after('<span class="fancybox-alt">' + alt + '</span>');
+        $(this).wrap('<a class="fancybox-img" href="' + this.src + '" data-fancybox=\"gallery\" data-caption="' + alt + '"></a>')
+      });
+      $(this).find('.fancybox').each(function(){
+        $(this).attr('rel', 'article' + i);
+      });
+    });
+
+    Fancybox.bind('[data-fancybox="gallery"]', {
+        // options
+    })
+  })
+</script>
+
+<!-- tocbot begin -->
+
+<script src="/lib/tocbot/tocbot.min.js"></script>
+
+<script>
+  $(document).ready(() => {
+      tocbot.init({
+        // Where to render the table of contents.
+        tocSelector: '.post-toc',
+        // Where to grab the headings to build the table of contents.
+        contentSelector: '.post-content',
+        // Which headings to grab inside of the contentSelector element.
+        headingSelector: 'h1, h2, h3',
+        // For headings inside relative or absolute positioned containers within content.
+        hasInnerContainers: true,
+    });
+  })
+</script>
+<!-- tocbot end -->
+
+
+  </main>
+  <footer class="flex flex-col h-40 items-center justify-center text-gray-400 text-sm">
+  <!-- busuanzi -->
+  
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!-- Busuanzi Analytics -->
+<div class="flex items-center gap-2">
+  <span>Visitors</span>
+  <span id="busuanzi_value_site_uv"></span>
+  <span>Page Views</span>
+  <span id="busuanzi_value_site_pv"></span>
+</div>
+<!-- End Busuanzi Analytics -->
+
+
+  <!-- copyright -->
+  <div class="flex items-center gap-2">
+    <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" style="color: inherit;">CC BY-NC-SA 4.0</a>
+    <span>© 2022</span>
+    <iconify-icon width="18" icon="emojione-monotone:maple-leaf" ></iconify-icon>
+    <a href="https://github.com/xbmlz" target="_blank" rel="noopener noreferrer">xbmlz</a>
+  </div>
+  <!-- powered by -->
+  <div class="flex items-center gap-2">
+    <span>Powered by</span>
+    <a href="https://hexo.io/" target="_blank" rel="noopener noreferrer">Hexo</a>
+    <span>&</span>
+    <a href="https://github.com/xbmlz/hexo-theme-maple" target="_blank" rel="noopener noreferrer">Maple</a>
+  </div>
+
+</footer>
+
+  <div class="back-to-top box-border fixed right-6 z-1024 -bottom-20 rounded py-1 px-1 bg-slate-900 opacity-60 text-white cursor-pointer text-center dark:bg-slate-600">
+    <span class="flex justify-center items-center text-sm">
+      <iconify-icon width="18" icon="ion:arrow-up-c" id="go-top"></iconify-icon>
+      <span id="scrollpercent"><span>0</span> %</span>
+    </span>
+  </div>
+  
+<script src="/js/main.js"></script>
+
+
+  <script>
+    $(document).ready(function () {
+      const mapleCount = "10";
+      const speed = "0.5";
+      const mapleEl = document.getElementById("maple");
+      const maples = Array.from({ length: mapleCount }).map(() => {
+        const maple = document.createElement("div");
+        const scale = Math.random() * 0.5 + 0.5;
+        const offset = Math.random() * 2 - 1;
+        const x = Math.random() * mapleEl.clientWidth;
+        const y = -Math.random() * mapleEl.clientHeight;
+        const duration = 10 / speed;
+        const delay = -duration;
+        maple.className = "maple";
+        maple.style.width = `${24 * scale}px`;
+        maple.style.height = `${24 * scale}px`;
+        maple.style.left = `${x}px`;
+        maple.style.top = `${y}px`;
+        maple.style.setProperty("--maple-fall-offset", offset);
+        maple.style.setProperty("--maple-fall-height", `${Math.abs(y) + mapleEl.clientHeight}px`);
+        maple.style.animation = `fall ${duration}s linear infinite`;
+        maple.style.animationDelay = `${delay}s`;
+        mapleEl.appendChild(maple)
+        return maple
+      })
+    });
+  </script>
+  
+
+
+  <div class="fixed top-0 bottom-0 left-0 right-0 pointer-events-none print:hidden" id="maple"></div>
+</body>
+
+</html>

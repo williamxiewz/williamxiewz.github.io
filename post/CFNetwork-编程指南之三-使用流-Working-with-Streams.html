@@ -1,1 +1,617 @@
-<!DOCTYPE html><html lang="en"><head><!-- hexo injector head_begin start --><meta name="description" content="ssss"></meta><meta name="keywords" content="Frontend, Web development, Blog, Aurora Theme, TriDiamond"></meta><meta name="author" content="Williamxie"></meta><!-- hexo injector head_begin end --><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="/favicon.ico"><link href="/static/css/chunk-libs.eebac533.css" rel="stylesheet"><link href="/static/css/app.a5fe2998.css" rel="stylesheet"><!-- hexo injector head_end start --><script rel="prefetch" async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script rel="preload" src="https://cdn.bootcdn.net/ajax/libs/prism/1.23.0/components/prism-core.js" data-manual></script><script rel="preload" src="https://cdn.bootcdn.net/ajax/libs/prism/1.23.0/plugins/autoloader/prism-autoloader.js"></script><script rel="preload" src="https://cdn.bootcdn.net/ajax/libs/prism/1.23.0/plugins/toolbar/prism-toolbar.min.js"></script><script rel="preload" src="https://cdn.bootcdn.net/ajax/libs/prism/1.23.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script><script rel="preload" src="https://cdn.bootcdn.net/ajax/libs/blueimp-md5/2.18.0/js/md5.min.js"></script><script rel="preload" src="https://cdn.bootcdn.net/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script><link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/prism/1.23.0/themes/prism.min.css"/><link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/prism/1.23.0/plugins/toolbar/prism-toolbar.min.css"/><link rel="stylesheet" href="https://fonts.loli.net/css?family=Rubik" /><script rel="preload" src="https://cdn.bootcdn.net/ajax/libs/gitalk/1.7.2/gitalk.min.js"></script><link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/gitalk/1.7.2/gitalk.min.css"/><link rel="stylesheet" href="//at.alicdn.com/t/font_2476818_87vaqng7dno.css" /><!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.0"></head><body id="body-container"><noscript><strong>We're sorry but Aurora Blog doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id="app"></div><script>(function(e){function t(t){for(var n,o,u=t[0],i=t[1],c=t[2],l=0,p=[];l<u.length;l++)o=u[l],Object.prototype.hasOwnProperty.call(a,o)&&a[o]&&p.push(a[o][0]),a[o]=0;for(n in i)Object.prototype.hasOwnProperty.call(i,n)&&(e[n]=i[n]);f&&f(t);while(p.length)p.shift()();return s.push.apply(s,c||[]),r()}function r(){for(var e,t=0;t<s.length;t++){for(var r=s[t],n=!0,o=1;o<r.length;o++){var u=r[o];0!==a[u]&&(n=!1)}n&&(s.splice(t--,1),e=i(i.s=r[0]))}return e}var n={},o={runtime:0},a={runtime:0},s=[];function u(e){return i.p+"static/js/"+({404:"404",about:"about",archives:"archives",categories:"categories",page:"page",post:"post",result:"result",tags:"tags"}[e]||e)+"."+{404:"7d1e319c",about:"b870224f",archives:"62201fb5",categories:"cd195d1b",page:"f035d07e",post:"bbd5d2f0",result:"7281cdb6",tags:"df396091"}[e]+".js"}function i(t){if(n[t])return n[t].exports;var r=n[t]={i:t,l:!1,exports:{}};return e[t].call(r.exports,r,r.exports,i),r.l=!0,r.exports}i.e=function(e){var t=[],r={404:1,about:1,archives:1,categories:1,page:1,post:1,result:1,tags:1};o[e]?t.push(o[e]):0!==o[e]&&r[e]&&t.push(o[e]=new Promise((function(t,r){for(var n="static/css/"+({404:"404",about:"about",archives:"archives",categories:"categories",page:"page",post:"post",result:"result",tags:"tags"}[e]||e)+"."+{404:"1a6cd5bd",about:"713e2e0c",archives:"0536c7a0",categories:"10e2be12",page:"01d3099e",post:"9f951a60",result:"10e2be12",tags:"10e2be12"}[e]+".css",a=i.p+n,s=document.getElementsByTagName("link"),u=0;u<s.length;u++){var c=s[u],l=c.getAttribute("data-href")||c.getAttribute("href");if("stylesheet"===c.rel&&(l===n||l===a))return t()}var p=document.getElementsByTagName("style");for(u=0;u<p.length;u++){c=p[u],l=c.getAttribute("data-href");if(l===n||l===a)return t()}var f=document.createElement("link");f.rel="stylesheet",f.type="text/css",f.onload=t,f.onerror=function(t){var n=t&&t.target&&t.target.src||a,s=new Error("Loading CSS chunk "+e+" failed.\n("+n+")");s.code="CSS_CHUNK_LOAD_FAILED",s.request=n,delete o[e],f.parentNode.removeChild(f),r(s)},f.href=a;var d=document.getElementsByTagName("head")[0];d.appendChild(f)})).then((function(){o[e]=0})));var n=a[e];if(0!==n)if(n)t.push(n[2]);else{var s=new Promise((function(t,r){n=a[e]=[t,r]}));t.push(n[2]=s);var c,l=document.createElement("script");l.charset="utf-8",l.timeout=120,i.nc&&l.setAttribute("nonce",i.nc),l.src=u(e);var p=new Error;c=function(t){l.onerror=l.onload=null,clearTimeout(f);var r=a[e];if(0!==r){if(r){var n=t&&("load"===t.type?"missing":t.type),o=t&&t.target&&t.target.src;p.message="Loading chunk "+e+" failed.\n("+n+": "+o+")",p.name="ChunkLoadError",p.type=n,p.request=o,r[1](p)}a[e]=void 0}};var f=setTimeout((function(){c({type:"timeout",target:l})}),12e4);l.onerror=l.onload=c,document.head.appendChild(l)}return Promise.all(t)},i.m=e,i.c=n,i.d=function(e,t,r){i.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:r})},i.r=function(e){"undefined"!==typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.t=function(e,t){if(1&t&&(e=i(e)),8&t)return e;if(4&t&&"object"===typeof e&&e&&e.__esModule)return e;var r=Object.create(null);if(i.r(r),Object.defineProperty(r,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var n in e)i.d(r,n,function(t){return e[t]}.bind(null,n));return r},i.n=function(e){var t=e&&e.__esModule?function(){return e["default"]}:function(){return e};return i.d(t,"a",t),t},i.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},i.p="/",i.oe=function(e){throw console.error(e),e};var c=window["webpackJsonp"]=window["webpackJsonp"]||[],l=c.push.bind(c);c.push=t,c=c.slice();for(var p=0;p<c.length;p++)t(c[p]);var f=l;r()})([]);</script><script src="/static/js/chunk-libs.9b3ced64.js"></script><script src="/static/js/app.d749b93c.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <meta name="author" content="William Xie">
+
+
+  <meta name="subtitle" content="Walk steps step by step">
+
+
+
+
+<title>CFNetwork 编程指南之三: 使用流(Working with Streams) | William&#39;s Blog</title>
+
+
+
+<link rel="icon" href="/favicon.png">
+
+
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/nprogress/nprogress.css">
+
+
+
+<script src="/lib/jquery.min.js"></script>
+
+
+<script src="/lib/iconify-icon.min.js"></script>
+
+
+<script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+<script>
+  tailwind.config = {
+    darkMode: "class",
+  };
+</script>
+
+
+<script src="/lib/nprogress/nprogress.js"></script>
+
+<script>
+  $(document).ready(() => {
+    NProgress.configure({
+      showSpinner: false,
+    });
+    NProgress.start();
+    $("#nprogress .bar").css({
+      background: "#de7441",
+    });
+    $("#nprogress .peg").css({
+      "box-shadow": "0 0 2px #de7441, 0 0 4px #de7441",
+    });
+    $("#nprogress .spinner-icon").css({
+      "border-top-color": "#de7441",
+      "border-left-color": "#de7441",
+    });
+    setTimeout(function () {
+      NProgress.done();
+      $(".fade").removeClass("out");
+    }, 800);
+  });
+</script>
+
+<script>
+  (function () {
+    const prefersDark =
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const setting = localStorage.getItem("hexo-color-scheme") || "auto";
+    if (setting === "dark" || (prefersDark && setting !== "light"))
+      document.documentElement.classList.toggle("dark", true);
+    let isDark = document.documentElement.classList.contains("dark");
+  })();
+
+  $(document).ready(function () {
+    // init icon
+    const prefersDark =
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const isDark = document.documentElement.classList.contains("dark");
+    $("#theme-icon").attr("icon", isDark ? "ri:moon-line" : "ri:sun-line");
+
+    function toggleGiscusTheme() {
+      const isDark = document.documentElement.classList.contains("dark");
+      const giscusFrame = document.querySelector("iframe.giscus-frame");
+      if (giscusFrame) {
+        giscusFrame.contentWindow.postMessage(
+          {
+            giscus: {
+              setConfig: {
+                theme: isDark ? "dark" : "light",
+              },
+            },
+          },
+          "https://giscus.app"
+        );
+      }
+    }
+
+    // toggle dark mode
+    function toggleDark() {
+      let isDark = document.documentElement.classList.contains("dark");
+      const setting = localStorage.getItem("hexo-color-scheme") || "auto";
+      isDark = !isDark;
+      document.documentElement.classList.toggle("dark", isDark);
+      $("#theme-icon").attr("icon", isDark ? "ri:moon-line" : "ri:sun-line");
+      if (prefersDark === isDark) {
+        localStorage.setItem("hexo-color-scheme", "auto");
+      } else {
+        localStorage.setItem("hexo-color-scheme", isDark ? "dark" : "light");
+      }
+      toggleGiscusTheme();
+    }
+
+    // listen dark mode change
+    window
+      .matchMedia("(prefers-color-scheme: dark)")
+      .addEventListener("change", (e) => {
+        const setting = localStorage.getItem("hexo-color-scheme") || "auto";
+        if (setting === "auto") {
+          document.documentElement.classList.toggle("dark", e.matches);
+          $("#theme-icon").attr(
+            "icon",
+            e.matches ? "ri:moon-line" : "ri:sun-line"
+          );
+          toggleGiscusTheme();
+        }
+      });
+
+    $("#toggle-dark").click((event) => {
+      const isAppearanceTransition = document.startViewTransition && !window.matchMedia('(prefers-reduced-motion: reduce)').matches
+      if (!isAppearanceTransition) {
+        toggleDark()
+        return
+      }
+      const x = event.clientX
+      const y = event.clientY
+      const endRadius = Math.hypot(
+        Math.max(x, innerWidth - x),
+        Math.max(y, innerHeight - y),
+      )
+      const transition = document.startViewTransition(async () => {
+        toggleDark()
+      })
+
+      transition.ready
+        .then(() => {
+          const isDark = document.documentElement.classList.contains("dark")
+          const clipPath = [
+            `circle(0px at ${x}px ${y}px)`,
+            `circle(${endRadius}px at ${x}px ${y}px)`,
+          ]
+          document.documentElement.animate(
+            {
+              clipPath: isDark
+                ? [...clipPath].reverse()
+                : clipPath,
+            },
+            {
+              duration: 400,
+              easing: 'ease-out',
+              pseudoElement: isDark
+                ? '::view-transition-old(root)'
+                : '::view-transition-new(root)',
+            },
+          )
+        })
+    });
+  });
+</script>
+
+
+
+
+<meta name="generator" content="Hexo 8.1.1"></head>
+<body class="font-sans bg-white dark:bg-zinc-900 text-gray-700 dark:text-gray-200 relative">
+  <header class="fixed w-full px-5 py-1 z-10 backdrop-blur-xl backdrop-saturate-150 border-b border-black/5">
+  <div class="max-auto">
+    <nav class="flex items-center text-base">
+      <a href="/" class="group">
+        <h2 class="font-medium tracking-tighterp text-l p-2">
+          <img class="w-5 mr-2 inline-block transition-transform group-hover:rotate-[30deg]" id="logo" src="/images/logo.svg" alt="William's Blog" />
+          William&#39;s Blog
+        </h2>
+      </a>
+      <div id="header-title" class="opacity-0 md:ml-2 md:mt-[0.1rem] text-xs font-medium whitespace-nowrap overflow-hidden overflow-ellipsis">
+        CFNetwork 编程指南之三: 使用流(Working with Streams)
+      </div>
+      <div class="flex-1"></div>
+      <div class="flex items-center gap-3">
+        
+          <a class="hidden sm:flex" href="/archives">Posts</a>
+        
+        
+          
+            <a class="w-5 h-5 hidden sm:flex" title="Github" target="_blank" rel="noopener" href="https://github.com/xbmlz">
+              <iconify-icon width="20" icon="ri:github-line"></iconify-icon>
+            </a>
+          
+        
+        <a class="w-5 h-5 hidden sm:flex" title="Github" href="rss2.xml">
+          <iconify-icon width="20" icon="ri:rss-line"></iconify-icon>
+        </a>
+        <a class="w-5 h-5" title="toggle theme" id="toggle-dark">
+          <iconify-icon width="20" icon="" id="theme-icon"></iconify-icon>
+        </a>
+      </div>
+      <div class="flex items-center justify-center gap-3 ml-3 sm:hidden">
+        <span class="w-5 h-5" aria-hidden="true" role="img" id="open-menu">
+          <iconify-icon width="20" icon="carbon:menu" ></iconify-icon>
+        </span>
+        <span class="w-5 h-5 hidden" aria-hidden="true" role="img" id="close-menu">
+          <iconify-icon  width="20" icon="carbon:close" ></iconify-icon>
+        </span>
+      </div>
+    </nav>
+  </div>
+</header>
+<div id="menu-panel" class="h-0 overflow-hidden sm:hidden fixed left-0 right-0 top-12 bottom-0 z-10">
+  <div id="menu-content" class="relative z-20 bg-white/80 px-6 sm:px-8 py-2 backdrop-blur-xl -translate-y-full transition-transform duration-300">
+    <ul class="nav flex flex-col sm:flex-row text-sm font-medium">
+      
+        <li class="nav-portfolio sm:mx-2 border-b sm:border-0 border-black/5 last:border-0 hover:text-main">
+          <a href="/archives" class="flex h-12 sm:h-auto items-center">Posts</a>
+        </li>
+      
+    </ul>
+  </div>
+  <div class="mask bg-black/20 absolute inset-0"></div>
+</div>
+
+  <main class="pt-14">
+    <!-- css -->
+
+<link rel="stylesheet" href="/lib/fancybox/fancybox.min.css">
+
+
+<link rel="stylesheet" href="/lib/tocbot/tocbot.min.css">
+
+<!-- toc -->
+
+<section class="px-6 max-w-prose mx-auto md:px-0">
+  <!-- header -->
+  <header class="overflow-hidden pt-6 pb-6 md:pt-12">
+    <div class="pt-4 md:pt-6">
+      <h1 id="article-title" class="text-[2rem] font-bold leading-snug mb-4 md:mb-6 md:text-[2.6rem]">
+        CFNetwork 编程指南之三: 使用流(Working with Streams)
+      </h1>
+      <div>
+        <section class="flex items-center gap-3 text-sm">
+          <span class="flex items-center gap-1">
+            <iconify-icon width="18" icon="carbon-calendar" ></iconify-icon>
+            <time>2016-08-19</time>
+          </span>
+          <span class="text-gray-400">·</span>
+          <span class="flex items-center gap-1">
+            <iconify-icon width="18" icon="ic:round-access-alarm" ></iconify-icon>
+            <span>15 min</span>
+          </span>
+          <span class="text-gray-400">·</span>
+          <span class="flex items-center gap-1">
+            <iconify-icon width="18" icon="icon-park-outline:font-search" ></iconify-icon>
+            <span>3.7k words</span>
+          </span>
+          
+            <span class="text-gray-400">·</span>
+            <span class="flex items-center gap-1">
+              <iconify-icon width="16" icon="icon-park-outline:box" class="mr-2"></iconify-icon>
+              <a class="article-category-link" href="/categories/iOS%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/">iOS网络编程</a>
+            </span>
+          
+        </section>
+      </div>
+    </div>
+  </header>
+  <!-- content -->
+  <article class="post-content prose m-auto slide-enter-content dark:prose-invert">
+    <p>#Working with Streams</p>
+<p>本文讨论如何创建、打开和检查读写流错误。它还描述了如何从读取流读取信息，如何从写入信息到写入流，如何在读取或写入流时防止阻塞以及如何通过代理服务器导航到流。</p>
+<p>##使用读取流<br>核心基础流可用于读取或写入文件或使用网络套接字。除了创建这些流过程中的异常，其他行为类似。</p>
+<p>###创建一个读取流<br>首先创建一个读取流。列表2-1为一个文件创建读取流。</p>
+<p>列表2-1 为一个文件创建读取流</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CFReadStreamRef myReadStream = CFReadStreamCreateWithFile(kCFAllocatorDefault, fileURL);</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+<p>在这个列表中，<code>kCFAllocatorDefault</code> 参数指定当前默认系统分配器来为流分配内存，fileURL 参数指定读取流创建到的文件名称，例如 <code>file:///Users/joeuser/Downloads/MyApp.sit</code></p>
+<p>类似的，你可以通过调用<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/CoreFoundation/Reference/CFStreamConstants/index.html#//apple_ref/c/func/CFStreamCreatePairWithSocketToCFHost">CFStreamCreatePairWithSocketToCFHost</a>（在使用运行循环阻止阻塞（<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/Networking/Conceptual/CFNetwork/CFStreamTasks/CFStreamTasks.html#//apple_ref/doc/uid/TP30000230-62233">Using a Run Loop to Prevent Blocking</a>）中有描述）或者<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/CoreFoundation/Reference/CFStreamConstants/index.html#//apple_ref/c/func/CFStreamCreatePairWithSocketToNetService">CFStreamCreatePairWithSocketToNetService</a>（在NSNetServices and CFNetServices 编程指南（<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/Networking/Conceptual/NSNetServiceProgGuide/Introduction.html#//apple_ref/doc/uid/TP40002736">NSNetServices and CFNetServices Programming Guide</a>）中有描述）来创建一对基于网络服务的流。</p>
+<p>现在，你已经创建流，你可以打开它。打开流将导致流保留需要的任何系统资源，例如打开文件所需的文件描述符。列表2-1是一个打开读取流的例子。</p>
+<p>列表2-2 打开读取流</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (!CFReadStreamOpen(myReadStream)) &#123;  </span><br><span class="line">     CFStreamError myErr = CFReadStreamGetError(myReadStream);  </span><br><span class="line">       <span class="comment">// An error has occurred.     </span></span><br><span class="line">     <span class="keyword">if</span> (myErr.domain == kCFStreamErrorDomainPOSIX) &#123;  </span><br><span class="line">         <span class="comment">// Interpret myErr.error as a UNIX errno.    </span></span><br><span class="line">     &#125; <span class="keyword">else</span> <span class="keyword">if</span> (myErr.domain == kCFStreamErrorDomainMacOSStatus) &#123;   </span><br><span class="line">        <span class="comment">// Interpret myErr.error as a MacOS error code.  </span></span><br><span class="line">        OSStatus macError = (OSStatus)myErr.error;     </span><br><span class="line">        <span class="comment">// Check other error domains.    </span></span><br><span class="line">     &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>CFReadStreamOpen</code> 函数返回<code>TRUE</code> 表示成功，<code>FALSE</code> 表示由于某种原因打开失败。如果<code>CFReadStreamOpen</code> 返回<code>FALSE</code>，例子调用<code>CFReadStreamGetError</code> 函数，将返回<code>CFStreamError</code> 类型结构，包含两个值：一个域代码和一个错误代码。域代码表明错误代码应该如何解释。例如，如果域代码是<code>kCFStreamErrorDomainPOSIX</code>，错误代码是<code>UNIX errno</code>值。其他错误域是<code>kCFStreamErrorDomainMacOSStatus</code>，表明错误代码是一个定义在<code>MacErrors.h</code>中的<code>OSStatus</code> 值，<code>kCFStreamErrorDomainHTTP</code>表明错误代码是<code>CFStreamErrorHTTP</code> 枚举中定义的值。</p>
+<p>打开一个流是一个漫长的过程，所以<code>CFReadStreamOpen</code> 函数和<code>CFWriteStreamOpen</code> 函数返回<code>TRUE</code> 表明打开流的过程已经开始，来避免阻塞。为了检查打开的装填，可以调用<code>CFReadStreamGetStatus</code> 和<code>CFWriteStreamGetStatus</code>函数，如果仍处于打开过程则返回&#96;&#96;kCFStreamStatusOpening<code>，如果已经打开则返回</code>kCFStreamStatusOpen<code> ，如果已经打开但失败了则返回</code>kCFStreamStatusErrorOccurred<code>。在大多数情况下，打开是否完成无关紧要，因为</code>CFStream&#96;函数的读写将会阻塞直到打开流。</p>
+<p>###从读取流中读取信息<br>从读取流中读取信息，调用函数<code>CFReadStreamRead</code>，这个函数类似于<code>UNIX read()</code> 系统调用。两者都采用缓存区和缓存区长度作为参数。两者都返回读取的字节数，在流或文件末尾则返回0，错误发生则返回-1.两者都阻塞直到可以读取一个字节并继续读取。列表2-3是从读取流中读取信息的例子。</p>
+<p>列表2-3 从读取流（blocking）中读取信息</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">CFIndex numBytesRead;</span><br><span class="line"><span class="keyword">do</span> &#123;   </span><br><span class="line">   UInt8 buf[myReadBufferSize]; </span><br><span class="line">    <span class="comment">// define myReadBufferSize as desired  </span></span><br><span class="line">    numBytesRead = CFReadStreamRead(myReadStream, buf, <span class="keyword">sizeof</span>(buf)); </span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>( numBytesRead &gt; <span class="number">0</span> ) &#123;     </span><br><span class="line">      handleBytes(buf, numBytesRead);  </span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span>( numBytesRead &lt; <span class="number">0</span> ) &#123;  </span><br><span class="line">      CFStreamError error = CFReadStreamGetError(myReadStream);       </span><br><span class="line">           reportError(error);    </span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125; <span class="keyword">while</span>( numBytesRead &gt; <span class="number">0</span> );</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<p>###释放读取流<br>当所有数据都被读取，你可以调用CFReadStreamClose 函数关闭流，从而释放有关系统资源。然后通过调用<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/CoreFoundation/Reference/CFTypeRef/index.html#//apple_ref/doc/c_ref/CFRelease">CFRelease</a>函数释放流引用。你可以设置引用为NULL使其无效。如列表2-4的例子。</p>
+<p>列表2-4 释放读取流</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">CFReadStreamClose(myReadStream);</span><br><span class="line">CFRelease(myReadStream);</span><br><span class="line">myReadStream = <span class="literal">NULL</span>;</span><br></pre></td></tr></table></figure>
+
+
+<p>##使用写入流<br>使用写入流类似于使用读取流。一个主要的区别是<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/CoreFoundation/Reference/CFWriteStreamRef/index.html#//apple_ref/doc/c_ref/CFWriteStreamWrite">CFWriteStreamWrite</a> 函数并不能保证接收你传递给它的所有字节。相反，CFWriteStreamWrite 返回它接收的字节数。你会看到列表2-5中的实例代码，如果写入的字节数与需要写入的总字节数不一致，缓存区会调整并适应这一点。</p>
+<p>列表2-5 创建、打开、写入并释放写入流</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">CFWriteStreamRef myWriteStream =</span><br><span class="line">        CFWriteStreamCreateWithFile(kCFAllocatorDefault, fileURL);</span><br><span class="line"><span class="keyword">if</span> (!CFWriteStreamOpen(myWriteStream)) &#123;</span><br><span class="line">    CFStreamError myErr = CFWriteStreamGetError(myWriteStream);</span><br><span class="line">    <span class="comment">// An error has occurred.</span></span><br><span class="line">    <span class="keyword">if</span> (myErr.domain == kCFStreamErrorDomainPOSIX) &#123;</span><br><span class="line">    <span class="comment">// Interpret myErr.error as a UNIX errno.</span></span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (myErr.domain == kCFStreamErrorDomainMacOSStatus) &#123;</span><br><span class="line">        <span class="comment">// Interpret myErr.error as a MacOS error code.</span></span><br><span class="line">        OSStatus macError = (OSStatus)myErr.error;</span><br><span class="line">        <span class="comment">// Check other error domains.</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">UInt8 buf[] = “Hello, world”;</span><br><span class="line">CFIndex bufLen = (CFIndex)<span class="built_in">strlen</span>(buf);</span><br><span class="line"> </span><br><span class="line"><span class="keyword">while</span> (!done) &#123;</span><br><span class="line">    CFIndex bytesWritten = CFWriteStreamWrite(myWriteStream, buf, (CFIndex)bufLen);</span><br><span class="line">    <span class="keyword">if</span> (bytesWritten &lt; <span class="number">0</span>) &#123;</span><br><span class="line">        CFStreamError error = CFWriteStreamGetError(myWriteStream);</span><br><span class="line">        reportError(error);</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (bytesWritten == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (CFWriteStreamGetStatus(myWriteStream) == kCFStreamStatusAtEnd) &#123;</span><br><span class="line">            done = TRUE;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (bytesWritten != bufLen) &#123;</span><br><span class="line">        <span class="comment">// Determine how much has been written and adjust the buffer</span></span><br><span class="line">        bufLen = bufLen - bytesWritten;</span><br><span class="line">        memmove(buf, buf + bytesWritten, bufLen);</span><br><span class="line"> </span><br><span class="line">        <span class="comment">// Figure out what went wrong with the write stream</span></span><br><span class="line">        CFStreamError error = CFWriteStreamGetError(myWriteStream);</span><br><span class="line">        reportError(error);</span><br><span class="line"> </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">CFWriteStreamClose(myWriteStream);</span><br><span class="line">CFRelease(myWriteStream);</span><br><span class="line">myWriteStream = <span class="literal">NULL</span>;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>##使用流时防止阻塞</p>
+<p>当使用流来通信时，特别是基于套接字的流，数据传输可能需要很长时间。如果你同步执行你的流，你的整个应用将被迫等待数据传输。因此，强烈建议你的代码使用替代方法来防止阻塞。</p>
+<p>当读取或写入一个CFStream对象时，有两种方法可以防止阻塞：</p>
+<ul>
+<li><p>使用一个运行循环——注册账户接收stream-related 事件并安排流到一个运行循环上。当stream-related 事件发生时，调用你的回调函数（注册调用时指定）。</p>
+</li>
+<li><p>轮询——对于读取流，在读取流之前找出是否有需要读取的字节。对于写入流，在写入流之前找出流是否可以无阻塞的写入。</p>
+</li>
+</ul>
+<p>将在以下章节中讨论这些方法。</p>
+<p>###使用运行循环防止阻塞<br>使用流的首选方法是运行循环。运行循环在你的主线程上执行。等待事件发生，然后调用与给定事件相关的函数。</p>
+<p>在网络传输的情况下，当你的注册事件发生时，你的回调函数被运行循环执行。这样你可以不必轮询你的套接字流，可以减缓线程。</p>
+<p>关于运行循环的更多信息，参阅线程编程指南（<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/Multithreading/Introduction/Introduction.html#//apple_ref/doc/uid/10000057i">Threading Programming Guide</a>）。</p>
+<p>这个例子首先创建一个套接字读取流：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">CFStreamCreatePairWithSocketToCFHost(kCFAllocatorDefault, host,port,</span><br><span class="line">                                  &amp;myReadStream, <span class="literal">NULL</span>);</span><br></pre></td></tr></table></figure>
+
+
+<p>CFHost对象引用、host指定远程主机为读取流的主机，port 参数指定主机使用的端口号。CFStreamCreatePairWithSocketToCFHost 函数返回新的读取流引用myReadStream。最后一个参数NULL表明调用者不希望创建写入流。如果你想创建一个写入流，最后一个参数为&amp;myWriteStream。</p>
+<p>在打开套接字读取流之前，创建一个内容，这样当你注册接收 stream-related事件时可以使用。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CFStreamClientContext myContext = &#123;<span class="number">0</span>, myPtr, myRetain, myRelease, myCopyDesc&#125;;</span><br></pre></td></tr></table></figure>
+
+
+<p>第一个参数是<code>0</code>指定版本号。<code>info</code> 参数<code>myPtr</code>是你想要传递给回调函数的数据指针。通常，<code>myPtr</code>是一个指向结构体的指针，在结构体中你定义了包含有关流的信息。参数<code>retain</code> 是一个指向函数的指针，可以保留参数<code>info</code> 。所以在函数中设置为<code>myRetain</code>，在上面的代码中，<code>CFStream</code> 将调用<code>myRetain(myPtr)</code>来保留<code>info</code> 指针。同样，<code>release</code> 参数<code>myRelease</code>是一个指向函数的指针，释放参数info 。当流与内容分离，<code>CFStream</code>将调用 <code>myRelease(myPtr)</code>。最后，<code>copyDescription</code> 是函数的一个参数，该函数提供流的描述。例如，如果你是调用上文所示的CFCopyDesc(myReadStream) ，<code>CFStream</code>将调用<code>myCopyDesc(myPtr)</code>。</p>
+<p>客户端环境允许你设置<code>retain</code>, <code>release</code>和<code>copyDescription</code> 参数为<code>NULL</code>。如果你设置<code>retain</code> 和参数<code>release </code>为<code>NULL</code>，系统将认为<code>info</code> 指针指向的内存一直存在直到流本身被销毁。如果你将<code>copyDescription</code> 参数设置为NULL，如果有要求，系统将提供<code>info </code>指针所指向内存的基本信息。</p>
+<p>设置好客户端环境后，调用函数<code>CFReadStreamSetClient</code> 注册接收有关流事件。<code>CFReadStreamSetClient</code> 要求你指定回调函数和你想接收的事件。列表2-6中的例子指定回调函数和接收的<code>kCFStreamEventHasBytesAvailable</code>,<code>kCFStreamEventErrorOccurred</code>和<code>kCFStreamEventEndEncountered</code> 事件。然后调用<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/CoreFoundation/Reference/CFReadStreamRef/index.html#//apple_ref/doc/c_ref/CFReadStreamScheduleWithRunLoop">CFReadStreamScheduleWithRunLoop</a>函数安排流到一个运行循环上。例子见列表2-6.</p>
+<p>列表2-6 安排流到运行循环上</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">CFOptionFlags registeredEvents = kCFStreamEventHasBytesAvailable |</span><br><span class="line">        kCFStreamEventErrorOccurred | kCFStreamEventEndEncountered;</span><br><span class="line"><span class="keyword">if</span> (CFReadStreamSetClient(myReadStream, registeredEvents, myCallBack, &amp;myContext))</span><br><span class="line">&#123;</span><br><span class="line">    CFReadStreamScheduleWithRunLoop(myReadStream, CFRunLoopGetCurrent(),</span><br><span class="line">                                    kCFRunLoopCommonModes);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>流安排到运行循环上后，你可以准备打开流，如列表2-7所示。</p>
+<p>列表2-7 打开非阻塞读取流</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (!CFReadStreamOpen(myReadStream)) &#123;</span><br><span class="line">    CFStreamError myErr = CFReadStreamGetError(myReadStream);</span><br><span class="line">    <span class="keyword">if</span> (myErr.error != <span class="number">0</span>) &#123;</span><br><span class="line">    <span class="comment">// An error has occurred.</span></span><br><span class="line">        <span class="keyword">if</span> (myErr.domain == kCFStreamErrorDomainPOSIX) &#123;</span><br><span class="line">        <span class="comment">// Interpret myErr.error as a UNIX errno.</span></span><br><span class="line">            strerror(myErr.error);</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (myErr.domain == kCFStreamErrorDomainMacOSStatus) &#123;</span><br><span class="line">            OSStatus macError = (OSStatus)myErr.error;</span><br><span class="line">            &#125;</span><br><span class="line">        <span class="comment">// Check other domains.</span></span><br><span class="line">    &#125; <span class="keyword">else</span></span><br><span class="line">        <span class="comment">// start the run loop</span></span><br><span class="line">        CFRunLoopRun();</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>现在，等待你的回调函数执行。在你的回调函数中，检查事件代码并采取适当的行动。见列表2-8.</p>
+<p>列表2-8 网络事件回调函数</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">myCallBack</span> <span class="params">(CFReadStreamRef stream, CFStreamEventType event, <span class="type">void</span> *myPtr)</span> &#123;</span><br><span class="line">    <span class="keyword">switch</span>(event) &#123;</span><br><span class="line">        <span class="keyword">case</span> kCFStreamEventHasBytesAvailable:</span><br><span class="line">            <span class="comment">// It is safe to call CFReadStreamRead; it won’t block because bytes</span></span><br><span class="line">            <span class="comment">// are available.</span></span><br><span class="line">            UInt8 buf[BUFSIZE];</span><br><span class="line">            CFIndex bytesRead = CFReadStreamRead(stream, buf, BUFSIZE);</span><br><span class="line">            <span class="keyword">if</span> (bytesRead &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                handleBytes(buf, bytesRead);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// It is safe to ignore a value of bytesRead that is less than or</span></span><br><span class="line">            <span class="comment">// equal to zero because these cases will generate other events.</span></span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> kCFStreamEventErrorOccurred:</span><br><span class="line">            CFStreamError error = CFReadStreamGetError(stream);</span><br><span class="line">            reportError(error);</span><br><span class="line">            CFReadStreamUnscheduleFromRunLoop(stream, CFRunLoopGetCurrent(),</span><br><span class="line">                                              kCFRunLoopCommonModes);</span><br><span class="line">            CFReadStreamClose(stream);</span><br><span class="line">            CFRelease(stream);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> kCFStreamEventEndEncountered:</span><br><span class="line">            reportCompletion();</span><br><span class="line">            CFReadStreamUnscheduleFromRunLoop(stream, CFRunLoopGetCurrent(),</span><br><span class="line">                                              kCFRunLoopCommonModes);</span><br><span class="line">            CFReadStreamClose(stream);</span><br><span class="line">            CFRelease(stream);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>当回调函数接收<code>kCFStreamEventHasBytesAvailabl</code>e <code>事件代码，它会调用</code>CFReadStreamRead&#96; 来读取数据。</p>
+<p>当回调函数接收<code>kCFStreamEventErrorOccurred</code> 事件代码，它会调用<code>CFReadStreamGetError</code> 来获取错误和自己的错误函数 (reportError)来处理错误。</p>
+<p>当回调函数接收<code>kCFStreamEventEndEncountered </code>事件代码，它调用自己的函数 (<code>reportCompletion</code>)来处理最终的数据然后调用<code>CFReadStreamUnscheduleFromRunLoop</code> 函数从指定运行循环上移除流。然后运行<code>CFReadStreamClose </code>函数来关闭流，<code>CFRelease</code> 来释放流引用。</p>
+<p>###轮询网络流<br>一般来说，轮询网络流是不明智的。然而，在某些罕见的情况下，它非常有用。为了轮询流，你首先检查流是否可以读取或写入，然后在流上执行一个读取或写入的操作。</p>
+<p>当写入到一个写入流中，你通过调用<code>CFWriteStreamCanAcceptBytes</code>可以决定流是否接受数据。如果返回TRUE，那么你可以确定随后调用的<code>CFWriteStreamWrite</code> 函数将立即发送数据而没有阻塞。</p>
+<p>同样，对于读取流，在调用CFReadStreamRead之前，调用CFReadStreamHasBytesAvailable函数。</p>
+<p>列表2-9 是一个轮询读取流的例子</p>
+<p>列表2-9 轮询读取流</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> (!done) &#123;</span><br><span class="line">    <span class="keyword">if</span> (CFReadStreamHasBytesAvailable(myReadStream)) &#123;</span><br><span class="line">        UInt8 buf[BUFSIZE];</span><br><span class="line">        CFIndex bytesRead = CFReadStreamRead(myReadStream, buf, BUFSIZE);</span><br><span class="line">        <span class="keyword">if</span> (bytesRead &lt; <span class="number">0</span>) &#123;</span><br><span class="line">            CFStreamError error = CFReadStreamGetError(myReadStream);</span><br><span class="line">            reportError(error);</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (bytesRead == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (CFReadStreamGetStatus(myReadStream) == kCFStreamStatusAtEnd) &#123;</span><br><span class="line">                done = TRUE;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            handleBytes(buf, bytesRead);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="comment">// ...do something else while you wait...</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>列表2-10 轮询写入流的例子</p>
+<p>列表2-10 轮询写入流</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">UInt8 buf[] = “Hello, world”;</span><br><span class="line">UInt32 bufLen = <span class="built_in">strlen</span>(buf);</span><br><span class="line"> </span><br><span class="line"><span class="keyword">while</span> (!done) &#123;</span><br><span class="line">    <span class="keyword">if</span> (CFWriteStreamCanAcceptBytes(myWriteStream)) &#123;</span><br><span class="line">        <span class="type">int</span> bytesWritten = CFWriteStreamWrite(myWriteStream, buf, <span class="built_in">strlen</span>(buf));</span><br><span class="line">        <span class="keyword">if</span> (bytesWritten &lt; <span class="number">0</span>) &#123;</span><br><span class="line">            CFStreamError error = CFWriteStreamGetError(myWriteStream);</span><br><span class="line">            reportError(error);</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (bytesWritten == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (CFWriteStreamGetStatus(myWriteStream) == kCFStreamStatusAtEnd)</span><br><span class="line">            &#123;</span><br><span class="line">                done = TRUE;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (bytesWritten != <span class="built_in">strlen</span>(buf)) &#123;</span><br><span class="line">            <span class="comment">// Determine how much has been written and adjust the buffer</span></span><br><span class="line">            bufLen = bufLen - bytesWritten;</span><br><span class="line">            memmove(buf, buf + bytesWritten, bufLen);</span><br><span class="line"> </span><br><span class="line">            <span class="comment">// Figure out what went wrong with the write stream</span></span><br><span class="line">            CFStreamError error = CFWriteStreamGetError(myWriteStream);</span><br><span class="line">            reportError(error);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="comment">// ...do something else while you wait...</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>##导航防火墙<br>有两种方式设置流的防火墙。对于大多数流，你可以使用SCDynamicStoreCopyProxies 函数来检索代理设置，然后设置kCFStreamHTTPProxy （或kCFStreamFTPProxy）属性将结果应用于流。SCDynamicStoreCopyProxies 函数是系统配置框架的一部分，因此你需要在你的项目中使用该函数时需导入<code>&lt;SystemConfiguration/SystemConfiguration.h&gt;</code>。然后当你完成后，释放代理字典引用。整个过程如列表2-11所示。</p>
+<p>列表2-11 通过代理服务器导航一个流</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">CFDictionaryRef proxyDict = SCDynamicStoreCopyProxies(<span class="literal">NULL</span>);</span><br><span class="line">CFReadStreamSetProperty(readStream, kCFStreamPropertyHTTPProxy, proxyDict);</span><br></pre></td></tr></table></figure>
+<p>然而，如果你经常需要使用代理设置多个流，这将变得更加复杂。在这种情况下，检索用户机器防火墙设置需要五个步骤：</p>
+<ul>
+<li><p>为动态存储会话SCDynamicStoreRef，创建一个持久的句柄。</p>
+</li>
+<li><p>将句柄添加到运行循环中的动态存储会话上，这样可以收到代理更改的通知。</p>
+</li>
+<li><p>使用SCDynamicStoreCopyProxies 检索最新的代理设置。</p>
+</li>
+<li><p>当被告知变更，更新你的代理。</p>
+</li>
+<li><p>当通过后，清理SCDynamicStoreRef。</p>
+</li>
+</ul>
+<p>为动态存储会话创建句柄，使用SCDynamicStoreCreate 函数并传递一个分配器，一个名字来描述你的过程，一个回调函数和一个动态存储环境SCDynamicStoreContext。当初始化应用时运行。代码如列表2-12所示.</p>
+<p>列表2-12 为动态存储会话创建一个句柄</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">SCDynamicStoreContext context = &#123;<span class="number">0</span>, self, <span class="literal">NULL</span>, <span class="literal">NULL</span>, <span class="literal">NULL</span>&#125;;</span><br><span class="line">systemDynamicStore = SCDynamicStoreCreate(<span class="literal">NULL</span>,</span><br><span class="line">                                          CFSTR(<span class="string">&quot;SampleApp&quot;</span>),</span><br><span class="line">                	                      proxyHasChanged,</span><br><span class="line">           								  &amp;context);</span><br></pre></td></tr></table></figure>
+<p>创建动态存储引用后，你需要将其添加到运行循环上。首先，采用动态存储引用 对 代理的任何更改 设置监控。使用SCDynamicStoreKeyCreateProxies 和SCDynamicStoreSetNotificationKeys函数可完成该功能。然后，你可以调用SCDynamicStoreCreateRunLoopSource 和CFRunLoopAddSource函数添加动态存储引用到运行循环上。代码如列表2-13所示。</p>
+<p>列表2-13 添加一个动态存储引用到运行循环</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Set up the store to monitor any changes to the proxies</span></span><br><span class="line">CFStringRef proxiesKey = SCDynamicStoreKeyCreateProxies(<span class="literal">NULL</span>);</span><br><span class="line">CFArrayRef keyArray = CFArrayCreate(<span class="literal">NULL</span>,</span><br><span class="line">                                    (<span class="type">const</span> <span class="type">void</span> **)(&amp;proxiesKey),</span><br><span class="line">                                    <span class="number">1</span>,</span><br><span class="line">                                    &amp;kCFTypeArrayCallBacks);</span><br><span class="line">SCDynamicStoreSetNotificationKeys(systemDynamicStore, keyArray, <span class="literal">NULL</span>);</span><br><span class="line">CFRelease(keyArray);</span><br><span class="line">CFRelease(proxiesKey);</span><br><span class="line"> </span><br><span class="line"><span class="comment">// Add the dynamic store to the run loop</span></span><br><span class="line">CFRunLoopSourceRef storeRLSource =</span><br><span class="line">    SCDynamicStoreCreateRunLoopSource(<span class="literal">NULL</span>, systemDynamicStore, <span class="number">0</span>);</span><br><span class="line">CFRunLoopAddSource(CFRunLoopGetCurrent(), storeRLSource, kCFRunLoopCommonModes);</span><br><span class="line">CFRelease(storeRLSource);</span><br></pre></td></tr></table></figure>
+
+<p>一旦动态存储引用添加到运行循环上，调用SCDynamicStoreCopyProxies函数，用它来预加载代理字典当前代理设置。如列表2-14所示</p>
+<p>列表2-14 加载代理字典</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gProxyDict = SCDynamicStoreCopyProxies(systemDynamicStore);</span><br></pre></td></tr></table></figure>
+
+
+<p>由于动态存储引用添加到运行循环上，每次代理改变，你的回调函数会运行。释放当前代理字典并使用新的代理设置重新加载。回调函数示例代码如列表2-15所示。</p>
+<p>列表2-15 代理回调函数</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">proxyHasChanged</span><span class="params">()</span> &#123;</span><br><span class="line">CFRelease(gProxyDict);</span><br><span class="line">   gProxyDict = SCDynamicStoreCopyProxies(systemDynamicStore);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>因为所有代理信息是最新的。创建读取或写入流后，通过调用CFReadStreamSetProperty 和CFWriteStreamSetProperty函数，设置kCFStreamPropertyHTTPProxy 代理。如果流是叫做的readStream读取流，函数调用如列表2-16所示。</p>
+<p>列表2-16 添加代理信息到流</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CFReadStreamSetProperty(readStream, kCFStreamPropertyHTTPProxy, gProxyDict);</span><br></pre></td></tr></table></figure>
+
+
+<p>当代理设置完成，确保释放字典和动态存储引用并从运行循环上删除动态存储引用。见列表2-17.</p>
+<p>列表2-17 清理代理信息</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (gProxyDict) &#123;</span><br><span class="line">CFRelease(gProxyDict);&#125;</span><br><span class="line"><span class="comment">// Invalidate the dynamic store&#x27;s run loop source</span></span><br><span class="line"><span class="comment">// to get the store out of the run loop</span></span><br><span class="line">CFRunLoopSourceRef rls = SCDynamicStoreCreateRunLoopSource(<span class="literal">NULL</span>, systemDynamicStore, <span class="number">0</span>);</span><br><span class="line">CFRunLoopSourceInvalidate(rls);</span><br><span class="line">CFRelease(rls);</span><br><span class="line">CFRelease(systemDynamicStore);</span><br></pre></td></tr></table></figure>
+<p>官方原文地址：<br><a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/Networking/Conceptual/CFNetwork/CFStreamTasks/CFStreamTasks.html#//apple_ref/doc/uid/TP30001132-CH6-SW1">CFNetwork Programming Guide</a></p>
+
+  </article>
+  <!-- tag -->
+  <div class="mt-12 pt-6 border-t border-gray-200">
+    
+      
+        <span class="bg-gray-100 dark:bg-gray-700 px-2 py-1 m-1 text-sm rounded-md transition-colors hover:bg-gray-200">
+          <a href="/tags/CFNetwork/">CFNetwork</a>
+        </span>
+      
+    
+  </div>
+  <!-- prev and next -->
+  <div class="flex justify-between mt-12 pt-6 border-t border-gray-200">
+    <div>
+      
+        <a href="/post/CFNetwork-%E7%BC%96%E7%A8%8B%E6%8C%87%E5%8D%97%E4%B9%8B%E5%9B%9B-%E4%B8%8EHTTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%80%9A%E4%BF%A1-Communicating-with-HTTP-Servers.html" class="text-sm text-gray-400 hover:text-gray-500 flex justify-center">
+          <iconify-icon width="20" icon="ri:arrow-left-s-line" data-inline="false"></iconify-icon>
+          CFNetwork 编程指南之四: 与HTTP服务器通信(Communicating with HTTP Servers)
+        </a>
+      
+    </div>
+    <div>
+      
+        <a href="/post/CFNetwork-%E7%BC%96%E7%A8%8B%E6%8C%87%E5%8D%97%E4%B9%8B%E4%BA%8C-CFNetwork%E6%A6%82%E5%BF%B5%EF%BC%88CFNetwork-Concepts.html" class="text-sm text-gray-400 hover:text-gray-500 flex justify-center">
+          CFNetwork 编程指南之二: CFNetwork概念（CFNetwork Concepts)
+          <iconify-icon width="20" icon="ri:arrow-right-s-line" data-inline="false"></iconify-icon>
+        </a>
+      
+    </div>
+  </div>
+  <!-- comment -->
+  <div class="article-comments mt-12">
+    
+
+  </div>
+</section>
+<!-- js inspect -->
+
+<script src="/lib/clipboard.min.js"></script>
+
+
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    "HTML-CSS": {
+        preferredFont: "TeX",
+        availableFonts: ["STIX","TeX"],
+        linebreaks: { automatic:true },
+        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+        inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
+        processEscapes: true,
+        ignoreClass: "tex2jax_ignore|dno",
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+        equationNumbers: { autoNumber: "AMS" },
+        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+        Macros: { href: "{}" }
+    },
+    messageStyle: "none"
+  });
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<script>
+  $(document).ready(() => {
+    const maraidConfig = {
+      theme: "default",
+      logLevel: 3,
+      flowchart: { curve: "linear" },
+      gantt: { axisFormat: "%m/%d/%Y" },
+      sequence: { actorMargin: 50 },
+    };
+    mermaid.initialize(maraidConfig);
+  });
+</script>
+
+
+
+<script src="/lib/fancybox/fancybox.umd.min.js"></script>
+
+<script>
+  $(document).ready(() => {
+    $('.post-content').each(function(i){
+      $(this).find('img').each(function(){
+        if ($(this).parent().hasClass('fancybox') || $(this).parent().is('a')) return;
+        var alt = this.alt;
+        if (alt) $(this).after('<span class="fancybox-alt">' + alt + '</span>');
+        $(this).wrap('<a class="fancybox-img" href="' + this.src + '" data-fancybox=\"gallery\" data-caption="' + alt + '"></a>')
+      });
+      $(this).find('.fancybox').each(function(){
+        $(this).attr('rel', 'article' + i);
+      });
+    });
+
+    Fancybox.bind('[data-fancybox="gallery"]', {
+        // options
+    })
+  })
+</script>
+
+<!-- tocbot begin -->
+
+<script src="/lib/tocbot/tocbot.min.js"></script>
+
+<script>
+  $(document).ready(() => {
+      tocbot.init({
+        // Where to render the table of contents.
+        tocSelector: '.post-toc',
+        // Where to grab the headings to build the table of contents.
+        contentSelector: '.post-content',
+        // Which headings to grab inside of the contentSelector element.
+        headingSelector: 'h1, h2, h3',
+        // For headings inside relative or absolute positioned containers within content.
+        hasInnerContainers: true,
+    });
+  })
+</script>
+<!-- tocbot end -->
+
+
+  </main>
+  <footer class="flex flex-col h-40 items-center justify-center text-gray-400 text-sm">
+  <!-- busuanzi -->
+  
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!-- Busuanzi Analytics -->
+<div class="flex items-center gap-2">
+  <span>Visitors</span>
+  <span id="busuanzi_value_site_uv"></span>
+  <span>Page Views</span>
+  <span id="busuanzi_value_site_pv"></span>
+</div>
+<!-- End Busuanzi Analytics -->
+
+
+  <!-- copyright -->
+  <div class="flex items-center gap-2">
+    <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" style="color: inherit;">CC BY-NC-SA 4.0</a>
+    <span>© 2022</span>
+    <iconify-icon width="18" icon="emojione-monotone:maple-leaf" ></iconify-icon>
+    <a href="https://github.com/xbmlz" target="_blank" rel="noopener noreferrer">xbmlz</a>
+  </div>
+  <!-- powered by -->
+  <div class="flex items-center gap-2">
+    <span>Powered by</span>
+    <a href="https://hexo.io/" target="_blank" rel="noopener noreferrer">Hexo</a>
+    <span>&</span>
+    <a href="https://github.com/xbmlz/hexo-theme-maple" target="_blank" rel="noopener noreferrer">Maple</a>
+  </div>
+
+</footer>
+
+  <div class="back-to-top box-border fixed right-6 z-1024 -bottom-20 rounded py-1 px-1 bg-slate-900 opacity-60 text-white cursor-pointer text-center dark:bg-slate-600">
+    <span class="flex justify-center items-center text-sm">
+      <iconify-icon width="18" icon="ion:arrow-up-c" id="go-top"></iconify-icon>
+      <span id="scrollpercent"><span>0</span> %</span>
+    </span>
+  </div>
+  
+<script src="/js/main.js"></script>
+
+
+  <script>
+    $(document).ready(function () {
+      const mapleCount = "10";
+      const speed = "0.5";
+      const mapleEl = document.getElementById("maple");
+      const maples = Array.from({ length: mapleCount }).map(() => {
+        const maple = document.createElement("div");
+        const scale = Math.random() * 0.5 + 0.5;
+        const offset = Math.random() * 2 - 1;
+        const x = Math.random() * mapleEl.clientWidth;
+        const y = -Math.random() * mapleEl.clientHeight;
+        const duration = 10 / speed;
+        const delay = -duration;
+        maple.className = "maple";
+        maple.style.width = `${24 * scale}px`;
+        maple.style.height = `${24 * scale}px`;
+        maple.style.left = `${x}px`;
+        maple.style.top = `${y}px`;
+        maple.style.setProperty("--maple-fall-offset", offset);
+        maple.style.setProperty("--maple-fall-height", `${Math.abs(y) + mapleEl.clientHeight}px`);
+        maple.style.animation = `fall ${duration}s linear infinite`;
+        maple.style.animationDelay = `${delay}s`;
+        mapleEl.appendChild(maple)
+        return maple
+      })
+    });
+  </script>
+  
+
+
+  <div class="fixed top-0 bottom-0 left-0 right-0 pointer-events-none print:hidden" id="maple"></div>
+</body>
+
+</html>

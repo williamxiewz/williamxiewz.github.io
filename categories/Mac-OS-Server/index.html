@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <meta name="author" content="William Xie">
+
+
+  <meta name="subtitle" content="Walk steps step by step">
+
+
+
+
+<title>目录: Mac OS Server | William&#39;s Blog</title>
+
+
+
+<link rel="icon" href="/favicon.png">
+
+
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/nprogress/nprogress.css">
+
+
+
+<script src="/lib/jquery.min.js"></script>
+
+
+<script src="/lib/iconify-icon.min.js"></script>
+
+
+<script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+<script>
+  tailwind.config = {
+    darkMode: "class",
+  };
+</script>
+
+
+<script src="/lib/nprogress/nprogress.js"></script>
+
+<script>
+  $(document).ready(() => {
+    NProgress.configure({
+      showSpinner: false,
+    });
+    NProgress.start();
+    $("#nprogress .bar").css({
+      background: "#de7441",
+    });
+    $("#nprogress .peg").css({
+      "box-shadow": "0 0 2px #de7441, 0 0 4px #de7441",
+    });
+    $("#nprogress .spinner-icon").css({
+      "border-top-color": "#de7441",
+      "border-left-color": "#de7441",
+    });
+    setTimeout(function () {
+      NProgress.done();
+      $(".fade").removeClass("out");
+    }, 800);
+  });
+</script>
+
+<script>
+  (function () {
+    const prefersDark =
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const setting = localStorage.getItem("hexo-color-scheme") || "auto";
+    if (setting === "dark" || (prefersDark && setting !== "light"))
+      document.documentElement.classList.toggle("dark", true);
+    let isDark = document.documentElement.classList.contains("dark");
+  })();
+
+  $(document).ready(function () {
+    // init icon
+    const prefersDark =
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const isDark = document.documentElement.classList.contains("dark");
+    $("#theme-icon").attr("icon", isDark ? "ri:moon-line" : "ri:sun-line");
+
+    function toggleGiscusTheme() {
+      const isDark = document.documentElement.classList.contains("dark");
+      const giscusFrame = document.querySelector("iframe.giscus-frame");
+      if (giscusFrame) {
+        giscusFrame.contentWindow.postMessage(
+          {
+            giscus: {
+              setConfig: {
+                theme: isDark ? "dark" : "light",
+              },
+            },
+          },
+          "https://giscus.app"
+        );
+      }
+    }
+
+    // toggle dark mode
+    function toggleDark() {
+      let isDark = document.documentElement.classList.contains("dark");
+      const setting = localStorage.getItem("hexo-color-scheme") || "auto";
+      isDark = !isDark;
+      document.documentElement.classList.toggle("dark", isDark);
+      $("#theme-icon").attr("icon", isDark ? "ri:moon-line" : "ri:sun-line");
+      if (prefersDark === isDark) {
+        localStorage.setItem("hexo-color-scheme", "auto");
+      } else {
+        localStorage.setItem("hexo-color-scheme", isDark ? "dark" : "light");
+      }
+      toggleGiscusTheme();
+    }
+
+    // listen dark mode change
+    window
+      .matchMedia("(prefers-color-scheme: dark)")
+      .addEventListener("change", (e) => {
+        const setting = localStorage.getItem("hexo-color-scheme") || "auto";
+        if (setting === "auto") {
+          document.documentElement.classList.toggle("dark", e.matches);
+          $("#theme-icon").attr(
+            "icon",
+            e.matches ? "ri:moon-line" : "ri:sun-line"
+          );
+          toggleGiscusTheme();
+        }
+      });
+
+    $("#toggle-dark").click((event) => {
+      const isAppearanceTransition = document.startViewTransition && !window.matchMedia('(prefers-reduced-motion: reduce)').matches
+      if (!isAppearanceTransition) {
+        toggleDark()
+        return
+      }
+      const x = event.clientX
+      const y = event.clientY
+      const endRadius = Math.hypot(
+        Math.max(x, innerWidth - x),
+        Math.max(y, innerHeight - y),
+      )
+      const transition = document.startViewTransition(async () => {
+        toggleDark()
+      })
+
+      transition.ready
+        .then(() => {
+          const isDark = document.documentElement.classList.contains("dark")
+          const clipPath = [
+            `circle(0px at ${x}px ${y}px)`,
+            `circle(${endRadius}px at ${x}px ${y}px)`,
+          ]
+          document.documentElement.animate(
+            {
+              clipPath: isDark
+                ? [...clipPath].reverse()
+                : clipPath,
+            },
+            {
+              duration: 400,
+              easing: 'ease-out',
+              pseudoElement: isDark
+                ? '::view-transition-old(root)'
+                : '::view-transition-new(root)',
+            },
+          )
+        })
+    });
+  });
+</script>
+
+
+
+
+<meta name="generator" content="Hexo 8.1.1"></head>
+<body class="font-sans bg-white dark:bg-zinc-900 text-gray-700 dark:text-gray-200 relative">
+  <header class="fixed w-full px-5 py-1 z-10 backdrop-blur-xl backdrop-saturate-150 border-b border-black/5">
+  <div class="max-auto">
+    <nav class="flex items-center text-base">
+      <a href="/" class="group">
+        <h2 class="font-medium tracking-tighterp text-l p-2">
+          <img class="w-5 mr-2 inline-block transition-transform group-hover:rotate-[30deg]" id="logo" src="/images/logo.svg" alt="William's Blog" />
+          William&#39;s Blog
+        </h2>
+      </a>
+      <div id="header-title" class="opacity-0 md:ml-2 md:mt-[0.1rem] text-xs font-medium whitespace-nowrap overflow-hidden overflow-ellipsis">
+        
+      </div>
+      <div class="flex-1"></div>
+      <div class="flex items-center gap-3">
+        
+          <a class="hidden sm:flex" href="/archives">Posts</a>
+        
+        
+          
+            <a class="w-5 h-5 hidden sm:flex" title="Github" target="_blank" rel="noopener" href="https://github.com/xbmlz">
+              <iconify-icon width="20" icon="ri:github-line"></iconify-icon>
+            </a>
+          
+        
+        <a class="w-5 h-5 hidden sm:flex" title="Github" href="rss2.xml">
+          <iconify-icon width="20" icon="ri:rss-line"></iconify-icon>
+        </a>
+        <a class="w-5 h-5" title="toggle theme" id="toggle-dark">
+          <iconify-icon width="20" icon="" id="theme-icon"></iconify-icon>
+        </a>
+      </div>
+      <div class="flex items-center justify-center gap-3 ml-3 sm:hidden">
+        <span class="w-5 h-5" aria-hidden="true" role="img" id="open-menu">
+          <iconify-icon width="20" icon="carbon:menu" ></iconify-icon>
+        </span>
+        <span class="w-5 h-5 hidden" aria-hidden="true" role="img" id="close-menu">
+          <iconify-icon  width="20" icon="carbon:close" ></iconify-icon>
+        </span>
+      </div>
+    </nav>
+  </div>
+</header>
+<div id="menu-panel" class="h-0 overflow-hidden sm:hidden fixed left-0 right-0 top-12 bottom-0 z-10">
+  <div id="menu-content" class="relative z-20 bg-white/80 px-6 sm:px-8 py-2 backdrop-blur-xl -translate-y-full transition-transform duration-300">
+    <ul class="nav flex flex-col sm:flex-row text-sm font-medium">
+      
+        <li class="nav-portfolio sm:mx-2 border-b sm:border-0 border-black/5 last:border-0 hover:text-main">
+          <a href="/archives" class="flex h-12 sm:h-auto items-center">Posts</a>
+        </li>
+      
+    </ul>
+  </div>
+  <div class="mask bg-black/20 absolute inset-0"></div>
+</div>
+
+  <main class="pt-14">
+    
+
+
+<section class="px-6 max-w-prose mx-auto gap-12 grid grid-cols-1">
+  <div class="flex flex-col h-48 items-center justify-center">
+    
+      <h1 class="site-title text-4xl leading-relaxed">
+        Categories - Mac-OS-Server
+      </h1>
+    
+  </div>
+  
+  
+    
+    
+      <div class="relative pointer-events-none">
+        <span class="text-9xl opacity-10 absolute -left-11 -top-6 font-bold">2016</span>
+      </div>
+    
+    <a style="--stagger:0" href="/post/Xcode-Server-%E6%95%99%E7%A8%8B4-%E8%AF%81%E4%B9%A6%E5%92%8C%E6%8F%8F%E8%BF%B0%E6%96%87%E4%BB%B6.html" data-animate>
+      <header>
+        <h2 class="font-bold text-xl">
+          Xcode Server 教程4: 证书和描述文件
+        </h2>
+      </header>
+      <section class="text-gray-400 my-2 text-sm time">
+        <p class="line-clamp-4">
+          
+            <div class="py-2">
+              <p><a href="(https://honzadvorsky.com/articles/2015-10-21-17-40-xcode_server_tutorials_4_certificates__provisioning_profiles/">原文翻译地址</a></p>
+<p>honza dvorsky<br>Xcode Server Tutorials: 4. Certificates &amp; Provisioning Profiles<br>21. october 2015</p>
+<p>This article is Part 4 of a whole series called Xcode Server Tutorials. Check out Part 3 first if you haven’t already. New posts are always tweeted by me (@czechboy0) on Twitter.</p>
+<p>Welcome back! Today we’ll cover the last piece of making Xcode Server a viable CI tool for shipping apps: code signing. Code signing is an important part of the outstanding security of iOS, Mac, Watch and now TV apps on Apple’s platforms. However, managing code signing is still an involved process for beginners, even though Apple has been working hard to abstract away many of the details with recent releases of Xcode. Unfortunately, those improvements haven’t really trickled down to Xcode Server yet, so we’ll need to get our hands dirty to make it archive apps for us and let us test on real iOS devices. Shall we?</p>
+            </div>
+          
+        </p>
+        <p class="line-clamp-4">
+          8月 17
+          ·
+          20 min
+        </p>
+      </section>
+    </a>
+  
+    
+    
+    <a style="--stagger:1" href="/post/Xcode-Server-%E6%95%99%E7%A8%8B3-%E9%A2%84%E7%BC%96%E8%AF%91%E4%BB%A5%E5%8F%8A%E7%BC%96%E8%AF%91%E5%90%8E%E8%84%9A%E6%9C%AC.html" data-animate>
+      <header>
+        <h2 class="font-bold text-xl">
+          Xcode Server 教程3: 预编译以及编译后脚本
+        </h2>
+      </header>
+      <section class="text-gray-400 my-2 text-sm time">
+        <p class="line-clamp-4">
+          
+            <div class="py-2">
+              <p><a target="_blank" rel="noopener" href="https://honzadvorsky.com/articles/2015-08-17-17-30-xcode_server_tutorials_3_prebuild__postbuild_scripts/">原文翻译地址</a></p>
+<p>honza dvorsky<br>Xcode Server Tutorials: 3. Prebuild &amp; Postbuild Scripts<br>17. august 2015</p>
+<p>This article is Part 3 of a whole series called Xcode Server Tutorials. Check out Part 2 first if you haven’t already. New posts are always tweeted by me (@czechboy0) on Twitter.</p>
+<p>Great to see that you’re hungry for more Xcode Server goodies! And boy, do I have plenty of them for you today. We’ll talk all about prebuild and postbuild scripts. These might initially sound boring, but soon you’ll see that they are in fact very interesting - they allow you to plug in tools like CocoaPods and fastlane, which can easily revolutionize your complete testing and deployment workflow. From messaging you on Slack when your build finishes to automatically uploading builds to the App Store, nothing is impossible. So let’s get started!</p>
+            </div>
+          
+        </p>
+        <p class="line-clamp-4">
+          8月 17
+          ·
+          21 min
+        </p>
+      </section>
+    </a>
+  
+    
+    
+    <a style="--stagger:2" href="/post/Xcode-Server-%E6%95%99%E7%A8%8B2-%E9%9B%86%E6%88%90.html" data-animate>
+      <header>
+        <h2 class="font-bold text-xl">
+          Xcode Server 教程2: 集成
+        </h2>
+      </header>
+      <section class="text-gray-400 my-2 text-sm time">
+        <p class="line-clamp-4">
+          
+            <div class="py-2">
+              <p><a target="_blank" rel="noopener" href="https://honzadvorsky.com/articles/2015-08-06-xcs_tutorials_2_integrations/">原文翻译地址</a></p>
+<p>This article is Part 2 of a whole series called Xcode Server Tutorials. Check out Part 1 first if you haven’t already. New posts are always tweeted by me (@czechboy0) on Twitter.</p>
+<p>Ok, time to stop celebrating your success from Part 1 where you got to install Xcode Server and created your very first Bot, which checked out and tested my demo project from GitHub. I left you just after you created your Bot, which, as you probably saw, triggered the first Integration of your Bot. Today, we will look at what this means and how to take advantage of Xcode’s beautiful visualizations of Integration results.</p>
+            </div>
+          
+        </p>
+        <p class="line-clamp-4">
+          8月 17
+          ·
+          8 min
+        </p>
+      </section>
+    </a>
+  
+    
+    
+    <a style="--stagger:3" href="/post/Xcode-Server-%E6%95%99%E7%A8%8B1-%E5%85%A5%E9%97%A8.html" data-animate>
+      <header>
+        <h2 class="font-bold text-xl">
+          Xcode Server 教程1：入门
+        </h2>
+      </header>
+      <section class="text-gray-400 my-2 text-sm time">
+        <p class="line-clamp-4">
+          
+            <div class="py-2">
+              <p><a target="_blank" rel="noopener" href="https://honzadvorsky.com/articles/2015-08-04-xcs_tutorials_1_getting_started/">原文翻译地址</a></p>
+<p>这篇文章是Xcode Server系列教程的第一部分。新的文章将会在我的Twitter（<a target="_blank" rel="noopener" href="https://twitter.com/czechboy0">@czechboy0</a>）上发布。</p>
+<p>#前言</p>
+<p>我们都知道Xcode Server是如何工作的。你的iOS团队成员花费数周的时间做一个特征分支，并且在这段时间里他没有把别人所做的修改合并到自己的代码里面。当PM催促团队成员交付既定的功能时，他会创建一个pull请求。人们快速浏览代码（因为它包含四千多行追加代码），完成代码审核之后，合并代码，一切就完成了，对吗？</p>
+<p>并非如此。</p>
+<p>你着手于新特征，期待有喝彩和掌声，因为这也预示着接下来几周要辛苦工作。然而，你却沉溺于Twitter。最终，你没有对新特征进行适当的测试，应用程序在32位设备上崩溃了。</p>
+<p>这并不是一个真实的故事，但却时有发生。我们大多数人都在这样团队工作过：<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Continuous_integration">持续集成</a>（CI）不是他们工作的一部分。或许他们认为自己的团队太小没必要使用这么先进的工具，也或许他们太忙没有时间安装。</p>
+<pre><code>持续集成是一种软件开发实践，即了解你合并的内容，时常合并。
+</code></pre>
+<p>这是我个人对持续集成的理解。在上面的事例中，这两个特性都被破坏了。首先，团队不知道他们在合并什么东西（一个bug使得他们的app无法在32位设备上使用）。其次，由于没有时常合并代码，导致最后存在大量差异，无人可以对这样的代码进行合理评审。只要他们使用CI工具，遵循CI实践，这两个问题都是可以避免的。</p>
+<p>如果你的团队还没有使用CI，或者你们已经使用了集成工具但使用效果并不令人满意，那么这篇文章就是为你而准备的。今天，我将展示如何使用Apple公司开发的持续集成服务器——<a target="_blank" rel="noopener" href="http://help.apple.com/serverapp/mac/4.0/#/apdEC37D10C-B277-4C06-9E1F-8DCB0A5970EB">XCode Server</a>（简写为“XCS”）。</p>
+            </div>
+          
+        </p>
+        <p class="line-clamp-4">
+          8月 17
+          ·
+          14 min
+        </p>
+      </section>
+    </a>
+  
+    
+    
+    <a style="--stagger:4" href="/post/iOS-Xcode-Server-%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90.html" data-animate>
+      <header>
+        <h2 class="font-bold text-xl">
+          iOS Xcode Server 持续集成
+        </h2>
+      </header>
+      <section class="text-gray-400 my-2 text-sm time">
+        <p class="line-clamp-4">
+          
+            <div class="py-2">
+              <p><a target="_blank" rel="noopener" href="http://www.jianshu.com/p/5faf777fdd97">转载自牧码人_简书</a></p>
+<p>#前言<br>常用的持续集成工具有Jenkins、Travis CI、Xcode server等，当然我们选择最简单的Xcode server。</p>
+<p>OS X server中集成了git版本管理功能，Xcode server持续集成服务，还有wiki知识库管理等，你甚至还可以拿它搭建一个网站服务器。</p>
+<p>在持续集成过程中你可以直接使用os x server 的git版本管理功能，将代码提交至自己搭建的OS X server服务器。也可以将代码提交至其他git版本管理仓库中(比如GitHub)。</p>
+<p>设备</p>
+<blockquote>
+<p>1.一台Git服务器，可以用GitHub、oschina等。<br> 2.一台装OS X Server的服务器，必须为MAC，下文简称 Xcode Server服务器。<br> 3.若干MAC做客户端，下文简称客户端。<br> 4.若干台iOS测试机。</p>
+</blockquote>
+<p><img src="http://cc.cocimg.com/api/uploads/20160418/1460947852507721.jpg"></p>
+            </div>
+          
+        </p>
+        <p class="line-clamp-4">
+          8月 17
+          ·
+          5 min
+        </p>
+      </section>
+    </a>
+  
+</section>
+
+
+
+  </main>
+  <footer class="flex flex-col h-40 items-center justify-center text-gray-400 text-sm">
+  <!-- busuanzi -->
+  
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!-- Busuanzi Analytics -->
+<div class="flex items-center gap-2">
+  <span>Visitors</span>
+  <span id="busuanzi_value_site_uv"></span>
+  <span>Page Views</span>
+  <span id="busuanzi_value_site_pv"></span>
+</div>
+<!-- End Busuanzi Analytics -->
+
+
+  <!-- copyright -->
+  <div class="flex items-center gap-2">
+    <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" style="color: inherit;">CC BY-NC-SA 4.0</a>
+    <span>© 2022</span>
+    <iconify-icon width="18" icon="emojione-monotone:maple-leaf" ></iconify-icon>
+    <a href="https://github.com/xbmlz" target="_blank" rel="noopener noreferrer">xbmlz</a>
+  </div>
+  <!-- powered by -->
+  <div class="flex items-center gap-2">
+    <span>Powered by</span>
+    <a href="https://hexo.io/" target="_blank" rel="noopener noreferrer">Hexo</a>
+    <span>&</span>
+    <a href="https://github.com/xbmlz/hexo-theme-maple" target="_blank" rel="noopener noreferrer">Maple</a>
+  </div>
+
+</footer>
+
+  <div class="back-to-top box-border fixed right-6 z-1024 -bottom-20 rounded py-1 px-1 bg-slate-900 opacity-60 text-white cursor-pointer text-center dark:bg-slate-600">
+    <span class="flex justify-center items-center text-sm">
+      <iconify-icon width="18" icon="ion:arrow-up-c" id="go-top"></iconify-icon>
+      <span id="scrollpercent"><span>0</span> %</span>
+    </span>
+  </div>
+  
+<script src="/js/main.js"></script>
+
+
+  <script>
+    $(document).ready(function () {
+      const mapleCount = "10";
+      const speed = "0.5";
+      const mapleEl = document.getElementById("maple");
+      const maples = Array.from({ length: mapleCount }).map(() => {
+        const maple = document.createElement("div");
+        const scale = Math.random() * 0.5 + 0.5;
+        const offset = Math.random() * 2 - 1;
+        const x = Math.random() * mapleEl.clientWidth;
+        const y = -Math.random() * mapleEl.clientHeight;
+        const duration = 10 / speed;
+        const delay = -duration;
+        maple.className = "maple";
+        maple.style.width = `${24 * scale}px`;
+        maple.style.height = `${24 * scale}px`;
+        maple.style.left = `${x}px`;
+        maple.style.top = `${y}px`;
+        maple.style.setProperty("--maple-fall-offset", offset);
+        maple.style.setProperty("--maple-fall-height", `${Math.abs(y) + mapleEl.clientHeight}px`);
+        maple.style.animation = `fall ${duration}s linear infinite`;
+        maple.style.animationDelay = `${delay}s`;
+        mapleEl.appendChild(maple)
+        return maple
+      })
+    });
+  </script>
+  
+
+
+  <div class="fixed top-0 bottom-0 left-0 right-0 pointer-events-none print:hidden" id="maple"></div>
+</body>
+
+</html>

@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <meta name="author" content="William Xie">
+
+
+  <meta name="subtitle" content="Walk steps step by step">
+
+
+
+
+<title>目录: iOS SDK | William&#39;s Blog</title>
+
+
+
+<link rel="icon" href="/favicon.png">
+
+
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/nprogress/nprogress.css">
+
+
+
+<script src="/lib/jquery.min.js"></script>
+
+
+<script src="/lib/iconify-icon.min.js"></script>
+
+
+<script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+<script>
+  tailwind.config = {
+    darkMode: "class",
+  };
+</script>
+
+
+<script src="/lib/nprogress/nprogress.js"></script>
+
+<script>
+  $(document).ready(() => {
+    NProgress.configure({
+      showSpinner: false,
+    });
+    NProgress.start();
+    $("#nprogress .bar").css({
+      background: "#de7441",
+    });
+    $("#nprogress .peg").css({
+      "box-shadow": "0 0 2px #de7441, 0 0 4px #de7441",
+    });
+    $("#nprogress .spinner-icon").css({
+      "border-top-color": "#de7441",
+      "border-left-color": "#de7441",
+    });
+    setTimeout(function () {
+      NProgress.done();
+      $(".fade").removeClass("out");
+    }, 800);
+  });
+</script>
+
+<script>
+  (function () {
+    const prefersDark =
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const setting = localStorage.getItem("hexo-color-scheme") || "auto";
+    if (setting === "dark" || (prefersDark && setting !== "light"))
+      document.documentElement.classList.toggle("dark", true);
+    let isDark = document.documentElement.classList.contains("dark");
+  })();
+
+  $(document).ready(function () {
+    // init icon
+    const prefersDark =
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const isDark = document.documentElement.classList.contains("dark");
+    $("#theme-icon").attr("icon", isDark ? "ri:moon-line" : "ri:sun-line");
+
+    function toggleGiscusTheme() {
+      const isDark = document.documentElement.classList.contains("dark");
+      const giscusFrame = document.querySelector("iframe.giscus-frame");
+      if (giscusFrame) {
+        giscusFrame.contentWindow.postMessage(
+          {
+            giscus: {
+              setConfig: {
+                theme: isDark ? "dark" : "light",
+              },
+            },
+          },
+          "https://giscus.app"
+        );
+      }
+    }
+
+    // toggle dark mode
+    function toggleDark() {
+      let isDark = document.documentElement.classList.contains("dark");
+      const setting = localStorage.getItem("hexo-color-scheme") || "auto";
+      isDark = !isDark;
+      document.documentElement.classList.toggle("dark", isDark);
+      $("#theme-icon").attr("icon", isDark ? "ri:moon-line" : "ri:sun-line");
+      if (prefersDark === isDark) {
+        localStorage.setItem("hexo-color-scheme", "auto");
+      } else {
+        localStorage.setItem("hexo-color-scheme", isDark ? "dark" : "light");
+      }
+      toggleGiscusTheme();
+    }
+
+    // listen dark mode change
+    window
+      .matchMedia("(prefers-color-scheme: dark)")
+      .addEventListener("change", (e) => {
+        const setting = localStorage.getItem("hexo-color-scheme") || "auto";
+        if (setting === "auto") {
+          document.documentElement.classList.toggle("dark", e.matches);
+          $("#theme-icon").attr(
+            "icon",
+            e.matches ? "ri:moon-line" : "ri:sun-line"
+          );
+          toggleGiscusTheme();
+        }
+      });
+
+    $("#toggle-dark").click((event) => {
+      const isAppearanceTransition = document.startViewTransition && !window.matchMedia('(prefers-reduced-motion: reduce)').matches
+      if (!isAppearanceTransition) {
+        toggleDark()
+        return
+      }
+      const x = event.clientX
+      const y = event.clientY
+      const endRadius = Math.hypot(
+        Math.max(x, innerWidth - x),
+        Math.max(y, innerHeight - y),
+      )
+      const transition = document.startViewTransition(async () => {
+        toggleDark()
+      })
+
+      transition.ready
+        .then(() => {
+          const isDark = document.documentElement.classList.contains("dark")
+          const clipPath = [
+            `circle(0px at ${x}px ${y}px)`,
+            `circle(${endRadius}px at ${x}px ${y}px)`,
+          ]
+          document.documentElement.animate(
+            {
+              clipPath: isDark
+                ? [...clipPath].reverse()
+                : clipPath,
+            },
+            {
+              duration: 400,
+              easing: 'ease-out',
+              pseudoElement: isDark
+                ? '::view-transition-old(root)'
+                : '::view-transition-new(root)',
+            },
+          )
+        })
+    });
+  });
+</script>
+
+
+
+
+<meta name="generator" content="Hexo 8.1.1"></head>
+<body class="font-sans bg-white dark:bg-zinc-900 text-gray-700 dark:text-gray-200 relative">
+  <header class="fixed w-full px-5 py-1 z-10 backdrop-blur-xl backdrop-saturate-150 border-b border-black/5">
+  <div class="max-auto">
+    <nav class="flex items-center text-base">
+      <a href="/" class="group">
+        <h2 class="font-medium tracking-tighterp text-l p-2">
+          <img class="w-5 mr-2 inline-block transition-transform group-hover:rotate-[30deg]" id="logo" src="/images/logo.svg" alt="William's Blog" />
+          William&#39;s Blog
+        </h2>
+      </a>
+      <div id="header-title" class="opacity-0 md:ml-2 md:mt-[0.1rem] text-xs font-medium whitespace-nowrap overflow-hidden overflow-ellipsis">
+        
+      </div>
+      <div class="flex-1"></div>
+      <div class="flex items-center gap-3">
+        
+          <a class="hidden sm:flex" href="/archives">Posts</a>
+        
+        
+          
+            <a class="w-5 h-5 hidden sm:flex" title="Github" target="_blank" rel="noopener" href="https://github.com/xbmlz">
+              <iconify-icon width="20" icon="ri:github-line"></iconify-icon>
+            </a>
+          
+        
+        <a class="w-5 h-5 hidden sm:flex" title="Github" href="rss2.xml">
+          <iconify-icon width="20" icon="ri:rss-line"></iconify-icon>
+        </a>
+        <a class="w-5 h-5" title="toggle theme" id="toggle-dark">
+          <iconify-icon width="20" icon="" id="theme-icon"></iconify-icon>
+        </a>
+      </div>
+      <div class="flex items-center justify-center gap-3 ml-3 sm:hidden">
+        <span class="w-5 h-5" aria-hidden="true" role="img" id="open-menu">
+          <iconify-icon width="20" icon="carbon:menu" ></iconify-icon>
+        </span>
+        <span class="w-5 h-5 hidden" aria-hidden="true" role="img" id="close-menu">
+          <iconify-icon  width="20" icon="carbon:close" ></iconify-icon>
+        </span>
+      </div>
+    </nav>
+  </div>
+</header>
+<div id="menu-panel" class="h-0 overflow-hidden sm:hidden fixed left-0 right-0 top-12 bottom-0 z-10">
+  <div id="menu-content" class="relative z-20 bg-white/80 px-6 sm:px-8 py-2 backdrop-blur-xl -translate-y-full transition-transform duration-300">
+    <ul class="nav flex flex-col sm:flex-row text-sm font-medium">
+      
+        <li class="nav-portfolio sm:mx-2 border-b sm:border-0 border-black/5 last:border-0 hover:text-main">
+          <a href="/archives" class="flex h-12 sm:h-auto items-center">Posts</a>
+        </li>
+      
+    </ul>
+  </div>
+  <div class="mask bg-black/20 absolute inset-0"></div>
+</div>
+
+  <main class="pt-14">
+    
+
+
+<section class="px-6 max-w-prose mx-auto gap-12 grid grid-cols-1">
+  <div class="flex flex-col h-48 items-center justify-center">
+    
+      <h1 class="site-title text-4xl leading-relaxed">
+        Categories - iOS-SDK
+      </h1>
+    
+  </div>
+  
+  
+    
+    
+      <div class="relative pointer-events-none">
+        <span class="text-9xl opacity-10 absolute -left-11 -top-6 font-bold">2016</span>
+      </div>
+    
+    <a style="--stagger:0" href="/post/%E7%BF%BB%E8%AF%91-Apple-Pay%E7%BC%96%E7%A8%8B%E6%8C%87%E5%8D%97.html" data-animate>
+      <header>
+        <h2 class="font-bold text-xl">
+          翻译: Apple Pay编程指南
+        </h2>
+      </header>
+      <section class="text-gray-400 my-2 text-sm time">
+        <p class="line-clamp-4">
+          
+            <div class="py-2">
+              <p>#关于Apple Pay</p>
+<p>ApplePay是一种移动支付技术，它能够让用户以一种便捷安全的方式为现实世界中购买的商品和服务付款。</p>
+<p>关于相关App里的数字商品和服务，请参考<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/StoreKitGuide/Introduction.html#//apple_ref/doc/uid/TP40008267">In-App Purchase Programming Guide</a>.</p>
+<p><img src="https://developer.apple.com/library/ios/ApplePay_Guide/Art/payment_intro_2x.png"></p>
+            </div>
+          
+        </p>
+        <p class="line-clamp-4">
+          8月 10
+          ·
+          20 min
+        </p>
+      </section>
+    </a>
+  
+    
+    
+    <a style="--stagger:1" href="/post/Wallet%E5%BC%80%E5%8F%91.html" data-animate>
+      <header>
+        <h2 class="font-bold text-xl">
+          Wallet 开发
+        </h2>
+      </header>
+      <section class="text-gray-400 my-2 text-sm time">
+        <p class="line-clamp-4">
+          
+            <div class="py-2">
+              <p>2012年WWDC上iOS6发布了一个全新的应用–Passbook，管理电子票券，包括登机牌，电影票，优惠卡，购物卡等。<br>2015年苹果全球开发者大会(WWDC 2015)在美国旧金山正式开幕本届主题为“the epicenter of change.（变革的中心）”。<br>苹果在会上宣布其iOS系统自带应用Passbook改名为Wallet，其改名和应用升级也是为了配合Apple Pay的一些功能，此时Wallet除了支持原本的电子票券，还支持信用卡，借记卡，即Apple Pay。 </p>
+            </div>
+          
+        </p>
+        <p class="line-clamp-4">
+          8月 10
+          ·
+          1 min
+        </p>
+      </section>
+    </a>
+  
+    
+    
+    <a style="--stagger:2" href="/post/iBeacon-%E5%BE%AE%E5%AE%9A%E4%BD%8D%E6%8A%80%E6%9C%AF.html" data-animate>
+      <header>
+        <h2 class="font-bold text-xl">
+          iBeacon 微定位技术
+        </h2>
+      </header>
+      <section class="text-gray-400 my-2 text-sm time">
+        <p class="line-clamp-4">
+          
+            <div class="py-2">
+              <p>在一家大型商场,医院或是大楼里,你是否会曾经有过找不到想要去的地方的经历呢?<br>这种情况下采用上面介绍的传统定位方式,就有些”力不从心”了,首先不能采用GPS定位,而WiFi 和蜂窝式移动电话基站定位误差比较大,这种情况下的定位就是 “微定位”技术了</p>
+<p>#地理围栏</p>
+<p>微定位技术中一个比较重要的概念—地理围栏. 地理围栏(Geo-fencing)是LBS的一种新应用,就是用一个虚拟的栅栏围出一个虚拟地理边界. 当手机进入,离开某个特定地理区域,或在该区域活动时,手机可以可以接受自动通知和警告.有了地理围栏技术,位置社交网站就可以帮助用户进入某一个地区时自动登记.</p>
+<p>地理围栏可以采用传统定位或微定位实现,当然微定位更加有现实意义,建立地理围栏技术往往是处于电子商务,店内导航和设计活动等目的. 定位环境比较复杂,定位要求比较精确.</p>
+            </div>
+          
+        </p>
+        <p class="line-clamp-4">
+          8月 10
+          ·
+          8 min
+        </p>
+      </section>
+    </a>
+  
+    
+    
+    <a style="--stagger:3" href="/post/Handoff-%E7%BC%96%E7%A8%8B%E6%8C%87%E5%8D%97.html" data-animate>
+      <header>
+        <h2 class="font-bold text-xl">
+          Handoff 编程指南
+        </h2>
+      </header>
+      <section class="text-gray-400 my-2 text-sm time">
+        <p class="line-clamp-4">
+          
+            <div class="py-2">
+              <p>本文翻译自Apple官方文档：<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/Handoff/HandoffFundamentals/HandoffFundamentals.html#//apple_ref/doc/uid/TP40014338-CH3-SW1">Handoff Programming Guide</a></p>
+<p>#关于Handoff</p>
+<p>Handoff是iOS 8 和 OS X v10.10中引入的功能，可以让同一个用户在多台设备间传递项目。</p>
+<p>Handoff能让用户从一台设备开始一个项目，然后切换至其他设备继续进行，这一切都是无缝的，每台设备都无需重新配置。例如，用户正在Mac上的Safari浏览一片长文章，随后他可以切换到附近一台已使用相同Apple ID 登入iCloud的iOS设备上，在这台iOS设备上的Safiri中继续浏览相同的网页，页面滚动的位置和原设备上的一样。</p>
+<p><img src="https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/Handoff/Art/continuation_2x.png"></p>
+            </div>
+          
+        </p>
+        <p class="line-clamp-4">
+          8月 10
+          ·
+          33 min
+        </p>
+      </section>
+    </a>
+  
+    
+    
+    <a style="--stagger:4" href="/post/iOS-IAP%E7%BC%96%E7%A8%8B.html" data-animate>
+      <header>
+        <h2 class="font-bold text-xl">
+          iOS IAP编程
+        </h2>
+      </header>
+      <section class="text-gray-400 my-2 text-sm time">
+        <p class="line-clamp-4">
+          
+            <div class="py-2">
+              <p>#协议</p>
+<p><img src="https://github.com/williamxiewz/williamxie-github-io/raw/master/appledeveloperiap1.png"></p>
+            </div>
+          
+        </p>
+        <p class="line-clamp-4">
+          8月 08
+          ·
+          7 min
+        </p>
+      </section>
+    </a>
+  
+    
+    
+    <a style="--stagger:5" href="/post/iOS-App-%E4%B8%8A%E6%9E%B6%E6%B5%81%E7%A8%8B.html" data-animate>
+      <header>
+        <h2 class="font-bold text-xl">
+          iOS App上架流程
+        </h2>
+      </header>
+      <section class="text-gray-400 my-2 text-sm time">
+        <p class="line-clamp-4">
+          
+            <div class="py-2">
+              <p>准备条件:</p>
+<blockquote>
+<p>1.一个已付费的开发者账号（账号类型分为个人（Individual）、公司（Company）、企业（Enterprise）、高校（University）四种类型，每年资费分别为$99、$99、$299、免费。）。<br>2.你的Xcode必须是正式版的.</p>
+</blockquote>
+<p>打开苹果开发者中心：<a target="_blank" rel="noopener" href="https://developer.apple.com/">https://developer.apple.com</a></p>
+<p>打开后点击：账号<br><img src="https://github.com/williamxiewz/williamxie-github-io/raw/master/appledeveloperappdistributionguide1.png"></p>
+            </div>
+          
+        </p>
+        <p class="line-clamp-4">
+          8月 08
+          ·
+          6 min
+        </p>
+      </section>
+    </a>
+  
+    
+    
+    <a style="--stagger:6" href="/post/iCloud-%E7%BC%96%E7%A8%8B.html" data-animate>
+      <header>
+        <h2 class="font-bold text-xl">
+          iCloud 编程
+        </h2>
+      </header>
+      <section class="text-gray-400 my-2 text-sm time">
+        <p class="line-clamp-4">
+          
+            <div class="py-2">
+              <p>#iCloud简介</p>
+<p>iCloud 是苹果”云战略”的重要棋子，iCloud是苹果的云服务技术。它的重点是提供数据的存储服务，苹果给每个用户免费提供5GB的云服务空间。如果不够，用户可以付费购买更多的空间。苹果公司斥资 10亿美元在北卡罗莱纳州建设新数据中心-iDataCenter，该数据中心面积为50万平方英尺，也是美国最大规模的数据中心之一。 </p>
+<p>iCloud被整合到iOS 5和OS X 10.7. 4中，使用了这些设备的用户，只需在多个设备中设置苹果账号就可以同步、共享和备份数据。如图4-1所示，我的iphone设备上的通讯录可以同步到我的ipad和Mac Air电脑中。iCloud可以存放照片、文档等内容，以无线方式将它们推送到你的所有设备上。这都是自动在后台执行的，当打开电脑时候你会发现这些信息已经在那里了！</p>
+<p>使用iCLoud 服务除了能够存储特定应用数据,还可以通过编程方式存储自己应用的数据,iOS8 之后苹果支持4中类的iCloud存储:</p>
+<ul>
+<li>iCloud 键值数据存储</li>
+<li>iCloud 文档存储</li>
+<li>iCloud Core Data 技术</li>
+<li>iCloudKit 存储编程</li>
+</ul>
+            </div>
+          
+        </p>
+        <p class="line-clamp-4">
+          8月 08
+          ·
+          20 min
+        </p>
+      </section>
+    </a>
+  
+    
+    
+    <a style="--stagger:7" href="/post/Handoff-%E7%BC%96%E7%A8%8B.html" data-animate>
+      <header>
+        <h2 class="font-bold text-xl">
+          Handoff 编程
+        </h2>
+      </header>
+      <section class="text-gray-400 my-2 text-sm time">
+        <p class="line-clamp-4">
+          
+            <div class="py-2">
+              <p><img src="https://support.apple.com/library/content/dam/edam/applecare/images/zh_CN/iOS/ios9-elcapitan-continuity-hero.jpg"></p>
+<p>#Handoff技术介绍</p>
+<p>Handoff是苹果“融合”主题中的重要元素之一，同时也是iOS8和OS X Yosemite中新的“Continuity”特征集的一部分。“Continuity”功能包含了能跨平台兼容的AirDrop、可在iPad和Mac上拨打iPhone电话和处理SMS信息，以及全新的更易使用的连接服务。无论你在做什么工作，无论你想要继续进行工作的设备是什么，苹果都试图通过透明、无缝的操作来实现这个想法，而不是试图通过一系列不同的设备来适应一个界面，也不是以云服务为中心。这是一个以用户为中心的大胆选择，一旦苹果正式提供这项功能，它可能将改变我们使用iPhone、iPad以及Mac的方式。所以，我们不禁要问，Handoff是如何工作的？</p>
+            </div>
+          
+        </p>
+        <p class="line-clamp-4">
+          8月 08
+          ·
+          20 min
+        </p>
+      </section>
+    </a>
+  
+</section>
+
+
+
+  </main>
+  <footer class="flex flex-col h-40 items-center justify-center text-gray-400 text-sm">
+  <!-- busuanzi -->
+  
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!-- Busuanzi Analytics -->
+<div class="flex items-center gap-2">
+  <span>Visitors</span>
+  <span id="busuanzi_value_site_uv"></span>
+  <span>Page Views</span>
+  <span id="busuanzi_value_site_pv"></span>
+</div>
+<!-- End Busuanzi Analytics -->
+
+
+  <!-- copyright -->
+  <div class="flex items-center gap-2">
+    <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" style="color: inherit;">CC BY-NC-SA 4.0</a>
+    <span>© 2022</span>
+    <iconify-icon width="18" icon="emojione-monotone:maple-leaf" ></iconify-icon>
+    <a href="https://github.com/xbmlz" target="_blank" rel="noopener noreferrer">xbmlz</a>
+  </div>
+  <!-- powered by -->
+  <div class="flex items-center gap-2">
+    <span>Powered by</span>
+    <a href="https://hexo.io/" target="_blank" rel="noopener noreferrer">Hexo</a>
+    <span>&</span>
+    <a href="https://github.com/xbmlz/hexo-theme-maple" target="_blank" rel="noopener noreferrer">Maple</a>
+  </div>
+
+</footer>
+
+  <div class="back-to-top box-border fixed right-6 z-1024 -bottom-20 rounded py-1 px-1 bg-slate-900 opacity-60 text-white cursor-pointer text-center dark:bg-slate-600">
+    <span class="flex justify-center items-center text-sm">
+      <iconify-icon width="18" icon="ion:arrow-up-c" id="go-top"></iconify-icon>
+      <span id="scrollpercent"><span>0</span> %</span>
+    </span>
+  </div>
+  
+<script src="/js/main.js"></script>
+
+
+  <script>
+    $(document).ready(function () {
+      const mapleCount = "10";
+      const speed = "0.5";
+      const mapleEl = document.getElementById("maple");
+      const maples = Array.from({ length: mapleCount }).map(() => {
+        const maple = document.createElement("div");
+        const scale = Math.random() * 0.5 + 0.5;
+        const offset = Math.random() * 2 - 1;
+        const x = Math.random() * mapleEl.clientWidth;
+        const y = -Math.random() * mapleEl.clientHeight;
+        const duration = 10 / speed;
+        const delay = -duration;
+        maple.className = "maple";
+        maple.style.width = `${24 * scale}px`;
+        maple.style.height = `${24 * scale}px`;
+        maple.style.left = `${x}px`;
+        maple.style.top = `${y}px`;
+        maple.style.setProperty("--maple-fall-offset", offset);
+        maple.style.setProperty("--maple-fall-height", `${Math.abs(y) + mapleEl.clientHeight}px`);
+        maple.style.animation = `fall ${duration}s linear infinite`;
+        maple.style.animationDelay = `${delay}s`;
+        mapleEl.appendChild(maple)
+        return maple
+      })
+    });
+  </script>
+  
+
+
+  <div class="fixed top-0 bottom-0 left-0 right-0 pointer-events-none print:hidden" id="maple"></div>
+</body>
+
+</html>
