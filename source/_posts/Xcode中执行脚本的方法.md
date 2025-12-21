@@ -1,3 +1,4 @@
+---
 title: Xcode中执行脚本的方法
 date: 2016-08-08 10:33:17
 categories:

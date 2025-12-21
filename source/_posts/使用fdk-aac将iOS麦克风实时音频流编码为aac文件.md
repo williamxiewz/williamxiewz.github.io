@@ -1,3 +1,4 @@
+---
 title: 使用fdk-aac将iOS麦克风实时音频流编码为aac文件
 date: 2016-09-08 00:58:20
 categories: 音视频开发

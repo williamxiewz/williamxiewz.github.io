@@ -1,3 +1,4 @@
+---
 title: awakeFromNib 整理摘录
 date: 2017-10-24 16:18:48
 categories: [iOS SDK]
@@ -50,4 +51,3 @@ Cunstom Controller 和Cunstom Window都会响应awakeFromNib方法。当一个ni
 
 需要注意的问题：
 当使用一个controller控制多个nib文件时，awakeFromNib方法会被多次调用。因此，当不使用awakeFromNib方法来完成nib对象的初始化时，需要注意此方法的多次调用对其他nib文件造成的影响。
-

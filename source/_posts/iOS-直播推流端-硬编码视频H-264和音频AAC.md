@@ -1,3 +1,4 @@
+---
 title: 'iOS 直播推流端: 硬编码视频H.264和音频AAC'
 date: 2016-09-08 17:53:14
 categories:   

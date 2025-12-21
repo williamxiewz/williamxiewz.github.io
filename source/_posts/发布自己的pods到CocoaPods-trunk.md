@@ -1,3 +1,4 @@
+---
 title: 发布自己的pods到CocoaPods trunk
 date: 2017-03-15 22:45:58
 categories: 

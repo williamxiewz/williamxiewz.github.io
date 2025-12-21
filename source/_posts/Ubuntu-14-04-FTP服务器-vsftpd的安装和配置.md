@@ -1,3 +1,4 @@
+---
 title: Ubuntu 14.04 FTP服务器--vsftpd的安装和配置
 date: 2016-10-20 10:20:07
 categories: cloud computing

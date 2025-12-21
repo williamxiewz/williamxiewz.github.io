@@ -1,3 +1,4 @@
+---
 title: iOS Xcode Server 持续集成
 date: 2016-08-17 13:02:45
 categories:  Mac OS Server
@@ -191,4 +192,3 @@ curl -F "file=@${IPA_PATH}" -F "uKey=User Key" -F "_api_key=API Key" http://www.
 如果你的开发者账号不是企业账号，请用在账号中添加过Device id的设备上安装。
 
 ![](http://cc.cocimg.com/api/uploads/20160420/1461119695808831.jpg)
-

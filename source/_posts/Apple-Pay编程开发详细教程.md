@@ -1,3 +1,4 @@
+---
 title: Apple Pay编程开发详细教程
 date: 2016-08-12 21:22:21
 categories: iOS SDK

@@ -1,3 +1,4 @@
+---
 title: 深入理解iOS开发中的BitCode功能
 date: 2016-09-06 18:16:31
 categories: iOS SDK
@@ -173,5 +174,3 @@ wuqiong: apple$ otool -l libTest.a | grep bitcode
 戴维营教育Slogan: Dive in education!
 
 更多iOS开发精品文章：[戴维营技术博客](http://io.diveinedu.com/)
-
-

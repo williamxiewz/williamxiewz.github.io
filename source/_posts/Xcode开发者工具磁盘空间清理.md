@@ -1,3 +1,4 @@
+---
 title: Xcode开发者工具磁盘空间清理
 date: 2016-08-15 15:50:10
 categories: iOS SDK
@@ -70,4 +71,3 @@ tags:
  ~/Library/Developer/XCPGDevices/
 
 这里保存了playground的项目缓存。全删了
-

@@ -1,3 +1,4 @@
+---
 title: Multipeer connectivity 对等结构网络编程
 date: 2016-08-10 18:58:32
 categories: iOS网络编程
@@ -242,4 +243,3 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
 
 
 ```
-

@@ -1,3 +1,4 @@
+---
 title: 'Xcode Server 教程2: 集成'
 date: 2016-08-17 13:11:40
 categories: Mac OS Server

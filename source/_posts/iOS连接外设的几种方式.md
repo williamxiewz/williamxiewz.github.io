@@ -1,3 +1,4 @@
+---
 title: iOS连接外设的几种方式
 date: 2016-08-18 14:24:31
 categories: iOS SDK

@@ -1,3 +1,4 @@
+---
 title: '翻译: Apple Pay编程指南'
 date: 2016-08-10 20:38:06
 categories: iOS SDK
@@ -337,4 +338,3 @@ self.discount = [PKPaymentSummaryItem summaryItemWithLabel:@"Discount" amount:di
 ![Figure 5-1 Payment数据结构](https://developer.apple.com/library/ios/ApplePay_Guide/Art/payment_data_structure_2x.png)
 
 关于支付数据结构格式的详细信息，请参看：[Payment Token Format Reference](https://developer.apple.com/library/ios/documentation/PassKit/Reference/PaymentTokenJSON/PaymentTokenJSON.html#//apple_ref/doc/uid/TP40014929).
-

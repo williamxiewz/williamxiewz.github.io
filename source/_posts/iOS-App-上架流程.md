@@ -1,3 +1,4 @@
+---
 title: iOS App上架流程
 date: 2016-08-08 22:16:57
 categories: iOS SDK
@@ -329,4 +330,3 @@ Application Loader上传应用
 ![](https://github.com/williamxiewz/williamxie-github-io/raw/master/appledeveloperappdistributionguide63.png)
 
 ![](https://github.com/williamxiewz/williamxie-github-io/raw/master/appledeveloperappdistributionguide64.png)
-

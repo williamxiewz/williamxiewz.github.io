@@ -1,3 +1,4 @@
+---
 title: GitHub Pages 配置域名
 date: 2016-08-25 12:37:31
 categories:

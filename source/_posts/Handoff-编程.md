@@ -1,3 +1,4 @@
+---
 title: Handoff 编程
 date: 2016-08-08 21:41:38
 categories: iOS SDK
@@ -410,6 +411,3 @@ class ViewController: UIViewController, NSUserActivityDelegate {
 
 
 ```
-
-
-

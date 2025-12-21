@@ -1,3 +1,4 @@
+---
 title: iOS使用TestFlight进行App Beta版测试
 date: 2016-08-13 17:13:38
 categories: iOS SDK
@@ -205,5 +206,3 @@ ps：这是第二封邮件，只有邀请加入应用测试的才会收到。只
 ![](https://github.com/williamxiewz/williamxie-github-io/raw/master/appledevelopertestflight29.png)
 
 6、打开TestFlight，输入验证码，Install应用。
-
-

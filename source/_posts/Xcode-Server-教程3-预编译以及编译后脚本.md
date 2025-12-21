@@ -1,3 +1,4 @@
+---
 title: 'Xcode Server 教程3: 预编译以及编译后脚本'
 date: 2016-08-17 13:13:56
 categories: Mac OS Server
