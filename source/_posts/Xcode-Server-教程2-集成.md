@@ -1,16 +1,24 @@
 ---
 title: 'Xcode Server 教程2: 集成'
 date: 2016-08-17 13:11:40
-categories: Mac OS Server
-tags: [Xcode Server]
+categories: iOS开发
+tags: [Xcode Server, CI, 持续集成, Bot, 测试结果]
+description: Xcode Server教程第二部分，详细介绍集成结果分析、测试报告查看、代码覆盖率统计以及Web界面使用
+keywords: Xcode Server,集成,Bot,测试结果,代码覆盖率,Web界面
 ---
 
 [原文翻译地址](https://honzadvorsky.com/articles/2015-08-06-xcs_tutorials_2_integrations/)
 
 
-This article is Part 2 of a whole series called Xcode Server Tutorials. Check out Part 1 first if you haven't already. New posts are always tweeted by me (@czechboy0) on Twitter.
+## 前言
 
-Ok, time to stop celebrating your success from Part 1 where you got to install Xcode Server and created your very first Bot, which checked out and tested my demo project from GitHub. I left you just after you created your Bot, which, as you probably saw, triggered the first Integration of your Bot. Today, we will look at what this means and how to take advantage of Xcode’s beautiful visualizations of Integration results.
+在[第一部分](https://williamxiewz.github.io/post/Xcode-Server-教程1-入门/)中，我们成功安装了 Xcode Server 并创建了第一个 Bot。现在是时候深入了解集成结果了。
+
+Xcode Server 的强大之处在于其美观且实用的结果可视化界面。通过这些界面，我们可以：
+- 📊 查看详细的测试结果
+- 📈 分析代码覆盖率
+- 🔍 检查提交历史
+- 📝 查看构建日志
 <!-- more -->
 
 Objective of this article

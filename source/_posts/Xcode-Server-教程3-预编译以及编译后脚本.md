@@ -1,8 +1,10 @@
 ---
 title: 'Xcode Server 教程3: 预编译以及编译后脚本'
 date: 2016-08-17 13:13:56
-categories: Mac OS Server
-tags: [Xcode Server]
+categories: iOS开发
+tags: [Xcode Server, CocoaPods, fastlane, 脚本, 自动化]
+description: Xcode Server高级配置教程，学习使用预编译和编译后脚本集成CocoaPods、fastlane等工具，以及私有Pod配置
+keywords: Xcode Server,预编译脚本,编译后脚本,CocoaPods,fastlane,私有Pod,自动化构建
 ---
 
 [原文翻译地址](https://honzadvorsky.com/articles/2015-08-17-17-30-xcode_server_tutorials_3_prebuild__postbuild_scripts/)

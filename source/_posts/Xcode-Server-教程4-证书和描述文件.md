@@ -1,8 +1,10 @@
 ---
 title: 'Xcode Server 教程4: 证书和描述文件'
 date: 2016-08-17 13:14:41
-categories: Mac OS Server
-tags: [Xcode Server]
+categories: iOS开发
+tags: [Xcode Server, 证书, 描述文件, 代码签名, 真机测试]
+description: Xcode Server代码签名配置教程，学习证书和描述文件管理，实现真机测试和应用分发
+keywords: Xcode Server,证书,Provisioning Profile,代码签名,真机测试,OTA安装
 ---
 
 [原文翻译地址]((https://honzadvorsky.com/articles/2015-10-21-17-40-xcode_server_tutorials_4_certificates__provisioning_profiles/)
