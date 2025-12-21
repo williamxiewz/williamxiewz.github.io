@@ -1,58 +1,52 @@
-# Header
+# ==========================================
+# Maple 主题配置文件
+# ==========================================
+
+# 导航栏配置
 nav:
-  Posts: /archives
-  # Categories: /category
-  # Tags: /tag
+  Archives: /archives
+  Categories: /categories
+  Tags: /tags
 
-# favicon
-favicon: /favicon.png
-
-# logo
+# 网站图标和Logo
+favicon: /favicon.ico
 logo: /images/logo.svg
 
-# links
+# 社交链接
 links:
-  Github: https://github.com/xbmlz
+  Github: https://github.com/williamxiewz
   # ZhiHu:
   # Twitter:
   # Weibo:
 
-# analytics
+# 统计代码
 google_analytics:
 baidu_analytics:
 
-# mathjax
-fancybox: true
+# 功能开关
+fancybox: true        # 图片查看器
+mathjax: true         # 数学公式支持
+echarts: true         # 图表库支持
+busuanzi: true        # 访问统计
 
-# mathjax
-mathjax: true
-
-# echarts
-echarts: true
-
-# busuanzi
-busuanzi: true
-
-# mermaid
+# Mermaid 图表支持
 mermaid:
   enable: true
-  # Available themes: default | dark | forest | neutral
+  # 可用主题: default | dark | forest | neutral
   theme: default
 
-# giscus
+# Giscus 评论系统
 giscus:
-  enable:
-  repo:
-  repo_id:
-  category:
-  category_id:
-  mapping:
+  enable: false      # 是否启用
+  repo:             # GitHub 仓库 (格式: username/repo)
+  repo_id:          # 仓库 ID
+  category:         # 讨论分类
+  category_id:      # 分类 ID
+  mapping:          # 页面映射方式 (pathname | url | title | og:title)
 
-# maple
+# Maple 主题特效
 maple:
   enable: true
-  # fall leaf count
-  count: 10
-  # 0-1
-  speed: 0.5
+  count: 10         # 落叶数量
+  speed: 0.5        # 落叶速度 (0-1)
 
