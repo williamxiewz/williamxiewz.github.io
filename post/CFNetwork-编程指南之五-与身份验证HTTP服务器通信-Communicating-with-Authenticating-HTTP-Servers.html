@@ -1,1 +1,826 @@
-<!DOCTYPE html><html lang="en"><head><!-- hexo injector head_begin start --><meta name="description" content="ssss"></meta><meta name="keywords" content="Frontend, Web development, Blog, Aurora Theme, TriDiamond"></meta><meta name="author" content="Williamxie"></meta><!-- hexo injector head_begin end --><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="/favicon.ico"><link href="/static/css/chunk-libs.eebac533.css" rel="stylesheet"><link href="/static/css/app.a5fe2998.css" rel="stylesheet"><!-- hexo injector head_end start --><script rel="prefetch" async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script rel="preload" src="https://cdn.bootcdn.net/ajax/libs/prism/1.23.0/components/prism-core.js" data-manual></script><script rel="preload" src="https://cdn.bootcdn.net/ajax/libs/prism/1.23.0/plugins/autoloader/prism-autoloader.js"></script><script rel="preload" src="https://cdn.bootcdn.net/ajax/libs/prism/1.23.0/plugins/toolbar/prism-toolbar.min.js"></script><script rel="preload" src="https://cdn.bootcdn.net/ajax/libs/prism/1.23.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script><script rel="preload" src="https://cdn.bootcdn.net/ajax/libs/blueimp-md5/2.18.0/js/md5.min.js"></script><script rel="preload" src="https://cdn.bootcdn.net/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script><link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/prism/1.23.0/themes/prism.min.css"/><link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/prism/1.23.0/plugins/toolbar/prism-toolbar.min.css"/><link rel="stylesheet" href="https://fonts.loli.net/css?family=Rubik" /><script rel="preload" src="https://cdn.bootcdn.net/ajax/libs/gitalk/1.7.2/gitalk.min.js"></script><link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/gitalk/1.7.2/gitalk.min.css"/><link rel="stylesheet" href="//at.alicdn.com/t/font_2476818_87vaqng7dno.css" /><!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.0"></head><body id="body-container"><noscript><strong>We're sorry but Aurora Blog doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id="app"></div><script>(function(e){function t(t){for(var n,o,u=t[0],i=t[1],c=t[2],l=0,p=[];l<u.length;l++)o=u[l],Object.prototype.hasOwnProperty.call(a,o)&&a[o]&&p.push(a[o][0]),a[o]=0;for(n in i)Object.prototype.hasOwnProperty.call(i,n)&&(e[n]=i[n]);f&&f(t);while(p.length)p.shift()();return s.push.apply(s,c||[]),r()}function r(){for(var e,t=0;t<s.length;t++){for(var r=s[t],n=!0,o=1;o<r.length;o++){var u=r[o];0!==a[u]&&(n=!1)}n&&(s.splice(t--,1),e=i(i.s=r[0]))}return e}var n={},o={runtime:0},a={runtime:0},s=[];function u(e){return i.p+"static/js/"+({404:"404",about:"about",archives:"archives",categories:"categories",page:"page",post:"post",result:"result",tags:"tags"}[e]||e)+"."+{404:"7d1e319c",about:"b870224f",archives:"62201fb5",categories:"cd195d1b",page:"f035d07e",post:"bbd5d2f0",result:"7281cdb6",tags:"df396091"}[e]+".js"}function i(t){if(n[t])return n[t].exports;var r=n[t]={i:t,l:!1,exports:{}};return e[t].call(r.exports,r,r.exports,i),r.l=!0,r.exports}i.e=function(e){var t=[],r={404:1,about:1,archives:1,categories:1,page:1,post:1,result:1,tags:1};o[e]?t.push(o[e]):0!==o[e]&&r[e]&&t.push(o[e]=new Promise((function(t,r){for(var n="static/css/"+({404:"404",about:"about",archives:"archives",categories:"categories",page:"page",post:"post",result:"result",tags:"tags"}[e]||e)+"."+{404:"1a6cd5bd",about:"713e2e0c",archives:"0536c7a0",categories:"10e2be12",page:"01d3099e",post:"9f951a60",result:"10e2be12",tags:"10e2be12"}[e]+".css",a=i.p+n,s=document.getElementsByTagName("link"),u=0;u<s.length;u++){var c=s[u],l=c.getAttribute("data-href")||c.getAttribute("href");if("stylesheet"===c.rel&&(l===n||l===a))return t()}var p=document.getElementsByTagName("style");for(u=0;u<p.length;u++){c=p[u],l=c.getAttribute("data-href");if(l===n||l===a)return t()}var f=document.createElement("link");f.rel="stylesheet",f.type="text/css",f.onload=t,f.onerror=function(t){var n=t&&t.target&&t.target.src||a,s=new Error("Loading CSS chunk "+e+" failed.\n("+n+")");s.code="CSS_CHUNK_LOAD_FAILED",s.request=n,delete o[e],f.parentNode.removeChild(f),r(s)},f.href=a;var d=document.getElementsByTagName("head")[0];d.appendChild(f)})).then((function(){o[e]=0})));var n=a[e];if(0!==n)if(n)t.push(n[2]);else{var s=new Promise((function(t,r){n=a[e]=[t,r]}));t.push(n[2]=s);var c,l=document.createElement("script");l.charset="utf-8",l.timeout=120,i.nc&&l.setAttribute("nonce",i.nc),l.src=u(e);var p=new Error;c=function(t){l.onerror=l.onload=null,clearTimeout(f);var r=a[e];if(0!==r){if(r){var n=t&&("load"===t.type?"missing":t.type),o=t&&t.target&&t.target.src;p.message="Loading chunk "+e+" failed.\n("+n+": "+o+")",p.name="ChunkLoadError",p.type=n,p.request=o,r[1](p)}a[e]=void 0}};var f=setTimeout((function(){c({type:"timeout",target:l})}),12e4);l.onerror=l.onload=c,document.head.appendChild(l)}return Promise.all(t)},i.m=e,i.c=n,i.d=function(e,t,r){i.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:r})},i.r=function(e){"undefined"!==typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.t=function(e,t){if(1&t&&(e=i(e)),8&t)return e;if(4&t&&"object"===typeof e&&e&&e.__esModule)return e;var r=Object.create(null);if(i.r(r),Object.defineProperty(r,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var n in e)i.d(r,n,function(t){return e[t]}.bind(null,n));return r},i.n=function(e){var t=e&&e.__esModule?function(){return e["default"]}:function(){return e};return i.d(t,"a",t),t},i.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},i.p="/",i.oe=function(e){throw console.error(e),e};var c=window["webpackJsonp"]=window["webpackJsonp"]||[],l=c.push.bind(c);c.push=t,c=c.slice();for(var p=0;p<c.length;p++)t(c[p]);var f=l;r()})([]);</script><script src="/static/js/chunk-libs.9b3ced64.js"></script><script src="/static/js/app.d749b93c.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <meta name="author" content="William Xie">
+
+
+  <meta name="subtitle" content="Walk steps step by step">
+
+
+
+
+<title>CFNetwork 编程指南之五: 与身份验证HTTP服务器通信(Communicating with Authenticating HTTP Servers) | William&#39;s Blog</title>
+
+
+
+<link rel="icon" href="/favicon.png">
+
+
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/nprogress/nprogress.css">
+
+
+
+<script src="/lib/jquery.min.js"></script>
+
+
+<script src="/lib/iconify-icon.min.js"></script>
+
+
+<script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+<script>
+  tailwind.config = {
+    darkMode: "class",
+  };
+</script>
+
+
+<script src="/lib/nprogress/nprogress.js"></script>
+
+<script>
+  $(document).ready(() => {
+    NProgress.configure({
+      showSpinner: false,
+    });
+    NProgress.start();
+    $("#nprogress .bar").css({
+      background: "#de7441",
+    });
+    $("#nprogress .peg").css({
+      "box-shadow": "0 0 2px #de7441, 0 0 4px #de7441",
+    });
+    $("#nprogress .spinner-icon").css({
+      "border-top-color": "#de7441",
+      "border-left-color": "#de7441",
+    });
+    setTimeout(function () {
+      NProgress.done();
+      $(".fade").removeClass("out");
+    }, 800);
+  });
+</script>
+
+<script>
+  (function () {
+    const prefersDark =
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const setting = localStorage.getItem("hexo-color-scheme") || "auto";
+    if (setting === "dark" || (prefersDark && setting !== "light"))
+      document.documentElement.classList.toggle("dark", true);
+    let isDark = document.documentElement.classList.contains("dark");
+  })();
+
+  $(document).ready(function () {
+    // init icon
+    const prefersDark =
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const isDark = document.documentElement.classList.contains("dark");
+    $("#theme-icon").attr("icon", isDark ? "ri:moon-line" : "ri:sun-line");
+
+    function toggleGiscusTheme() {
+      const isDark = document.documentElement.classList.contains("dark");
+      const giscusFrame = document.querySelector("iframe.giscus-frame");
+      if (giscusFrame) {
+        giscusFrame.contentWindow.postMessage(
+          {
+            giscus: {
+              setConfig: {
+                theme: isDark ? "dark" : "light",
+              },
+            },
+          },
+          "https://giscus.app"
+        );
+      }
+    }
+
+    // toggle dark mode
+    function toggleDark() {
+      let isDark = document.documentElement.classList.contains("dark");
+      const setting = localStorage.getItem("hexo-color-scheme") || "auto";
+      isDark = !isDark;
+      document.documentElement.classList.toggle("dark", isDark);
+      $("#theme-icon").attr("icon", isDark ? "ri:moon-line" : "ri:sun-line");
+      if (prefersDark === isDark) {
+        localStorage.setItem("hexo-color-scheme", "auto");
+      } else {
+        localStorage.setItem("hexo-color-scheme", isDark ? "dark" : "light");
+      }
+      toggleGiscusTheme();
+    }
+
+    // listen dark mode change
+    window
+      .matchMedia("(prefers-color-scheme: dark)")
+      .addEventListener("change", (e) => {
+        const setting = localStorage.getItem("hexo-color-scheme") || "auto";
+        if (setting === "auto") {
+          document.documentElement.classList.toggle("dark", e.matches);
+          $("#theme-icon").attr(
+            "icon",
+            e.matches ? "ri:moon-line" : "ri:sun-line"
+          );
+          toggleGiscusTheme();
+        }
+      });
+
+    $("#toggle-dark").click((event) => {
+      const isAppearanceTransition = document.startViewTransition && !window.matchMedia('(prefers-reduced-motion: reduce)').matches
+      if (!isAppearanceTransition) {
+        toggleDark()
+        return
+      }
+      const x = event.clientX
+      const y = event.clientY
+      const endRadius = Math.hypot(
+        Math.max(x, innerWidth - x),
+        Math.max(y, innerHeight - y),
+      )
+      const transition = document.startViewTransition(async () => {
+        toggleDark()
+      })
+
+      transition.ready
+        .then(() => {
+          const isDark = document.documentElement.classList.contains("dark")
+          const clipPath = [
+            `circle(0px at ${x}px ${y}px)`,
+            `circle(${endRadius}px at ${x}px ${y}px)`,
+          ]
+          document.documentElement.animate(
+            {
+              clipPath: isDark
+                ? [...clipPath].reverse()
+                : clipPath,
+            },
+            {
+              duration: 400,
+              easing: 'ease-out',
+              pseudoElement: isDark
+                ? '::view-transition-old(root)'
+                : '::view-transition-new(root)',
+            },
+          )
+        })
+    });
+  });
+</script>
+
+
+
+
+<meta name="generator" content="Hexo 5.4.2"></head>
+<body class="font-sans bg-white dark:bg-zinc-900 text-gray-700 dark:text-gray-200 relative">
+  <header class="fixed w-full px-5 py-1 z-10 backdrop-blur-xl backdrop-saturate-150 border-b border-black/5">
+  <div class="max-auto">
+    <nav class="flex items-center text-base">
+      <a href="/" class="group">
+        <h2 class="font-medium tracking-tighterp text-l p-2">
+          <img class="w-5 mr-2 inline-block transition-transform group-hover:rotate-[30deg]" id="logo" src="/images/logo.svg" alt="William's Blog" />
+          William&#39;s Blog
+        </h2>
+      </a>
+      <div id="header-title" class="opacity-0 md:ml-2 md:mt-[0.1rem] text-xs font-medium whitespace-nowrap overflow-hidden overflow-ellipsis">
+        CFNetwork 编程指南之五: 与身份验证HTTP服务器通信(Communicating with Authenticating HTTP Servers)
+      </div>
+      <div class="flex-1"></div>
+      <div class="flex items-center gap-3">
+        
+          <a class="hidden sm:flex" href="/archives">Posts</a>
+        
+        
+          
+            <a class="w-5 h-5 hidden sm:flex" title="Github" target="_blank" rel="noopener" href="https://github.com/xbmlz">
+              <iconify-icon width="20" icon="ri:github-line"></iconify-icon>
+            </a>
+          
+        
+        <a class="w-5 h-5 hidden sm:flex" title="Github" href="rss2.xml">
+          <iconify-icon width="20" icon="ri:rss-line"></iconify-icon>
+        </a>
+        <a class="w-5 h-5" title="toggle theme" id="toggle-dark">
+          <iconify-icon width="20" icon="" id="theme-icon"></iconify-icon>
+        </a>
+      </div>
+      <div class="flex items-center justify-center gap-3 ml-3 sm:hidden">
+        <span class="w-5 h-5" aria-hidden="true" role="img" id="open-menu">
+          <iconify-icon width="20" icon="carbon:menu" ></iconify-icon>
+        </span>
+        <span class="w-5 h-5 hidden" aria-hidden="true" role="img" id="close-menu">
+          <iconify-icon  width="20" icon="carbon:close" ></iconify-icon>
+        </span>
+      </div>
+    </nav>
+  </div>
+</header>
+<div id="menu-panel" class="h-0 overflow-hidden sm:hidden fixed left-0 right-0 top-12 bottom-0 z-10">
+  <div id="menu-content" class="relative z-20 bg-white/80 px-6 sm:px-8 py-2 backdrop-blur-xl -translate-y-full transition-transform duration-300">
+    <ul class="nav flex flex-col sm:flex-row text-sm font-medium">
+      
+        <li class="nav-portfolio sm:mx-2 border-b sm:border-0 border-black/5 last:border-0 hover:text-main">
+          <a href="/archives" class="flex h-12 sm:h-auto items-center">Posts</a>
+        </li>
+      
+    </ul>
+  </div>
+  <div class="mask bg-black/20 absolute inset-0"></div>
+</div>
+
+  <main class="pt-14">
+    <!-- css -->
+
+<link rel="stylesheet" href="/lib/fancybox/fancybox.min.css">
+
+
+<link rel="stylesheet" href="/lib/tocbot/tocbot.min.css">
+
+<!-- toc -->
+
+<section class="px-6 max-w-prose mx-auto md:px-0">
+  <!-- header -->
+  <header class="overflow-hidden pt-6 pb-6 md:pt-12">
+    <div class="pt-4 md:pt-6">
+      <h1 id="article-title" class="text-[2rem] font-bold leading-snug mb-4 md:mb-6 md:text-[2.6rem]">
+        CFNetwork 编程指南之五: 与身份验证HTTP服务器通信(Communicating with Authenticating HTTP Servers)
+      </h1>
+      <div>
+        <section class="flex items-center gap-3 text-sm">
+          <span class="flex items-center gap-1">
+            <iconify-icon width="18" icon="carbon-calendar" ></iconify-icon>
+            <time>2016-08-19</time>
+          </span>
+          <span class="text-gray-400">·</span>
+          <span class="flex items-center gap-1">
+            <iconify-icon width="18" icon="ic:round-access-alarm" ></iconify-icon>
+            <span>13 min</span>
+          </span>
+          <span class="text-gray-400">·</span>
+          <span class="flex items-center gap-1">
+            <iconify-icon width="18" icon="icon-park-outline:font-search" ></iconify-icon>
+            <span>3.5k words</span>
+          </span>
+          
+            <span class="text-gray-400">·</span>
+            <span class="flex items-center gap-1">
+              <iconify-icon width="16" icon="icon-park-outline:box" class="mr-2"></iconify-icon>
+              <a class="article-category-link" href="/categories/iOS%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/">iOS网络编程</a>
+            </span>
+          
+        </section>
+      </div>
+    </div>
+  </header>
+  <!-- content -->
+  <article class="post-content prose m-auto slide-enter-content dark:prose-invert">
+    <p>#与身份验证HTTP服务器通信</p>
+<p>本文描述了如何利用CFHTTPAuthentication API与需要身份验证的HTTP服务器通信。它解释了如何找到匹配的验证对象和证书，并将它们应用到HTTP请求，然后存储以供以后使用。</p>
+<p>一般来说，如果一个HTTP服务器返回一个401或407响应你的HTTP请求，这表明服务器进行身份验证需要证书。在CFHTTPAuthentication API中，每个证书组存储在CFHTTPAuthentication 对象中。因此，每个不同的身份认证服务器和每个不同用户连接的服务器需要一个单独的CFHTTPAuthentication 对象。与服务器通信，你需要应用CFHTTPAuthentication 对象到HTTP请求。接下来更加详细的解释这些步骤。</p>
+<span id="more"></span>
+
+<p>##处理身份验证<br>添加身份验证支持将允许你的应用和身份验证服务器（如果服务器返回401或407响应）进行交互。尽管HTTP身份验证不是一个难的概念，它是一个复杂的过程。步骤如下：</p>
+<blockquote><span class="custom-blockquote-svg"><svg width="24" height="24" viewBox="0 0 24 24" fill="" xmlns="http://www.w3.org/2000/svg" data-reactroot="">
+<path fill="" d="M22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22C13.8 22 15.5 21.5 17 20.6L22 22L20.7 17C21.5 15.5 22 13.8 22 12Z" undefined="1"></path>
+<path fill="" d="M15.97 11.5H16.04C17.12 11.5 18 12.38 18 13.47V13.53C18 14.62 17.12 15.5 16.03 15.5H15.96C14.88 15.5 14 14.62 14 13.53V13.46C14 12.38 14.88 11.5 15.97 11.5Z" undefined="1"></path>
+<path fill="" d="M7.97 11.5H8.04C9.12 11.5 10 12.38 10 13.47V13.53C10 14.62 9.12 15.5 8.03 15.5H7.97C6.88 15.5 6 14.62 6 13.53V13.46C6 12.38 6.88 11.5 7.97 11.5Z" undefined="1"></path>
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke="" d="M17 8.5C15.23 8.97 14.07 10.84 14.01 13.27C14 13.33 14 13.4 14 13.47V13.5"></path>
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke="" d="M9 8.5C7.23 8.97 6.07 10.84 6.01 13.27C6 13.33 6 13.4 6 13.47V13.5"></path>
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke="" d="M15.97 11.5H16.04C17.12 11.5 18 12.38 18 13.47V13.53C18 14.62 17.12 15.5 16.03 15.5H15.96C14.88 15.5 14 14.62 14 13.53V13.46C14 12.38 14.88 11.5 15.97 11.5Z"></path>
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke="" d="M7.97 11.5H8.04C9.12 11.5 10 12.38 10 13.47V13.53C10 14.62 9.12 15.5 8.03 15.5H7.97C6.88 15.5 6 14.62 6 13.53V13.46C6 12.38 6.88 11.5 7.97 11.5Z"></path>
+</svg>
+</span><p>1.客户端向服务器发送一个HTTP请求。<br>2.服务器返回一个验证给客户端。<br>3.客户端将原始请求的证书打包并发送给服务器。<br>4.在客户端和服务器之间谈判<br>5.当服务器验证了客户端身份，返回请求的响应。</p></blockquote>
+<p>执行这个过程需要多个步骤。整个过程如图4-1和4-2.</p>
+<p><img src="https://developer.apple.com/library/ios/documentation/Networking/Conceptual/CFNetwork/Art/apply_2x.png" alt="图4-1 处理身份验证"></p>
+<p><img src="https://developer.apple.com/library/ios/documentation/Networking/Conceptual/CFNetwork/Art/authentication_2x.png" alt="图4-2 找到一个身份验证对象"></p>
+<p>当一个HTTP请求返回一个401或407响应，第一步是为客户端找到一个有效的CFHTTPAuthentication 对象。一个身份验证对象包括证书和其他信息，当应用到HTTP消息请求，与服务器验证你的身份。如果你已经与服务器进行过身份验证，你会有一个有效的身份验证对象。然而，在大多数情况下，你需要使用<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/CoreFoundation/Reference/CFHTTPAuthenticationRef/index.html#//apple_ref/doc/c_ref/CFHTTPAuthenticationCreateFromResponse">CFHTTPAuthenticationCreateFromResponse</a> 函数来创建一个对象。见列表4-1.</p>
+<blockquote><span class="custom-blockquote-svg"><svg width="24" height="24" viewBox="0 0 24 24" fill="" xmlns="http://www.w3.org/2000/svg" data-reactroot="">
+<path fill="" d="M22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22C13.8 22 15.5 21.5 17 20.6L22 22L20.7 17C21.5 15.5 22 13.8 22 12Z" undefined="1"></path>
+<path fill="" d="M15.97 11.5H16.04C17.12 11.5 18 12.38 18 13.47V13.53C18 14.62 17.12 15.5 16.03 15.5H15.96C14.88 15.5 14 14.62 14 13.53V13.46C14 12.38 14.88 11.5 15.97 11.5Z" undefined="1"></path>
+<path fill="" d="M7.97 11.5H8.04C9.12 11.5 10 12.38 10 13.47V13.53C10 14.62 9.12 15.5 8.03 15.5H7.97C6.88 15.5 6 14.62 6 13.53V13.46C6 12.38 6.88 11.5 7.97 11.5Z" undefined="1"></path>
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke="" d="M17 8.5C15.23 8.97 14.07 10.84 14.01 13.27C14 13.33 14 13.4 14 13.47V13.5"></path>
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke="" d="M9 8.5C7.23 8.97 6.07 10.84 6.01 13.27C6 13.33 6 13.4 6 13.47V13.5"></path>
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke="" d="M15.97 11.5H16.04C17.12 11.5 18 12.38 18 13.47V13.53C18 14.62 17.12 15.5 16.03 15.5H15.96C14.88 15.5 14 14.62 14 13.53V13.46C14 12.38 14.88 11.5 15.97 11.5Z"></path>
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke="" d="M7.97 11.5H8.04C9.12 11.5 10 12.38 10 13.47V13.53C10 14.62 9.12 15.5 8.03 15.5H7.97C6.88 15.5 6 14.62 6 13.53V13.46C6 12.38 6.88 11.5 7.97 11.5Z"></path>
+</svg>
+</span><p>注意：所有关于身份验证的示例代码改编自ImageClient 应用。</p></blockquote>
+<p>列表4-1 创建一个身份验证对象</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>authentication<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>   
+
+CFHTTPMessageRef responseHeader <span class="token operator">=</span>
+    <span class="token punctuation">(</span>CFHTTPMessageRef<span class="token punctuation">)</span> <span class="token function">CFReadStreamCopyProperty</span><span class="token punctuation">(</span>
+        readStream<span class="token punctuation">,</span>
+        kCFStreamPropertyHTTPResponseHeader
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Get the authentication information from the response.</span>
+authentication <span class="token operator">=</span>
+<span class="token function">CFHTTPAuthenticationCreateFromResponse</span><span class="token punctuation">(</span><span class="token constant">NULL</span><span class="token punctuation">,</span> responseHeader<span class="token punctuation">)</span><span class="token punctuation">;</span>   
+<span class="token function">CFRelease</span><span class="token punctuation">(</span>responseHeader<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>如果新身份验证对象有效，那么你已经完成可以继续图4-1的第二步。如果身份验证对象无效，然后扔掉身份验证对象和证书，检查证书。关于证书的更多信息，阅读安全证书（<a target="_blank" rel="noopener" href="http://developer.apple.com/library/mac/qa/qa2001/qa1277.html">Security Credentials</a>）。</p>
+<p>不好的证书意味着服务器不接受登陆信息，它将继续监听新的证书。然而，如果证书是好的，但服务器仍然拒绝你的请求，然后服务器拒绝与你通信，你必须放弃。加上证书是不好的，重试整个过程，先创建身份验证对象直到你得到有效的证书和有效的验证对象。这个过程类似于列表4-2中的代码。</p>
+<p>列表4-2 查找一个有效的身份验证对象</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c">CFStreamError err<span class="token punctuation">;</span>
+
+<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>authentication<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+
+<span class="token comment">// the newly created authentication object is bad, must return</span>
+<span class="token keyword">return</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">CFHTTPAuthenticationIsValid</span><span class="token punctuation">(</span>authentication<span class="token punctuation">,</span> <span class="token operator">&amp;</span>err<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+<span class="token comment">// destroy authentication and credentials</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>credentials<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token function">CFRelease</span><span class="token punctuation">(</span>credentials<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    credentials <span class="token operator">=</span> <span class="token constant">NULL</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token function">CFRelease</span><span class="token punctuation">(</span>authentication<span class="token punctuation">)</span><span class="token punctuation">;</span>
+authentication <span class="token operator">=</span> <span class="token constant">NULL</span><span class="token punctuation">;</span>
+
+<span class="token comment">// check for bad credentials (to be treated separately)</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">.</span>domain <span class="token operator">==</span> kCFStreamErrorDomainHTTP <span class="token operator">&amp;&amp;</span>
+    <span class="token punctuation">(</span>err<span class="token punctuation">.</span>error <span class="token operator">==</span> kCFStreamErrorHTTPAuthenticationBadUserName
+    <span class="token operator">||</span> err<span class="token punctuation">.</span>error <span class="token operator">==</span> kCFStreamErrorHTTPAuthenticationBadPassword<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">&#123;</span>
+    <span class="token function">retryAuthorizationFailure</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>authentication<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token punctuation">&#123;</span>
+    <span class="token function">errorOccurredLoadingImage</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>现在你有一个有效的身份验证对象，继续图4-1中的流程。首先，考虑你是否需要证书。如果你不需要，则应由身份验证对象到HTTP请求。身份验证对象应用到HTTP请求详见列表4-4（resumeWithCredentials）。</p>
+<p>未存储证书（在内存中保存证书（<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/Networking/Conceptual/CFNetwork/CFHTTPAuthenticationTasks/CFHTTPAuthenticationTasks.html#//apple_ref/doc/uid/TP30001132-CH8-SW6">Keeping Credentials in Memory</a> ）和在永久性仓库中存储证书（<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/Networking/Conceptual/CFNetwork/CFHTTPAuthenticationTasks/CFHTTPAuthenticationTasks.html#//apple_ref/doc/uid/TP30001132-CH8-SW5">Keeping Credentials in a Persistent Store</a>）中有解释），获取有效证书的唯一方法是提示用户。大多数情况下，证书需要用户名和密码。通过传递身份验证对象到<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/CoreFoundation/Reference/CFHTTPAuthenticationRef/index.html#//apple_ref/doc/c_ref/CFHTTPAuthenticationRequiresUserNameAndPassword">CFHTTPAuthenticationRequiresUserNameAndPassword</a> 函数，你可以看到用户名和密码是必须的。如果证书需要用户名和密码，提示用户输入用户名和密码并在证书字典里存储。对于一个NTLM服务器，证书还需要一个域。在你有新的证书后，你可以调用列表4-4的函数resumeWithCredentials ，应用身份验证对象到HTTP请求。整个过程见列表4-3。</p>
+<blockquote><span class="custom-blockquote-svg"><svg width="24" height="24" viewBox="0 0 24 24" fill="" xmlns="http://www.w3.org/2000/svg" data-reactroot="">
+<path fill="" d="M22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22C13.8 22 15.5 21.5 17 20.6L22 22L20.7 17C21.5 15.5 22 13.8 22 12Z" undefined="1"></path>
+<path fill="" d="M15.97 11.5H16.04C17.12 11.5 18 12.38 18 13.47V13.53C18 14.62 17.12 15.5 16.03 15.5H15.96C14.88 15.5 14 14.62 14 13.53V13.46C14 12.38 14.88 11.5 15.97 11.5Z" undefined="1"></path>
+<path fill="" d="M7.97 11.5H8.04C9.12 11.5 10 12.38 10 13.47V13.53C10 14.62 9.12 15.5 8.03 15.5H7.97C6.88 15.5 6 14.62 6 13.53V13.46C6 12.38 6.88 11.5 7.97 11.5Z" undefined="1"></path>
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke="" d="M17 8.5C15.23 8.97 14.07 10.84 14.01 13.27C14 13.33 14 13.4 14 13.47V13.5"></path>
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke="" d="M9 8.5C7.23 8.97 6.07 10.84 6.01 13.27C6 13.33 6 13.4 6 13.47V13.5"></path>
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke="" d="M15.97 11.5H16.04C17.12 11.5 18 12.38 18 13.47V13.53C18 14.62 17.12 15.5 16.03 15.5H15.96C14.88 15.5 14 14.62 14 13.53V13.46C14 12.38 14.88 11.5 15.97 11.5Z"></path>
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke="" d="M7.97 11.5H8.04C9.12 11.5 10 12.38 10 13.47V13.53C10 14.62 9.12 15.5 8.03 15.5H7.97C6.88 15.5 6 14.62 6 13.53V13.46C6 12.38 6.88 11.5 7.97 11.5Z"></path>
+</svg>
+</span><p>注意：在代码列表中，前面有省略号的注释表明这个功能超出了本文的范围，但是需要实现。这不同与正常的注释描述正在发生什么功能。</p></blockquote>
+<p>列表4-3 查找证书（如果需要）并应用它们</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token comment">// ...continued from Listing 4-2</span>
+<span class="token keyword">else</span> <span class="token punctuation">&#123;</span>    <span class="token function">cancelLoad</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">if</span> <span class="token punctuation">(</span>credentials<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token function">resumeWithCredentials</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token comment">// are a user name &amp; password needed?</span>
+<span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">CFHTTPAuthenticationRequiresUserNameAndPassword</span><span class="token punctuation">(</span>authentication<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">&#123;</span>
+    CFStringRef realm <span class="token operator">=</span> <span class="token constant">NULL</span><span class="token punctuation">;</span>
+    CFURLRef url <span class="token operator">=</span> <span class="token function">CFHTTPMessageCopyRequestURL</span><span class="token punctuation">(</span>request<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+     <span class="token comment">// check if you need an account domain so you can display it if necessary</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">CFHTTPAuthenticationRequiresAccountDomain</span><span class="token punctuation">(</span>authentication<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        realm <span class="token operator">=</span> <span class="token function">CFHTTPAuthenticationCopyRealm</span><span class="token punctuation">(</span>authentication<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token comment">// ...prompt user for user name (user), password (pass)</span>
+    <span class="token comment">// and if necessary domain (domain) to give to the server...</span>
+
+    <span class="token comment">// Guarantee values</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>user<span class="token punctuation">)</span> user <span class="token operator">=</span> <span class="token function">CFSTR</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>pass<span class="token punctuation">)</span> pass <span class="token operator">=</span> <span class="token function">CFSTR</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token function">CFDictionarySetValue</span><span class="token punctuation">(</span>credentials<span class="token punctuation">,</span>
+kCFHTTPAuthenticationUsername<span class="token punctuation">,</span> user<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token function">CFDictionarySetValue</span><span class="token punctuation">(</span>credentials<span class="token punctuation">,</span>
+kCFHTTPAuthenticationPassword<span class="token punctuation">,</span> pass<span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token comment">// Is an account domain needed? (used currently for NTLM only)</span>
+   <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">CFHTTPAuthenticationRequiresAccountDomain</span><span class="token punctuation">(</span>authentication<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+       <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>domain<span class="token punctuation">)</span> domain <span class="token operator">=</span> <span class="token function">CFSTR</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+       <span class="token function">CFDictionarySetValue</span><span class="token punctuation">(</span>credentials<span class="token punctuation">,</span> kCFHTTPAuthenticationAccountDomain<span class="token punctuation">,</span> domain<span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token punctuation">&#125;</span>
+   <span class="token keyword">if</span> <span class="token punctuation">(</span>realm<span class="token punctuation">)</span> <span class="token function">CFRelease</span><span class="token punctuation">(</span>realm<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">CFRelease</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token punctuation">&#123;</span>
+   <span class="token function">resumeWithCredentials</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>列表4-4 应用身份验证对象到请求</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">void</span> <span class="token function">resumeWithCredentials</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>   
+
+<span class="token comment">// Apply whatever credentials we've built up to the old request</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">CFHTTPMessageApplyCredentialDictionary</span><span class="token punctuation">(</span>request<span class="token punctuation">,</span> authentication<span class="token punctuation">,</span>
+                                            credentials<span class="token punctuation">,</span> <span class="token constant">NULL</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token function">errorOccurredLoadingImage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token punctuation">&#123;</span>
+    <span class="token comment">// Now that we've updated our request, retry the load</span>
+    <span class="token function">loadRequest</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>##在内存中存储证书<br>如果你打算经常与一个身份验证服务器进行通信，重用证书可以来避免多次提示用户服务器用户名和密码。本章解释了一次性使用身份验证代码（例如处理身份验证（<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/Networking/Conceptual/CFNetwork/CFHTTPAuthenticationTasks/CFHTTPAuthenticationTasks.html#//apple_ref/doc/uid/TP30001132-CH8-SW3">Handling Authentication</a>））需要作出的变更，在内存中存储证书以便重用。</p>
+<p>重用证书，你的代码中需要更改三个数据结构。</p>
+<p>1.创建一个可变的数组来保存所有的身份验证对象。</p>
+<pre><code>CFMutableArrayRef authArray;
+</code></pre>
+<p>代替：</p>
+<pre><code>CFHTTPAuthenticationRef authentication;
+</code></pre>
+<p>2.使用字典，创建身份验证对象到证书的映射。</p>
+<pre><code>CFMutableDictionaryRef credentialsDict;
+</code></pre>
+<p>代替：</p>
+<pre><code>CFMutableDictionaryRef credentials;
+</code></pre>
+<p>3.保持这些结构在你原来修改当前身份验证对象和当前证书的地方。</p>
+<pre><code>CFDictionaryRemoveValue(credentialsDict, authentication);
+</code></pre>
+<p>代替：</p>
+<pre><code>CFRelease(credentials);
+</code></pre>
+<p>现在，创建HTTP请求后，在每次加载前，查找一个匹配的身份验证对象。查找适合对象的一个简单的非优化方法见列表4-5.</p>
+<p>列表4-5 查找一个匹配的身份验证对象</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c">CFHTTPAuthenticationRef findAuthenticationForRequest <span class="token punctuation">&#123;</span>   
+
+<span class="token keyword">int</span> i<span class="token punctuation">,</span> c <span class="token operator">=</span> <span class="token function">CFArrayGetCount</span><span class="token punctuation">(</span>authArray<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> c<span class="token punctuation">;</span> i <span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    CFHTTPAuthenticationRef auth <span class="token operator">=</span> <span class="token punctuation">(</span>CFHTTPAuthenticationRef<span class="token punctuation">)</span>
+            <span class="token function">CFArrayGetValueAtIndex</span><span class="token punctuation">(</span>authArray<span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">CFHTTPAuthenticationAppliesToRequest</span><span class="token punctuation">(</span>auth<span class="token punctuation">,</span> request<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">return</span> auth<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+   <span class="token keyword">return</span> <span class="token constant">NULL</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>如果身份验证数组有一个匹配的身份验证对象，然后检查证书仓库是否有正确的证书可用。这样做可以防止你需要再次提示用户输入用户名和密码。调用<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/CoreFoundation/Reference/CFDictionaryRef/index.html#//apple_ref/doc/c_ref/CFDictionaryGetValue">CFDictionaryGetValue</a> 函数可以查找证书，如列表4-6所示。</p>
+<p>列表4-6 搜索证书仓库</p>
+<pre><code>credentials = CFDictionaryGetValue(credentialsDict, authentication);
+</code></pre>
+<p>然后应用你的匹配的身份验证对象和证书到你原始的HTTP请求并重新发送。</p>
+<blockquote><span class="custom-blockquote-svg"><svg width="24" height="24" viewBox="0 0 24 24" fill="" xmlns="http://www.w3.org/2000/svg" data-reactroot="">
+<path fill="" d="M22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22C13.8 22 15.5 21.5 17 20.6L22 22L20.7 17C21.5 15.5 22 13.8 22 12Z" undefined="1"></path>
+<path fill="" d="M15.97 11.5H16.04C17.12 11.5 18 12.38 18 13.47V13.53C18 14.62 17.12 15.5 16.03 15.5H15.96C14.88 15.5 14 14.62 14 13.53V13.46C14 12.38 14.88 11.5 15.97 11.5Z" undefined="1"></path>
+<path fill="" d="M7.97 11.5H8.04C9.12 11.5 10 12.38 10 13.47V13.53C10 14.62 9.12 15.5 8.03 15.5H7.97C6.88 15.5 6 14.62 6 13.53V13.46C6 12.38 6.88 11.5 7.97 11.5Z" undefined="1"></path>
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke="" d="M17 8.5C15.23 8.97 14.07 10.84 14.01 13.27C14 13.33 14 13.4 14 13.47V13.5"></path>
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke="" d="M9 8.5C7.23 8.97 6.07 10.84 6.01 13.27C6 13.33 6 13.4 6 13.47V13.5"></path>
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke="" d="M15.97 11.5H16.04C17.12 11.5 18 12.38 18 13.47V13.53C18 14.62 17.12 15.5 16.03 15.5H15.96C14.88 15.5 14 14.62 14 13.53V13.46C14 12.38 14.88 11.5 15.97 11.5Z"></path>
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke="" d="M7.97 11.5H8.04C9.12 11.5 10 12.38 10 13.47V13.53C10 14.62 9.12 15.5 8.03 15.5H7.97C6.88 15.5 6 14.62 6 13.53V13.46C6 12.38 6.88 11.5 7.97 11.5Z"></path>
+</svg>
+</span><p>警告：在接收到服务器验证前，不要应用证书到HTTP请求。在你上次认证后，服务器可能改变，你可能会有一个安全风险。</p></blockquote>
+<p>有了这些变更，你的应用可以在内存中存储身份验证对象和证书以便未来使用。</p>
+<p>##在永久性仓库中存储证书<br>在内存中存储证书可以防止用户在特定应用启动时重新输入服务器用户名和密码。然而，当应用退出，这些证书被释放。为了避免丢失证书，将它们保存到永久性仓库，这样每个服务器证书只需要生成一次。推荐用钥匙链来存储证书。即使你有很多个钥匙链，本文档中的钥匙链指的是用户默认的钥匙链。使用钥匙链表明你存储的身份验证信息可以用于其他试图访问同一个服务器的应用中，反之亦然。</p>
+<p>在钥匙链中存储和检索证书需要两个函数：一个用于查找证书字典用于身份验证，另一个保存最近请求的证书。本文中这些函数声明如下：</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c">CFMutableDictionaryRef <span class="token function">findCredentialsForAuthentication</span><span class="token punctuation">(</span> CFHTTPAuthenticationRef auth<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">void</span> <span class="token function">saveCredentialsForRequest</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>findCredentialsForAuthentication 函数首先检查内存中的证书字典本地缓存是否有证书。如何实现见列表4-6。</p>
+<p>如果内存中没有证书的缓存，然后搜索钥匙链。使用SecKeychainFindInternetPassword函数搜索钥匙链。该函数需要大量的参数。参数和一段简短的描述HTTP身份验证证书如何使用它们，如下：</p>
+<p><code>keychainOrArray</code></p>
+<p>NULL 指定用户默认钥匙链列表。</p>
+<p><code>serverNameLength</code></p>
+<p>serverName的长度，通常是strlen(serverName)。</p>
+<p><code>serverName</code></p>
+<p>从HTTP请求解析到的服务器名称</p>
+<p><code>securityDomainLength</code></p>
+<p>安全域的长度，或0表示没有域。在示例代码中， realm ? strlen(realm) : 0向账户传递两种情形。</p>
+<p><code>securityDomain</code></p>
+<p>利用CFHTTPAuthenticationCopyRealm 函数获取身份验证对象范围</p>
+<p><code>accountNameLength</code></p>
+<p>accountName的长度。由于accountName是NULL，值为0</p>
+<p><code>accountName</code></p>
+<p>当读取钥匙链记录时没有账户名，该字段为NULL。</p>
+<p><code>pathLength</code></p>
+<p>path的长度，如果没有路径则为0.在示例代码中，path ? strlen(path) : 0向账户传递两种情形。</p>
+<p><code>path</code></p>
+<p>利用CFURLCopyPath 函数从身份验证对象获取路径。</p>
+<p><code>port</code></p>
+<p>利用CFURLGetPortNumber函数获取端口号。</p>
+<p><code>protocol</code></p>
+<p>代表协议类型的字符串，例如HTTP或HTTPS。通过CFURLCopyScheme 函数获取协议类型。</p>
+<p><code>authenticationType</code></p>
+<p>利用CFHTTPAuthenticationCopyMethod函数获取身份验证类型。</p>
+<p><code>passwordLength</code></p>
+<p>0，因为在读取钥匙链记录时不需要密码。</p>
+<p><code>passwordData</code></p>
+<p>NULL，因为在读取钥匙链记录时不需要密码。</p>
+<p><code>itemRef</code></p>
+<p>查找到正确的钥匙链记录，返回钥匙链记录引用对象SecKeychainItemRef。</p>
+<p>当正确的调用，代码如列表4-7所示。</p>
+<p>列表4-7 搜索钥匙链</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c">didFind <span class="token operator">=</span>   
+
+<span class="token function">SecKeychainFindInternetPassword</span><span class="token punctuation">(</span><span class="token constant">NULL</span><span class="token punctuation">,</span>
+                                <span class="token function">strlen</span><span class="token punctuation">(</span>host<span class="token punctuation">)</span><span class="token punctuation">,</span> host<span class="token punctuation">,</span>
+                                realm <span class="token operator">?</span> <span class="token function">strlen</span><span class="token punctuation">(</span>realm<span class="token punctuation">)</span> <span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> realm<span class="token punctuation">,</span>
+                                <span class="token number">0</span><span class="token punctuation">,</span> <span class="token constant">NULL</span><span class="token punctuation">,</span>
+                                path <span class="token operator">?</span> <span class="token function">strlen</span><span class="token punctuation">(</span>path<span class="token punctuation">)</span> <span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> path<span class="token punctuation">,</span>
+                                port<span class="token punctuation">,</span>
+                                protocolType<span class="token punctuation">,</span>
+                                authenticationType<span class="token punctuation">,</span>
+                                <span class="token number">0</span><span class="token punctuation">,</span> <span class="token constant">NULL</span><span class="token punctuation">,</span>
+                                <span class="token operator">&amp;</span>itemRef<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+<p>假设SecKeychainFindInternetPassword 成功返回，创建一个包含单独钥匙链属性(SecKeychainAttribute)的钥匙链属性列表(SecKeychainAttributeList)。钥匙链实现列表将包含用户名和密码。为了加载钥匙链属性列表，调用SecKeychainItemCopyContent 函数并将SecKeychainFindInternetPassword返回的钥匙链记录引用对象(itemRef)传递给它。该函数将用账号的用户名和密码void **填充到钥匙链属性中。</p>
+<p>用户名和密码可以用来创建一组新证书。列表4-8展示了这个过程。</p>
+<p>列表4-8 从钥匙链价值服务器证书。</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">if</span> <span class="token punctuation">(</span>didFind <span class="token operator">==</span> noErr<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+
+SecKeychainAttribute    attr<span class="token punctuation">;</span>
+SecKeychainAttributeList attrList<span class="token punctuation">;</span>
+UInt32                  length<span class="token punctuation">;</span>
+<span class="token keyword">void</span>                    <span class="token operator">*</span>outData<span class="token punctuation">;</span>
+
+<span class="token comment">// To set the account name attribute</span>
+attr<span class="token punctuation">.</span>tag <span class="token operator">=</span> kSecAccountItemAttr<span class="token punctuation">;</span>
+attr<span class="token punctuation">.</span>length <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+attr<span class="token punctuation">.</span>data <span class="token operator">=</span> <span class="token constant">NULL</span><span class="token punctuation">;</span>
+
+attrList<span class="token punctuation">.</span>count <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+attrList<span class="token punctuation">.</span>attr <span class="token operator">=</span> <span class="token operator">&amp;</span>attr<span class="token punctuation">;</span>
+
+<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">SecKeychainItemCopyContent</span><span class="token punctuation">(</span>itemRef<span class="token punctuation">,</span> <span class="token constant">NULL</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>attrList<span class="token punctuation">,</span>
+<span class="token operator">&amp;</span>length<span class="token punctuation">,</span> <span class="token operator">&amp;</span>outData<span class="token punctuation">)</span><span class="token operator">==</span> noErr<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token comment">// attr.data is the account (username) and outdata is the password</span>
+    CFStringRef username <span class="token operator">=</span>
+        <span class="token function">CFStringCreateWithBytes</span><span class="token punctuation">(</span>kCFAllocatorDefault<span class="token punctuation">,</span> attr<span class="token punctuation">.</span>data<span class="token punctuation">,</span>
+                                attr<span class="token punctuation">.</span>length<span class="token punctuation">,</span> kCFStringEncodingUTF8<span class="token punctuation">,</span> false<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    CFStringRef password <span class="token operator">=</span>
+        <span class="token function">CFStringCreateWithBytes</span><span class="token punctuation">(</span>kCFAllocatorDefault<span class="token punctuation">,</span> outData<span class="token punctuation">,</span> length<span class="token punctuation">,</span>
+                                kCFStringEncodingUTF8<span class="token punctuation">,</span> false<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">SecKeychainItemFreeContent</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>attrList<span class="token punctuation">,</span> outData<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// create credentials dictionary and fill it with the user name &amp; password</span>
+    credentials <span class="token operator">=</span>
+        <span class="token function">CFDictionaryCreateMutable</span><span class="token punctuation">(</span><span class="token constant">NULL</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span>
+                                  <span class="token operator">&amp;</span>kCFTypeDictionaryKeyCallBacks<span class="token punctuation">,</span>
+                                  <span class="token operator">&amp;</span>kCFTypeDictionaryValueCallBacks<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">CFDictionarySetValue</span><span class="token punctuation">(</span>credentials<span class="token punctuation">,</span> kCFHTTPAuthenticationUsername<span class="token punctuation">,</span>
+                        username<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">CFDictionarySetValue</span><span class="token punctuation">(</span>credentials<span class="token punctuation">,</span> kCFHTTPAuthenticationPassword<span class="token punctuation">,</span>
+                        password<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token function">CFRelease</span><span class="token punctuation">(</span>username<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">CFRelease</span><span class="token punctuation">(</span>password<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token function">CFRelease</span><span class="token punctuation">(</span>itemRef<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<p>如果你可以先存储证书到钥匙链中，从钥匙链中检索证书才有用。首先，查看证书是否已经存储在钥匙链中。调用SecKeychainFindInternetPassword，传递用户名到accountName ，传递accountName 的长度到accountNameLength``。</p>
+<p>如果记录存在，修改它来改变密码。设置钥匙链属性的数据字段包含用户名，主要你可以修改正确的属性。然后调用SecKeychainItemModifyContent 函数并传递钥匙链记录引用对象(itemRef)，钥匙链属性列表和新密码。通过修改钥匙链记录而非重写，钥匙链记录会正确的更新其他相关数据也将保留。记录如列表4-9所示。</p>
+<p>列表4-9 修改钥匙链记录</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token comment">// Set the attribute to the account name   </span>
+attr<span class="token punctuation">.</span>tag <span class="token operator">=</span> kSecAccountItemAttr<span class="token punctuation">;</span> 
+attr<span class="token punctuation">.</span>length <span class="token operator">=</span> <span class="token function">strlen</span><span class="token punctuation">(</span>username<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+attr<span class="token punctuation">.</span>data <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token operator">*</span><span class="token punctuation">)</span>username<span class="token punctuation">;</span>
+<span class="token comment">// Modify the keychain entry   </span>
+<span class="token function">SecKeychainItemModifyContent</span><span class="token punctuation">(</span>itemRef<span class="token punctuation">,</span> <span class="token operator">&amp;</span>attrList<span class="token punctuation">,</span> <span class="token function">strlen</span><span class="token punctuation">(</span>password<span class="token punctuation">)</span><span class="token punctuation">,</span>   
+<span class="token punctuation">(</span><span class="token keyword">void</span> <span class="token operator">*</span><span class="token punctuation">)</span>password<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>如果记录不存在，你将需要从头开始创建它。<code>SecKeychainAddInternetPassword</code> 函数完成该任务。它的参数与<code>SecKeychainFindInternetPassword</code>相同，但与调用<code>SecKeychainFindInternetPassword</code>相比，你提供用户名和密码给<code>SecKeychainAddInternetPassword</code> 。释放钥匙链记录引用对象成功后调用<code>SecKeychainAddInternetPassword</code> ，除非你需要在其他地方使用。见列表4-10函数调用。</p>
+<p>列表4-10 存储一个新的钥匙链记录</p>
+<pre class="line-numbers language-none"><code class="language-none">SecKeychainAddInternetPassword(NULL,   
+
+                          strlen(host), host,
+                          realm ? strlen(realm) : 0, realm,
+                          strlen(username), username,
+                          path ? strlen(path) : 0, path,
+                          port,
+                          protocolType,
+                          authenticationType,
+                          strlen(password), password,
+                          &amp;itemRef);
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+<p>身份验证防火墙<br>身份验证防火墙与身份验证服务器非常相似，处理必须检查每个失败的HTTP请求的代理身份验证和服务器身份验证。这以为着，你需要单独存储（本地和永久）代理服务器和源服务器。因此，失败的HTTP响应的过程如下：</p>
+<ul>
+<li><p>确定响应的状态码是否为407（代理怀疑）。如果是，检查当地代理仓库和永久性代理仓库查找一个匹配的身份验证对象和证书。如果这些都没有一个匹配的对象和证书，然后请求用户证书。应用身份验证对象到HTTP请求并重试。</p>
+</li>
+<li><p>确定响应的状态码是否为401（服务器怀疑）。如果是，遵循与407响应相同的过程，但是用原始服务器存储。</p>
+</li>
+</ul>
+<p>使用代理服务器有些细微的差别。首先，钥匙链调用的参数来自于代理主机和端口，而非一个源服务器的URL。第二，当要求用户输入用户名和密码，确保清楚的提示是什么密码。</p>
+<p>通过这些指令，你的应用应该可以使用身份验证防火墙。</p>
+<p>官方原文地址：<br><a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/Networking/Conceptual/CFNetwork/CFHTTPAuthenticationTasks/CFHTTPAuthenticationTasks.html#//apple_ref/doc/uid/TP30001132-CH8-SW1">CFNetwork Programming Guide</a></p>
+
+  </article>
+  <!-- tag -->
+  <div class="mt-12 pt-6 border-t border-gray-200">
+    
+      
+        <span class="bg-gray-100 dark:bg-gray-700 px-2 py-1 m-1 text-sm rounded-md transition-colors hover:bg-gray-200">
+          <a href="/tags/CFNetwork/">CFNetwork</a>
+        </span>
+      
+    
+  </div>
+  <!-- prev and next -->
+  <div class="flex justify-between mt-12 pt-6 border-t border-gray-200">
+    <div>
+      
+        <a href="/post/CFNetwork-%E7%BC%96%E7%A8%8B%E6%8C%87%E5%8D%97%E4%B9%8B%E5%85%AD-%E4%BD%BF%E7%94%A8FTP%E6%9C%8D%E5%8A%A1%E5%99%A8-Working-with-FTP-Servers.html" class="text-sm text-gray-400 hover:text-gray-500 flex justify-center">
+          <iconify-icon width="20" icon="ri:arrow-left-s-line" data-inline="false"></iconify-icon>
+          CFNetwork 编程指南之六: 使用FTP服务器(Working with FTP Servers)
+        </a>
+      
+    </div>
+    <div>
+      
+        <a href="/post/CFNetwork-%E7%BC%96%E7%A8%8B%E6%8C%87%E5%8D%97%E4%B9%8B%E5%9B%9B-%E4%B8%8EHTTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%80%9A%E4%BF%A1-Communicating-with-HTTP-Servers.html" class="text-sm text-gray-400 hover:text-gray-500 flex justify-center">
+          CFNetwork 编程指南之四: 与HTTP服务器通信(Communicating with HTTP Servers)
+          <iconify-icon width="20" icon="ri:arrow-right-s-line" data-inline="false"></iconify-icon>
+        </a>
+      
+    </div>
+  </div>
+  <!-- comment -->
+  <div class="article-comments mt-12">
+    
+
+  </div>
+</section>
+<!-- js inspect -->
+
+<script src="/lib/clipboard.min.js"></script>
+
+
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    "HTML-CSS": {
+        preferredFont: "TeX",
+        availableFonts: ["STIX","TeX"],
+        linebreaks: { automatic:true },
+        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+        inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
+        processEscapes: true,
+        ignoreClass: "tex2jax_ignore|dno",
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+        equationNumbers: { autoNumber: "AMS" },
+        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+        Macros: { href: "{}" }
+    },
+    messageStyle: "none"
+  });
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<script>
+  $(document).ready(() => {
+    const maraidConfig = {
+      theme: "default",
+      logLevel: 3,
+      flowchart: { curve: "linear" },
+      gantt: { axisFormat: "%m/%d/%Y" },
+      sequence: { actorMargin: 50 },
+    };
+    mermaid.initialize(maraidConfig);
+  });
+</script>
+
+
+
+<script src="/lib/fancybox/fancybox.umd.min.js"></script>
+
+<script>
+  $(document).ready(() => {
+    $('.post-content').each(function(i){
+      $(this).find('img').each(function(){
+        if ($(this).parent().hasClass('fancybox') || $(this).parent().is('a')) return;
+        var alt = this.alt;
+        if (alt) $(this).after('<span class="fancybox-alt">' + alt + '</span>');
+        $(this).wrap('<a class="fancybox-img" href="' + this.src + '" data-fancybox=\"gallery\" data-caption="' + alt + '"></a>')
+      });
+      $(this).find('.fancybox').each(function(){
+        $(this).attr('rel', 'article' + i);
+      });
+    });
+
+    Fancybox.bind('[data-fancybox="gallery"]', {
+        // options
+    })
+  })
+</script>
+
+<!-- tocbot begin -->
+
+<script src="/lib/tocbot/tocbot.min.js"></script>
+
+<script>
+  $(document).ready(() => {
+      tocbot.init({
+        // Where to render the table of contents.
+        tocSelector: '.post-toc',
+        // Where to grab the headings to build the table of contents.
+        contentSelector: '.post-content',
+        // Which headings to grab inside of the contentSelector element.
+        headingSelector: 'h1, h2, h3',
+        // For headings inside relative or absolute positioned containers within content.
+        hasInnerContainers: true,
+    });
+  })
+</script>
+<!-- tocbot end -->
+
+
+  </main>
+  <footer class="flex flex-col h-40 items-center justify-center text-gray-400 text-sm">
+  <!-- busuanzi -->
+  
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!-- Busuanzi Analytics -->
+<div class="flex items-center gap-2">
+  <span>Visitors</span>
+  <span id="busuanzi_value_site_uv"></span>
+  <span>Page Views</span>
+  <span id="busuanzi_value_site_pv"></span>
+</div>
+<!-- End Busuanzi Analytics -->
+
+
+  <!-- copyright -->
+  <div class="flex items-center gap-2">
+    <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" style="color: inherit;">CC BY-NC-SA 4.0</a>
+    <span>© 2022</span>
+    <iconify-icon width="18" icon="emojione-monotone:maple-leaf" ></iconify-icon>
+    <a href="https://github.com/xbmlz" target="_blank" rel="noopener noreferrer">xbmlz</a>
+  </div>
+  <!-- powered by -->
+  <div class="flex items-center gap-2">
+    <span>Powered by</span>
+    <a href="https://hexo.io/" target="_blank" rel="noopener noreferrer">Hexo</a>
+    <span>&</span>
+    <a href="https://github.com/xbmlz/hexo-theme-maple" target="_blank" rel="noopener noreferrer">Maple</a>
+  </div>
+
+</footer>
+
+  <div class="back-to-top box-border fixed right-6 z-1024 -bottom-20 rounded py-1 px-1 bg-slate-900 opacity-60 text-white cursor-pointer text-center dark:bg-slate-600">
+    <span class="flex justify-center items-center text-sm">
+      <iconify-icon width="18" icon="ion:arrow-up-c" id="go-top"></iconify-icon>
+      <span id="scrollpercent"><span>0</span> %</span>
+    </span>
+  </div>
+  
+<script src="/js/main.js"></script>
+
+
+  <script>
+    $(document).ready(function () {
+      const mapleCount = "10";
+      const speed = "0.5";
+      const mapleEl = document.getElementById("maple");
+      const maples = Array.from({ length: mapleCount }).map(() => {
+        const maple = document.createElement("div");
+        const scale = Math.random() * 0.5 + 0.5;
+        const offset = Math.random() * 2 - 1;
+        const x = Math.random() * mapleEl.clientWidth;
+        const y = -Math.random() * mapleEl.clientHeight;
+        const duration = 10 / speed;
+        const delay = -duration;
+        maple.className = "maple";
+        maple.style.width = `${24 * scale}px`;
+        maple.style.height = `${24 * scale}px`;
+        maple.style.left = `${x}px`;
+        maple.style.top = `${y}px`;
+        maple.style.setProperty("--maple-fall-offset", offset);
+        maple.style.setProperty("--maple-fall-height", `${Math.abs(y) + mapleEl.clientHeight}px`);
+        maple.style.animation = `fall ${duration}s linear infinite`;
+        maple.style.animationDelay = `${delay}s`;
+        mapleEl.appendChild(maple)
+        return maple
+      })
+    });
+  </script>
+  
+
+
+  <div class="fixed top-0 bottom-0 left-0 right-0 pointer-events-none print:hidden" id="maple"></div>
+</body>
+
+</html>

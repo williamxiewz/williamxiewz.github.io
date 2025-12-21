@@ -1,1 +1,596 @@
-<!DOCTYPE html><html lang="en"><head><!-- hexo injector head_begin start --><meta name="description" content="ssss"></meta><meta name="keywords" content="Frontend, Web development, Blog, Aurora Theme, TriDiamond"></meta><meta name="author" content="Williamxie"></meta><!-- hexo injector head_begin end --><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="/favicon.ico"><link href="/static/css/chunk-libs.eebac533.css" rel="stylesheet"><link href="/static/css/app.a5fe2998.css" rel="stylesheet"><!-- hexo injector head_end start --><script rel="prefetch" async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script rel="preload" src="https://cdn.bootcdn.net/ajax/libs/prism/1.23.0/components/prism-core.js" data-manual></script><script rel="preload" src="https://cdn.bootcdn.net/ajax/libs/prism/1.23.0/plugins/autoloader/prism-autoloader.js"></script><script rel="preload" src="https://cdn.bootcdn.net/ajax/libs/prism/1.23.0/plugins/toolbar/prism-toolbar.min.js"></script><script rel="preload" src="https://cdn.bootcdn.net/ajax/libs/prism/1.23.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script><script rel="preload" src="https://cdn.bootcdn.net/ajax/libs/blueimp-md5/2.18.0/js/md5.min.js"></script><script rel="preload" src="https://cdn.bootcdn.net/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script><link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/prism/1.23.0/themes/prism.min.css"/><link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/prism/1.23.0/plugins/toolbar/prism-toolbar.min.css"/><link rel="stylesheet" href="https://fonts.loli.net/css?family=Rubik" /><script rel="preload" src="https://cdn.bootcdn.net/ajax/libs/gitalk/1.7.2/gitalk.min.js"></script><link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/gitalk/1.7.2/gitalk.min.css"/><link rel="stylesheet" href="//at.alicdn.com/t/font_2476818_87vaqng7dno.css" /><!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.0"></head><body id="body-container"><noscript><strong>We're sorry but Aurora Blog doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id="app"></div><script>(function(e){function t(t){for(var n,o,u=t[0],i=t[1],c=t[2],l=0,p=[];l<u.length;l++)o=u[l],Object.prototype.hasOwnProperty.call(a,o)&&a[o]&&p.push(a[o][0]),a[o]=0;for(n in i)Object.prototype.hasOwnProperty.call(i,n)&&(e[n]=i[n]);f&&f(t);while(p.length)p.shift()();return s.push.apply(s,c||[]),r()}function r(){for(var e,t=0;t<s.length;t++){for(var r=s[t],n=!0,o=1;o<r.length;o++){var u=r[o];0!==a[u]&&(n=!1)}n&&(s.splice(t--,1),e=i(i.s=r[0]))}return e}var n={},o={runtime:0},a={runtime:0},s=[];function u(e){return i.p+"static/js/"+({404:"404",about:"about",archives:"archives",categories:"categories",page:"page",post:"post",result:"result",tags:"tags"}[e]||e)+"."+{404:"7d1e319c",about:"b870224f",archives:"62201fb5",categories:"cd195d1b",page:"f035d07e",post:"bbd5d2f0",result:"7281cdb6",tags:"df396091"}[e]+".js"}function i(t){if(n[t])return n[t].exports;var r=n[t]={i:t,l:!1,exports:{}};return e[t].call(r.exports,r,r.exports,i),r.l=!0,r.exports}i.e=function(e){var t=[],r={404:1,about:1,archives:1,categories:1,page:1,post:1,result:1,tags:1};o[e]?t.push(o[e]):0!==o[e]&&r[e]&&t.push(o[e]=new Promise((function(t,r){for(var n="static/css/"+({404:"404",about:"about",archives:"archives",categories:"categories",page:"page",post:"post",result:"result",tags:"tags"}[e]||e)+"."+{404:"1a6cd5bd",about:"713e2e0c",archives:"0536c7a0",categories:"10e2be12",page:"01d3099e",post:"9f951a60",result:"10e2be12",tags:"10e2be12"}[e]+".css",a=i.p+n,s=document.getElementsByTagName("link"),u=0;u<s.length;u++){var c=s[u],l=c.getAttribute("data-href")||c.getAttribute("href");if("stylesheet"===c.rel&&(l===n||l===a))return t()}var p=document.getElementsByTagName("style");for(u=0;u<p.length;u++){c=p[u],l=c.getAttribute("data-href");if(l===n||l===a)return t()}var f=document.createElement("link");f.rel="stylesheet",f.type="text/css",f.onload=t,f.onerror=function(t){var n=t&&t.target&&t.target.src||a,s=new Error("Loading CSS chunk "+e+" failed.\n("+n+")");s.code="CSS_CHUNK_LOAD_FAILED",s.request=n,delete o[e],f.parentNode.removeChild(f),r(s)},f.href=a;var d=document.getElementsByTagName("head")[0];d.appendChild(f)})).then((function(){o[e]=0})));var n=a[e];if(0!==n)if(n)t.push(n[2]);else{var s=new Promise((function(t,r){n=a[e]=[t,r]}));t.push(n[2]=s);var c,l=document.createElement("script");l.charset="utf-8",l.timeout=120,i.nc&&l.setAttribute("nonce",i.nc),l.src=u(e);var p=new Error;c=function(t){l.onerror=l.onload=null,clearTimeout(f);var r=a[e];if(0!==r){if(r){var n=t&&("load"===t.type?"missing":t.type),o=t&&t.target&&t.target.src;p.message="Loading chunk "+e+" failed.\n("+n+": "+o+")",p.name="ChunkLoadError",p.type=n,p.request=o,r[1](p)}a[e]=void 0}};var f=setTimeout((function(){c({type:"timeout",target:l})}),12e4);l.onerror=l.onload=c,document.head.appendChild(l)}return Promise.all(t)},i.m=e,i.c=n,i.d=function(e,t,r){i.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:r})},i.r=function(e){"undefined"!==typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.t=function(e,t){if(1&t&&(e=i(e)),8&t)return e;if(4&t&&"object"===typeof e&&e&&e.__esModule)return e;var r=Object.create(null);if(i.r(r),Object.defineProperty(r,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var n in e)i.d(r,n,function(t){return e[t]}.bind(null,n));return r},i.n=function(e){var t=e&&e.__esModule?function(){return e["default"]}:function(){return e};return i.d(t,"a",t),t},i.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},i.p="/",i.oe=function(e){throw console.error(e),e};var c=window["webpackJsonp"]=window["webpackJsonp"]||[],l=c.push.bind(c);c.push=t,c=c.slice();for(var p=0;p<c.length;p++)t(c[p]);var f=l;r()})([]);</script><script src="/static/js/chunk-libs.9b3ced64.js"></script><script src="/static/js/app.d749b93c.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <meta name="author" content="William Xie">
+
+
+  <meta name="subtitle" content="Walk steps step by step">
+
+
+
+
+<title>Xcode Server 教程3: 预编译以及编译后脚本 | William&#39;s Blog</title>
+
+
+
+<link rel="icon" href="/favicon.png">
+
+
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/nprogress/nprogress.css">
+
+
+
+<script src="/lib/jquery.min.js"></script>
+
+
+<script src="/lib/iconify-icon.min.js"></script>
+
+
+<script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+<script>
+  tailwind.config = {
+    darkMode: "class",
+  };
+</script>
+
+
+<script src="/lib/nprogress/nprogress.js"></script>
+
+<script>
+  $(document).ready(() => {
+    NProgress.configure({
+      showSpinner: false,
+    });
+    NProgress.start();
+    $("#nprogress .bar").css({
+      background: "#de7441",
+    });
+    $("#nprogress .peg").css({
+      "box-shadow": "0 0 2px #de7441, 0 0 4px #de7441",
+    });
+    $("#nprogress .spinner-icon").css({
+      "border-top-color": "#de7441",
+      "border-left-color": "#de7441",
+    });
+    setTimeout(function () {
+      NProgress.done();
+      $(".fade").removeClass("out");
+    }, 800);
+  });
+</script>
+
+<script>
+  (function () {
+    const prefersDark =
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const setting = localStorage.getItem("hexo-color-scheme") || "auto";
+    if (setting === "dark" || (prefersDark && setting !== "light"))
+      document.documentElement.classList.toggle("dark", true);
+    let isDark = document.documentElement.classList.contains("dark");
+  })();
+
+  $(document).ready(function () {
+    // init icon
+    const prefersDark =
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const isDark = document.documentElement.classList.contains("dark");
+    $("#theme-icon").attr("icon", isDark ? "ri:moon-line" : "ri:sun-line");
+
+    function toggleGiscusTheme() {
+      const isDark = document.documentElement.classList.contains("dark");
+      const giscusFrame = document.querySelector("iframe.giscus-frame");
+      if (giscusFrame) {
+        giscusFrame.contentWindow.postMessage(
+          {
+            giscus: {
+              setConfig: {
+                theme: isDark ? "dark" : "light",
+              },
+            },
+          },
+          "https://giscus.app"
+        );
+      }
+    }
+
+    // toggle dark mode
+    function toggleDark() {
+      let isDark = document.documentElement.classList.contains("dark");
+      const setting = localStorage.getItem("hexo-color-scheme") || "auto";
+      isDark = !isDark;
+      document.documentElement.classList.toggle("dark", isDark);
+      $("#theme-icon").attr("icon", isDark ? "ri:moon-line" : "ri:sun-line");
+      if (prefersDark === isDark) {
+        localStorage.setItem("hexo-color-scheme", "auto");
+      } else {
+        localStorage.setItem("hexo-color-scheme", isDark ? "dark" : "light");
+      }
+      toggleGiscusTheme();
+    }
+
+    // listen dark mode change
+    window
+      .matchMedia("(prefers-color-scheme: dark)")
+      .addEventListener("change", (e) => {
+        const setting = localStorage.getItem("hexo-color-scheme") || "auto";
+        if (setting === "auto") {
+          document.documentElement.classList.toggle("dark", e.matches);
+          $("#theme-icon").attr(
+            "icon",
+            e.matches ? "ri:moon-line" : "ri:sun-line"
+          );
+          toggleGiscusTheme();
+        }
+      });
+
+    $("#toggle-dark").click((event) => {
+      const isAppearanceTransition = document.startViewTransition && !window.matchMedia('(prefers-reduced-motion: reduce)').matches
+      if (!isAppearanceTransition) {
+        toggleDark()
+        return
+      }
+      const x = event.clientX
+      const y = event.clientY
+      const endRadius = Math.hypot(
+        Math.max(x, innerWidth - x),
+        Math.max(y, innerHeight - y),
+      )
+      const transition = document.startViewTransition(async () => {
+        toggleDark()
+      })
+
+      transition.ready
+        .then(() => {
+          const isDark = document.documentElement.classList.contains("dark")
+          const clipPath = [
+            `circle(0px at ${x}px ${y}px)`,
+            `circle(${endRadius}px at ${x}px ${y}px)`,
+          ]
+          document.documentElement.animate(
+            {
+              clipPath: isDark
+                ? [...clipPath].reverse()
+                : clipPath,
+            },
+            {
+              duration: 400,
+              easing: 'ease-out',
+              pseudoElement: isDark
+                ? '::view-transition-old(root)'
+                : '::view-transition-new(root)',
+            },
+          )
+        })
+    });
+  });
+</script>
+
+
+
+
+<meta name="generator" content="Hexo 5.4.2"></head>
+<body class="font-sans bg-white dark:bg-zinc-900 text-gray-700 dark:text-gray-200 relative">
+  <header class="fixed w-full px-5 py-1 z-10 backdrop-blur-xl backdrop-saturate-150 border-b border-black/5">
+  <div class="max-auto">
+    <nav class="flex items-center text-base">
+      <a href="/" class="group">
+        <h2 class="font-medium tracking-tighterp text-l p-2">
+          <img class="w-5 mr-2 inline-block transition-transform group-hover:rotate-[30deg]" id="logo" src="/images/logo.svg" alt="William's Blog" />
+          William&#39;s Blog
+        </h2>
+      </a>
+      <div id="header-title" class="opacity-0 md:ml-2 md:mt-[0.1rem] text-xs font-medium whitespace-nowrap overflow-hidden overflow-ellipsis">
+        Xcode Server 教程3: 预编译以及编译后脚本
+      </div>
+      <div class="flex-1"></div>
+      <div class="flex items-center gap-3">
+        
+          <a class="hidden sm:flex" href="/archives">Posts</a>
+        
+        
+          
+            <a class="w-5 h-5 hidden sm:flex" title="Github" target="_blank" rel="noopener" href="https://github.com/xbmlz">
+              <iconify-icon width="20" icon="ri:github-line"></iconify-icon>
+            </a>
+          
+        
+        <a class="w-5 h-5 hidden sm:flex" title="Github" href="rss2.xml">
+          <iconify-icon width="20" icon="ri:rss-line"></iconify-icon>
+        </a>
+        <a class="w-5 h-5" title="toggle theme" id="toggle-dark">
+          <iconify-icon width="20" icon="" id="theme-icon"></iconify-icon>
+        </a>
+      </div>
+      <div class="flex items-center justify-center gap-3 ml-3 sm:hidden">
+        <span class="w-5 h-5" aria-hidden="true" role="img" id="open-menu">
+          <iconify-icon width="20" icon="carbon:menu" ></iconify-icon>
+        </span>
+        <span class="w-5 h-5 hidden" aria-hidden="true" role="img" id="close-menu">
+          <iconify-icon  width="20" icon="carbon:close" ></iconify-icon>
+        </span>
+      </div>
+    </nav>
+  </div>
+</header>
+<div id="menu-panel" class="h-0 overflow-hidden sm:hidden fixed left-0 right-0 top-12 bottom-0 z-10">
+  <div id="menu-content" class="relative z-20 bg-white/80 px-6 sm:px-8 py-2 backdrop-blur-xl -translate-y-full transition-transform duration-300">
+    <ul class="nav flex flex-col sm:flex-row text-sm font-medium">
+      
+        <li class="nav-portfolio sm:mx-2 border-b sm:border-0 border-black/5 last:border-0 hover:text-main">
+          <a href="/archives" class="flex h-12 sm:h-auto items-center">Posts</a>
+        </li>
+      
+    </ul>
+  </div>
+  <div class="mask bg-black/20 absolute inset-0"></div>
+</div>
+
+  <main class="pt-14">
+    <!-- css -->
+
+<link rel="stylesheet" href="/lib/fancybox/fancybox.min.css">
+
+
+<link rel="stylesheet" href="/lib/tocbot/tocbot.min.css">
+
+<!-- toc -->
+
+<section class="px-6 max-w-prose mx-auto md:px-0">
+  <!-- header -->
+  <header class="overflow-hidden pt-6 pb-6 md:pt-12">
+    <div class="pt-4 md:pt-6">
+      <h1 id="article-title" class="text-[2rem] font-bold leading-snug mb-4 md:mb-6 md:text-[2.6rem]">
+        Xcode Server 教程3: 预编译以及编译后脚本
+      </h1>
+      <div>
+        <section class="flex items-center gap-3 text-sm">
+          <span class="flex items-center gap-1">
+            <iconify-icon width="18" icon="carbon-calendar" ></iconify-icon>
+            <time>2016-08-22</time>
+          </span>
+          <span class="text-gray-400">·</span>
+          <span class="flex items-center gap-1">
+            <iconify-icon width="18" icon="ic:round-access-alarm" ></iconify-icon>
+            <span>20 min</span>
+          </span>
+          <span class="text-gray-400">·</span>
+          <span class="flex items-center gap-1">
+            <iconify-icon width="18" icon="icon-park-outline:font-search" ></iconify-icon>
+            <span>3.3k words</span>
+          </span>
+          
+            <span class="text-gray-400">·</span>
+            <span class="flex items-center gap-1">
+              <iconify-icon width="16" icon="icon-park-outline:box" class="mr-2"></iconify-icon>
+              <a class="article-category-link" href="/categories/Mac-OS-Server/">Mac OS Server</a>
+            </span>
+          
+        </section>
+      </div>
+    </div>
+  </header>
+  <!-- content -->
+  <article class="post-content prose m-auto slide-enter-content dark:prose-invert">
+    <p><a target="_blank" rel="noopener" href="https://honzadvorsky.com/articles/2015-08-17-17-30-xcode_server_tutorials_3_prebuild__postbuild_scripts/">原文翻译地址</a></p>
+<p>honza dvorsky<br>Xcode Server Tutorials: 3. Prebuild &amp; Postbuild Scripts<br>17. august 2015</p>
+<p>This article is Part 3 of a whole series called Xcode Server Tutorials. Check out Part 2 first if you haven’t already. New posts are always tweeted by me (@czechboy0) on Twitter.</p>
+<p>Great to see that you’re hungry for more Xcode Server goodies! And boy, do I have plenty of them for you today. We’ll talk all about prebuild and postbuild scripts. These might initially sound boring, but soon you’ll see that they are in fact very interesting - they allow you to plug in tools like CocoaPods and fastlane, which can easily revolutionize your complete testing and deployment workflow. From messaging you on Slack when your build finishes to automatically uploading builds to the App Store, nothing is impossible. So let’s get started!</p>
+<span id="more"></span>
+<p>Environment</p>
+<p>Time has passed since Part 1, so from now on, all tutorials are using Xcode 7 Beta 5 and OS X Server 5 Beta 4. Please make sure to upgrade if at all possible. Take your time, I’ll be waiting here whenever you’re ready. 👍</p>
+<p>Objective of this article</p>
+<p>Today we’ll discover the full power of prebuild and postbuild scripts in Xcode Server by adding fastlane and CocoaPods to our project. In the process, we’ll learn about the _xcsbuildd user and how to make sure it does what we need. We’ll encounter several common issues, which we’ll fix together. Then we’ll try to add a private CocoaPod, which will make us figure out how to add SSH keys for _xcsbuildd to make it work.</p>
+<p>From the feedback I’ve received, this has been the most anticipated topic, so let’s get right into it.</p>
+<ol>
+<li>Using CocoaPods</li>
+</ol>
+<p>CocoaPods is a great dependency manager for Xcode projects. It allows you to integrate other people’s (or your own) code in your project easily. I regularly split my own projects into multiple “Pods”, to make logical modules of my code reusable. Now, let’s say our app will want to use the XcodeServerSDK project to make a cool Bot-aware iOS app (excuse the shameless self-promotion, but I needed a Pod written in Swift 2). Let’s use CocoaPods to add it as a dependency of our project.</p>
+<p>I already added the Podfile to our project, so please switch to step3 of the tutorial by, in the XCSTutorialProject1, running</p>
+<p>git checkout step3<br>which will magicly create a Podfile in your project! Then we just need to actually have CocoaPods install the dependencies and start using the workspace instead of the project. So please run</p>
+<p>killall Xcode<br>pod install<br>open XCSTutorialProject1.xcworkspace<br>Good! Now our project uses CocoaPods and we’re able to use XcodeServerSDK. Let’s switch our Bot to the new branch (above we only switched our local checkout) and see if it can rebuild our project with the new shiny Pod in it!</p>
+<p>To do that, let’s right-click on the Bot in Xcode and select Edit Bot, which will show the configuration sheet that we saw in Part 1.</p>
+<p>Let’s go to Repositories and switch our Bot to the step3 branch, which will tell it which branch to pull from now on. Previously we were on master. (Also, to save time, feel free to quickly switch to Devices and make sure you only have one Simulator selected for testing.) Then click Done to save it.</p>
+<p>Let’s kick off another Integration by right-clicking on the Bot again, but this time selecting Integrate.</p>
+<p>Once that Integration finishes, let’s look at its results like we did in Part 2. Oh, what is that? Seems like we got an error! 😧</p>
+<p>The sandbox is not in sync with the Podfile.lock. Run ‘pod install’ or update your CocoaPods installation.<br>Of course, silly me! Since we don’t commit our Pods directory (where the code pulled by CocoaPods lives) into our git repo, our Bot can’t find it. We need to run pod install before every Integration to make things right.</p>
+<p>before every Integration</p>
+<p>This should sound familiar, because we already covered a way to run something before or after every Integration. That’s what Triggers are for! Script triggers, in our case, are going to help us run CocoaPods before every Integration. Let’s add one now!</p>
+<ol start="2">
+<li>Prebuild script: run CocoaPods</li>
+</ol>
+<p>Let’s edit our Bot again and add a new prebuild script trigger, just like we saw in Part 1 (feel free to go there and see how exactly how we did it and please re-read the ⚠️ Weirdness Alert to understand why we first have to cd into our project directory.)</p>
+<p>Since we ran pod install on our local machine, let’s just add a simple prebuild script like this</p>
+<p>cd XCSTutorialProject1<br>pod install<br>Again, save the Bot and re-Integrate it.</p>
+<p>2.1 Search Path Issues</p>
+<p>You might (but you probably won’t) get a Trigger Error now that says something like</p>
+<p>Trigger script exited with code: 127 /var/folders…: line 3: pod: command not found<br>this means that the build user can’t find CocoaPods. This might happen if you’re using a homebrew-installed version of Ruby (like I am), in which case, your tools get installed into /usr/local/bin (which is not included in the build user’s PATH variable) instead of /usr/bin (which is). I’ve been asked about this issue and I came up with four solutions (so far). Which is the best one for you depends on whether the machine on which you’re going to be running Xcode Server is your development machine or a separate build machine. Here I sorted them from the simplest workarounds to more robust solutions:</p>
+<ol>
+<li>specify the full path to your tool: /usr/local/bin/pod install in our case</li>
+<li>manually add the extra search path by adding a line export PATH=”/usr/local/bin:$PATH” at the beginning of the script</li>
+<li>create a symbolic link by running the following command:</li>
+</ol>
+<p>sudo ln -s /usr/local/bin/pod /usr/bin/pod<br>just once, which would make pod available in /usr/bin, but actually point to the executable in /usr/local/bin<br>4) combine the solutions above, e.g. 1) + 2) run fastlane from a fully qualified path /usr/local/bin/fastlane and as the first step of your Fastfile, add sh “export PATH=&quot;/usr/local/bin:$PATH&quot;“. From that point you should be able to call e.g. CocoaPods by just pod instead of /usr/local/bin/pod. Or 3) + 2), where you only create a symlink for fastlane.</p>
+<p>Personally, I’d use 3) if there is only a few tools I need to trigger. If there are more, I’d go for 1) + 2). Feel free to ping me with more solutions that you come up with. Ideally, if you can come up with a way to modify PATH of the _xcsbuildd user permanently, definitely let me know and I’ll add it here. That would be the best solution.</p>
+<p>Update (14th Sep, 2015): I’ve heard that the symbolic link solution doesn’t seem to work with El Cap anymore, plus it makes using multiple versions of Ruby with rvm very difficult. See this article I wrote about fixing this issue.</p>
+<p>But again, if you’re using the system installation of Ruby (and you’re not using any homebrew-installed tools), you won’t encounter this issue. Either way, make sure to re-Integrate if you had to apply one of these fixes. Once it finishes, take a look at the full script output by going to Logs -&gt; Show -&gt; Before Trigger #1.</p>
+<ol start="3">
+<li>The famous _xcsbuildd user is here</li>
+</ol>
+<p>Let’s say you did want to do this properly for your dedicated build server and chose to use solution 4. How would you go about doing it? Let me introduce you to the _xcsbuildd user.</p>
+<p>In Under the Hood of Xcode Server I mentioned that Xcode Server runs many daemons on your machine plus an extra user called _xcsbuildd which does all the building. Don’t believe me? Run users in your Terminal right now and you should see yourself and the _xcsbuildd user being logged in. It’s there, ready for your Bots.</p>
+<p>Since _xcsbuildd is a completely separate user, it doesn’t share state with your user, specifically your home folder (/Users/honzadvorsky in my case). Instead, _xcsbuildd‘s home folder is at /var/_xcsbuildd. The reason why this is important is because many tools, Ruby Gems and CocoaPods being one of them, rely on your home folder having some of their data set up (if you don’t install gems globally).</p>
+<p>3.1 Logging in as _xcsbuildd</p>
+<p>In order to make these tools available to our build user, we need to log in as the _xcsbuildd user now. Macs, being Unix-based machines, have preinstalled tools called su and sudo to switch users and gain root permissions. Since we don’t know _xcsbuildd‘s password, we’ll need to use sudo for our login command - which will be su - _xcsbuildd (the dash is so that the whole environment is switched to the new user). Combining these, to log in as _xcsbuildd, we need to run</p>
+<p>$ sudo su - _xcsbuildd<br>su: /bin/false: No such file or directory<br>Doesn’t work. Turns out that _xcsbuildd doesn’t have a shell set up (a way to have an interactive login session), currently it has it set as /bin/false, which is just a glorified way of saying nope. Let’s set a shell for our friend then! We’ll use another preinstalled tool called dscl.</p>
+<p>$ sudo dscl localhost -change /Local/Default/Users/_xcsbuildd UserShell /bin/false /bin/bash<br>Don’t feel intimidated - you only need to run this once to be forever able to login as _xcsbuildd. What we’re saying here is:</p>
+<p>“Hey directory service, on this computer, please change the shell of the user _xcsbuildd from /bin/false to /bin/bash.”</p>
+<p>If it prints nothing, that’s a good sign. (There is also a way to change the shell in OS X Server. See this Tweet, where in OS X Server -&gt; Users you can show System Accounts, right click on _xcsbuildd and change the shell in Advanced Options. Thanks, @pm_kowal!)</p>
+<p>Let’s try to log in as _xcsbuildd again…</p>
+<p>$ sudo su - _xcsbuildd<br>honza-dvorskys-mbpr-14:~ _xcsbuildd$<br>Success! 🎉 Let’s verify that we did the right thing by running</p>
+<p>$ whoami<br>_xcsbuildd<br>$ pwd ~<br>/var/_xcsbuildd<br>Perfect. We’re now logged in as _xcsbuildd whose home directory is /var/_xcsbuildd!</p>
+<ol start="4">
+<li>Private CocoaPod</li>
+</ol>
+<p>Now, I usually use this newly-found power to show people how to add SSH keys to the _xcsbuildd user. The reason why that’s necessary is that many people have their own private CocoaPods saved in a private git repository. I had to solve this problem at work and that’s how I first encountered this issue.</p>
+<p>💭 You might say, slow down, didn’t we already tell Xcode Server how to access our private git repositories by telling it our SSH keys when setting up our first Bot? We did indeed, however that information was only sent over HTTPS in a format called scm blueprint, which Xcode Server only uses to check out our repository (see XcodeServerSDK and what information is sent over when creating a Bot). These SSH keys are sent over just for this purpose, but they aren’t added as standard SSH keys to the _xcsbuildd user, meaning they are not available in our scripts, unfortunately.</p>
+<p>If you now add a private CocoaPods spec repository to your Podfile and try to integrate, the script will fail with something like</p>
+<p>Cloning into ‘MySuperSecretPodspecRepository’…<br>Host key verification failed.<br>fatal: Could not read from remote repository.</p>
+<p>Please make sure you have the correct access rights<br>and the repository exists.<br>4.1 Adding SSH keys</p>
+<p>Fair enough. You have two options now:</p>
+<p>Reuse existing keys</p>
+<p>You can copy your existing SSH keys to /var/_xcsbuildd/.ssh and change their ownership. You’d run:</p>
+<p>$ sudo -s<br>$ mkdir /var/_xcsbuildd/.ssh<br>$ cp /Users/honzadvorsky/.ssh/id_rsa /var/_xcsbuildd/.ssh/<br>$ cp /Users/honzadvorsky/.ssh/id_rsa.pub /var/_xcsbuildd/.ssh/<br>$ cp /Users/honzadvorsky/.ssh/known_hosts /var/_xcsbuildd/.ssh/<br>$ chown _xcsbuildd:_xcs /var/_xcsbuildd/.ssh/id_rsa<br>$ chown _xcsbuildd:_xcs /var/_xcsbuildd/.ssh/id_rsa.pub<br>$ chown _xcsbuildd:_xcs /var/_xcsbuildd/.ssh/known_hosts<br>$ exit<br>We use sudo -s to start a root session so that we don’t have to prepend every subsequent command with sudo. With chown we make sure the new copy of our keys belongs to the _xcsbuildd user so that it can access them. We also need to copy the known_hosts file to not be asked about trusting new servers again.</p>
+<p>This solution works fine, but for increased security, it’s probably better practice to create separate SSH keys for each user.</p>
+<p>Generate new keys</p>
+<p>Let’s start by using our new skill: log in as _xcsbuildd. Try to remember how to do it, but you can always look it up above if you get stuck.</p>
+<p>$ whoami # make sure we’re _xcsbuildd<br>$ ssh-keygen -t rsa<br>I usually don’t change the defaults, so I just hit return three times and get a confirmation that my new keys have been successfully created.</p>
+<p>…<br>Your identification has been saved in /var/_xcsbuildd/.ssh/id_rsa.<br>Your public key has been saved in /var/_xcsbuildd/.ssh/id_rsa.pub.<br>…<br>$ exit # switch back to your user<br>Once you’ve switched back to your user, there’s a quick way to copy the new public key</p>
+<p>sudo cat /var/_xcsbuildd/.ssh/id_rsa.pub | pbcopy<br>pbcopy is another preinstalled tool, which pipes its input into the clipboard. Super handy!</p>
+<p>Now we just need to add our new public key to e.g. GitHub in Settings -&gt; SSK keys -&gt; Add SSH key. Make sure to name it appropriately so that you remember it’s the _xcsbuildd‘s public key. (The example screenshot below is from GitHub, but add your new public key to whatever git hosting service you’re using.)</p>
+<p>4.2 Confirming known_hosts</p>
+<p>If you try to re-run your Integration now, you’ll see that the script is still failing with</p>
+<p>Cloning spec repo <code>czechboy0</code> from <code>git@github.com:czechboy0/MySuperSecretPodspecRepository.git</code><br>[!] Unable to add a source with url <code>git@github.com:czechboy0/MySuperSecretPodspecRepository.git</code> named <code>czechboy0</code>.<br>No worries - the SSH keys are all good, unfortunately we still need to confirm that _xcsbuildd trusts the (in my case) GitHub server. Let’s do that now! Log in as _xcsbuildd again and run:</p>
+<p>$ ssh -T <a href="mailto:&#103;&#105;&#116;&#64;&#x67;&#x69;&#x74;&#x68;&#x75;&#x62;&#x2e;&#x63;&#x6f;&#x6d;">&#103;&#105;&#116;&#64;&#x67;&#x69;&#x74;&#x68;&#x75;&#x62;&#x2e;&#x63;&#x6f;&#x6d;</a> # substitute with your podspec git repo’s server<br>The authenticity of host ‘github.com (192.30.252.131)’ can’t be established.<br>RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.<br>Are you sure you want to continue connecting (yes/no)?<br>$ yes<br>Warning: Permanently added ‘github.com,192.30.252.131’ (RSA) to the list of known hosts.<br>Hi czechboy0! You’ve successfully authenticated, but GitHub does not provide shell access.<br>Cool! Let’s run it again just to confirm…</p>
+<p>$ ssh -T <a href="mailto:&#x67;&#105;&#x74;&#64;&#x67;&#105;&#116;&#x68;&#117;&#98;&#x2e;&#99;&#111;&#109;">&#x67;&#105;&#x74;&#64;&#x67;&#105;&#116;&#x68;&#117;&#98;&#x2e;&#99;&#111;&#109;</a><br>Hi czechboy0! You’ve successfully authenticated, but GitHub does not provide shell access.<br>Perfect. Now re-Integrate again and your private Pod should get installed correctly! 🎆</p>
+<ol start="5">
+<li>Postbuild script: run fastlane</li>
+</ol>
+<p>Cool, so we got our prebuild script working all the way! Apologies for the length of the previous section, but I know how many people struggle with setting private Pods correctly, so I wanted to settle this once and for all. ☺️</p>
+<p>Now, for our postbuild script, let’s say we want to get a message on Slack and the computer to speak to us when our build finishes. fastlane is a powerful tool for running all sorts of actions, but I wanted to pick something simple for now. Obviously, you can add any action to your Fastfile that you want! (like uploading to Crashlytics Beta/HockeyApp/TestFlight etc) (By the way, you could also migrate our prebuild script to fastlane by using the install_cocoapods action).</p>
+<p>We could go use our trial-and-error approach from before, but this time we already know what we need to do. 😎 I’ll assume you’ve installed fastlane (sudo gem install fastlane), so we need to make sure fastlane is runnable from our postbuild script. Again, if you’re using non-system Ruby, you’ll need to create a symlink first by running</p>
+<p>sudo ln -s /usr/local/bin/fastlane /usr/bin/fastlane<br>Next, we’ll add a simple Fastfile with the slack and say actions. I’ve done that for you, so please switch your local branch with git checkout step4 and your Bot’s branch to step4 (like we did above from Xcode).</p>
+<p>And this time let’s add a postbuild script, instead of prebuild. It should say</p>
+<p>cd XCSTutorialProject1<br>fastlane postbuild<br>That’s it! We just tell fastlane to run our lane called “postbuild”, which will perform the above actions for us. Neat! Re-integrate your Bot to hear you computer speak to you 👾</p>
+<ol start="6">
+<li>Environment variables in scripts</li>
+</ol>
+<p>Xcode Server also gives you a couple of useful environment variables, so that you can make the right decisions in your scripts. You get metadata about the Integration and the Bot, result of the Integration, assets folder and logs locations on disk and more. See most of the XCS variables below (there are missing ones that show up when you create an archive, for example.) If you’re ever curious, just add the command set to your script and it will dump all the environment variables just like this.</p>
+<p>XCS=1<br>XCS_ANALYZER_WARNING_CHANGE=0<br>XCS_ANALYZER_WARNING_COUNT=0<br>XCS_ARCHIVE<br>XCS_BOT_ID=b8dc7112eda9d6a111f67a04ce046bf7<br>XCS_BOT_NAME=’My First Bot’<br>XCS_BOT_TINY_ID=0F536B6<br>XCS_DERIVED_DATA_DIR=/Library/Developer/XcodeServer/Integrations/Caches/b8dc7112eda9d6a111f67a04ce046bf7/DerivedData<br>XCS_ERROR_CHANGE=-9<br>XCS_ERROR_COUNT=1<br>XCS_INTEGRATION_ID=b8dc7112eda9d6a111f67a04ce07b055<br>XCS_INTEGRATION_NUMBER=15<br>XCS_INTEGRATION_RESULT=trigger-error<br>XCS_INTEGRATION_TINY_ID=B905C2D<br>XCS_OUTPUT_DIR=/Library/Developer/XcodeServer/Integrations/Integration-b8dc7112eda9d6a111f67a04ce07b055<br>XCS_PRODUCT<br>XCS_SOURCE_DIR=/Library/Developer/XcodeServer/Integrations/Caches/b8dc7112eda9d6a111f67a04ce046bf7/Source<br>XCS_TESTS_CHANGE=-2<br>XCS_TESTS_COUNT=0<br>XCS_TEST_FAILURE_CHANGE=0<br>XCS_TEST_FAILURE_COUNT=0<br>XCS_WARNING_CHANGE=0<br>XCS_WARNING_COUNT=0<br>XCS_XCODEBUILD_LOG=/Library/Developer/XcodeServer/Integrations/Integration-b8dc7112eda9d6a111f67a04ce07b055/xcodebuild.log<br>Okay, this is all for today! Great job, you! 👏 This was a bit more technical Tutorial, because it was all about scripts. We learned all about adding CocoaPods and fastlane to our project, we got to meet the mighty _xcsbuildd user for whom we added SSH keys, we encountered and together fixed many issues and at the end, we found the environment variables we get in our scripts for free. I hope I answered all your questions about running scripts on Xcode Server. But if I didn’t, please ping me and I might write a short Hack article about anything I’ve missed.</p>
+<p>Even though we’ve covered a lot in parts 1 to 3, there’s still a big elephant in the room. And that elephant can’t move because no valid signing identity was found. Yes, next tutorial will be all about code signing on Xcode Server. 📝 How to manage certificates and provisioning profiles to make Xcode Server create archives, test on connected iOS devices and even enable you to install your app on your iPhone just over Wi-Fi. If this sounds at all like something you’d like to be able to do, stay tuned for the next Xcode Server Tutorial! 🚀</p>
+<p>I hope you found this useful or interesting. For criticism, praise and future articles, I’m @czechboy0 on Twitter.</p>
+<p>« Part 2: IntegrationsPart 4: Certificates &amp; Provisioning Profiles »<br>All Xcode Server Tutorials &amp; Hacks<br>« Full blog<br>© 2016 honza dvorsky — powered by Wintersmith</p>
+
+  </article>
+  <!-- tag -->
+  <div class="mt-12 pt-6 border-t border-gray-200">
+    
+      
+        <span class="bg-gray-100 dark:bg-gray-700 px-2 py-1 m-1 text-sm rounded-md transition-colors hover:bg-gray-200">
+          <a href="/tags/Xcode-Server/">Xcode Server</a>
+        </span>
+      
+    
+  </div>
+  <!-- prev and next -->
+  <div class="flex justify-between mt-12 pt-6 border-t border-gray-200">
+    <div>
+      
+        <a href="/post/Xcode-Server-%E6%95%99%E7%A8%8B4-%E8%AF%81%E4%B9%A6%E5%92%8C%E6%8F%8F%E8%BF%B0%E6%96%87%E4%BB%B6.html" class="text-sm text-gray-400 hover:text-gray-500 flex justify-center">
+          <iconify-icon width="20" icon="ri:arrow-left-s-line" data-inline="false"></iconify-icon>
+          Xcode Server 教程4: 证书和描述文件
+        </a>
+      
+    </div>
+    <div>
+      
+        <a href="/post/Xcode-Server-%E6%95%99%E7%A8%8B2-%E9%9B%86%E6%88%90.html" class="text-sm text-gray-400 hover:text-gray-500 flex justify-center">
+          Xcode Server 教程2: 集成
+          <iconify-icon width="20" icon="ri:arrow-right-s-line" data-inline="false"></iconify-icon>
+        </a>
+      
+    </div>
+  </div>
+  <!-- comment -->
+  <div class="article-comments mt-12">
+    
+
+  </div>
+</section>
+<!-- js inspect -->
+
+<script src="/lib/clipboard.min.js"></script>
+
+
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    "HTML-CSS": {
+        preferredFont: "TeX",
+        availableFonts: ["STIX","TeX"],
+        linebreaks: { automatic:true },
+        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+        inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
+        processEscapes: true,
+        ignoreClass: "tex2jax_ignore|dno",
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+        equationNumbers: { autoNumber: "AMS" },
+        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+        Macros: { href: "{}" }
+    },
+    messageStyle: "none"
+  });
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<script>
+  $(document).ready(() => {
+    const maraidConfig = {
+      theme: "default",
+      logLevel: 3,
+      flowchart: { curve: "linear" },
+      gantt: { axisFormat: "%m/%d/%Y" },
+      sequence: { actorMargin: 50 },
+    };
+    mermaid.initialize(maraidConfig);
+  });
+</script>
+
+
+
+<script src="/lib/fancybox/fancybox.umd.min.js"></script>
+
+<script>
+  $(document).ready(() => {
+    $('.post-content').each(function(i){
+      $(this).find('img').each(function(){
+        if ($(this).parent().hasClass('fancybox') || $(this).parent().is('a')) return;
+        var alt = this.alt;
+        if (alt) $(this).after('<span class="fancybox-alt">' + alt + '</span>');
+        $(this).wrap('<a class="fancybox-img" href="' + this.src + '" data-fancybox=\"gallery\" data-caption="' + alt + '"></a>')
+      });
+      $(this).find('.fancybox').each(function(){
+        $(this).attr('rel', 'article' + i);
+      });
+    });
+
+    Fancybox.bind('[data-fancybox="gallery"]', {
+        // options
+    })
+  })
+</script>
+
+<!-- tocbot begin -->
+
+<script src="/lib/tocbot/tocbot.min.js"></script>
+
+<script>
+  $(document).ready(() => {
+      tocbot.init({
+        // Where to render the table of contents.
+        tocSelector: '.post-toc',
+        // Where to grab the headings to build the table of contents.
+        contentSelector: '.post-content',
+        // Which headings to grab inside of the contentSelector element.
+        headingSelector: 'h1, h2, h3',
+        // For headings inside relative or absolute positioned containers within content.
+        hasInnerContainers: true,
+    });
+  })
+</script>
+<!-- tocbot end -->
+
+
+  </main>
+  <footer class="flex flex-col h-40 items-center justify-center text-gray-400 text-sm">
+  <!-- busuanzi -->
+  
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!-- Busuanzi Analytics -->
+<div class="flex items-center gap-2">
+  <span>Visitors</span>
+  <span id="busuanzi_value_site_uv"></span>
+  <span>Page Views</span>
+  <span id="busuanzi_value_site_pv"></span>
+</div>
+<!-- End Busuanzi Analytics -->
+
+
+  <!-- copyright -->
+  <div class="flex items-center gap-2">
+    <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" style="color: inherit;">CC BY-NC-SA 4.0</a>
+    <span>© 2022</span>
+    <iconify-icon width="18" icon="emojione-monotone:maple-leaf" ></iconify-icon>
+    <a href="https://github.com/xbmlz" target="_blank" rel="noopener noreferrer">xbmlz</a>
+  </div>
+  <!-- powered by -->
+  <div class="flex items-center gap-2">
+    <span>Powered by</span>
+    <a href="https://hexo.io/" target="_blank" rel="noopener noreferrer">Hexo</a>
+    <span>&</span>
+    <a href="https://github.com/xbmlz/hexo-theme-maple" target="_blank" rel="noopener noreferrer">Maple</a>
+  </div>
+
+</footer>
+
+  <div class="back-to-top box-border fixed right-6 z-1024 -bottom-20 rounded py-1 px-1 bg-slate-900 opacity-60 text-white cursor-pointer text-center dark:bg-slate-600">
+    <span class="flex justify-center items-center text-sm">
+      <iconify-icon width="18" icon="ion:arrow-up-c" id="go-top"></iconify-icon>
+      <span id="scrollpercent"><span>0</span> %</span>
+    </span>
+  </div>
+  
+<script src="/js/main.js"></script>
+
+
+  <script>
+    $(document).ready(function () {
+      const mapleCount = "10";
+      const speed = "0.5";
+      const mapleEl = document.getElementById("maple");
+      const maples = Array.from({ length: mapleCount }).map(() => {
+        const maple = document.createElement("div");
+        const scale = Math.random() * 0.5 + 0.5;
+        const offset = Math.random() * 2 - 1;
+        const x = Math.random() * mapleEl.clientWidth;
+        const y = -Math.random() * mapleEl.clientHeight;
+        const duration = 10 / speed;
+        const delay = -duration;
+        maple.className = "maple";
+        maple.style.width = `${24 * scale}px`;
+        maple.style.height = `${24 * scale}px`;
+        maple.style.left = `${x}px`;
+        maple.style.top = `${y}px`;
+        maple.style.setProperty("--maple-fall-offset", offset);
+        maple.style.setProperty("--maple-fall-height", `${Math.abs(y) + mapleEl.clientHeight}px`);
+        maple.style.animation = `fall ${duration}s linear infinite`;
+        maple.style.animationDelay = `${delay}s`;
+        mapleEl.appendChild(maple)
+        return maple
+      })
+    });
+  </script>
+  
+
+
+  <div class="fixed top-0 bottom-0 left-0 right-0 pointer-events-none print:hidden" id="maple"></div>
+</body>
+
+</html>

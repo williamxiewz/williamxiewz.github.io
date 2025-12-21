@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <meta name="author" content="William Xie">
+
+
+  <meta name="subtitle" content="Walk steps step by step">
+
+
+
+
+<title>归档 | William&#39;s Blog</title>
+
+
+
+<link rel="icon" href="/favicon.png">
+
+
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/nprogress/nprogress.css">
+
+
+
+<script src="/lib/jquery.min.js"></script>
+
+
+<script src="/lib/iconify-icon.min.js"></script>
+
+
+<script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+<script>
+  tailwind.config = {
+    darkMode: "class",
+  };
+</script>
+
+
+<script src="/lib/nprogress/nprogress.js"></script>
+
+<script>
+  $(document).ready(() => {
+    NProgress.configure({
+      showSpinner: false,
+    });
+    NProgress.start();
+    $("#nprogress .bar").css({
+      background: "#de7441",
+    });
+    $("#nprogress .peg").css({
+      "box-shadow": "0 0 2px #de7441, 0 0 4px #de7441",
+    });
+    $("#nprogress .spinner-icon").css({
+      "border-top-color": "#de7441",
+      "border-left-color": "#de7441",
+    });
+    setTimeout(function () {
+      NProgress.done();
+      $(".fade").removeClass("out");
+    }, 800);
+  });
+</script>
+
+<script>
+  (function () {
+    const prefersDark =
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const setting = localStorage.getItem("hexo-color-scheme") || "auto";
+    if (setting === "dark" || (prefersDark && setting !== "light"))
+      document.documentElement.classList.toggle("dark", true);
+    let isDark = document.documentElement.classList.contains("dark");
+  })();
+
+  $(document).ready(function () {
+    // init icon
+    const prefersDark =
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const isDark = document.documentElement.classList.contains("dark");
+    $("#theme-icon").attr("icon", isDark ? "ri:moon-line" : "ri:sun-line");
+
+    function toggleGiscusTheme() {
+      const isDark = document.documentElement.classList.contains("dark");
+      const giscusFrame = document.querySelector("iframe.giscus-frame");
+      if (giscusFrame) {
+        giscusFrame.contentWindow.postMessage(
+          {
+            giscus: {
+              setConfig: {
+                theme: isDark ? "dark" : "light",
+              },
+            },
+          },
+          "https://giscus.app"
+        );
+      }
+    }
+
+    // toggle dark mode
+    function toggleDark() {
+      let isDark = document.documentElement.classList.contains("dark");
+      const setting = localStorage.getItem("hexo-color-scheme") || "auto";
+      isDark = !isDark;
+      document.documentElement.classList.toggle("dark", isDark);
+      $("#theme-icon").attr("icon", isDark ? "ri:moon-line" : "ri:sun-line");
+      if (prefersDark === isDark) {
+        localStorage.setItem("hexo-color-scheme", "auto");
+      } else {
+        localStorage.setItem("hexo-color-scheme", isDark ? "dark" : "light");
+      }
+      toggleGiscusTheme();
+    }
+
+    // listen dark mode change
+    window
+      .matchMedia("(prefers-color-scheme: dark)")
+      .addEventListener("change", (e) => {
+        const setting = localStorage.getItem("hexo-color-scheme") || "auto";
+        if (setting === "auto") {
+          document.documentElement.classList.toggle("dark", e.matches);
+          $("#theme-icon").attr(
+            "icon",
+            e.matches ? "ri:moon-line" : "ri:sun-line"
+          );
+          toggleGiscusTheme();
+        }
+      });
+
+    $("#toggle-dark").click((event) => {
+      const isAppearanceTransition = document.startViewTransition && !window.matchMedia('(prefers-reduced-motion: reduce)').matches
+      if (!isAppearanceTransition) {
+        toggleDark()
+        return
+      }
+      const x = event.clientX
+      const y = event.clientY
+      const endRadius = Math.hypot(
+        Math.max(x, innerWidth - x),
+        Math.max(y, innerHeight - y),
+      )
+      const transition = document.startViewTransition(async () => {
+        toggleDark()
+      })
+
+      transition.ready
+        .then(() => {
+          const isDark = document.documentElement.classList.contains("dark")
+          const clipPath = [
+            `circle(0px at ${x}px ${y}px)`,
+            `circle(${endRadius}px at ${x}px ${y}px)`,
+          ]
+          document.documentElement.animate(
+            {
+              clipPath: isDark
+                ? [...clipPath].reverse()
+                : clipPath,
+            },
+            {
+              duration: 400,
+              easing: 'ease-out',
+              pseudoElement: isDark
+                ? '::view-transition-old(root)'
+                : '::view-transition-new(root)',
+            },
+          )
+        })
+    });
+  });
+</script>
+
+
+
+
+<meta name="generator" content="Hexo 5.4.2"></head>
+<body class="font-sans bg-white dark:bg-zinc-900 text-gray-700 dark:text-gray-200 relative">
+  <header class="fixed w-full px-5 py-1 z-10 backdrop-blur-xl backdrop-saturate-150 border-b border-black/5">
+  <div class="max-auto">
+    <nav class="flex items-center text-base">
+      <a href="/" class="group">
+        <h2 class="font-medium tracking-tighterp text-l p-2">
+          <img class="w-5 mr-2 inline-block transition-transform group-hover:rotate-[30deg]" id="logo" src="/images/logo.svg" alt="William's Blog" />
+          William&#39;s Blog
+        </h2>
+      </a>
+      <div id="header-title" class="opacity-0 md:ml-2 md:mt-[0.1rem] text-xs font-medium whitespace-nowrap overflow-hidden overflow-ellipsis">
+        
+      </div>
+      <div class="flex-1"></div>
+      <div class="flex items-center gap-3">
+        
+          <a class="hidden sm:flex" href="/archives">Posts</a>
+        
+        
+          
+            <a class="w-5 h-5 hidden sm:flex" title="Github" target="_blank" rel="noopener" href="https://github.com/xbmlz">
+              <iconify-icon width="20" icon="ri:github-line"></iconify-icon>
+            </a>
+          
+        
+        <a class="w-5 h-5 hidden sm:flex" title="Github" href="rss2.xml">
+          <iconify-icon width="20" icon="ri:rss-line"></iconify-icon>
+        </a>
+        <a class="w-5 h-5" title="toggle theme" id="toggle-dark">
+          <iconify-icon width="20" icon="" id="theme-icon"></iconify-icon>
+        </a>
+      </div>
+      <div class="flex items-center justify-center gap-3 ml-3 sm:hidden">
+        <span class="w-5 h-5" aria-hidden="true" role="img" id="open-menu">
+          <iconify-icon width="20" icon="carbon:menu" ></iconify-icon>
+        </span>
+        <span class="w-5 h-5 hidden" aria-hidden="true" role="img" id="close-menu">
+          <iconify-icon  width="20" icon="carbon:close" ></iconify-icon>
+        </span>
+      </div>
+    </nav>
+  </div>
+</header>
+<div id="menu-panel" class="h-0 overflow-hidden sm:hidden fixed left-0 right-0 top-12 bottom-0 z-10">
+  <div id="menu-content" class="relative z-20 bg-white/80 px-6 sm:px-8 py-2 backdrop-blur-xl -translate-y-full transition-transform duration-300">
+    <ul class="nav flex flex-col sm:flex-row text-sm font-medium">
+      
+        <li class="nav-portfolio sm:mx-2 border-b sm:border-0 border-black/5 last:border-0 hover:text-main">
+          <a href="/archives" class="flex h-12 sm:h-auto items-center">Posts</a>
+        </li>
+      
+    </ul>
+  </div>
+  <div class="mask bg-black/20 absolute inset-0"></div>
+</div>
+
+  <main class="pt-14">
+    <section class="px-6 max-w-prose mx-auto gap-12 grid grid-cols-1">
+  <div class="flex flex-col h-48 items-center justify-center">
+    
+      <h1 class="site-title text-4xl leading-relaxed">
+        William&#39;s Blog
+      </h1>
+      <p class="text-gray-500 mt-2">
+        Walk steps step by step
+      </p>
+    
+  </div>
+  
+  
+    
+    
+      <div class="relative pointer-events-none">
+        <span class="text-9xl opacity-10 absolute -left-11 -top-6 font-bold">2016</span>
+      </div>
+    
+    <a style="--stagger:0" href="/post/iOS-%E4%BD%BF%E7%94%A8TestFlight%E8%BF%9B%E8%A1%8CApp-Beta%E7%89%88%E6%B5%8B%E8%AF%95.html" data-animate>
+      <header>
+        <h2 class="font-bold text-xl">
+          iOS使用TestFlight进行App Beta版测试
+        </h2>
+      </header>
+      <section class="text-gray-400 my-2 text-sm time">
+        <p class="line-clamp-4">
+          
+            <div class="py-2">
+              <p>在2014WWDC中库克用了20秒的时间，简短的3句话，介绍了测试版本的TestFlight服务。TestFlight用于将Beta版测试，TestFlight已经被苹果收购，所以不要担心存在第三方测试造成数据泄露问题。TestFlight需要iOS8及以上版本的iOS设备才能运行，所以iOS7及之前的设备就不能安装了。TestFlight整合进了iTunes Connect，开发者可以通过电子邮件来邀请测试员来进行测试，这样开发者就可以更简单地让你的同行非同行、你的上级、你的客户、你所想要一起参与测试的人一起来测试应用。</p>
+<p>TestFlight的测试方式分为两种：</p>
+<ul>
+<li>内部测试</li>
+<li>外部测试</li>
+</ul>
+<p>从功能上讲，这两种方式都可以为测试人员在测试阶段对你的App进行测试。但是既然分了内部测试和外部测试，他们肯定还是有区别的，所谓的内部主要是指iTunes Connect上在你的开发团队里参与技术开发或者管理的成员。最多可以邀请25个内部成员，而与之相对的外部测试，指的是那些不属于你的团队或者公司的测试者，外部测试人员的上限是2000人。这里有一点需要注意的是，在你邀请外部成员参与测试之前，需要先通过苹果的审核，一般审核会在一天左右。而这一限制在内部成员上就没有，也就是说只要你把你的App上传到iTunes Connect上之后内部成员就可以开始进行内部测试了，无需审核。在邀请发出后，有效测试时间为60天。</p>
+            </div>
+          
+        </p>
+        <p class="line-clamp-4">
+          8月 13
+          ·
+          7 min
+        </p>
+      </section>
+    </a>
+  
+    
+    
+    <a style="--stagger:1" href="/post/Apple-Pay%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B.html" data-animate>
+      <header>
+        <h2 class="font-bold text-xl">
+          Apple Pay编程开发详细教程
+        </h2>
+      </header>
+      <section class="text-gray-400 my-2 text-sm time">
+        <p class="line-clamp-4">
+          
+            <div class="py-2">
+              <p>#Apple Pay简介</p>
+<p>##什么是Apple Pay<br>Apple Pay，简单来说, 就是一种移动支付方式。通过Touch ID/ Passcode，用户可使用存储在iPhone 6, 6p等设备上的信用卡和借记卡支付证书来授权支付；</p>
+<p>它是苹果公司在2014苹果秋季新品发布会上发布的一种基于NFC的手机支付功能，于2014年10月20日在美国正式上线，2016年2月18日凌晨5：00， Apple Pay 业务在中国上线。</p>
+<p>Apple Pay 是在 iOS 8 中第一次被介绍，它可以为你的应用中的实体商品和服务，提供简单、安全、私密的支付方式。它使得用户支付起来非常简便，只需按一下指纹就可以授权进行交易。</p>
+            </div>
+          
+        </p>
+        <p class="line-clamp-4">
+          8月 12
+          ·
+          18 min
+        </p>
+      </section>
+    </a>
+  
+    
+    
+    <a style="--stagger:2" href="/post/%E7%BF%BB%E8%AF%91-Apple-Pay%E7%BC%96%E7%A8%8B%E6%8C%87%E5%8D%97.html" data-animate>
+      <header>
+        <h2 class="font-bold text-xl">
+          翻译: Apple Pay编程指南
+        </h2>
+      </header>
+      <section class="text-gray-400 my-2 text-sm time">
+        <p class="line-clamp-4">
+          
+            <div class="py-2">
+              <p>#关于Apple Pay</p>
+<p>ApplePay是一种移动支付技术，它能够让用户以一种便捷安全的方式为现实世界中购买的商品和服务付款。</p>
+<p>关于相关App里的数字商品和服务，请参考<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/StoreKitGuide/Introduction.html#//apple_ref/doc/uid/TP40008267">In-App Purchase Programming Guide</a>.</p>
+<p><img src="https://developer.apple.com/library/ios/ApplePay_Guide/Art/payment_intro_2x.png"></p>
+            </div>
+          
+        </p>
+        <p class="line-clamp-4">
+          8月 10
+          ·
+          20 min
+        </p>
+      </section>
+    </a>
+  
+    
+    
+    <a style="--stagger:3" href="/post/Wallet%E5%BC%80%E5%8F%91.html" data-animate>
+      <header>
+        <h2 class="font-bold text-xl">
+          Wallet 开发
+        </h2>
+      </header>
+      <section class="text-gray-400 my-2 text-sm time">
+        <p class="line-clamp-4">
+          
+            <div class="py-2">
+              <p>2012年WWDC上iOS6发布了一个全新的应用–Passbook，管理电子票券，包括登机牌，电影票，优惠卡，购物卡等。<br>2015年苹果全球开发者大会(WWDC 2015)在美国旧金山正式开幕本届主题为“the epicenter of change.（变革的中心）”。<br>苹果在会上宣布其iOS系统自带应用Passbook改名为Wallet，其改名和应用升级也是为了配合Apple Pay的一些功能，此时Wallet除了支持原本的电子票券，还支持信用卡，借记卡，即Apple Pay。 </p>
+            </div>
+          
+        </p>
+        <p class="line-clamp-4">
+          8月 10
+          ·
+          1 min
+        </p>
+      </section>
+    </a>
+  
+    
+    
+    <a style="--stagger:4" href="/post/iBeacon-%E5%BE%AE%E5%AE%9A%E4%BD%8D%E6%8A%80%E6%9C%AF.html" data-animate>
+      <header>
+        <h2 class="font-bold text-xl">
+          iBeacon 微定位技术
+        </h2>
+      </header>
+      <section class="text-gray-400 my-2 text-sm time">
+        <p class="line-clamp-4">
+          
+            <div class="py-2">
+              <p>在一家大型商场,医院或是大楼里,你是否会曾经有过找不到想要去的地方的经历呢?<br>这种情况下采用上面介绍的传统定位方式,就有些”力不从心”了,首先不能采用GPS定位,而WiFi 和蜂窝式移动电话基站定位误差比较大,这种情况下的定位就是 “微定位”技术了</p>
+<p>#地理围栏</p>
+<p>微定位技术中一个比较重要的概念—地理围栏. 地理围栏(Geo-fencing)是LBS的一种新应用,就是用一个虚拟的栅栏围出一个虚拟地理边界. 当手机进入,离开某个特定地理区域,或在该区域活动时,手机可以可以接受自动通知和警告.有了地理围栏技术,位置社交网站就可以帮助用户进入某一个地区时自动登记.</p>
+<p>地理围栏可以采用传统定位或微定位实现,当然微定位更加有现实意义,建立地理围栏技术往往是处于电子商务,店内导航和设计活动等目的. 定位环境比较复杂,定位要求比较精确.</p>
+            </div>
+          
+        </p>
+        <p class="line-clamp-4">
+          8月 10
+          ·
+          7 min
+        </p>
+      </section>
+    </a>
+  
+    
+    
+    <a style="--stagger:5" href="/post/Multipeer-connectivity-%E5%AF%B9%E7%AD%89%E7%BB%93%E6%9E%84%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B.html" data-animate>
+      <header>
+        <h2 class="font-bold text-xl">
+          Multipeer connectivity 对等结构网络编程
+        </h2>
+      </header>
+      <section class="text-gray-400 my-2 text-sm time">
+        <p class="line-clamp-4">
+          
+            <div class="py-2">
+              <p>#对等结构网络 </p>
+<p>对等结构网络是苹果的<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/zh-cn/%E7%84%A1%E7%B7%9A%E9%9A%A8%E6%84%8F%E7%B6%B2%E8%B7%AF">Ad Hoc</a>网络的一种,是在小空间里构建无限网络的解决方案。苹果公司的GameKit或Multipeer Connectivity(多点连接）框架中提供了开发这种网络的APi.</p>
+<p>在iOS7中，引入了一个全新的框架——Multipeer Connectivity(多点连接)。利用Multipeer Connectivity框架，即使在没有连接到WiFi（WLAN）或移动网络（xG）的情况下，距离较近的Apple设备（iMac/iPad/iPhone）之间可基于蓝牙和WiFi（P2P WiFi）技术进行发现和连接实现近场通信。</p>
+            </div>
+          
+        </p>
+        <p class="line-clamp-4">
+          8月 10
+          ·
+          6 min
+        </p>
+      </section>
+    </a>
+  
+    
+    
+    <a style="--stagger:6" href="/post/Bonjour%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B.html" data-animate>
+      <header>
+        <h2 class="font-bold text-xl">
+          Bonjour网络编程
+        </h2>
+      </header>
+      <section class="text-gray-400 my-2 text-sm time">
+        <p class="line-clamp-4">
+          
+            <div class="py-2">
+              <p>#Bonjour 介绍<br>Bonjour(法语”你好’’的意思),它可以使应用不必指定眼务器端口和IP地址就可以以动态发现。 </p>
+<p>发现眼务是通过特定命名搜索服务的.例如”tony. _tonyipp. _tcp.local”这样的命名，发 现服务命名格式如下：<br> &lt;服务名&gt;.<em>〈服务类&gt;.</em>&lt;传输协议名&gt;.&lt;域名&gt; </p>
+<p>tony为服务名,服务名是一个描述性的名字。tonyipp是服务类.可以由开发人员自己命名，也可使用已经注册的服务类型名，例如ipp是打印服务。目前已经注册的服务类型名有400多种，可以在<a target="_blank" rel="noopener" href="http://www/">http://www</a>. dns-sd.org/ServiceTypes.html的网址查看。tcp是传输协议，local是本地域名。 </p>
+<p>苹果提供的Bonour编程比较简单，主要是两个类：NSNetServce和NSNetSeowser,以及它们的委托协议NSNetServiceDelegate和NSNetServiceBrowserDelegate。在服务器端需要发布五福,而客户端需要解析服务或查询服务。一旦连接建立起来,捷克语进行通信了,之后的事情和Bonjour无关了。</p>
+            </div>
+          
+        </p>
+        <p class="line-clamp-4">
+          8月 10
+          ·
+          1 min
+        </p>
+      </section>
+    </a>
+  
+    
+    
+    <a style="--stagger:7" href="/post/HomeKit%E7%BC%96%E7%A8%8B%E5%AE%9E%E4%BE%8B.html" data-animate>
+      <header>
+        <h2 class="font-bold text-xl">
+          HomeKit 编程实例
+        </h2>
+      </header>
+      <section class="text-gray-400 my-2 text-sm time">
+        <p class="line-clamp-4">
+          
+            <div class="py-2">
+              <!-- MFI (Made for iPod,Made for iPhone ,and Made for iPad) 认证是指 连接iPod,iPhone,iPad而特别设计的电子配件.并且这些配件已经被苹果公司授权认证,以此来满足苹果产品的性能标准. -->
+
+<p>#HomeKit智能家居平台</p>
+<p>随着物联网技术的发展,构建智能家居的技术越来越成熟,苹果公司制定了HomeKit智能家居平台硬件规格标准,第三方设备制造商将可以为苹果设备推出大量智能家居产品.设备商都必须参加MFI 授权计划,并严格遵守此前公布的硬件规格要求.</p>
+<p>HomeKit 硬件标准涵盖了包括蓝牙低功耗连接,WiFi连接和安全等规格设计,目前HomeKit只能家居设备包括风扇,车库门,电灯,锁,电源插座,数字开关和韩文琦等家用设备.</p>
+<p><img src="https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/HomeKitDeveloperGuide/Art/into_diagram_2x.png"></p>
+            </div>
+          
+        </p>
+        <p class="line-clamp-4">
+          8月 10
+          ·
+          11 min
+        </p>
+      </section>
+    </a>
+  
+    
+    
+    <a style="--stagger:8" href="/post/Handoff-%E7%BC%96%E7%A8%8B%E6%8C%87%E5%8D%97.html" data-animate>
+      <header>
+        <h2 class="font-bold text-xl">
+          Handoff 编程指南
+        </h2>
+      </header>
+      <section class="text-gray-400 my-2 text-sm time">
+        <p class="line-clamp-4">
+          
+            <div class="py-2">
+              <p>本文翻译自Apple官方文档：<a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/Handoff/HandoffFundamentals/HandoffFundamentals.html#//apple_ref/doc/uid/TP40014338-CH3-SW1">Handoff Programming Guide</a></p>
+<p>#关于Handoff</p>
+<p>Handoff是iOS 8 和 OS X v10.10中引入的功能，可以让同一个用户在多台设备间传递项目。</p>
+<p>Handoff能让用户从一台设备开始一个项目，然后切换至其他设备继续进行，这一切都是无缝的，每台设备都无需重新配置。例如，用户正在Mac上的Safari浏览一片长文章，随后他可以切换到附近一台已使用相同Apple ID 登入iCloud的iOS设备上，在这台iOS设备上的Safiri中继续浏览相同的网页，页面滚动的位置和原设备上的一样。</p>
+<p><img src="https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/Handoff/Art/continuation_2x.png"></p>
+            </div>
+          
+        </p>
+        <p class="line-clamp-4">
+          8月 10
+          ·
+          32 min
+        </p>
+      </section>
+    </a>
+  
+    
+    
+    <a style="--stagger:9" href="/post/HomeKit-%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97.html" data-animate>
+      <header>
+        <h2 class="font-bold text-xl">
+          HomeKit 开发指南
+        </h2>
+      </header>
+      <section class="text-gray-400 my-2 text-sm time">
+        <p class="line-clamp-4">
+          
+            <div class="py-2">
+              <p>#第一部分：简介</p>
+<p>该文档旨在帮你编写HomeKit app。HomeKit库是用来沟通和控制家庭自动化配件的，这些家庭自动化配件都支持苹果的HomeKit Accessory Protocol。HomeKit应用程序可让</p>
+<p>用户发现兼容配件并配置它们。用户可以创建一些action来控制智能配件（例如恒温或者光线强弱），对其进行分组，并且可以通过Siri触发。HomeKit 对象被存储在用户iOS设备的数据库中，并且通过iCloud还可以同步到其他iOS设备。HomeKit支持远程访问智能配件，并支持多个用户设备和多个用户。HomeKit 还对用户的安全和隐私做了处理。</p>
+<p><img src="https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/HomeKitDeveloperGuide/Art/into_diagram_2x.png"></p>
+            </div>
+          
+        </p>
+        <p class="line-clamp-4">
+          8月 10
+          ·
+          40 min
+        </p>
+      </section>
+    </a>
+  
+</section>
+
+  </main>
+  <footer class="flex flex-col h-40 items-center justify-center text-gray-400 text-sm">
+  <!-- busuanzi -->
+  
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!-- Busuanzi Analytics -->
+<div class="flex items-center gap-2">
+  <span>Visitors</span>
+  <span id="busuanzi_value_site_uv"></span>
+  <span>Page Views</span>
+  <span id="busuanzi_value_site_pv"></span>
+</div>
+<!-- End Busuanzi Analytics -->
+
+
+  <!-- copyright -->
+  <div class="flex items-center gap-2">
+    <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" style="color: inherit;">CC BY-NC-SA 4.0</a>
+    <span>© 2022</span>
+    <iconify-icon width="18" icon="emojione-monotone:maple-leaf" ></iconify-icon>
+    <a href="https://github.com/xbmlz" target="_blank" rel="noopener noreferrer">xbmlz</a>
+  </div>
+  <!-- powered by -->
+  <div class="flex items-center gap-2">
+    <span>Powered by</span>
+    <a href="https://hexo.io/" target="_blank" rel="noopener noreferrer">Hexo</a>
+    <span>&</span>
+    <a href="https://github.com/xbmlz/hexo-theme-maple" target="_blank" rel="noopener noreferrer">Maple</a>
+  </div>
+
+</footer>
+
+  <div class="back-to-top box-border fixed right-6 z-1024 -bottom-20 rounded py-1 px-1 bg-slate-900 opacity-60 text-white cursor-pointer text-center dark:bg-slate-600">
+    <span class="flex justify-center items-center text-sm">
+      <iconify-icon width="18" icon="ion:arrow-up-c" id="go-top"></iconify-icon>
+      <span id="scrollpercent"><span>0</span> %</span>
+    </span>
+  </div>
+  
+<script src="/js/main.js"></script>
+
+
+  <script>
+    $(document).ready(function () {
+      const mapleCount = "10";
+      const speed = "0.5";
+      const mapleEl = document.getElementById("maple");
+      const maples = Array.from({ length: mapleCount }).map(() => {
+        const maple = document.createElement("div");
+        const scale = Math.random() * 0.5 + 0.5;
+        const offset = Math.random() * 2 - 1;
+        const x = Math.random() * mapleEl.clientWidth;
+        const y = -Math.random() * mapleEl.clientHeight;
+        const duration = 10 / speed;
+        const delay = -duration;
+        maple.className = "maple";
+        maple.style.width = `${24 * scale}px`;
+        maple.style.height = `${24 * scale}px`;
+        maple.style.left = `${x}px`;
+        maple.style.top = `${y}px`;
+        maple.style.setProperty("--maple-fall-offset", offset);
+        maple.style.setProperty("--maple-fall-height", `${Math.abs(y) + mapleEl.clientHeight}px`);
+        maple.style.animation = `fall ${duration}s linear infinite`;
+        maple.style.animationDelay = `${delay}s`;
+        mapleEl.appendChild(maple)
+        return maple
+      })
+    });
+  </script>
+  
+
+
+  <div class="fixed top-0 bottom-0 left-0 right-0 pointer-events-none print:hidden" id="maple"></div>
+</body>
+
+</html>
