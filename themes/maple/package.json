@@ -20,6 +20,6 @@
     "release": "bumpp --commit --tag --push && npm publish"
   },
   "dependencies": {
-    "bumpp": "^9.1.0"
+    "bumpp": "^10.4.1"
   }
 }
